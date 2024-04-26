@@ -6,8 +6,6 @@ from django.views.decorators.csrf import csrf_exempt
 import json
 from openai import OpenAI
 from pymongo.errors import ConnectionFailure
-import logging
-import traceback
 
 def index(request):
     return render(request, 'index.html')
@@ -332,45 +330,35 @@ def get_blogs_data(request):
     blogs_data = collection.find_one()
     return JsonResponse(blogs_data['all_category'])
 
-
-
-
-logger = logging.getLogger(__name__)
-
 @csrf_exempt
 def chat(request):
-    try:
-        client = OpenAI(api_key=settings.OPENAI_API_KEY)
-        messages = []
+    client = OpenAI(api_key=settings.OPENAI_API_KEY)
+    messages = []
 
-        if request.method == 'POST':
-            data = request.POST.get('user_message') or request.body.decode('utf-8')
-            user_message = data.strip()
+    if request.method == 'POST':
+        data = request.POST.get('user_message') or request.body.decode('utf-8')
+        user_message = data.strip()
 
-            if user_message:
-                response = client.chat.completions.create(
-                    model="ft:gpt-3.5-turbo-0125:personal::96ufzwZZ",
-                    messages=[
-                        {"role": "system", "content": "System Heuristics is a tech consultancy firm that offers expert guidance and innovative strategies tailored to optimize performance and drive digital transformation"},
-                        {"role": "user", "content": user_message}
-                    ],
-                    temperature=0,
-                )
+        if user_message:
+            response = client.chat.completions.create(
+                model="ft:gpt-3.5-turbo-0125:personal::96ufzwZZ",
+                messages=[
+                    {"role": "system", "content": "System Heuristics is a tech consultancy firm that offers expert guidance and innovative strategies tailored to optimize performance and drive digital transformation"},
+                    {"role": "user", "content": user_message}
+                ],
+                temperature=0,
+            )
 
-                messages.append({"role": "user", "content": user_message})
-                messages.append({"role": "system", "content": response.choices[0].message.content})
-            else:
-                messages.append({"role": "system", "content": "Please provide a valid message"})
-
-            return JsonResponse({'messages': messages})
-
+            messages.append({"role": "user", "content": user_message})
+            messages.append({"role": "system", "content": response.choices[0].message.content})
         else:
-            logger.warning("Received non-POST request")
-            return JsonResponse({'error': 'Method not allowed'}, status=405)
+            messages.append({"role": "system", "content": "Please provide a valid message"})
 
-    except Exception as e:
-        traceback.print_exc()  # Print the traceback to the console or log file
-        return JsonResponse({'error': 'Internal Server Error'}, status=500)
+        return JsonResponse({'messages': messages})
+
+    return JsonResponse({'messages': []})
+    
+
 
 
 def get_learn_more_data(request):
