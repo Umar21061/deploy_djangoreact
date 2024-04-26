@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, useHistory } from 'react-router-dom';
 import './App.css';
 import Header from './Header';
 import Navbar from './Navbar';
@@ -12,7 +12,6 @@ import BlogPage2 from './BlogPage2';
 import Cons from './Cons';
 import Footer from './Footer';
 import BlogPage from './BlogPage';
-
 import ServicesPage from './ServicesPage';
 import AboutPage from './AboutPage';
 import PortfolioPage from './PortfolioPage';
@@ -32,10 +31,9 @@ import Premium from './Premium';
 import Ebook from './Ebook';
 import LearnMore from './LearnMore';
 
-
-
 function App() {
   const [textData, setTextData] = useState('');
+  const history = useHistory();
 
   useEffect(() => {
     fetchTextData();
@@ -51,6 +49,10 @@ function App() {
     }
   };
 
+  const handleLearnMoreClick = () => {
+    history.push('/learn-more'); // Navigate to the LearnMore route
+  };
+
   return (
     <Router>
       <div className="App">
@@ -61,6 +63,7 @@ function App() {
           <Route path="/about" element={<AboutPage />} />
           <Route path="/portfolio" element={<PortfolioPage />} />
           <Route path="/blog" element={<BlogPage />} />
+          <Route path="/learn-more" element={<LearnMore />} /> {/* Route for LearnMore component */}
           <Route path="/" element={<HomePage textData={textData} />} />
           <Route path="/career" element={<Career />} />
           <Route path="/apply" element={<Apply />} />
@@ -88,11 +91,6 @@ function HomePage({ textData }) {
       <Reward/>
       <Cons/>
       <Footer/>
-
-      
-
-      
-
     </>
   );
 }
