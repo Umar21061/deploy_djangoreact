@@ -40,7 +40,7 @@ MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware',
 ]
 CORS_ALLOWED_ORIGINS = [
-    'https://reactdjango-b60889f1357a.herokuapp.com',  # Add your React frontend URL here
+    'http://localhost:3000',  # Add your React frontend URL here
 ]
 
 ROOT_URLCONF = 'djangobackend.urls'
@@ -73,6 +73,7 @@ DATABASES = {
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
+STATIC_ROOT = BASE_DIR / 'staticfiles'
 
 
 # Password validation
@@ -117,8 +118,6 @@ STATIC_URL = 'static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'reactfrontend/build/static')]
-STATIC_ROOT = BASE_DIR / 'staticfiles'
-
 
 from dotenv import load_dotenv
 
