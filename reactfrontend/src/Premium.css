@@ -1,0 +1,94 @@
+.page-wrapper {
+    width: 1200px; /* Set your desired width for the page */
+    margin: 0 auto; /* Center the page horizontally */
+  }
+  
+  .premium-container {
+    display: flex;
+    flex-direction: column;
+    border: 2px solid black;
+    background-color: black; /* black background outside */
+    padding: 10px; /* Reduced padding */
+  }
+  .premium-header{
+    color : rgba(255, 255, 255, 0.5);
+  }
+  
+  .premium-row {
+    display: flex;
+    justify-content: space-between;
+    gap : 15px;
+  }
+  
+  .premium-item {
+    flex: 1;
+    border: 2px solid black;
+    padding: 20px;
+    margin-right: 10px;
+    background-color: white; /* white background inside */
+    position: relative; /* Position relative for absolute positioning within */
+  }
+  
+  .premium-item:last-child {
+    margin-right: 0;
+  }
+  
+  .premium-item h3,
+  .premium-item p {
+    color: black;
+  }
+  
+  .premium-item .outside-text p {
+    /* Position relative to the parent item */
+    position: absolute;
+    margin-top: 30px;
+    left: 0;
+    background-color: black;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    width: 100%; /* Take full width */
+    text-align: left; /* Center align the text */
+    text-align: justify;
+  }
+  
+  .premium-item::before,
+  .premium-item::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    width: 0;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.5);
+    transition: width 0.3s ease;
+    z-index: 1;
+  }
+  
+  .premium-item::before {
+    left: 0;
+  }
+  
+  .premium-item::after {
+    right: 0;
+  }
+  
+  .premium-item:hover::before,
+  .premium-item:hover::after {
+    width: 100%;
+  }
+  /* Media Query for Small Screens */
+@media screen and (max-width: 768px) {
+  .page-wrapper {
+    width: auto; /* Remove fixed width for responsiveness */
+    padding: 0 10px; /* Add some padding to avoid edge-to-edge layout */
+  }
+
+  .premium-row {
+    flex-direction: column; /* Stack items vertically */
+  }
+
+  .premium-item {
+    margin-right: 0; /* Remove right margin */
+    margin-bottom: 20px; /* Add bottom margin for spacing */
+  }
+}

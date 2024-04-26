@@ -1,0 +1,41 @@
+.ebook-container {
+    padding: 20px;
+    margin: 20px;
+  }
+  
+  .ebook-heading {
+    font-size: 35px;
+    margin-bottom: 10px;
+  }
+  
+  .ebook-location,
+  .ebook-team-size {
+    margin-bottom: 5px;
+  }
+  
+  .ebook-compensation {
+    margin-bottom: 10px;
+  }
+  
+  .ebook-description {
+    margin-bottom: 30px;
+    border: 2px solid black; /* New border */
+    background-color: white; /* White background */
+    padding: 10px; /* Add padding for inner content */
+    color: black; /* Black text */
+    text-align: justify;
+  }
+  
+  
+  .loading {
+    font-style: italic;
+    color: #888;
+  }
+  .ebook-button {
+    color: black;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    text-decoration: none; /* Add this line to remove underline */
+    /* Add any other styling you want for the button */
+}

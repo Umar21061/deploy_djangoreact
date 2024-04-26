@@ -1,0 +1,140 @@
+/* Service2.css */
+
+/* Adjust container width */
+.container-service2 {
+    margin-top: 50px;
+    width: 100%; /* Make container width full */
+    overflow-x: hidden; /* Hide horizontal scrollbar */
+}
+
+.container-service2-row-servce{
+    margin-bottom: 40px;
+   
+}
+
+
+.content-wrapper1 {
+    width: 100%; /* Make content wrapper width full */
+    max-width: 1000px; /* Set maximum width */
+    margin: 0 auto; /* Center the content */
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.border-around {
+    border: 2px solid rgb(120, 167, 46); /* Set border color */
+    padding: 20px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+/* Styling for headings with class 'headingto' */
+.headingto {
+    position: relative;
+    font-family: Hellix, sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    color: rgb(255, 255, 255);
+    font-size: 45px;
+    line-height: 30px;
+}
+
+/* Add line under the heading */
+.headingto::after {
+    content: '';
+    position: absolute;
+    bottom: -10px; /* Adjust as needed */
+    left: 0;
+    width: calc(100% - 100px); /* Adjust width to fit within col-md-4 */
+    height: 5px; /* Adjust thickness of line */
+    background-color: rgb(120, 167, 46); /* Line color */
+}
+
+/* Styling for Learn more button */
+/* Styling for Learn more button */
+.btn.learn-btn {
+    background-color: transparent;
+    color: #fff; /* White text */
+    border: none;
+    padding: 0; /* Remove padding */
+    cursor: pointer;
+    position: relative; /* For positioning the arrow and line */
+    display: inline-block; /* Ensures button size fits content */
+    margin-bottom: 30px; /* Add margin bottom for space between button and border */
+}
+
+
+/* Styling for the arrow */
+.arrow {
+    font-size: 20px; /* Adjust the size as needed */
+    margin-left: 5px; /* Add some space between text and arrow */
+    vertical-align: middle; /* Align arrow vertically */
+}
+
+/* Styling for the line */
+.line2 {
+    position: absolute;
+    bottom: -5px; /* Align line to bottom of button */
+    left: 0;
+    width: 0; /* Initially hide the line */
+    height: 5px; /* Thickness of line */
+    background-color: rgb(120, 167, 46); /* Line color */
+    transition: width 0.3s; /* Smooth transition effect */
+}
+
+/* Hover effect to extend the line */
+.btn.learn-btn:hover .line2 {
+    width: 100%; /* Extend line to full width */
+}
+
+/* Remove hover effect */
+.btn.learn-btn:hover {
+    background-color: transparent;
+    color: #fff;
+}
+
+/* Add this CSS to adjust the image size */
+.x1-image {
+    width: 70%;
+}
+
+.x3-image {
+    width: 50%;
+}
+
+.scrolling-header {
+    font-size: 40px;
+}
+
+.x2-image {
+    width: 60%;
+}
+
+.col-md-8 p {
+    text-align: justify;
+}
+
+
+/* Media Query for Small Screens */
+@media (max-width: 767px) {
+    .headingto {
+        font-size: 30px; /* Reduce heading font size for small screens */
+    }
+
+    .arrow {
+        font-size: 16px; /* Reduce arrow font size for small screens */
+    }
+
+    .content-wrapper {
+        padding: 0 15px; /* Add padding to content wrapper for small screens */
+    }
+
+    .x1-image,
+    .x2-image,
+    .x3-image {
+        width: 100%; /* Make images full width for small screens */
+    }
+    .col-md-4 p {
+    text-align: justify;
+}
+}

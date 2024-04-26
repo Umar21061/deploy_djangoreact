@@ -1,0 +1,46 @@
+/* Partner.css */
+@import url('https://fonts.googleapis.com/css2?family=Helix+Sans:wght@400;700&display=swap');
+
+.partner-container {
+  margin: 20px auto;
+  width: 80%;
+  margin-top: 100px;
+}
+
+.heading {
+  text-align: left;
+  font-family: 'Helix Sans', sans-serif;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap; /* Allows the rows to wrap on smaller screens */
+  justify-content: space-between;
+  margin-bottom: 20px; /* Add space between rows */
+}
+
+.column {
+  flex: 1 1 30%; /* Allow columns to take up full width on small screens */
+  padding: 20px;
+  box-sizing: border-box; /* Include padding in column width */
+}
+
+.column h3 {
+  font-family: 'Helix Sans', sans-serif;
+}
+
+.column p {
+  font-size: 16px;
+  font-family: 'Helix Sans', sans-serif;
+  text-align: justify;
+}
+
+@media screen and (max-width: 768px) {
+  .column {
+    flex-basis: 100%; /* Make columns take full width on smaller screens */
+  }
+  .column p {
+    font-family: 'Helix Sans', sans-serif;
+    text-align: justify;
+  }
+}

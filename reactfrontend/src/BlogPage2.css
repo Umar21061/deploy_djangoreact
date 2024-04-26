@@ -1,0 +1,93 @@
+/* Import CSS file */
+@import url('BlogPage2.css');
+
+/* Styling for the container div */
+.blockpage2.container {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px; /* Centers the content horizontally */
+  margin-bottom: 40px;
+
+}
+
+/* Styling for the side-by-side divs */
+.blockpage2.side-container {
+  display: flex;
+  align-items: center;
+  border: 2px solid black; /* Adds border */
+  background-color: white; /* Sets background color */
+}
+
+/* Styling for the left side containing the image */
+.blockpage2.left-side {
+  flex: 0 0 auto; /* Prevents the left side from shrinking */
+  padding: 20px; /* Adds padding */
+}
+
+/* Styling for the image */
+.blockpage2.left-side img {
+  max-width: 70%; /* Ensures the image doesn't overflow its container */
+  
+}
+
+/* Styling for the right side containing text and button */
+.blockpage2.right-side {
+  flex: 1; /* Allows the right side to grow */
+  padding: 20px; /* Adds padding */
+}
+
+/* Styling for the text */
+.blockpage2.right-side p {
+  color: black; 
+  font-size: 25px; /* Sets text color */
+}
+
+/* Styling for the button */
+.blockpage2.right-side button {
+  color: black; /* Sets button text color */
+  background-color: white; /* Sets button background color */
+  font-size: 25px; /* Sets font size */
+  position: relative; /* Sets position */
+  border: none; /* Removes button border */
+  cursor: pointer; /* Changes cursor to pointer on hover */
+  overflow: hidden; /* Adds overflow behavior */
+}
+
+.blockpage2.right-side button::before {
+  content: ''; /* Adds pseudo-element content */
+  position: absolute; /* Sets position */
+  top: 0; /* Aligns with top */
+  left: 0; /* Aligns with left */
+  width: 100%; /* Sets width */
+  height: 100%; /* Sets height */
+  background-image: linear-gradient(120deg, #aaff00 0%, #00ffaa 100%); /* Sets gradient background */
+  transform: translateX(-100%); /* Moves the gradient off-screen */
+  transition: transform 0.3s ease; /* Adds transition effect */
+  z-index: -1; /* Sets z-index */
+}
+
+.blockpage2.right-side button:hover::before {
+  transform: translateX(0); /* Moves the gradient back on-screen on hover */
+}
+
+.blockpage2.right-side button:hover {
+  color: #000000; /* Changes text color on hover */
+  z-index: 1; /* Sets z-index */
+}
+/* Styling for the arrow */
+
+@media screen and (max-width: 768px) {
+  .blockpage2.side-container {
+    flex-direction: column; /* Stack elements vertically */
+  }
+
+  .blockpage2.right-side {
+    padding-top: 0; /* Remove top padding */
+  }
+
+  .blockpage2.left-side,
+  .blockpage2.right-side {
+    padding: 10px; /* Reduce padding for smaller screens */
+    text-align: center; /* Center align text and image */
+  }
+}

@@ -1,0 +1,89 @@
+/* Styling for crew container */
+.crew-heading{
+    text-align: left;
+    font-family: 'Hellix', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    color: rgb(118, 118, 118);
+    line-height: 17px;
+    margin-bottom: 5%;
+    margin-left: 120px;
+}
+.crew-container {
+    margin-top: 50px;
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    margin-left: 100px;
+    margin-bottom: 60px;
+    
+    
+}
+
+
+/* Styling for crew member */
+.crew-member {
+    flex: 0 0 auto; /* Ensure each item takes equal space */
+    margin: 10px;
+    position: relative;
+    text-align: center; /* Center the text */
+}
+
+/* Styling for crew member image */
+.crew-member img {
+    display: block;
+    width: 90%;
+    /* Removed height property */
+    object-fit: cover; /* Ensure the image fills its container while preserving aspect ratio */
+}
+
+/* Styling for crew overlay */
+.crew-overlay {
+    position: absolute;
+    bottom: 20px; /* Add top margin */
+    left: 0; /* Align to the left edge of the container */
+    transform: translateY(-50%); /* Adjust for vertical centering */
+    width: 100%; /* Ensure text spans the entire width of the container */
+    color: white; /* Text color */
+    font-size: 16px; /* Default font size */
+    visibility: hidden; /* Hide by default */
+    transition: font-size 0.3s; /* Add transition for smoother effect */
+}
+
+/* Styling for crew overlay on hover */
+.crew-member:hover .crew-overlay {
+    visibility: visible; /* Show text on hover */
+    font-size: 25px; /* Increase font size on hover */
+}
+
+/* Styling for scrollbar */
+.crew-container::-webkit-scrollbar {
+    width: 12px; /* Width of the scrollbar */
+}
+
+/* Track */
+.crew-container::-webkit-scrollbar-track {
+    background: #f1f1f1; /* Color of the track */
+}
+
+/* Handle */
+.crew-container::-webkit-scrollbar-thumb {
+    background: #888; /* Color of the scrollbar handle */
+    border-radius: 6px; /* Rounded corners */
+}
+
+/* Handle on hover */
+.crew-container::-webkit-scrollbar-thumb:hover {
+    background: #555; /* Color of the scrollbar handle on hover */
+}
+@media screen and (max-width: 768px) {
+    .crew-container {
+        margin-left: 0; /* Remove left margin on small screens */
+        justify-content: center; /* Center crew members horizontally */
+    }
+    .crew-heading {
+        text-align: center; /* Center the crew heading on small screens */
+        margin-left: 0; /* Reset left margin */
+    }
+   
+}

@@ -1,0 +1,76 @@
+/* CSS for About component */
+
+.about-section {
+    text-align: center;
+    color: white;
+    background-color: black;
+    padding: 50px; /* Adjust padding for smaller screens */
+}
+
+.large-text {
+    font-family: 'Hellix', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    color: rgb(118, 118, 118);
+    font-size: 17px;
+    line-height: 17px;
+    margin-bottom: 3%;
+}
+
+.about-container {
+    max-width: 1100px; /* Limit the maximum width of the container */
+    margin: 0 auto; /* Center the container */
+}
+
+.about-row {
+    display: flex; /* Use flexbox for the rows */
+    flex-wrap: wrap; /* Allow items to wrap to the next line */
+    justify-content: center; /* Center items horizontally */
+    margin-bottom: 30px;
+}
+
+.about-content {
+    flex: 0 0 calc(33.33% - 30px); /* Equal width for each div, considering padding and margin */
+    margin: 15px; /* Add margin between div elements */
+    position: relative; 
+}
+
+.white-text {
+    
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+    padding: 40px;
+    overflow: hidden; /* Hide overflow to prevent the image from showing outside the div */
+    position: relative; /* Set position to relative for absolute positioning of image */
+}
+
+.logo-img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80px; /* Adjust the size of the logo */
+}
+
+.white-text img:not(.logo-img) {
+    position: absolute;
+    top: 0;
+    left: -100%; /* Initially position the image outside the div */
+    width: 100%; /* Cover the entire width of the div */
+    height: 100%;
+    transition: left 0.5s; /* Transition effect for left property */
+}
+
+.white-text:hover img:not(.logo-img) {
+    left: 0; /* Move the image to the right (fully visible) on hover */
+}
+
+/* Media queries */
+@media screen and (max-width: 768px) {
+    .about-section {
+        padding: 30px; /* Adjust padding for smaller screens */
+    }
+
+    .about-content {
+        flex-basis: 100%; /* Set flex-basis to 100% for full width on small screens */
+    }
+}

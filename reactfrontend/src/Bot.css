@@ -1,0 +1,38 @@
+#chat-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-right: 100px; /* Adjust as needed */
+   
+}
+
+
+#chat-box {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+}
+
+#chat-box div {
+    flex: 1; /* Fill remaining space */
+}
+
+#chat-box img {
+    width: 70px; /* Adjust the width to your preference */
+    height: auto; /* Maintain aspect ratio */
+    margin-left: 10px; /* Adjust the margin between the image and messages */
+}
+
+#chat-box form {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+}
+
+.user-message {
+    text-align: right;
+}
+
+.bot-message {
+    text-align: left;
+}

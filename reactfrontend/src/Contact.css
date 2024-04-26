@@ -1,0 +1,30 @@
+.btn-contact {
+  font-size: 20px;
+  position: relative;
+  border: none;
+  cursor: pointer;
+  overflow: hidden;
+  color: white;
+}
+
+.btn-contact::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(120deg, #aaff00 0%, #00ffaa 100%);
+  transform: translateX(-100%);
+  transition: transform 0.3s ease;
+  z-index: -1;
+}
+
+.btn-contact:hover::before {
+  transform: translateX(0);
+}
+
+.btn-contact:hover {
+  color: #000000;
+  z-index: 1;
+}
