@@ -5,6 +5,7 @@ import video from './video/v6.mp4'; // Import the video
 import Reward from './reward.js'; // Import Reward component
 import Cons from './Cons.js'; // Import Cons component
 import Footer from './Footer.js'; // Import Footer component
+import Crew from './Crew.js';
 
 const Career = () => {
   return (
@@ -54,6 +55,7 @@ const Career = () => {
       </div>
       
     </div>
+    <Crew/>
     <Reward/>
     <Cons/>
     <Footer/>
