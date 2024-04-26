@@ -379,3 +379,35 @@ def get_learn_more_data(request):
         return JsonResponse(data)
     except ConnectionFailure as e:
         return JsonResponse({'error': str(e)}, status=500)
+
+
+
+
+
+
+from django.http import JsonResponse
+from pymongo import MongoClient
+
+def project_details(request):
+    try:
+        # Connect to MongoDB
+        client = MongoClient("mongodb+srv://umer:umer123456@cluster0.chseyyo.mongodb.net/")
+
+        # Access the portfolio database
+        db = client.portfolio
+
+        # Access the project_detail collection
+        collection = db.project_detail
+
+        # Fetch data from MongoDB
+        data = collection.find({}, {'_id': 0, 'backend_development': 1})
+
+        # Convert MongoDB cursor to list of dictionaries
+        portfolio_data = list(data)
+
+        # Close MongoDB connection
+        client.close()
+
+        return JsonResponse(portfolio_data, safe=False)
+    except Exception as e:
+        return JsonResponse({'error': str(e)}, status=500)

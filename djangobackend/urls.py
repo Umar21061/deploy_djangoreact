@@ -19,6 +19,7 @@ urlpatterns = [
     path('api/get_reward_data/', views.get_reward_data, name='get_reward_data'),
      path('api/learnmore/', views.get_learn_more_data, name='get_learn_more_data'),
     
+    path('api/project_Details/', views.project_details, name='project_details'),
     
    
     

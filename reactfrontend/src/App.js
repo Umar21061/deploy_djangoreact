@@ -32,6 +32,8 @@ import Premium from './Premium';
 import Ebook from './Ebook';
 import LearnMore from './LearnMore';
 
+import ProjectDetails from './ProjectDetails';
+
 
 
 function App() {
@@ -67,6 +69,9 @@ function App() {
           <Route path="/contact" element={<ContactForm />} /> {/* Use ContactForm component here */}
           <Route path="/ebook" element={<Ebook />} />
           <Route path="/learnmore" element={<LearnMore />} />
+          <Route path="/project-details/:projectId" element={<ProjectDetails />} />
+          
+          
         </Routes>
       </div>
     </Router>
@@ -89,10 +94,11 @@ function HomePage({ textData }) {
       <Reward/>
       <Cons/>
       <Footer/>
-
       
 
       
+
+
 
     </>
   );
