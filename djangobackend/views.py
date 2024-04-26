@@ -50,7 +50,7 @@ def get_market_data(request):
 
 
 
-def get_portfolio_data(request):
+
     # Connect to MongoDB
     client = MongoClient("mongodb+srv://umer:umer123456@cluster0.chseyyo.mongodb.net/")
 
@@ -113,6 +113,66 @@ def get_crew_data(request):
     except Exception as e:
         # Handle exceptions appropriately
         return JsonResponse({'error': str(e)})
+
+
+
+
+def get_portfolio_data(request):
+    try:
+        # Connect to MongoDB
+        client = MongoClient("mongodb+srv://umer:umer123456@cluster0.chseyyo.mongodb.net/")
+
+        # Access the portfolio database
+        db = client.portfolio
+
+        # Access the project2 collection
+        collection = db.project2
+
+        # Fetch data from MongoDB
+        data = collection.find({}, {'_id': 0, 'category': 1, 'urls': 1, 'video_text': 1})
+
+        # Convert MongoDB cursor to list of dictionaries
+        portfolio_data = list(data)
+
+        # Close MongoDB connection
+        client.close()
+
+        return JsonResponse(portfolio_data, safe=False)
+    except Exception as e:
+        return JsonResponse({'error': str(e)}, status=500)
+
+
+
+    try:
+        # Connect to MongoDB
+        client = MongoClient("mongodb+srv://umer:umer123456@cluster0.chseyyo.mongodb.net/")
+
+        # Access the portfolio database
+        db = client.portfolio
+
+        # Access the project collection
+        collection = db.project
+
+        # Fetch data from MongoDB
+        data = collection.find({}, {'_id': 0, 'portfolioproject_url.expertise': 1, 'portfolioproject_url.industry': 1})
+
+        # Convert MongoDB cursor to list of dictionaries
+        portfolio_data = list(data)
+
+        # Close MongoDB connection
+        client.close()
+
+        return JsonResponse(portfolio_data, safe=False)
+    except Exception as e:
+        return JsonResponse({'error': str(e)}, status=500)
+    
+
+
+
+
+    # views.py
+
+
 
 
 def get_job_data(request):
@@ -198,6 +258,8 @@ def blogpage2(request):
     except Exception as e:
         return JsonResponse({'error': str(e)}, status=500)
 
+from django.http import JsonResponse
+from pymongo import MongoClient
 
 def get_reward_data(request):
     try:
