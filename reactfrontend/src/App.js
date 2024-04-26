@@ -66,6 +66,7 @@ function App() {
           <Route path="/apply" element={<Apply />} />
           <Route path="/contact" element={<ContactForm />} /> {/* Use ContactForm component here */}
           <Route path="/ebook" element={<Ebook />} />
+          <Route path="/learnmore" element={<LearnMore />} />
         </Routes>
       </div>
     </Router>

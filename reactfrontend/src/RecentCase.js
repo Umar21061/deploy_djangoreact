@@ -1,11 +1,9 @@
-// Recent.js
+// RecentCase.js
 import React, { useState, useEffect, useRef } from 'react';
-import './RecentCase.css'; // Import the CSS file specific to the Recent component
+import './RecentCase.css';
 
 function Recent() {
     const [portfolioData, setPortfolioData] = useState([]);
-    const [selectedCategory, setSelectedCategory] = useState(null);
-    const [showExpertise, setShowExpertise] = useState(false);
     const [loading, setLoading] = useState(true);
     const [activeVideoIndex, setActiveVideoIndex] = useState(null);
     const videoRefs = useRef([]);
@@ -15,7 +13,7 @@ function Recent() {
     }, []);
 
     useEffect(() => {
-        videoRefs.current = Array(portfolioData.length).fill().map((_, i) => videoRefs.current[i] || React.createRef());
+        videoRefs.current = Array(portfolioData.length).fill().map((_, i) => videoRefs.current[i] || Array(portfolioData[i].urls.length).fill().map(() => React.createRef()));
     }, [portfolioData]);
 
     const fetchPortfolioData = async () => {
@@ -30,97 +28,59 @@ function Recent() {
         }
     };
 
-    const handleCategorySelect = (category) => {
-        setSelectedCategory(category === selectedCategory ? null : category);
-    };
-
-    const toggleExpertise = () => {
-        setShowExpertise(true);
-        setSelectedCategory(null);
-    };
-
-    const toggleIndustry = () => {
-        setShowExpertise(false);
-        setSelectedCategory(null);
-    };
-
-    const showAllVideos = () => {
-        setSelectedCategory(null);
-    };
-
     const handleMouseEnter = (index) => {
         setActiveVideoIndex(index);
-        videoRefs.current[index].current.play();
+        videoRefs.current[index[0]][index[1]].current.play();
     };
 
     const handleMouseLeave = (index) => {
         setActiveVideoIndex(null);
-        videoRefs.current[index].current.pause();
+        videoRefs.current[index[0]][index[1]].current.pause();
     };
 
-    return (
+    return (<div>
+        <h1> Our Projects</h1>
         <div className="recent">
-            <div className="recent-button-container">
-                <button className="recent-industry-button" onClick={toggleIndustry}>Industry</button>
-                <button className="recent-expertise-button" onClick={toggleExpertise}>Expertise</button>
-                <button className="recent-all-category-button" onClick={showAllVideos}>All Categories</button>
-            </div>
-
-            <div className="recent-category-buttons">
-                {showExpertise ? (
-                    <div className="center">
-                        {['Backend Development', 'Discovery & Design', 'Frontend Development', 'Interactive Experience', 'Mobile Development', 'Web Development'].map((category, index) => (
-                            <button key={index} onClick={() => handleCategorySelect(category)} className={selectedCategory === category ? "recent-selected" : ""}>
-                                {category}
-                            </button>
-                        ))}
-                    </div>
-                ) : (
-                    <div className="center">
-                        {['Retail', 'Data Management', 'Entertainment', 'Finance', 'Health', 'Manufacturing', 'Transportation'].map((category, index) => (
-                            <button key={index} onClick={() => handleCategorySelect(category)} className={selectedCategory === category ? "recent-selected" : ""}>
-                                {category}
-                            </button>
-                        ))}
-                    </div>
-                )}
-            </div>
-
             {loading ? (
                 <p className="recent-loading-text">Loading...</p>
             ) : (
                 <div className="recent-video-container">
-                    {portfolioData.map((project, index) => (
-                        <div key={index} className="recent-video-item">
-                            {(!selectedCategory || selectedCategory === 'All Categories' || (project.category && project.category.includes(selectedCategory))) && (
-                                <div className="recent-video-player">
-                                    {project.urls.slice(0, 3).map((url, videoIndex) => (
-                                        <div
-                                            key={videoIndex}
+                    <div className="recent-video-row">
+                        {portfolioData.map((project, categoryIndex) => (
+                            <React.Fragment key={categoryIndex}>
+                                {project.urls.map((url, videoIndex) => (
+                                    <div
+                                        key={`${categoryIndex}-${videoIndex}`}
+                                        className="recent-video-player-horizontal"
+                                        onMouseEnter={() => handleMouseEnter([categoryIndex, videoIndex])}
+                                        onMouseLeave={() => handleMouseLeave([categoryIndex, videoIndex])}
+                                    >
+                                        <video
+                                            ref={videoRefs.current[categoryIndex][videoIndex]}
                                             className="recent-video-player"
-                                            onMouseEnter={() => handleMouseEnter(index * 3 + videoIndex)}
-                                            onMouseLeave={() => handleMouseLeave(index * 3 + videoIndex)}
+                                            controls={false}
+                                            autoPlay={activeVideoIndex && activeVideoIndex[0] === categoryIndex && activeVideoIndex[1] === videoIndex}
+                                            muted
+                                            onClick={() => {
+                                                const videoRef = videoRefs.current[categoryIndex][videoIndex].current;
+                                                if (videoRef.paused) videoRef.play();
+                                                else videoRef.pause();
+                                            }}
                                         >
-                                            <video
-                                                ref={videoRefs.current[index * 3 + videoIndex]}
-                                                controls={false}
-                                                autoPlay={activeVideoIndex === index * 3 + videoIndex}
-                                                muted
-                                                onClick={() => videoRefs.current[index * 3 + videoIndex].current.paused ? videoRefs.current[index * 3 + videoIndex].current.play() : videoRefs.current[index * 3 + videoIndex].current.pause()}
-                                            >
-                                                <source src={url} type="video/mp4" />
-                                                Your browser does not support the video tag.
-                                            </video>
-                                            {activeVideoIndex === index * 3 + videoIndex && <p className="recent-video-text">{project.video_text}</p>}
-                                        </div>
-                                    ))}
-                                </div>
-                            )}
-                        </div>
-                    ))}
+                                            <source src={url} type="video/mp4" />
+                                            Your browser does not support the video tag.
+                                        </video>
+                                        <p className={`recent-video-text ${activeVideoIndex && activeVideoIndex[0] === categoryIndex && activeVideoIndex[1] === videoIndex ? 'active' : ''}`}>{project.video_text}</p>
+                                    </div>
+                                ))}
+                            </React.Fragment>
+                        ))}
+                    </div>
                 </div>
             )}
         </div>
+        </div>
+
     );
 }
 

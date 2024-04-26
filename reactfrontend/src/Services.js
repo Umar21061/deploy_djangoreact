@@ -1,4 +1,5 @@
 import React from 'react';
+import {  Link } from 'react-router-dom';
 import './Services.css'; // Import CSS styles for the Services component
 import i1 from './image/i1.jpg'; // Import image for the first service item
 import i2 from './image/i2.jpg'; // Import image for the second service item
@@ -43,7 +44,9 @@ const Services = () => {
                 </div>
                 
                 {/* Button to see all services */}
-                <button className="see-all-button">See all services</button>
+                <button className="see-all-button"><Link to="/services">
+                            See All Services
+                        </Link></button>
             </div>
         </div>
     );

@@ -53,6 +53,7 @@ h1 {
 /* Services Section Styles */
 
 .see-all-button {
+text-decoration: none;
 margin-top: 50px; /* Add space above button */
 background-color: #ffffff; /* Set background color to white */
 color: #000000; /* Set button text color to black */
@@ -67,6 +68,7 @@ transition: all 0.3s ease; /* Add transition for smoother hover effect */
 }
 
 .see-all-button::before {
+text-decoration: none;    
 content: ''; /* Create empty content for pseudo-element */
 position: absolute; /* Position the pseudo-element absolutely */
 top: 0; /* Align the top of the element */
@@ -86,6 +88,7 @@ transform: translateX(0); /* Move the element inside the button on hover */
 .see-all-button:hover {
 color: #000000; /* Set button text color to black on hover */
 z-index: 1; /* Set z-index to ensure button text appears above hover color */
+text-decoration: none;
 }
 
 @media screen and (max-width: 768px) {
