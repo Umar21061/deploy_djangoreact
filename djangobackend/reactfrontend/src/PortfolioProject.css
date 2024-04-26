@@ -1,0 +1,70 @@
+
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.industry-button, .expertise-button {
+    margin: 0 10px;
+}
+
+.category-buttons {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.category-buttons button {
+    margin: 0 5px;
+}
+
+.category-buttons .center {
+    display: inline-block;
+}
+
+.selected {
+    background-color: #ccc; /* You can adjust the styling for selected button */
+}
+
+.video-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 10px;
+    padding: 10px; /* Add padding to provide spacing */
+    max-width: 100%; /* Ensure the container doesn't exceed viewport width */
+}
+
+.video-item {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: calc(100% - 20px); /* Adjust for padding */
+    margin-bottom: 10px; /* Add margin between rows */
+}
+
+.video-player {
+    position: relative; /* Ensure relative positioning for the container */
+    width: calc(33.33% - 10px); /* Calculate width for three videos per row */
+    max-width: calc(33.33% - 10px); /* Ensure equal width for all videos */
+    flex-grow: 1; /* Allow videos to take equal space in row */
+}
+
+.video-player video {
+    width: 100%; /* Make the video fill the container */
+}
+
+.video-player p.video-text {
+    position: absolute; /* Position the text relative to the container */
+    bottom: 10px; /* Adjust as per your design */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Center horizontally */
+    background-color: rgba(0, 0, 0, 0.7); /* Add background color for better visibility */
+    color: #fff; /* Text color */
+    padding: 5px 10px; /* Add padding for better readability */
+    border-radius: 5px; /* Add some border radius for styling */
+    width: 90%; /* Limit text width */
+    text-align: center; /* Center align text */
+    z-index: 1; /* Ensure the text is above the video */
+}

@@ -1,0 +1,63 @@
+/* Recent.css */
+
+.recent-button-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.recent-industry-button, .recent-expertise-button {
+    margin: 0 10px;
+}
+
+.recent-category-buttons {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.recent-category-buttons button {
+    margin: 0 5px;
+}
+
+.recent-category-buttons .center {
+    display: inline-block;
+}
+
+.recent-selected {
+    background-color: #ccc; /* You can adjust the styling for selected button */
+}
+
+.recent-video-container {
+    overflow-x: auto; /* Enable horizontal scrolling */
+    white-space: nowrap; /* Prevent videos from wrapping */
+    padding: 10px 0; /* Adjust padding */
+    max-width: 100%; /* Ensure the container doesn't exceed viewport width */
+}
+
+.recent-video-item {
+    display: inline-block; /* Display videos in a single row */
+    margin-right: 10px; /* Add margin between videos */
+}
+
+.recent-video-player {
+    width: 300px; /* Adjust width of each video container */
+    position: relative; /* Ensure relative positioning for the container */
+}
+
+.recent-video-player video {
+    width: 100%; /* Make the video fill the container */
+}
+
+.recent-video-player p.recent-video-text {
+    position: absolute; /* Position the text relative to the container */
+    bottom: 10px; /* Adjust as per your design */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Center horizontally */
+    background-color: rgba(0, 0, 0, 0.7); /* Add background color for better visibility */
+    color: #fff; /* Text color */
+    padding: 5px 10px; /* Add padding for better readability */
+    border-radius: 5px; /* Add some border radius for styling */
+    width: 90%; /* Limit text width */
+    text-align: center; /* Center align text */
+    z-index: 1; /* Ensure the text is above the video */
+}

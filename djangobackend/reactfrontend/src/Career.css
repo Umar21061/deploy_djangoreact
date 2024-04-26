@@ -1,0 +1,156 @@
+/* Desktop styles */
+#career-opportunities-container {
+    margin-top: 80px;
+    margin-bottom: 60px;
+}
+
+.career-heading2 {
+    margin-bottom: 50px;
+}
+
+.career-container {
+    position: relative;
+    margin-bottom: 80px;
+}
+
+.career-video {
+    width: 100%;
+    height: 70vh;
+    object-fit: cover;
+}
+
+.career-text-overlay {
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    
+}
+
+.career-text-overlay h1 {
+    font-size: 70px;
+}
+
+.career-text-overlay h5 {
+    font-size: 30px;
+}
+
+.button-row-career {
+    display: flex;
+    gap: 10px;
+}
+
+.button-career {
+    padding: 10px 20px;
+    font-size: 30px;
+    background-color: transparent;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.button-career:hover {
+    color: rgb(223, 220, 42);
+}
+
+.job-row,
+.job-row2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-top: 20px;
+    transition: border-color 0.3s ease;
+    margin-bottom: 30px;
+}
+
+.job-row:hover,
+.job-row2:hover {
+    border-color: rgb(157, 169, 170);
+    background-color: rgb(199, 206, 101);
+    color: white;
+    border-color: rgb(211, 230, 46);
+}
+
+.job-info,
+.job-info2 {
+    flex: 1;
+    padding: 0 10px;
+}
+
+.job-title,
+.job-title2 {
+    margin: 0;
+    font-weight: bold;
+}
+
+.job-salary,
+.job-salary2 {
+    margin: 0;
+}
+
+.job-apply,
+.job-apply2 {
+    flex: 0;
+}
+
+.button-apply,
+.button-apply2 {
+    padding: 10px 20px;
+    background-color: white;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Hover effect for Apply button */
+.job-row:hover .button-apply,
+.job-row2:hover .button-apply2 {
+    background-color: #d0e422;
+}
+
+/* Change Apply button text color on hover */
+.job-row:hover .button-apply:hover,
+.job-row2:hover .button-apply2:hover {
+    color: black;
+}
+
+/* Media query for small screens */
+@media screen and (max-width: 768px) {
+    .career-text-overlay h1 {
+        font-size: 40px;
+    }
+
+    .career-text-overlay h5 {
+        font-size: 20px;
+    }
+
+    .button-career {
+        font-size: 20px;
+    }
+
+    .job-row,
+    .job-row2 {
+        flex-direction: column;
+    }
+
+    .job-info,
+    .job-info2 {
+        padding: 10px;
+    }
+
+    .job-apply,
+    .job-apply2 {
+        margin-top: 10px;
+    }
+
+    .button-apply,
+    .button-apply2 {
+        font-size: 16px;
+    }
+}

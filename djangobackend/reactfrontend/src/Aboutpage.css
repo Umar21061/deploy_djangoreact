@@ -1,0 +1,113 @@
+.aboutpage-container {
+    padding: 34px;
+}
+
+.aboutpage-section {
+    position: relative;
+    overflow: hidden;
+    height: auto; /* Set the height to 70vh */
+}
+
+
+
+.aboutpage-row {
+    display: flex;
+    flex-wrap: wrap; /* Allow items to wrap to the next line */
+    justify-content: space-between; /* Adjust spacing between items */
+}
+
+.aboutpage-info {
+    text-align: center;
+    margin-top: 20px;
+    flex: 1; /* Allow each item to grow equally */
+    max-width: 200px; /* Limit maximum width of each item */
+    padding: 0 10px; /* Add padding to each item */
+    margin-right: 10px; /* Increase margin between items in row layout */
+}
+
+.aboutpage-info:last-child {
+    margin-right: 0; /* Remove right margin for the last item in row layout */
+}
+
+
+@media only screen and (max-width: 1200px) {
+    .aboutpage-row {
+        flex-direction: column; /* Set flex direction to column on small screens */
+        align-items: center; /* Center items vertically */
+    }
+
+    .aboutpage-info {
+        width: 100%; /* Set width to full for small screens */
+        max-width: none; /* Remove maximum width */
+        margin-bottom: 20px; /* Increase margin between items in column layout */
+    }
+}
+/* Styling for additional divs */
+
+  /* Centering content inside additional divs */
+  .center-content {
+    text-align: left; /* Align text to the left */
+  }
+  
+ 
+
+.aboutpage-info h4 {
+    font-size: 20px; /* Adjust font size */
+    color: white;
+}
+
+.line {
+    width: 100px; /* Adjust line width */
+    height: 5px;
+    background-color: rgb(120, 167, 46);
+    margin: 10px auto;
+}
+
+.aboutpage-info:hover .line {
+    animation: moveLine 2s forwards;
+}
+
+.aboutpage-info:hover h2 {
+    animation: updateNumber 2s forwards;
+}
+
+@keyframes moveLine {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 100px; /* Width of the line */
+    }
+}
+
+@keyframes updateNumber {
+    0% {
+        color: white; /* Initial color */
+    }
+    25% {
+        color: yellow; /* Color transition */
+    }
+    50% {
+        color: orange; /* Color transition */
+    }
+    75% {
+        color: red; /* Color transition */
+    }
+    100% {
+        color: white; /* Final color */
+    }
+}
+@media only screen and (max-width: 768px) {
+    .aboutpage-row {
+        flex-direction: column; /* Set flex direction to column on small screens */
+        align-items: center; /* Center items vertically */
+    }
+
+    .aboutpage-info {
+        width: 100%; /* Set width to full for small screens */
+        max-width: none; /* Remove maximum width */
+        margin-bottom: 20px; /* Increase margin between items in column layout */
+    }
+
+  
+}

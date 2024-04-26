@@ -1,0 +1,110 @@
+.learnmore-div1 {
+  margin-bottom: 40px;
+  border: 1px solid #ccc;
+  padding: 20px;
+  display: flex;
+}
+
+.left-column {
+  flex: 1;
+  color: white;
+}
+
+.right-column {
+  flex: 1;
+}
+
+
+
+
+
+.learnmore-div2 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Align items to the left */
+  justify-content: center;
+  text-align: left; /* Align text to the left */
+  margin-bottom: 50px;
+}
+
+.learnmore-div2 p {
+  margin: 5px 0;
+}
+
+.learnmore-div2 .numbered-row {
+  display: flex;
+  align-items: center;
+}
+
+.learnmore-div2 .numbered-row p {
+  margin: 5px 10px; /* Adjust margin for each row */
+}
+
+.heading2 {
+  margin-bottom: 10px;
+}
+
+.heading2-heading {
+  margin-top: 5px;
+}
+
+.heading2-text {
+  margin-bottom: 20px;
+}
+
+.learnmore-div2 p {
+  margin: 5px 0;
+}
+
+.learnmore-div2 .numbered-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.learnmore-div2 .numbered-row p {
+  margin: 5px;
+}
+
+.image-row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.learnmore-image {
+  position: relative;
+  width: 30%;
+  margin-right: 1%;
+  margin-bottom: 50px;
+}
+
+.learnmore-image:last-child {
+  margin-right: 0;
+}
+
+.learnmore-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.learnmore-image .image-text,
+.learnmore-image .image-title {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(255, 255, 255, 0.7);
+  padding: 5px 10px;
+  border-radius: 5px;
+  color: #000;
+  font-size: 14px;
+  text-align: center;
+}
+
+.learnmore-image .image-text {
+  top: 0;
+}
+
+.learnmore-image .image-title {
+  bottom: 0;
+}

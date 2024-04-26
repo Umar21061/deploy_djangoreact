@@ -1,0 +1,81 @@
+.portfolio-section {
+    position: relative;
+    overflow: hidden;
+    height: auto; /* Set the height to 70vh */
+    padding: 34px;
+}
+
+.video-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.portfolio-content {
+    position: relative;
+    z-index: 1;
+    color: white;
+    text-align: center;
+    padding: 50px;
+}
+
+.portfolio-info {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.portfolio-info h2 {
+    font-size: 150px;
+    margin-bottom: 10px;
+    color: wheat;
+}
+
+.portfolio-info p {
+    font-size: 40px;
+    color: white;
+}
+
+.line {
+    width: 200px;
+    height: 5px;
+    background-color: rgb(120, 167, 46);
+    margin: 10px auto;
+}
+.portfolio-info:hover .line {
+    animation: moveLine 2s forwards;
+}
+
+.portfolio-info:hover h2 {
+    animation: updateNumber 2s forwards;
+}
+
+@keyframes moveLine {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 200px; /* Width of the line */
+    }
+}
+
+@keyframes updateNumber {
+    0% {
+        color: white; /* Initial color */
+    }
+    25% {
+        color: yellow; /* Color transition */
+    }
+    50% {
+        color: orange; /* Color transition */
+    }
+    75% {
+        color: red; /* Color transition */
+    }
+    100% {
+        color: white; /* Final color */
+    }
+}

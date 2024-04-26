@@ -1,0 +1,82 @@
+.blogs {
+    margin: 20px auto;
+    max-width: 1200px;
+    padding: 20px;
+    font-family: 'Hellix', sans-serif;
+}
+.blogs .blogs-heading{
+    color: rgb(118, 118, 118);
+}
+
+.blogs .blog-details {
+    margin-top: 20px;
+}
+
+.blogs .image-container {
+    display: inline-block;
+    width: calc(33.33% - 20px); /* Adjust the percentage as needed for equal width with gaps */
+    text-align: center;
+    margin-bottom: 20px;
+    margin-right: 20px; /* Add gap between images */
+    position: relative; /* Position container relatively for absolute positioning of text */
+}
+
+.blogs .image-container img {
+    max-width: 100%;
+    height: auto;
+    width: 100%; /* Make all images fill their containers */
+    object-fit: cover; /* Ensure images maintain aspect ratio */
+}
+
+.blogs .image-container .image-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    padding: 5px;
+    box-sizing: border-box;
+    width: 80%; /* Adjust text width as needed */
+    max-width: 300px; /* Limit text width to prevent overflow */
+}
+
+.blogs button {
+    margin-right: 10px;
+    background: none;
+    border: none;
+    font-size: 26px;
+    line-height: 34px;
+    font-style: normal;
+    font-weight: 600;
+    color: rgb(118, 118, 118);
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.3s, color 0.3s; /* Add color transition */
+    margin-bottom: 30px;
+}
+
+.blogs button:hover {
+    color: gold ;/* Apply linear-gradient effect to text color on hover */
+    transform: scale(1.1);
+}
+
+@media screen and (max-width: 768px) {
+    .blogs .image-container {
+        width: calc(50% - 20px); /* Adjust width for mobile screens */
+    }
+    .blogs button {
+        margin-bottom: 10px; /* Reduce bottom margin for buttons on small screens */
+        display: block; /* Ensure buttons stack vertically */
+        width: 100%; /* Make buttons full width on small screens */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .blogs .image-container {
+        width: calc(100% - 20px); /* Adjust width for smallest screens */
+    }
+    .blogs button {
+        margin-bottom: 10px; /* Reduce bottom margin for buttons on smallest screens */
+    }
+}
+

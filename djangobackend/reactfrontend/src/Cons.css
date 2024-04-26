@@ -1,0 +1,73 @@
+/* styles.css */
+
+.contact-container {
+    color: white;
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    padding: 125px;
+}
+
+.contact-row {
+    display: flex;
+    margin-bottom: 10px;
+
+}
+
+
+.get-in-touch-button {
+    font-size: 20px;
+    background-color: black; /* Example blue color */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    position: relative; /* Position relative for ::before pseudo-element */
+    overflow: hidden; /* Hide overflowing content */
+    transition: all 0.3s ease; /* Add transition for smoother hover effect */
+}
+
+.get-in-touch-button::before {
+    content: ''; /* Create empty content for pseudo-element */
+    position: absolute; /* Position the pseudo-element absolutely */
+    top: 0; /* Align the top of the element */
+    left: 0; /* Align the left of the element */
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    background-image: linear-gradient(120deg, #aaff00 0%, #00ffaa 100%); /* Gradient background */
+    transform: translateX(-100%); /* Move the element outside the button */
+    transition: transform 0.3s ease; /* Smooth transition effect */
+    z-index: -1; /* Set z-index to ensure the hover color appears below button text */
+}
+
+.get-in-touch-button:hover::before {
+    transform: translateX(0); /* Move the element inside the button on hover */
+}
+
+.get-in-touch-button:hover {
+    color: white; /* Set button text color to white on hover */
+    z-index: 1; /* Set z-index to ensure button text appears above hover color */
+}
+
+
+.contact-detail {
+    flex: 1;
+    color: white;
+}
+
+/* Responsive Styles */
+@media only screen and (max-width: 768px) {
+    .contact-container {
+        padding: 25px; /* Adjust padding for smaller screens */
+    }
+    
+    .row {
+        flex-direction: column; /* Change flex-direction for smaller screens */
+    }
+
+    .get-in-touch-button {
+        width: 100%; /* Make button full width on smaller screens */
+    }
+}
+
