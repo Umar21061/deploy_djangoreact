@@ -44,3 +44,15 @@
     margin: 0;
     text-align: center; /* Center text horizontally */
 }
+
+@media screen and (max-width: 768px) {
+    .project-details-item,
+    .project-details-background2 {
+        height: auto; /* Change height to auto for smaller screens */
+    }
+    
+    .project-details-content,
+    .project-details-content2 {
+        max-width: 100%; /* Adjust maximum width for smaller screens */
+    }
+}

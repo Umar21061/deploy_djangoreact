@@ -1,26 +1,49 @@
-
-
 .button-container {
     display: flex;
     justify-content: center;
     margin-bottom: 20px;
+    color: rgb(118, 118, 118);
+    font-size: 20px;
+}
+.all-category-button{
+    margin: 0 5px;
+    background: none; /* Remove background */
+    border: none; /* Remove border */
+    cursor: pointer; /* Add cursor pointer */
+    color: rgb(118, 118, 118);
+    font-size: 20px;
+
 }
 
 .industry-button, .expertise-button {
     margin: 0 10px;
+    background: none; /* Remove background */
+    border: none; /* Remove border */
+    cursor: pointer; /* Add cursor pointer */
+    color: rgb(118, 118, 118);
+    font-size: 20px;
 }
 
 .category-buttons {
     text-align: center;
     margin-bottom: 20px;
+    color: rgb(118, 118, 118);
+    font-size: 20px;
 }
 
 .category-buttons button {
     margin: 0 5px;
+    background: none; /* Remove background */
+    border: none; /* Remove border */
+    cursor: pointer; /* Add cursor pointer */
+    color: rgb(118, 118, 118);
+    font-size: 20px;
 }
 
 .category-buttons .center {
     display: inline-block;
+    color: rgb(118, 118, 118);
+    font-size: 20px;
 }
 
 .selected {
