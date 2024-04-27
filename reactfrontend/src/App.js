@@ -82,7 +82,6 @@ function HomePage({ textData }) {
   return (
     <>
       <Bot />
-      <Hero/>
       <Portfolio/>
       <About/>
       <Services/>
@@ -94,7 +93,7 @@ function HomePage({ textData }) {
       <Reward/>
       <Cons/>
       <Footer/>
-      
+     
 
       
 

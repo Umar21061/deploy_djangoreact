@@ -27,26 +27,25 @@ const Crew = () => {
     };
 
     return (
-        <>
-        <h5 className='crew-heading'> WHAT’S NEW IN OUR CREW?</h5>
-        
-        <div className="crew-container">
-            {crewData.map((member, index) => (
-                <div 
-                    key={`crew_${index}`} 
-                    className={`crew-member crew_${index}`}
-                    onMouseEnter={() => handleMouseEnter(index)}
-                    onMouseLeave={() => handleMouseLeave(index)}
-                >
-                    <a href={member.link} target="_blank" rel="noopener noreferrer">
-                        <img src={member.image_url} alt={member.image_text} />
-                    </a>
-                    <div className="crew-overlay">{member.image_text}</div>
-                </div>
-            ))}
+        <div className="crew-wrapper">
+            <h5 className='crew-heading'> WHAT’S NEW IN OUR CREW?</h5>
+            
+            <div className="crew-container">
+                {crewData.map((member, index) => (
+                    <div 
+                        key={`crew_${index}`} 
+                        className={`crew-member crew_${index}`}
+                        onMouseEnter={() => handleMouseEnter(index)}
+                        onMouseLeave={() => handleMouseLeave(index)}
+                    >
+                        <a href={member.link} target="_blank" rel="noopener noreferrer">
+                            <img src={member.image_url} alt={member.image_text} />
+                        </a>
+                        <div className="crew-overlay">{member.image_text}</div>
+                    </div>
+                ))}
+            </div>
         </div>
-        </>
-        
     );
 };
 

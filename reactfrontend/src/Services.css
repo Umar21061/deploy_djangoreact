@@ -5,8 +5,8 @@ body {
 }
 
 /* Add space after h1 */
-h1 {
-    margin-bottom: 40px;
+.services-heading{
+    margin-bottom: 50px;
 }
 
 .services-section {
@@ -46,18 +46,11 @@ h1 {
 
 
 .see-all-button {
-    margin-top: 30px; /* Reduce margin top on small devices */
-    font-size: 20px; /* Reduce font size on small devices */
-}
-
-/* Services Section Styles */
-
-.see-all-button {
 text-decoration: none;
-margin-top: 50px; /* Add space above button */
-background-color: #ffffff; /* Set background color to white */
-color: #000000; /* Set button text color to black */
-font-size: 25px; /* Set button text size */
+margin-top: 20px; /* Add space above button */
+background-color: black; /* Set background color to white */
+color: white; /* Set button text color to black */
+font-size: 20px; /* Set button text size */
 position: relative; /* Position relative for ::before pseudo-element */
 border: none; /* Remove default button border */
 cursor: pointer; /* Set cursor to pointer */

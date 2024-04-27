@@ -55,7 +55,7 @@
     position: absolute;
     top: 0;
     left: -100%; /* Initially position the image outside the div */
-    width: 100%; /* Cover the entire width of the div */
+    width: 80%; /* Cover the entire width of the div */
     height: 100%;
     transition: left 0.5s; /* Transition effect for left property */
 }

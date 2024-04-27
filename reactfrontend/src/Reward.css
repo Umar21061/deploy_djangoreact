@@ -7,25 +7,29 @@
     justify-content: center;
     margin-top: 40px;
     margin-bottom: 40px;
+    margin-left: 50px;
 }
 .reward-heading{
     margin-top: 50px;
-    color: rgb(118, 118, 118);
+    color: black;
     margin-left: 100px;
+    font-weight: 600px;
     
 }
+
 /* Style for each reward item */
 .reward-item {
-    margin: 10px; /* Add space around each reward item */
+   
     position: relative;
     flex: 0 0 calc(33.33% - 40px); /* Set width for each item with spacing */
     max-width: calc(33.33% - 40px); /* Limit maximum width */
     box-sizing: border-box; /* Include padding and border in the element's total width and height */
+    color: black;
 }
 
 /* Image styling */
 .reward-image {
-    width: 80%; /* Make images fill their container */
+    width: 50%; /* Make images fill their container */
     height: auto;
     cursor: pointer;
 }
@@ -40,11 +44,9 @@
     height: 100%;
     opacity: 0;
     transition: opacity 0.3s ease;
-    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
-    color: #fff; /* Text color */
+    color: black;
     display: flex;
     flex-direction: column; /* Display text overlay content in a column */
-    align-items: left;
     justify-content: center;
     text-align: left;
 }
@@ -52,11 +54,13 @@
 /* Style for heading */
 .reward-overlay h2 {
     font-size: 24px; /* Set font size for heading */
+    color: black;
 }
 
 /* Style for paragraph */
 .reward-overlay p {
     font-size: 16px; /* Set font size for paragraph */
+    color: black;
     
 }
 

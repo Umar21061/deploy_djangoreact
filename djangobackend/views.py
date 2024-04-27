@@ -385,8 +385,7 @@ def get_learn_more_data(request):
 
 
 
-from django.http import JsonResponse
-from pymongo import MongoClient
+
 
 def project_details(request):
     try:

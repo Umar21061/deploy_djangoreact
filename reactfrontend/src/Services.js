@@ -12,7 +12,7 @@ const Services = () => {
     return (
         <div className='container'>
             <div className="services-section">
-                <h1>Our Services</h1>
+                <h1 className='services-heading'>Our Services</h1>
                 <div className="service-container">
                     {/* First row */}
                     <div className="service-row">
@@ -26,7 +26,7 @@ const Services = () => {
                         </div>
                         <div className="service-item">
                             <img src={i4} alt="Service Icon" />
-                            <h2>Language Processing</h2>
+                            <h2>Language Process</h2>
                         </div>
                         <div className="service-item">
                             <img src={i5} alt="Service Icon" />

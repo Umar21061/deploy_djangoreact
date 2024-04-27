@@ -5,42 +5,45 @@
   margin: 20px auto;
   width: 80%;
   margin-top: 100px;
+  margin-bottom: 50px;
 }
 
-.heading {
+.partner-heading {
   text-align: left;
   font-family: 'Helix Sans', sans-serif;
+  margin-bottom: 30px;
 }
 
-.row {
+.partner-row {
   display: flex;
   flex-wrap: wrap; /* Allows the rows to wrap on smaller screens */
   justify-content: space-between;
-  margin-bottom: 20px; /* Add space between rows */
+ 
 }
 
-.column {
+.partner-column {
   flex: 1 1 30%; /* Allow columns to take up full width on small screens */
-  padding: 20px;
   box-sizing: border-box; /* Include padding in column width */
 }
 
-.column h3 {
+.partner-column h3 {
   font-family: 'Helix Sans', sans-serif;
 }
 
-.column p {
+.partner-column p {
   font-size: 16px;
   font-family: 'Helix Sans', sans-serif;
   text-align: justify;
+  color: black;
 }
 
 @media screen and (max-width: 768px) {
-  .column {
+  .partner-column {
     flex-basis: 100%; /* Make columns take full width on smaller screens */
   }
-  .column p {
+  .partner-column p {
     font-family: 'Helix Sans', sans-serif;
     text-align: justify;
+    color: black;
   }
 }

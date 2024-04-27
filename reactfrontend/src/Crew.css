@@ -3,23 +3,26 @@
     text-align: left;
     font-family: 'Hellix', sans-serif;
     font-style: normal;
-    font-weight: 500;
-    color: rgb(118, 118, 118);
+    font-weight: 600;
+    color: black;
     line-height: 17px;
     margin-bottom: 5%;
-    margin-left: 120px;
+   
 }
-.crew-container {
-    margin-top: 50px;
-    display: flex;
-    flex-wrap: nowrap;
-    overflow-x: auto;
-    margin-left: 100px;
-    margin-bottom: 60px;
-    
-    
+/* Styling for crew container */
+.crew-wrapper {
+    max-width: 1200px; /* Set the maximum width of the container */
+    margin: 0 auto; /* Center the container horizontally */
 }
 
+/* Styling for crew container */
+.crew-container {
+    display: flex;
+    justify-content: center;
+    overflow-x: hidden;
+    margin-top: 50px;
+    margin-bottom: 60px;
+}
 
 /* Styling for crew member */
 .crew-member {
@@ -32,10 +35,13 @@
 /* Styling for crew member image */
 .crew-member img {
     display: block;
-    width: 90%;
-    /* Removed height property */
-    object-fit: cover; /* Ensure the image fills its container while preserving aspect ratio */
+    width: 400px; /* Set a fixed width */
+    height: 300px; /* Set a fixed height */
+    margin: 0; /* Remove any margins */
+    padding: 0; /* Remove any padding */
+    object-fit: cover;
 }
+
 
 /* Styling for crew overlay */
 .crew-overlay {

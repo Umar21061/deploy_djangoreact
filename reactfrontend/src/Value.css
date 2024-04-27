@@ -15,13 +15,14 @@
   
   .value-heading {
     flex: 1;
-    color: rgb(118, 118, 118);
+    color: black;
   }
   
   .value-paragraph {
     flex: 1;
     margin-left: 20px; /* adjust margin as needed */
-    color: rgb(118, 118, 118);
+    color: black;
+    text-align: justify;
   }
   
  
@@ -38,6 +39,7 @@
     .value-paragraph {
       width: 100%;
       margin-left: 0; /* Reset margin for small screens */
+      text-align: justify;
     }
   }
   

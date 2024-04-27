@@ -6,6 +6,12 @@
     padding: 10px 0;
     max-width: 100%;
 }
+.recent-heading {
+    text-align: center;
+    margin-bottom: 20px; /* Adjust margin as needed */
+    font-size: 30px;
+    font-family: 'Helvetica Neue', sans-serif;
+}
 
 .recent-video-player-horizontal {
     display: inline-block;

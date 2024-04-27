@@ -6,7 +6,7 @@ import './Home.css';
 const Header = () => {
     return (
         <div>
-            <div className="header-row bg-green-yellow text-black py-1 text-center ">
+            <div className="header-row bg-green-yellow text-white py-1 text-center ">
                 <div className="container-fluid">
                     <div className="row align-items-center">
                         <div className="col-md-12">

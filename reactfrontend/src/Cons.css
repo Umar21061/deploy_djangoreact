@@ -1,7 +1,10 @@
 /* styles.css */
+.contact-detail {
+    flex: 1;
+    color: black; /* Set text color to black */
+}
 
 .contact-container {
-    color: white;
     margin-top: 30px;
     display: flex;
     flex-direction: column;
@@ -14,6 +17,9 @@
     margin-bottom: 10px;
 
 }
+.cons-head{
+    color: black;
+} 
 
 
 .get-in-touch-button {

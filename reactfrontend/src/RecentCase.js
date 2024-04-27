@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { Link } from 'react-router-dom'; // Import Link from react-router-dom
+import { Link } from 'react-router-dom';
 import './RecentCase.css';
 
 function Recent() {
@@ -50,7 +50,7 @@ function Recent() {
 
     return (
         <div>
-            <h1>Our Projects</h1>
+            <div className="recent-heading">Our Projects</div>
             <div className="recent">
                 {loading ? (
                     <p className="recent-loading-text">Loading...</p>
@@ -66,11 +66,10 @@ function Recent() {
                                             onMouseEnter={() => handleMouseEnter([categoryIndex, videoIndex])}
                                             onMouseLeave={() => handleMouseLeave([categoryIndex, videoIndex])}
                                         >
-                                            {/* Wrap the video element in an anchor tag */}
                                             <Link 
                                                 to={`/project-details/${project.id}`} 
                                                 onClick={() => handleVideoClick(project.id)}
-                                                style={{ textDecoration: 'none', color: 'inherit' }} // Inline CSS to remove underline and blue color
+                                                style={{ textDecoration: 'none', color: 'inherit' }}
                                             >
                                                 <video
                                                     ref={videoRefs.current[categoryIndex][videoIndex]}
