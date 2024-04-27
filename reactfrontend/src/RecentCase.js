@@ -1,4 +1,3 @@
-// RecentCase.js
 import React, { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom'; // Import Link from react-router-dom
 import './RecentCase.css';
@@ -68,7 +67,11 @@ function Recent() {
                                             onMouseLeave={() => handleMouseLeave([categoryIndex, videoIndex])}
                                         >
                                             {/* Wrap the video element in an anchor tag */}
-                                            <Link to={`/project-details/${project.id}`} onClick={() => handleVideoClick(project.id)}>
+                                            <Link 
+                                                to={`/project-details/${project.id}`} 
+                                                onClick={() => handleVideoClick(project.id)}
+                                                style={{ textDecoration: 'none', color: 'inherit' }} // Inline CSS to remove underline and blue color
+                                            >
                                                 <video
                                                     ref={videoRefs.current[categoryIndex][videoIndex]}
                                                     className="recent-video-player"

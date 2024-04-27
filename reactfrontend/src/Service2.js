@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './Service2.css';
-import {  Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import x1Image from './image/x1.png';
 import x2Image from './image/x2.png';
 import x3Image from './image/x3.png';
@@ -36,9 +36,7 @@ const Service2 = () => {
                   <h3>Brain Hive</h3>
                   <p>A business idea validation to give you customer feedback, a polished PoC, and all necessary materials for increased chances of securing funding and attracting customers.</p>
                   <button className="btn btn learn-btn">
-                  <Link to="/learnmore">
-                            LearnMore
-                        </Link>
+                    <Link to="/learnmore" style={{ textDecoration: 'none', color: 'red' }}>LearnMore</Link>
                     <span className="arrow">⇨</span>
                     <div className="line2"></div>
                   </button>
@@ -48,9 +46,7 @@ const Service2 = () => {
                   <h3>MVP Forge</h3>
                   <p>A swift way to develop an MVP solution, regardless of how far your product is in the discovery phase, the particularities of your industry, and individual requirements.</p>
                   <button className="btn btn learn-btn">
-                  <Link to="/learnmore">
-                            LearnMore
-                        </Link>
+                    <Link to="/learnmore" style={{ textDecoration: 'none', color: 'red' }}>LearnMore</Link>
                     <span className="arrow">⇨</span>
                     <div className="line2"></div>
                   </button>
@@ -60,9 +56,7 @@ const Service2 = () => {
                   <h3>Launchpad</h3>
                   <p>Full suite of premium development services to scale your MVP to a high-quality product – from product design and branding to E2E development and ongoing support.</p>
                   <button className="btn btn learn-btn">
-                  <Link to="/learnmore">
-                            LearnMore
-                        </Link>
+                    <Link to="/learnmore" style={{ textDecoration: 'none', color: 'red' }}>LearnMore</Link>
                     <span className="arrow">⇨</span>
                     <div className="line2"></div>
                   </button>
@@ -87,9 +81,7 @@ const Service2 = () => {
                   <h3>Velocity+</h3>
                   <p>Supercharge your organization's development with our hands-on workshops and training courses designed to meet your team's skill level and desired topics.</p>
                   <button className="btn btn learn-btn">
-                  <Link to="/learnmore">
-                            LearnMore
-                        </Link>
+                    <Link to="/learnmore" style={{ textDecoration: 'none', color: 'red' }}>LearnMore</Link>
                     <span className="arrow">⇨</span>
                     <div className="line2"></div>
                   </button>
@@ -99,9 +91,7 @@ const Service2 = () => {
                   <h3>Innovation Lab</h3>
                   <p>Embark on a journey of in-depth discovery, user-centric design, tech validation, and strategic foresight together with an all-rounded team of industry pioneers.</p>
                   <button className="btn btn learn-btn">
-                  <Link to="/learnmore">
-                            LearnMore
-                        </Link>
+                    <Link to="/learnmore" style={{ textDecoration: 'none', color: 'red' }}>LearnMore</Link>
                     <span className="arrow">⇨</span>
                     <div className="line2"></div>
                   </button>
@@ -111,9 +101,7 @@ const Service2 = () => {
                   <h3>Digital Disruption</h3>
                   <p>A fusion of premium services with business understanding and hands-on experience – from discovery and product design to E2E development and maintenance.</p>
                   <button className="btn btn learn-btn">
-                  <Link to="/learnmore">
-                            LearnMore
-                        </Link>
+                    <Link to="/learnmore" style={{ textDecoration: 'none', color: 'red' }}>LearnMore</Link>
                     <span className="arrow">⇨</span>
                     <div className="line2"></div>
                   </button>
@@ -138,9 +126,7 @@ const Service2 = () => {
                   <h3>Co-pitching</h3>
                   <p>The ultimate key to refining your pitch idea or leveraging tech and design expertise. Enhance your agency's proposal, increase its impact and the likelihood of winning over potential prospects.</p>
                   <button className="btn btn learn-btn">
-                  <Link to="/learnmore">
-                            LearnMore
-                        </Link>
+                    <Link to="/learnmore" style={{ textDecoration: 'none', color: 'red' }}>LearnMore</Link>
                     <span className="arrow">⇨</span>
                     <div className="line2"></div>
                   </button>
@@ -150,9 +136,7 @@ const Service2 = () => {
                   <h3>Digital Campaigns</h3>
                   <p>Take your events and digital campaigns to the next level with immersive experiences that span from mobile and web to AR&VR – from ideation through full development to on-site support.</p>
                   <button className="btn btn learn-btn">
-                  <Link to="/learnmore">
-                            LearnMore
-                        </Link>
+                    <Link to="/learnmore" style={{ textDecoration: 'none', color: 'red' }}>LearnMore</Link>
                     <span className="arrow">⇨</span>
                     <div className="line2"></div>
                   </button>
@@ -178,13 +162,11 @@ const Service2 = () => {
                   <p>Successful digital products should not only be visually appealing but also deeply aligned with user requirements. We designed a handful of our own apps, and using that experience, we can employ UserTesting, Empathy Maps, and Customer Journey Mapping to help you identify, examine, and validate the problem your product addresses. Then, use Figma and Adobe XD to prototype and design the precise solution.</p>
                   <div className="row">
                     <div className="col-md-12 text-left">
-                    <button className="btn btn learn-btn">
-                  <Link to="/learnmore">
-                            LearnMore
-                        </Link>
-                    <span className="arrow">⇨</span>
-                    <div className="line2"></div>
-                  </button>
+                      <button className="btn btn learn-btn">
+                        <Link to="/learnmore" style={{ textDecoration: 'none', color: 'red' }}>LearnMore</Link>
+                        <span className="arrow">⇨</span>
+                        <div className="line2"></div>
+                      </button>
                     </div>
                   </div>
                 </div>
@@ -209,13 +191,11 @@ const Service2 = () => {
                   <p>Scalable, user-friendly, and efficient digital solutions ease achieving business goals. We understand it, and having created dozens of successful projects, we know how to utilize Python’s modularity to deliver web apps that are easy to maintain and expand, use React to craft dynamic user interfaces that adapt in real time, and leverage Vue.js to create lightweight yet powerful solutions.</p>
                   <div className="row">
                     <div className="col-md-12 text-left">
-                    <button className="btn btn learn-btn">
-                  <Link to="/learnmore">
-                            LearnMore
-                        </Link>
-                    <span className="arrow">⇨</span>
-                    <div className="line2"></div>
-                  </button>
+                      <button className="btn btn learn-btn">
+                        <Link to="/learnmore" style={{ textDecoration: 'none', color: 'red' }}>LearnMore</Link>
+                        <span className="arrow">⇨</span>
+                        <div className="line2"></div>
+                      </button>
                     </div>
                   </div>
                 </div>
@@ -240,13 +220,11 @@ const Service2 = () => {
                   <p>Modern mobile apps must be fast, stable, and compatible with multiple platforms to stand out. We can help you achieve that using React Native to provide all the values your customers might seek. And with our practical experience in the lifestyle, eCommerce, management and entertainment industries, we know how to hit your targets with high-performant, feature-packed, and user-friendly mobile applications. </p>
                   <div className="row">
                     <div className="col-md-12 text-left">
-                    <button className="btn btn learn-btn">
-                  <Link to="/learnmore">
-                            LearnMore
-                        </Link>
-                    <span className="arrow">⇨</span>
-                    <div className="line2"></div>
-                  </button>
+                      <button className="btn btn learn-btn">
+                        <Link to="/learnmore" style={{ textDecoration: 'none', color: 'red' }}>LearnMore</Link>
+                        <span className="arrow">⇨</span>
+                        <div className="line2"></div>
+                      </button>
                     </div>
                   </div>
                 </div>

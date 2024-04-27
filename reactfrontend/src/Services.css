@@ -67,8 +67,7 @@ padding: 15px 30px; /* Add padding for the button */
 transition: all 0.3s ease; /* Add transition for smoother hover effect */
 }
 
-.see-all-button::before {
-text-decoration: none;    
+.see-all-button::before {   
 content: ''; /* Create empty content for pseudo-element */
 position: absolute; /* Position the pseudo-element absolutely */
 top: 0; /* Align the top of the element */
@@ -88,7 +87,6 @@ transform: translateX(0); /* Move the element inside the button on hover */
 .see-all-button:hover {
 color: #000000; /* Set button text color to black on hover */
 z-index: 1; /* Set z-index to ensure button text appears above hover color */
-text-decoration: none;
 }
 
 @media screen and (max-width: 768px) {
