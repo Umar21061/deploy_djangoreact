@@ -1,17 +1,23 @@
 .button-container {
     display: flex;
     justify-content: center;
-    margin-bottom: 20px;
+    margin-top: 20px;
     color: rgb(118, 118, 118);
-    font-size: 20px;
+    font-weight: 600;
+    font-size: 26px;
+    line-height: 34px;
+    font-style: normal;
 }
 .all-category-button{
+    margin-top: 20px;
     margin: 0 5px;
     background: none; /* Remove background */
     border: none; /* Remove border */
     cursor: pointer; /* Add cursor pointer */
-    color: rgb(118, 118, 118);
-    font-size: 20px;
+    font-weight: 600;
+    font-size: 26px;
+    line-height: 34px;
+    font-style: normal;
 
 }
 
@@ -21,14 +27,22 @@
     border: none; /* Remove border */
     cursor: pointer; /* Add cursor pointer */
     color: rgb(118, 118, 118);
-    font-size: 20px;
+    font-weight: 600;
+    font-size: 26px;
+    margin-bottom: 20px;
+    line-height: 34px;
+    font-style: normal;
 }
 
 .category-buttons {
     text-align: center;
     margin-bottom: 20px;
     color: rgb(118, 118, 118);
-    font-size: 20px;
+    font-weight: 600;
+    font-size: 26px;
+    margin-bottom: 30px;
+    line-height: 34px;
+    font-style: normal;
 }
 
 .category-buttons button {
@@ -37,13 +51,21 @@
     border: none; /* Remove border */
     cursor: pointer; /* Add cursor pointer */
     color: rgb(118, 118, 118);
-    font-size: 20px;
+    font-weight: 600;
+    font-size: 26px;
+    margin-bottom: 30px;
+    line-height: 34px;
+    font-style: normal;
 }
 
 .category-buttons .center {
     display: inline-block;
     color: rgb(118, 118, 118);
-    font-size: 20px;
+    font-weight: 600;
+    font-size: 26px;
+    margin-bottom: 30px;
+    line-height: 34px;
+    font-style: normal;
 }
 
 .selected {
