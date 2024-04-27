@@ -44,9 +44,11 @@ const Services = () => {
                 </div>
                 
                 {/* Button to see all services */}
-                <button className="see-all-button"> <Link to="/services">
-                            See All Services
-                        </Link></button>
+                <div >
+                <Link to="/services">
+                            <button className="see-all-button">See all services</button>
+                        </Link>
+                </div>
             </div>
         </div>
         
