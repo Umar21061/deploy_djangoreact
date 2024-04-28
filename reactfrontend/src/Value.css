@@ -32,14 +32,20 @@
     .value-wrapper {
       flex-direction: column;
       align-items: center;
-      width: auto;
+      width: 90%; /* Adjust width for small screens */
+      max-width: 600px; /* Max width for small screens */
+      margin-left: 20px; /* Equal margin on left and right */
+      margin-right: 20px; /* Equal margin on left and right */
+    }
+    .value-p{
+      text-align: justify;
     }
   
     .value-heading,
     .value-paragraph {
       width: 100%;
-      margin-left: 0; /* Reset margin for small screens */
+      margin-left: 20px; /* Reset margin for small screens */
       text-align: justify;
+      font-size: 14px; /* Adjust font size for small screens */
     }
   }
-  

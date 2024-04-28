@@ -19,11 +19,11 @@ const Value = () => {
     <div className="value-container">
       <div className="value-wrapper">
         <div className="value-heading">
-          <h2>Dedication to innovation</h2>
+          <h2>Dedication innovation</h2>
         </div>
         <div className="value-paragraph">
           <h6 className='value-p'>
-          Always looking for better solutions, thinking big, being creative in problem-solving, and open-minded to new ideas.
+          Always looking for better solutions thinking big being creativein problem-solving,and open-minded to new ideas.
           </h6>
         </div>
       </div>

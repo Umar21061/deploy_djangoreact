@@ -45,6 +45,7 @@
     height: 400px; /* Set the desired height */
     margin: 0 10px; /* Equal left and right margins */
     object-fit: cover;
+    margin-left: 20px;
 }
 
 .recent-video-player p.recent-video-text {

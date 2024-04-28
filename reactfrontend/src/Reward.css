@@ -68,3 +68,25 @@
 .reward-item:hover .reward-overlay {
     opacity: 1;
 }
+/* Media queries for responsiveness */
+@media screen and (max-width: 768px) {
+    .reward-container {
+        flex-direction: column; /* Change flex direction to column for small screens */
+        align-items: center; /* Center items horizontally */
+    }
+    
+    .reward-item {
+        flex: 0 0 100%; /* Set width to full width for small screens */
+        max-width: 100%; /* Limit maximum width to full width for small screens */
+        margin-left: 0; /* Remove left margin on small screens */
+    }
+    
+    .reward-heading {
+        margin-left: 0; /* Remove left margin on small screens */
+        text-align: center; /* Center align heading on small screens */
+    }
+    .reward-image{
+        width: 40%; 
+        align-items: center;
+    }
+}

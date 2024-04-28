@@ -93,3 +93,29 @@
     }
    
 }
+
+@media screen and (max-width: 768px) {
+    .crew-container {
+        flex-direction: column; /* Display crew members vertically */
+        align-items: center; /* Center crew members horizontally */
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+    .crew-member {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+}
+@media screen and (max-width: 576px) {
+    .crew-container {
+        flex-direction: column; /* Display crew members vertically */
+        align-items: center; /* Center crew members horizontally */
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+    .crew-member {
+        margin-left: 20px;
+        margin-right: 20px;
+
+    }
+}

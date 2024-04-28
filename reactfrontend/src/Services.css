@@ -92,4 +92,18 @@ z-index: 1; /* Set z-index to ensure button text appears above hover color */
     .service-item {
         flex-basis: calc(100% - 20px); /* Adjust width for responsiveness */
     }
+
+.service-item img {
+    max-width: 15%;
+    height: auto;
+    
+}
+
+.see-all-button {
+    font-size: 15px;
+
+}
+
+
+
 }
