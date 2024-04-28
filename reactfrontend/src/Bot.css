@@ -56,17 +56,24 @@ body {
 }
 
 @media (max-width: 768px) {
+    body {
+        overflow-x: hidden; /* Prevent horizontal scrolling */
+    }
+
     #chat-container {
         flex-direction: column; /* Change back to column in mobile view */
-        align-items: flex-start; /* Align items to the start */
+        align-items: center; /* Align items to the center */
+        margin-left: 20px; /* Add left margin to chat container */
+        margin-right: 20px; /* Add right margin to chat container */
     }
 
     #chat-box {
-        margin-left: 60px; /* Add left margin to chat box */
-        margin-right: 0; /* Remove right margin */
+        margin: 0; /* Reset margin */
     }
 
     #chat-box img {
         width: 70px; /* Adjust the width to your preference */
+        margin: 0 auto; /* Center the image */
     }
 }
+

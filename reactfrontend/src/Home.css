@@ -3,6 +3,10 @@
     height: 80px;
     width: auto;
 }
+.header-text-header {
+    font-size: 3vw; 
+}
+
 
 .btn-primary {
     background-color:black;
@@ -70,9 +74,20 @@
     color: black;
 }
 
+
+@media (max-width: 576px) { /* Adjust font size for small screens */
+    .header-text-header {
+        font-size: 5vw; 
+    }
+}
+
+
 @media (max-width: 768px) {
     .navbar-logo {
         margin-left: 10px;
+    }
+    .header-text-header {
+        font-size: 5vw; 
     }
 
     .menu-item {

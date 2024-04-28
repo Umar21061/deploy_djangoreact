@@ -88,7 +88,7 @@ function HomePage({ textData }) {
       <RecentCase/>
       <Partner/>
       <Crew/>
-     <Banner/>
+      <Banner/>
       <Value/>
       <Reward/>
       <Cons/>

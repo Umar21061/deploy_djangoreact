@@ -6,6 +6,7 @@ function Recent() {
     const [portfolioData, setPortfolioData] = useState([]);
     const [loading, setLoading] = useState(true);
     const [activeVideoIndex, setActiveVideoIndex] = useState(null);
+    const [showAllProjects, setShowAllProjects] = useState(false);
     const videoRefs = useRef([]);
 
     useEffect(() => {
@@ -57,7 +58,7 @@ function Recent() {
                 ) : (
                     <div className="recent-video-container">
                         <div className="recent-video-row">
-                            {portfolioData.map((project, categoryIndex) => (
+                            {portfolioData.slice(0, showAllProjects ? portfolioData.length : 1).map((project, categoryIndex) => (
                                 <React.Fragment key={categoryIndex}>
                                     {project.urls.map((url, videoIndex) => (
                                         <div
@@ -93,6 +94,11 @@ function Recent() {
                                 </React.Fragment>
                             ))}
                         </div>
+                        {!showAllProjects && (
+                            <div className="show-all-projects">
+                                <button onClick={() => setShowAllProjects(true)}>See All Projects</button>
+                            </div>
+                        )}
                     </div>
                 )}
             </div>

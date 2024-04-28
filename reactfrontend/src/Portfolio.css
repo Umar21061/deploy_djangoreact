@@ -2,7 +2,7 @@
     position: relative;
     overflow: hidden;
     height: auto; /* Set the height to 70vh */
-    padding: 34px;
+    padding: 2%; /* Adjust padding for smaller screens */
 }
 
 .video-background {
@@ -20,31 +20,36 @@
     z-index: 1;
     color: white;
     text-align: center;
-    padding: 50px;
+    padding: 2% 5%; /* Adjust padding for smaller screens */
 }
 
 .portfolio-info {
     text-align: center;
-    margin-top: 20px;
+    margin-top: 2%; /* Adjust margin for smaller screens */
 }
 
 .portfolio-info h2 {
-    font-size: 150px;
-    margin-bottom: 10px;
+    font-size: 6vw; /* Responsive font size based on viewport width */
+    margin-bottom: 1%; /* Adjust margin for smaller screens */
     color: wheat;
 }
 
 .portfolio-info p {
-    font-size: 40px;
+    font-size: 2.5vw; /* Responsive font size based on viewport width */
+    color: white;
+}
+
+.portfolio-info h4 {
     color: white;
 }
 
 .line {
-    width: 200px;
-    height: 5px;
+    width: 15%; /* Responsive width based on parent container */
+    height: 0.5vw; /* Responsive height */
     background-color: rgb(120, 167, 46);
-    margin: 10px auto;
+    margin: 2% auto; /* Adjust margin for smaller screens */
 }
+
 .portfolio-info:hover .line {
     animation: moveLine 2s forwards;
 }
@@ -58,7 +63,7 @@
         width: 0;
     }
     100% {
-        width: 200px; /* Width of the line */
+        width: 15%; /* Width of the line */
     }
 }
 
@@ -77,5 +82,21 @@
     }
     100% {
         color: white; /* Final color */
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .portfolio-info h2 {
+        font-size: 4.5em; /* Larger font size for desktop */
+    }
+
+    .portfolio-info p {
+        font-size: 1.5em; /* Larger font size for desktop */
+    }
+
+    .line {
+        width: 10%; /* Larger width for desktop */
+        height: 0.3em; /* Adjusted height for desktop */
+        margin: 1% auto; /* Adjusted margin for desktop */
     }
 }
