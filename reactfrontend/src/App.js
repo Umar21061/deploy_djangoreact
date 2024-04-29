@@ -70,6 +70,7 @@ function App() {
           <Route path="/ebook" element={<Ebook />} />
           <Route path="/learnmore" element={<LearnMore />} />
           <Route path="/project-details/:projectId" element={<ProjectDetails />} />
+          <Route path="/portfolioproject" element={<PortfolioProject />} />
           
           
         </Routes>

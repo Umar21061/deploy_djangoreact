@@ -1,12 +1,12 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import './RecentCase.css';
+import PortfolioProject from './PortfolioProject';
 
 function Recent() {
     const [portfolioData, setPortfolioData] = useState([]);
     const [loading, setLoading] = useState(true);
     const [activeVideoIndex, setActiveVideoIndex] = useState(null);
-    const [showAllProjects, setShowAllProjects] = useState(false);
     const videoRefs = useRef([]);
 
     useEffect(() => {
@@ -58,47 +58,44 @@ function Recent() {
                 ) : (
                     <div className="recent-video-container">
                         <div className="recent-video-row">
-                            {portfolioData.slice(0, showAllProjects ? portfolioData.length : 1).map((project, categoryIndex) => (
-                                <React.Fragment key={categoryIndex}>
-                                    {project.urls.map((url, videoIndex) => (
-                                        <div
-                                            key={`${categoryIndex}-${videoIndex}`}
-                                            className="recent-video-player-horizontal"
-                                            onMouseEnter={() => handleMouseEnter([categoryIndex, videoIndex])}
-                                            onMouseLeave={() => handleMouseLeave([categoryIndex, videoIndex])}
+                            {portfolioData.length > 0 && portfolioData[0].urls.map((url, videoIndex) => (
+                                <div
+                                    key={videoIndex}
+                                    className="recent-video-player-horizontal"
+                                    onMouseEnter={() => handleMouseEnter([0, videoIndex])}
+                                    onMouseLeave={() => handleMouseLeave([0, videoIndex])}
+                                >
+                                    <Link 
+                                        to={`/project-details/${portfolioData[0].id}`} 
+                                        onClick={() => handleVideoClick(portfolioData[0].id)}
+                                        style={{ textDecoration: 'none', color: 'inherit' }}
+                                    >
+                                        <video
+                                            ref={videoRefs.current[0][videoIndex]}
+                                            className="recent-video-player"
+                                            controls={false}
+                                            autoPlay={activeVideoIndex && activeVideoIndex[0] === 0 && activeVideoIndex[1] === videoIndex}
+                                            muted
+                                            onClick={() => {
+                                                const videoRef = videoRefs.current[0][videoIndex].current;
+                                                if (videoRef.paused) videoRef.play();
+                                                else videoRef.pause();
+                                            }}
                                         >
-                                            <Link 
-                                                to={`/project-details/${project.id}`} 
-                                                onClick={() => handleVideoClick(project.id)}
-                                                style={{ textDecoration: 'none', color: 'inherit' }}
-                                            >
-                                                <video
-                                                    ref={videoRefs.current[categoryIndex][videoIndex]}
-                                                    className="recent-video-player"
-                                                    controls={false}
-                                                    autoPlay={activeVideoIndex && activeVideoIndex[0] === categoryIndex && activeVideoIndex[1] === videoIndex}
-                                                    muted
-                                                    onClick={() => {
-                                                        const videoRef = videoRefs.current[categoryIndex][videoIndex].current;
-                                                        if (videoRef.paused) videoRef.play();
-                                                        else videoRef.pause();
-                                                    }}
-                                                >
-                                                    <source src={url} type="video/mp4" />
-                                                    Your browser does not support the video tag.
-                                                </video>
-                                                <p className={`recent-video-text ${activeVideoIndex && activeVideoIndex[0] === categoryIndex && activeVideoIndex[1] === videoIndex ? 'active' : ''}`}>{project.video_text}</p>
-                                            </Link>
-                                        </div>
-                                    ))}
-                                </React.Fragment>
+                                            <source src={url} type="video/mp4" />
+                                            Your browser does not support the video tag.
+                                        </video>
+                                        <p className={`recent-video-text ${activeVideoIndex && activeVideoIndex[0] === 0 && activeVideoIndex[1] === videoIndex ? 'active' : ''}`}>{portfolioData[0].video_text}</p>
+                                    </Link>
+                                </div>
                             ))}
                         </div>
-                        {!showAllProjects && (
-                            <div className="show-all-projects">
-                                <button onClick={() => setShowAllProjects(true)}>See All Projects</button>
-                            </div>
-                        )}
+                        {/* "See All Projects" button */}
+                        <div className="show-all-projects">
+                        <Link to="/portfolioproject">
+                            <button>See All Projects</button>
+                        </Link>
+                        </div>
                     </div>
                 )}
             </div>

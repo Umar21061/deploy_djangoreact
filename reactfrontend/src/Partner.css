@@ -12,11 +12,11 @@
 }
 
 .partner-heading {
-  text-align: left;
+  text-align: center; /* Center align the heading */
   font-family: 'Helix Sans', sans-serif;
   margin-bottom: 50px;
-  color: white;
-  margin-left: 50px;
+  color: rgb(118, 118, 118);
+  margin-top: 30px;
 }
 
 .partner-row {
@@ -25,10 +25,11 @@
   justify-content: space-between;
   margin-left: 50px;
   margin-right: 50px;
+  gap : 20px;
 }
 
 .partner-column {
-  flex: 1 1 30%; /* Allow columns to take up full width on small screens */
+  flex: 1 1 20%; /* Adjust the width of each column */
   box-sizing: border-box; /* Include padding in column width */
   margin-bottom: 20px; /* Add margin for spacing between columns */
 }

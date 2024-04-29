@@ -1,152 +1,115 @@
-
 .recent-video-container {
-    overflow-x: auto;
-    overflow-y: hidden;
-    white-space: nowrap;
-    padding-bottom: 15px;
-    margin-bottom: 50px;
-    margin-top:  40px;
-  }
-  .recent-video-container::-webkit-scrollbar {
-    height: 10px; /* Height of the scrollbar */
-  }
-  .recent-video-container::-webkit-scrollbar-thumb {
-    background-color: #ac63c9; /* Color of the scrollbar thumb */
-    border-radius: 10px; /* Rounded corners */
-  }
-  .recent-video-container::-webkit-scrollbar-track {
-    background-color: #f2f2f2; /* Color of the scrollbar track */
-  }
-  
-  /* Styling for the corners of the scrollbar */
-  .recent-video-container::-webkit-scrollbar-corner {
-    background-color: transparent; /* Color of the scrollbar corners */
-  }
-  
-  /* Styling for the buttons of the scrollbar (only visible when hovered) */
-  .recent-video-container::-webkit-scrollbar-button {
-    display: none; /* Hide the scrollbar buttons */
-  }
+  overflow-x: auto;
+  overflow-y: hidden;
+  white-space: nowrap;
+  padding-bottom: 15px;
+  margin-bottom: 50px;
+  margin-top: 40px;
+  text-align: center; /* Center the videos */
+}
 
 .recent-heading {
-    margin-top: 100px;
-    text-align: center;
-    margin-bottom: 30px; 
-    font-size: 30px;
-    font-family: 'Helvetica Neue', sans-serif;
-    font-weight: bold;
+  margin-top: 60px;
+  text-align: center;
+  margin-bottom: 50px;
+  font-size: 35px;
+  font-family: 'Helvetica Neue', sans-serif;
+  font-weight: bold;
 }
 
 .recent-video-player-horizontal {
-    display: inline-block;
-    margin-right: 10px;
-    position: relative;
+  display: inline-block;
+  margin-right: 10px;
+  position: relative;
 }
 
 .recent-video-player {
-    width: 400px; /* Let the width adjust to maintain aspect ratio */
-    height: 400px; /* Set the desired height */
-    margin: 0 10px; /* Equal left and right margins */
-    object-fit: cover;
-    margin-left: 20px;
+  width: 400px; /* Let the width adjust to maintain aspect ratio */
+  height: 400px; /* Set the desired height */
+  object-fit: cover;
+  margin-bottom: 30px; /* Add 10px more gap */
 }
 
 .recent-video-player p.recent-video-text {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: rgba(0, 0, 0, 0.7);
-    color: #fff;
-    padding: 5px 10px;
-    border-radius: 5px;
-    text-align: center;
-    z-index: 1;
-    opacity: 0; /* Initially hide the text */
-    transition: opacity 0.3s ease; /* Add transition effect */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 5px;
+  text-align: center;
+  z-index: 1;
+  opacity: 0; /* Initially hide the text */
+  transition: opacity 0.3s ease; /* Add transition effect */
 }
 
 .recent-video-player:hover p.recent-video-text,
 .recent-video-player:hover p.recent-video-text.active {
-    opacity: 1; /* Show text on hover or when video is active */
+  opacity: 1; /* Show text on hover or when video is active */
 }
 
 .show-all-projects {
-    text-align: center;
-    margin-top: 20px;
+  text-align: center;
+  margin-top: 20px;
 }
 
 .show-all-projects button {
-    background-color: black;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
-    border-radius: 5px;
+  background-color: black;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
 }
 
 .show-all-projects button:hover {
-    background-color: black;
+  background-color: black;
 }
 
-.recent-video-text{
-    color: black;
-    text-align: center;
+.recent-video-text {
+  color: black;
+  text-align: center;
 }
+
 /* Media query for mobile devices */
 @media screen and (max-width: 768px) {
   .recent-video-container {
-    overflow-x: hidden;
-    overflow-y: auto; /* Allow vertical scrolling */
-    white-space: normal; /* Reset white-space */
-    padding-bottom: 0; /* Remove bottom padding */
-    margin-bottom: 0; /* Remove bottom margin */
-    display: flex;
-    flex-direction: column; /* Stack videos in a column */
+      overflow-x: hidden;
+      overflow-y: auto; /* Allow vertical scrolling */
+      white-space: normal; /* Reset white-space */
+      padding-bottom: 0; /* Remove bottom padding */
+      margin-bottom: 0; /* Remove bottom margin */
+      display: flex;
+      flex-direction: column; /* Stack videos in a column */
+      align-items: center; /* Center horizontally */
   }
 
   .recent-video-player-horizontal {
-    margin-right: 0; /* Remove right margin */
+      margin-right: 0; /* Remove right margin */
   }
 
   .recent-video-player {
-    width: 100%; /* Take full width */
-    height: auto; /* Let the height adjust */
-    margin: 0; /* Remove margins */
+      width: 100%; /* Take full width */
+      height: auto; /* Let the height adjust */
+      margin: 0; /* Remove margins */
+      margin-bottom: 20px; /* Add 10px more gap */
   }
 
   .recent-video-player p.recent-video-text {
-    position: relative; /* Reset position */
-    transform: none; /* Reset transform */
-    top: auto; /* Reset top */
-    left: auto; /* Reset left */
-    opacity: 1; /* Show text by default */
-    background-color: transparent; /* Transparent background */
-    padding: 0; /* Remove padding */
-    border-radius: 0; /* Remove border-radius */
-    text-align: left; /* Align text left */
-    z-index: auto; /* Reset z-index */
-    transition: none; /* Remove transition */
-    color: #000; /* Set text color */
-  }
-
-  .show-all-projects {
-    text-align: center;
-    margin-top: 20px;
-  }
-
-  .show-all-projects button {
-    background-color: black;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
-    border-radius: 5px;
-  }
-
-  .show-all-projects button:hover {
-    background-color: black;
+      position: relative; /* Reset position */
+      transform: none; /* Reset transform */
+      top: auto; /* Reset top */
+      left: auto; /* Reset left */
+      opacity: 1; /* Show text by default */
+      background-color: transparent; /* Transparent background */
+      padding: 0; /* Remove padding */
+      border-radius: 0; /* Remove border-radius */
+      text-align: left; /* Align text left */
+      z-index: auto; /* Reset z-index */
+      transition: none; /* Remove transition */
+      color: #000; /* Set text color */
   }
 }

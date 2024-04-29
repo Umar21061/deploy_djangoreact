@@ -58,8 +58,8 @@ body {
 /* Add border to input fields */
 #chat-box input[type="text"], 
 #chat-box input[type="submit"] {
-    border: 3px solid grey; /* Add a 5px solid grey border */
-    border-radius: 10px;
+    border: 1px solid grey; /* Add a 5px solid grey border */
+    border-radius: 8px;
     
 }
 
@@ -70,14 +70,14 @@ body {
     border: none; /* Remove default button border */
     margin-left: 2px; /* Add 2px gap between button and fields */
     cursor: pointer; /* Change cursor to pointer on hover */
-    border: 3px solid grey;
+    border: 1px solid grey;
     border-radius: 4px;
   
 }
 
 #chat-box input[type="submit"]:hover {
-    background-color: rgb(114, 107, 107); /* Darken button color on hover */
-    border: 3px solid grey;
+    background-color: rgb(51, 52, 117); /* Darken button color on hover */
+    border: 1px solid rgb(51, 52, 117);
 
 }
 
