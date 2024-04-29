@@ -25,11 +25,11 @@
   justify-content: space-between;
   margin-left: 50px;
   margin-right: 50px;
-  gap : 20px;
+  gap : 25px;
 }
 
 .partner-column {
-  flex: 1 1 20%; /* Adjust the width of each column */
+  flex: 1 1 10%; /* Adjust the width of each column */
   box-sizing: border-box; /* Include padding in column width */
   margin-bottom: 20px; /* Add margin for spacing between columns */
 }
@@ -37,6 +37,7 @@
 .partner-column h3 {
   font-family: 'Helix Sans', sans-serif;
   color: white;
+  text-align: justify;
 }
 
 .partner-column p {
