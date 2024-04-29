@@ -27,7 +27,7 @@
   width: 400px; /* Let the width adjust to maintain aspect ratio */
   height: 400px; /* Set the desired height */
   object-fit: cover;
-  margin-bottom: 30px; /* Add 10px more gap */
+  margin-bottom: 10x; /* Add 10px more gap */
 }
 
 .recent-video-player p.recent-video-text {
@@ -73,6 +73,7 @@
   color: black;
   text-align: center;
 }
+
 
 /* Media query for mobile devices */
 @media screen and (max-width: 768px) {
