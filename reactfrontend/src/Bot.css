@@ -1,8 +1,7 @@
-.bot-container{
+.bot-container {
     margin-top: 40px;
     height: 100vh;
 }
-
 
 #chat-container {
     display: flex;
@@ -53,7 +52,35 @@ body {
 
 .bot-text {
     color: black; /* Text color */
+   
 }
+
+/* Add border to input fields */
+#chat-box input[type="text"], 
+#chat-box input[type="submit"] {
+    border: 3px solid grey; /* Add a 5px solid grey border */
+    border-radius: 10px;
+    
+}
+
+/* Style the send button */
+#chat-box input[type="submit"] {
+    background-color: gray; /* Change button background color */
+    color: white; /* Button text color */
+    border: none; /* Remove default button border */
+    margin-left: 2px; /* Add 2px gap between button and fields */
+    cursor: pointer; /* Change cursor to pointer on hover */
+    border: 3px solid grey;
+    border-radius: 4px;
+  
+}
+
+#chat-box input[type="submit"]:hover {
+    background-color: grey; /* Darken button color on hover */
+    border: 3px solid grey;
+
+}
+
 
 @media (max-width: 768px) {
     body {
@@ -76,4 +103,3 @@ body {
         margin: 0 auto; /* Center the image */
     }
 }
-
