@@ -20,7 +20,7 @@
   
   .value-paragraph {
     flex: 1;
-    margin-left: 20px; /* adjust margin as needed */
+   
     color: black;
     text-align: justify;
   }
