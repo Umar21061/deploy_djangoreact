@@ -89,6 +89,7 @@
 
 .recent-video-text{
     color: black;
+    text-align: center;
 }
 /* Media query for mobile devices */
 @media screen and (max-width: 768px) {
