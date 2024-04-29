@@ -1,10 +1,9 @@
-// Partner.js
 import React from 'react';
 import './Partner.css';
 
 const Partner = () => {
   return (
-    <div className="partner-container">
+    <React.Fragment>
       <h2 className="partner-heading">WHY PARTNERS CHOOSE US?</h2>
       <div className="partner-row">
         <div className="partner-column">
@@ -22,7 +21,7 @@ const Partner = () => {
       </div>
       <div className="partner-row">
         <div className="partner-column">
-          <h3>Fully adjusted to operate internationally</h3>
+          <h3>Operate internationally</h3>
           <p>We’re well managing both the time zone difference and the cultural fit, so our partners don’t feel the distance.</p>
         </div>
         <div className="partner-column">
@@ -34,8 +33,16 @@ const Partner = () => {
           <p>We use modern, scalable tools to deliver cutting-edge solutions and finish projects without technical debt.</p>
         </div>
       </div>
+    </React.Fragment>
+  );
+}
+
+const PartnerContainer = () => {
+  return (
+    <div className="partner-container">
+      <Partner />
     </div>
   );
 }
 
-export default Partner;
+export default PartnerContainer;

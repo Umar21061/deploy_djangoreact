@@ -3,38 +3,46 @@
 
 .partner-container {
   margin: 20px auto;
-  width: 80%;
+  width: 100%;
   margin-top: 100px;
-  margin-bottom: 50px;
+  margin-bottom: 70px;
+  background-color: black;
+  height: auto; /* Change height to auto to accommodate dynamic content */
+  padding: 20px; /* Add padding for spacing */
 }
 
 .partner-heading {
   text-align: left;
   font-family: 'Helix Sans', sans-serif;
-  margin-bottom: 30px;
+  margin-bottom: 50px;
+  color: white;
+  margin-left: 50px;
 }
 
 .partner-row {
   display: flex;
   flex-wrap: wrap; /* Allows the rows to wrap on smaller screens */
   justify-content: space-between;
- 
+  margin-left: 50px;
+  margin-right: 50px;
 }
 
 .partner-column {
   flex: 1 1 30%; /* Allow columns to take up full width on small screens */
   box-sizing: border-box; /* Include padding in column width */
+  margin-bottom: 20px; /* Add margin for spacing between columns */
 }
 
 .partner-column h3 {
   font-family: 'Helix Sans', sans-serif;
+  color: white;
 }
 
 .partner-column p {
   font-size: 16px;
   font-family: 'Helix Sans', sans-serif;
   text-align: justify;
-  color: black;
+  color: white;
 }
 
 @media screen and (max-width: 768px) {
@@ -44,6 +52,6 @@
   .partner-column p {
     font-family: 'Helix Sans', sans-serif;
     text-align: justify;
-    color: black;
+    color: white; /* Change text color back to white for smaller screens */
   }
 }

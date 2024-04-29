@@ -83,14 +83,13 @@ function HomePage({ textData }) {
     <>
       <Bot />
       <Portfolio/>
-      <About/>
       <Services/>
+      <About/>
       <RecentCase/>
       <Partner/>
       <Crew/>
       <Banner/>
       <Value/>
-      <Reward/>
       <Cons/>
       <Footer/>
      

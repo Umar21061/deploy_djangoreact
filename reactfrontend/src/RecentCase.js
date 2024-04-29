@@ -51,7 +51,7 @@ function Recent() {
 
     return (
         <div>
-            <div className="recent-heading">Our Projects</div>
+            <h1 className="recent-heading">Our Projects</h1>
             <div className="recent">
                 {loading ? (
                     <p className="recent-loading-text">Loading...</p>

@@ -49,6 +49,7 @@
     left: 50%;
     transform: translate(-50%, -50%);
     width: 80px; /* Adjust the size of the logo */
+    align-items: center;
 }
 
 .white-text img:not(.logo-img) {
@@ -61,7 +62,7 @@
 }
 
 .white-text:hover img:not(.logo-img) {
-    left: 0; /* Move the image to the right (fully visible) on hover */
+    align-items: center;
 }
 
 /* Media queries */
