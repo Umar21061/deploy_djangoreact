@@ -23,6 +23,8 @@
     color: white;
     text-align: center;
     padding: 2% 5%; /* Adjust padding for smaller screens */
+    margin-top: 5%;
+    
 }
 
 .portfolio-info {
@@ -33,7 +35,7 @@
 .portfolio-info h2 {
     font-size: 6vw; /* Responsive font size based on viewport width */
     margin-bottom: 1%; /* Adjust margin for smaller screens */
-    color: wheat;
+    color: white;
 }
 
 .portfolio-info p {
@@ -48,17 +50,20 @@
 .line {
     width: 15%; /* Responsive width based on parent container */
     height: 0.5vw; /* Responsive height */
-    background-color: rgb(120, 167, 46);
+    background: linear-gradient(120deg, #5f4fbd 0%, #251f75 100%); /* Updated gradient background */
     margin: 2% auto; /* Adjust margin for smaller screens */
 }
 
 .portfolio-info:hover .line {
     animation: moveLine 2s forwards;
+    background: linear-gradient(120deg, #5f4fbd 0%, #251f75 100%); /* Apply gradient on hover */
 }
 
 .portfolio-info:hover h2 {
     animation: updateNumber 2s forwards;
+    color: white; /* Change text color on hover */
 }
+
 
 @keyframes moveLine {
     0% {
