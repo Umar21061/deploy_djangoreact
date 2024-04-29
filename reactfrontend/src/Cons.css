@@ -1,7 +1,7 @@
 /* styles.css */
 .contact-detail {
     flex: 1;
-    color: black; /* Set text color to black */
+    color: white; /* Set text color to black */
 }
 
 .contact-container {
@@ -10,6 +10,7 @@
     flex-direction: column;
     align-items: left;
     padding: 125px;
+    background-color: black;
 }
 
 .contact-row {
@@ -18,7 +19,7 @@
 
 }
 .cons-head{
-    color: black;
+    color: white;
 } 
 
 
