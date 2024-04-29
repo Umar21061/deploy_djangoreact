@@ -3,7 +3,7 @@ import Portfolio from './Portfolio';
 import PortfolioProject from './PortfolioProject';
 import Cons from './Cons';
 import Footer from './Footer';
-import Crew from './crew';
+import Crew from './Crew';
 
 const PortfolioPage = () => {
   return (

@@ -79,7 +79,7 @@ transform: translateX(0); /* Move the element inside the button on hover */
 }
 
 .see-all-button:hover {
-color: #000000; /* Set button text color to black on hover */
+color: white; /* Set button text color to black on hover */
 z-index: 1; /* Set z-index to ensure button text appears above hover color */
 }
 
