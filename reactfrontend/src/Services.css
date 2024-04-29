@@ -68,7 +68,7 @@ top: 0; /* Align the top of the element */
 left: 0; /* Align the left of the element */
 width: 100%; /* Full width */
 height: 100%; /* Full height */
-background-image: linear-gradient(120deg, #aaff00 0%, #00ffaa 100%); /* Gradient background */
+background-image: linear-gradient(120deg, #5f4fbd  0%,  #251f75  100%);
 transform: translateX(-100%); /* Move the element outside the button */
 transition: transform 0.3s ease; /* Smooth transition effect */
 z-index: -1; /* Set z-index to ensure the hover color appears below button text */
