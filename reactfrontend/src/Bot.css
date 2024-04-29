@@ -65,7 +65,7 @@ body {
 
 /* Style the send button */
 #chat-box input[type="submit"] {
-    background-color: gray; /* Change button background color */
+    background-color: rgb(170, 168, 168); /* Change button background color */
     color: white; /* Button text color */
     border: none; /* Remove default button border */
     margin-left: 2px; /* Add 2px gap between button and fields */
@@ -76,7 +76,7 @@ body {
 }
 
 #chat-box input[type="submit"]:hover {
-    background-color: grey; /* Darken button color on hover */
+    background-color: rgb(114, 107, 107); /* Darken button color on hover */
     border: 3px solid grey;
 
 }
