@@ -61,7 +61,7 @@
 
 .portfolio-info:hover h2 {
     animation: updateNumber 2s forwards;
-    color: white; /* Change text color on hover */
+    color: rgb(255, 255, 255); 
 }
 
 
