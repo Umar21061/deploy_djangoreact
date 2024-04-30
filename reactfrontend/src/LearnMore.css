@@ -1,20 +1,22 @@
 .learnmore-div1 {
   margin-bottom: 40px;
-  border: 1px solid #ccc;
+  border: 1px solid #5b5ca1;
   padding: 20px;
   display: flex;
 }
 
 .left-column {
   flex: 1;
-  color: white;
+  color: black;
 }
 
 .right-column {
   flex: 1;
 }
 
-
+.heading2-text{
+  color: black;
+}
 
 
 
@@ -46,24 +48,30 @@
 
 .heading2-heading {
   margin-top: 5px;
+  color: black;
 }
+
 
 .heading2-text {
   margin-bottom: 20px;
+  color: black;
 }
 
 .learnmore-div2 p {
   margin: 5px 0;
+  color: black;
 }
 
 .learnmore-div2 .numbered-row {
   display: flex;
   align-items: center;
   justify-content: center;
+  color: black;
 }
 
 .learnmore-div2 .numbered-row p {
   margin: 5px;
+  color: black;
 }
 
 .image-row {
@@ -107,4 +115,7 @@
 
 .learnmore-image .image-title {
   bottom: 0;
+}
+.learnmore-text{
+  color: black;
 }

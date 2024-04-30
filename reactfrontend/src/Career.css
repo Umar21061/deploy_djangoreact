@@ -6,6 +6,7 @@
 
 .career-heading2 {
     margin-bottom: 50px;
+    color: black;
 }
 
 .career-container {
@@ -25,15 +26,18 @@
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
+   
     
 }
 
 .career-text-overlay h1 {
     font-size: 70px;
+    color: white;
 }
 
 .career-text-overlay h5 {
     font-size: 30px;
+    color: white;
 }
 
 .button-row-career {
@@ -45,7 +49,7 @@
     padding: 10px 20px;
     font-size: 30px;
     background-color: transparent;
-    color: white;
+    color: black;
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -53,7 +57,7 @@
 }
 
 .button-career:hover {
-    color: rgb(223, 220, 42);
+    color: rgb(80, 40, 173);
 }
 
 .job-row,
@@ -61,7 +65,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border: 1px solid #ccc;
+    border: 1px solid #34397c;
     padding: 10px;
     margin-top: 20px;
     transition: border-color 0.3s ease;
@@ -70,7 +74,7 @@
 
 .job-row:hover,
 .job-row2:hover {
-    border-color: rgb(157, 169, 170);
+    border-color: rgb(69, 70, 155);
     background-color: rgb(199, 206, 101);
     color: white;
     border-color: rgb(211, 230, 46);
@@ -80,29 +84,34 @@
 .job-info2 {
     flex: 1;
     padding: 0 10px;
+    color: black;
 }
 
 .job-title,
 .job-title2 {
     margin: 0;
     font-weight: bold;
+    color: black;
 }
 
 .job-salary,
 .job-salary2 {
     margin: 0;
+    color: black;
 }
 
 .job-apply,
 .job-apply2 {
     flex: 0;
+    color: black;
 }
+
 
 .button-apply,
 .button-apply2 {
     padding: 10px 20px;
-    background-color: white;
-    color: black;
+    background-color: black;
+    color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -111,7 +120,7 @@
 /* Hover effect for Apply button */
 .job-row:hover .button-apply,
 .job-row2:hover .button-apply2 {
-    background-color: #d0e422;
+    background-color: #644db4;
 }
 
 /* Change Apply button text color on hover */
@@ -124,33 +133,43 @@
 @media screen and (max-width: 768px) {
     .career-text-overlay h1 {
         font-size: 40px;
+        color: black;
     }
 
     .career-text-overlay h5 {
         font-size: 20px;
+       
     }
 
     .button-career {
         font-size: 20px;
+        color: black;
     }
 
     .job-row,
     .job-row2 {
         flex-direction: column;
+        color:black;
     }
 
     .job-info,
     .job-info2 {
         padding: 10px;
+        color: black;
     }
 
     .job-apply,
     .job-apply2 {
         margin-top: 10px;
+        color: black;
     }
 
     .button-apply,
     .button-apply2 {
         font-size: 16px;
+        color: black;
     }
+}
+.career-text{
+    color: black;
 }

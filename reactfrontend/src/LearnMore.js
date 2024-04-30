@@ -29,7 +29,7 @@ const LearnMore = ({ uniqueClassName }) => {
             <div className="learnmore-div1">
                 <div className="left-column">
                 <h1>Velocity+ for Enterprises</h1>
-                <p>Embark on a journey of in-depth discovery, user-centric design</p>
+                <p className='learnmore-text'>Embark on a journey of in-depth discovery, user-centric design</p>
                 </div>
                 <div className="right-column">
                     <img src={div1?.['right-column']?.image_url} alt="Right Column Image" />

@@ -4,7 +4,9 @@
 .servicespage-container {
     position: relative;
 }
-
+.servicespage-heading{
+    color: white;
+}
 .servicespage-video {
     width: 100%;
     height: 70vh; /* Set the height to 70% of the viewport height */
@@ -17,6 +19,7 @@
     left: 50%; /* Position from the left */
     transform: translate(-50%, -50%); /* Center the element both horizontally and vertically */
     text-align: center;
+    color: white;
 }
 
 .product-container {

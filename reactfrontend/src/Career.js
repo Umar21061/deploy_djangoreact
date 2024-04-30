@@ -18,7 +18,7 @@ const Career = () => {
       {/* Text Overlay */}
       <div className="career-text-overlay">
         <h1 className="career-heading">Can you feel IT?</h1>
-        <h5>Hi there - Why don’t you explore what your future is going to be, check out our company vibe!</h5>
+        <h5 className='career-text'>Hi there - Why don’t you explore what your future is going to be, check out our company vibe!</h5>
       </div>
       {/* Career Opportunities */}
       <div className='container' id='career-opportunities-container'>
@@ -31,7 +31,7 @@ const Career = () => {
         <div className="job-row">
           <div className="job-info">
             <p className="job-title">Business Development Manager</p>
-            <p>Remote or Poznan HQ</p>
+            <p className='job-text1' >Remote or Poznan HQ</p>
           </div>
           <div className="job-info">
             <p className="job-salary">CoE: 12500 - 15700 PLN gross<br />B2B: 15000 - 19000 PLN net + VAT</p>
@@ -44,7 +44,7 @@ const Career = () => {
         <div className="job-row2">
           <div className="job-info2">
             <p className="job-title2">If you didn't find the right job for you, you can still apply with our general form</p>
-            <p>Remote or Poznan HQ</p>
+            <p className='job-text1'>Remote or Poznan HQ</p>
           </div>
           <div className="job-apply2">
             {/* Link to Apply.js */}

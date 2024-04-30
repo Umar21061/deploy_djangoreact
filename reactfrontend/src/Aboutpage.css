@@ -1,11 +1,13 @@
 .aboutpage-container {
     padding: 34px;
+    background-color: black;
+ 
 }
 
 .aboutpage-section {
     position: relative;
     overflow: hidden;
-    height: auto; /* Set the height to 70vh */
+    height: 40vh; /* Set the height to 70vh */
 }
 
 
@@ -16,6 +18,7 @@
     justify-content: space-between; /* Adjust spacing between items */
 }
 
+
 .aboutpage-info {
     text-align: center;
     margin-top: 20px;
@@ -23,7 +26,11 @@
     max-width: 200px; /* Limit maximum width of each item */
     padding: 0 10px; /* Add padding to each item */
     margin-right: 10px; /* Increase margin between items in row layout */
+    color: white;
+   
 }
+
+
 
 .aboutpage-info:last-child {
     margin-right: 0; /* Remove right margin for the last item in row layout */
