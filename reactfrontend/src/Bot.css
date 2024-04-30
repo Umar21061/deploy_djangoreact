@@ -80,7 +80,7 @@ body {
     border: 1px solid rgb(51, 52, 117);
 }
 .lead{
-    margin-bottom: 15px;
+    margin-bottom: 30px;
 }
 @media (max-width: 768px) {
     body {

@@ -53,6 +53,7 @@
 .show-all-projects {
   text-align: center;
   margin-top: 20px;
+  margin-bottom: 30px;
 }
 
 .show-all-projects button {
@@ -104,10 +105,11 @@
       overflow-y: auto; /* Allow vertical scrolling */
       white-space: normal; /* Reset white-space */
       padding-bottom: 0; /* Remove bottom padding */
-      margin-bottom: 0; /* Remove bottom margin */
+      margin-bottom: 2px; /* Remove bottom margin */
       display: flex;
       flex-direction: column; /* Stack videos in a column */
       align-items: center; /* Center horizontally */
+      height: auto;
   }
 
   .recent-video-player-horizontal {

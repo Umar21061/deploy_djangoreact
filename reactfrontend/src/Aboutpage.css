@@ -92,13 +92,13 @@
         color: white; /* Initial color */
     }
     25% {
-        color: yellow; /* Color transition */
+        color: rgb(138, 123, 202); /* Color transition */
     }
     50% {
-        color: orange; /* Color transition */
+        color: rgb(54, 47, 146); /* Color transition */
     }
     75% {
-        color: red; /* Color transition */
+        color: rgb(3, 7, 63); /* Color transition */
     }
     100% {
         color: white; /* Final color */
