@@ -1,59 +1,57 @@
-/* Partner.css */
-@import url('https://fonts.googleapis.com/css2?family=Helix+Sans:wght@400;700&display=swap');
-
-.partner-container {
-  margin: 20px auto;
-  width: 100%;
-  margin-top: 100px;
-  margin-bottom: 70px;
-  background-color: black;
-  height: auto; /* Change height to auto to accommodate dynamic content */
-  padding: 20px; /* Add padding for spacing */
+/* Reset default font to ensure consistency */
+body {
+  font-family: 'Halix Sens-Serif', sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
-.partner-heading {
-  text-align: center; /* Center align the heading */
-  font-family: 'Helix Sans', sans-serif;
-  margin-bottom: 50px;
-  color: rgb(118, 118, 118);
-  margin-top: 30px;
+.partner-container {
+  display: flex;
+  flex-direction: column; /* Arrange rows vertically */
+  align-items: center; /* Center align items horizontally */
+  background-color: black;
+  height: auto; /* Set height to auto for responsiveness */
+  padding: 20px; /* Add padding for spacing */
+  margin-bottom: 30px;
 }
 
 .partner-row {
   display: flex;
-  flex-wrap: wrap; /* Allows the rows to wrap on smaller screens */
-  justify-content: space-between;
-  margin-left: 50px;
-  margin-right: 50px;
-  gap : 25px;
+  flex-wrap: wrap; /* Allow rows to wrap on small screens */
+  justify-content: space-around; /* Evenly space columns horizontally */
+  margin-bottom: 20px; /* Add some space between rows */
 }
 
 .partner-column {
-  flex: 1 1 10%; /* Adjust the width of each column */
-  box-sizing: border-box; /* Include padding in column width */
-  margin-bottom: 20px; /* Add margin for spacing between columns */
+  flex: 1; /* Each column takes equal space */
+  max-width: 350px; /* Adjust the width of columns as needed */
+  background-color: black;
+  color: white;
+  padding: 20px;
+  box-sizing: border-box; /* Include padding in width calculation */
+  text-align: left;
+ 
 }
 
 .partner-column h3 {
-  font-family: 'Helix Sans', sans-serif;
-  color: white;
-  text-align: justify;
+  margin-top: 0;
+  margin-bottom: 30px; /* Add 30px bottom margin after heading */
 }
 
 .partner-column p {
-  font-size: 16px;
-  font-family: 'Helix Sans', sans-serif;
-  text-align: justify;
-  color: white;
+  margin-bottom: 0;
 }
 
+/* Media query for small screens */
 @media screen and (max-width: 768px) {
   .partner-column {
-    flex-basis: 100%; /* Make columns take full width on smaller screens */
+    flex-basis: calc(100% - 40px); /* Each column takes 100% of the available space with margin */
+    text-align: left;
+    padding: 20px 0; /* Adjust padding to ensure equal row start and end */
   }
-  .partner-column p {
-    font-family: 'Helix Sans', sans-serif;
-    text-align: justify;
-    color: white; /* Change text color back to white for smaller screens */
-  }
+  
+.partner-column p {
+  text-align: justify;
+}
+
 }

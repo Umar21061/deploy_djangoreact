@@ -74,23 +74,7 @@
     }
 }
 
-@keyframes updateNumber {
-    0% {
-        color: white; /* Initial color */
-    }
-    25% {
-        color: yellow; /* Color transition */
-    }
-    50% {
-        color: orange; /* Color transition */
-    }
-    75% {
-        color: red; /* Color transition */
-    }
-    100% {
-        color: white; /* Final color */
-    }
-}
+
 
 @media screen and (min-width: 768px) {
     .portfolio-info h2 {

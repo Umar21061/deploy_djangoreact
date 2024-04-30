@@ -7,7 +7,7 @@ const Banner = () => {
     <div className="banner">
       <img src={t33} alt="Background" className="banner-background" />
       <div className="banner-content">
-        <h1>People remain our DNA</h1>
+        <h1>People are the Core of Our Innovation</h1>
         
       </div>
       

@@ -56,16 +56,16 @@ const Bot = () => {
     return (
         <div className="container bot-container">
             <div className="row bot-row">
-                <div className="col-lg-5 bot">
-                    <h1 className="display-5 fw-bold lh-1 mb-3 slice-left-to-right">We elevate businesses with our Data Science prowess, turning raw data into actionable insights.</h1>
-                    <h6 className="lead slice-left-to-right">We harness the power of data to fuel innovation and drive strategic growth for businesses.</h6>
+                <div className="col-lg-7 bot">
+                    <h1 className="display-5 fw-bold lh-1 mb-3 slice-left-to-right">We empower businesses with our AI expertise, transforming complex data into actionable insights.</h1>
+                    <h6 className="lead slice-left-to-right">We leverage the power of artificial intelligence to fuel innovation and drive strategic growth across industries.</h6>
                     <div className="d-grid gap-2 d-md-flex justify-content-md-start">
                         <Link to="/contact">
                             <button type="button" className="btn btn-primary btn-lg px-4 me-md-2 slice-left-to-right">Get in Touch</button>
                         </Link>
                     </div>
                 </div>
-                <div id="chat-container" className="col-lg-7 bot d-flex flex-column justify-content-start"> {/* Move the bot to the top */}
+                <div id="chat-container" className="col-lg-5 bot d-flex flex-column justify-content-start"> {/* Move the bot to the top */}
                     <div id="chat-box">
                         <div>
                             {!showGreeting && messages.map((message, index) => (
@@ -81,7 +81,7 @@ const Bot = () => {
                                     onChange={handleChange}
                                     placeholder="Enter your message"
                                 />
-                                <input type="submit" value="Send" />
+                                <input type="submit" value="Ask" />
                             </form>
                         </div>
                         <img src={rbImage} alt="Robot" />

@@ -67,7 +67,7 @@ const Portfolio = () => {
                 Your browser does not support the video tag.
             </video>
             <div className="portfolio-content">
-                <h1>We craft cutting-edge solutions powered by data science, driving digital transformation and innovation for businesses worldwide</h1>
+                <h1>We craft cutting-edge solutions powered by AI, driving digital transformation and innovation for businesses worldwide</h1>
                 {/* Add your portfolio items and content here */}
             </div>
             <div className="container">

@@ -53,30 +53,29 @@ body {
 
 .see-all-button {
 text-decoration: none;
-margin-top: 20px; /* Add space above button */
-background-color: black; /* Set background color to white */
-color: white; /* Set button text color to black */
-font-size: 20px; /* Set button text size */
-position: relative; /* Position relative for ::before pseudo-element */
-border: none; /* Remove default button border */
-cursor: pointer; /* Set cursor to pointer */
-overflow: hidden; /* Hide overflowing content */
-border-radius: 25px; /* Set border radius for curved corners */
-padding: 15px 30px; /* Add padding for the button */
-transition: all 0.3s ease; /* Add transition for smoother hover effect */
+background-color:white;
+font-size: 20px;
+position: relative;
+border: 2px solid rgb(195, 195, 207);
+cursor: pointer;
+overflow: hidden;
+color: black;
+padding: 10px;
+border-radius: 10px;
+
 }
 
 .see-all-button::before {   
-content: ''; /* Create empty content for pseudo-element */
-position: absolute; /* Position the pseudo-element absolutely */
-top: 0; /* Align the top of the element */
-left: 0; /* Align the left of the element */
-width: 100%; /* Full width */
-height: 100%; /* Full height */
-background-image: linear-gradient(120deg, #5f4fbd  0%,  #251f75  100%);
-transform: translateX(-100%); /* Move the element outside the button */
-transition: transform 0.3s ease; /* Smooth transition effect */
-z-index: -1; /* Set z-index to ensure the hover color appears below button text */
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(120deg, #5f4fbd  0%,  #251f75  100%);
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+    z-index: -1;
 }
 
 .see-all-button:hover::before {
@@ -84,8 +83,8 @@ transform: translateX(0); /* Move the element inside the button on hover */
 }
 
 .see-all-button:hover {
-color: white; /* Set button text color to black on hover */
-z-index: 1; /* Set z-index to ensure button text appears above hover color */
+    color: white;
+    z-index: 1;
 }
 
 @media screen and (max-width: 768px) {

@@ -45,7 +45,7 @@
     .value-paragraph {
       width: 100%;
       margin-left: 20px; /* Reset margin for small screens */
-      text-align: justify;
+    
       font-size: 14px; /* Adjust font size for small screens */
     }
   }

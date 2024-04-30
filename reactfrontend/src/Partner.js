@@ -7,30 +7,30 @@ const Partner = () => {
       <h2 className="partner-heading">WHY PARTNERS CHOOSE US?</h2>
       <div className="partner-row">
         <div className="partner-column">
-          <h3>Award-winning design</h3>
-          <p>We’re quality-oriented with great attention to detail and design accuracy, which helps win new clients and awards.</p>
+          <h3>Cutting-Edge Technology</h3>
+          <p className="partner-text">Access to the latest advancements in AI and machine learning technologies, ensuring solutions are innovative and competitive</p>
         </div>
         <div className="partner-column">
-          <h3>Crystal clear processes</h3>
-          <p>We’re like an open book, so our partners always know what is going on at our end and what’s coming next.</p>
+          <h3>Expertise and Experience</h3>
+          <p className="partner-text">A team of highly skilled AI professionals with deep industry knowledge and a proven track record of successful implementations.</p>
         </div>
         <div className="partner-column">
-          <h3>Effective communication</h3>
-          <p>We’re always in the loop with our partners and projects, ready to think through the best solutions.</p>
+          <h3>Customized Solutions</h3>
+          <p className="partner-text">Tailored AI solutions that fit specific business needs, helping partners to achieve their unique goals effectively.</p>
         </div>
       </div>
       <div className="partner-row">
         <div className="partner-column">
-          <h3>Operate internationally</h3>
-          <p>We’re well managing both the time zone difference and the cultural fit, so our partners don’t feel the distance.</p>
+          <h3>Scalability</h3>
+          <p className="partner-text">Ability to scale solutions to meet growing business demands, ensuring long-term reliability and performance.</p>
         </div>
         <div className="partner-column">
-          <h3>Flexible cooperation</h3>
-          <p>We’re adjustable to individual needs and can handle the dynamically changing scope and technology.</p>
+          <h3>Data Security and Compliance</h3>
+          <p className="partner-text">Rigorous standards for data security and adherence to regulatory requirements, building trust and safeguarding partner interests.</p>
         </div>
         <div className="partner-column">
-          <h3>Technical excellence</h3>
-          <p>We use modern, scalable tools to deliver cutting-edge solutions and finish projects without technical debt.</p>
+          <h3>Continuous Support and Development</h3>
+          <p className="partner-text">Ongoing support and iterative improvements to AI solutions, keeping systems at the forefront of technology and business needs.</p>
         </div>
       </div>
     </React.Fragment>

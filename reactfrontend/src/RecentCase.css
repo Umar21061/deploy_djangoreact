@@ -56,18 +56,40 @@
 }
 
 .show-all-projects button {
-  background-color: black;
-  color: #fff;
-  border: none;
-  padding: 10px 20px;
-  font-size: 16px;
+  text-decoration: none;
+  background-color: white;
+  font-size: 20px;
+  position: relative;
+  border: 2px solid rgb(195, 195, 207);
   cursor: pointer;
-  border-radius: 5px;
+  overflow: hidden;
+  color: black;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.show-all-projects button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(120deg, #5f4fbd 0%, #251f75 100%);
+  transform: translateX(-100%);
+  transition: transform 0.3s ease;
+  z-index: -1;
+}
+
+.show-all-projects button:hover::before {
+  transform: translateX(0);
 }
 
 .show-all-projects button:hover {
-  background-color: black;
+  color: white;
+  z-index: 1;
 }
+
 
 .recent-video-text {
   color: black;
