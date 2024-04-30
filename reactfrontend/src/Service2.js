@@ -24,17 +24,17 @@ const Service2 = () => {
               <div className="row">
                 {/* Customer Bundles Content */}
                 <div className="col-md-4">
-                  <h2 className='headingto'>Startups</h2>
+                  <h2 className='headingto'>AI Solutions</h2>
                 </div>
                 <div className="col-md-8 text-md-right">
-                  <p className="service-text">From web and mobile app development to product discovery and building MVPs, we aim to meet the unique needs of startups, fuel innovation, and take your business to the next level.</p>
+                  <p className="service-text">Our comprehensive suite of AI services spans from idea inception to market domination, ensuring your startup stays at the forefront of technological advancement. Let's embark on this transformative journey together.</p>
                 </div>
               </div>
               <div className="row">
                 {/* Brain Hive */}
                 <div className="col-md-4">
-                  <h3>Brain Hive</h3>
-                  <p className="service-text">A business idea validation to give you customer feedback, a polished PoC, and all necessary materials for increased chances of securing funding and attracting customers.</p>
+                  <h3>Machine Learning</h3>
+                  <p className="service-text">Empower your business with cutting-edge AI services. Unlock insights, drive efficiency, and innovate like never before with our machine learning solutions.</p>
                   <button className="btn btn learn-btn">
                     <Link to="/learnmore" style={{ textDecoration: 'none', color: '#443d68' }}>LearnMore</Link>
                     <span className="arrow">⇨</span>
@@ -43,8 +43,8 @@ const Service2 = () => {
                 </div>
                 {/* MVP Forge */}
                 <div className="col-md-4">
-                  <h3>MVP Forge</h3>
-                  <p className="service-text">A swift way to develop an MVP solution, regardless of how far your product is in the discovery phase, the particularities of your industry, and individual requirements.</p>
+                  <h3>Generative AI</h3>
+                  <p className="service-text">Unleash the power of creativity with our Generative AI services. From art and music to storytelling and design, explore endless possibilities and redefine what's possible.</p>
                   <button className="btn btn learn-btn">
                     <Link to="/learnmore" style={{ textDecoration: 'none', color: '#443d68' }}>LearnMore</Link>
                     <span className="arrow">⇨</span>
@@ -53,8 +53,8 @@ const Service2 = () => {
                 </div>
                 {/* Launchpad */}
                 <div className="col-md-4">
-                  <h3>Launchpad</h3>
-                  <p className="service-text">Full suite of premium development services to scale your MVP to a high-quality product – from product design and branding to E2E development and ongoing support.</p>
+                  <h3>Language Processing</h3>
+                  <p className="service-text">Empower your applications with advanced Language Processing AI. Unlock the full potential of text data for deeper insights and seamless user interactions.</p>
                   <button className="btn btn learn-btn">
                     <Link to="/learnmore" style={{ textDecoration: 'none', color: '#443d68' }}>LearnMore</Link>
                     <span className="arrow">⇨</span>
@@ -69,17 +69,17 @@ const Service2 = () => {
             <div className="border-around">
               <div className="row">
                 <div className="col-md-4">
-                  <h2 className='headingto'>Enterprise</h2>
+                  <h2 className='headingto'>Data Security</h2>
                 </div>
                 <div className="col-md-8 text-md-right">
-                  <p className="service-text">Accelerate your progress, validate ideas, and disrupt the market with a new product. Our goal is to drive growth and innovation and help make you a leader in the industry.</p>
+                  <p className="service-text">Unlocking the power of computer vision and data analytics while safeguarding your assets with AI-driven security measures. Elevate your business operations with cutting-edge technology solutions.</p>
                 </div>
               </div>
               <div className="row">
                 {/* Velocity+ */}
                 <div className="col-md-4">
-                  <h3>Velocity+</h3>
-                  <p className="service-text">Supercharge your organization's development with our hands-on workshops and training courses designed to meet your team's skill level and desired topics.</p>
+                  <h3>Computer Vision</h3>
+                  <p className="service-text">Experience the future of perception with our Computer Vision solutions. From object detection to image classification, revolutionize your business with AI-powered visual intelligence.</p>
                   <button className="btn btn learn-btn">
                     <Link to="/learnmore" style={{ textDecoration: 'none', color: '#443d68' }}>LearnMore</Link>
                     <span className="arrow">⇨</span>
@@ -88,8 +88,8 @@ const Service2 = () => {
                 </div>
                 {/* Innovation Lab */}
                 <div className="col-md-4">
-                  <h3>Innovation Lab</h3>
-                  <p className="service-text">Embark on a journey of in-depth discovery, user-centric design, tech validation, and strategic foresight together with an all-rounded team of industry pioneers.</p>
+                  <h3>Data Analytics</h3>
+                  <p className="service-text">Elevate your decision-making with our Data Analytics services. Turn raw data into actionable insights, driving strategic growth and staying ahead of the curve in today's data-driven world.</p>
                   <button className="btn btn learn-btn">
                     <Link to="/learnmore" style={{ textDecoration: 'none', color: '#443d68' }}>LearnMore</Link>
                     <span className="arrow">⇨</span>
@@ -98,8 +98,8 @@ const Service2 = () => {
                 </div>
                 {/* Digital Disruption */}
                 <div className="col-md-4">
-                  <h3>Digital Disruption</h3>
-                  <p className="service-text">A fusion of premium services with business understanding and hands-on experience – from discovery and product design to E2E development and maintenance.</p>
+                  <h3>AI-Driven Security</h3>
+                  <p className="service-text">Safeguard your assets with our AI-Driven Security solutions. Detect threats, anticipate risks, and fortify your defenses with cutting-edge technology, ensuring peace of mind in an ever-evolving digital landscape.</p>
                   <button className="btn btn learn-btn">
                     <Link to="/learnmore" style={{ textDecoration: 'none', color: '#443d68' }}>LearnMore</Link>
                     <span className="arrow">⇨</span>
@@ -114,17 +114,17 @@ const Service2 = () => {
             <div className="border-around">
               <div className="row">
                 <div className="col-md-4">
-                  <h2 className='headingto'>Agencies</h2>
+                  <h2 className='headingto'>Automation Solutions</h2>
                 </div>
                 <div className="col-md-8 text-md-right">
-                  <p className="service-text">Win over prospects effortlessly, boost brand engagement, and elevate your agency's game. Use our team’s expertise and knowledge to achieve remarkable results.</p>
+                  <p className="service-text">Harness the power of data-driven foresight with predictive analytics and streamline operations through robotic process automation. Drive efficiency and strategic decision-making with these innovative solutions.</p>
                 </div>
               </div>
               <div className="row">
                 {/* Co-pitching */}
                 <div className="col-md-4">
-                  <h3>Co-pitching</h3>
-                  <p className="service-text">The ultimate key to refining your pitch idea or leveraging tech and design expertise. Enhance your agency's proposal, increase its impact and the likelihood of winning over potential prospects.</p>
+                  <h3>Predictive Analytics</h3>
+                  <p className="service-text">Stay ahead of the game with our Predictive Analytics solutions. Anticipate trends, forecast outcomes, and make informed decisions with confidence, leveraging the power of data-driven insights to drive your success.</p>
                   <button className="btn btn learn-btn">
                     <Link to="/learnmore" style={{ textDecoration: 'none', color: '#443d68' }}>LearnMore</Link>
                     <span className="arrow">⇨</span>
@@ -133,8 +133,8 @@ const Service2 = () => {
                 </div>
                 {/* Digital Campaigns */}
                 <div className="col-md-8">
-                  <h3>Digital Campaigns</h3>
-                  <p className="service-text">Take your events and digital campaigns to the next level with immersive experiences that span from mobile and web to AR&VR – from ideation through full development to on-site support.</p>
+                  <h3>Robotic Process Automation</h3>
+                  <p className="service-text">Automate repetitive tasks and streamline workflows with our Robotic Process Automation solutions. Boost productivity, reduce errors, and free up valuable time for your team to focus on high-value activities, driving efficiency and innovation.</p>
                   <button className="btn btn learn-btn">
                     <Link to="/learnmore" style={{ textDecoration: 'none', color: '#443d68' }}>LearnMore</Link>
                     <span className="arrow">⇨</span>
