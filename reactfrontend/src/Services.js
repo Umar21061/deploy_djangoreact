@@ -26,7 +26,7 @@ const Services = () => {
                         </div>
                         <div className="service-item">
                             <img src={i4} alt="Service Icon" />
-                            <h2>Natural Language Processing (NLP)</h2>
+                            <h2>Language Processing</h2>
                         </div>
                         <div className="service-item">
                             <img src={i5} alt="Service Icon" />

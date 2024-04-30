@@ -2,7 +2,6 @@
     position: relative;
     overflow: hidden;
     height: auto; /* Set the height to 70vh */
-    padding: 2%; /* Adjust padding for smaller screens */
     height: 100vh;
     margin-bottom: 40px;
 }
@@ -37,6 +36,7 @@
     margin-bottom: 1%; /* Adjust margin for smaller screens */
     color: white;
 }
+
 
 .portfolio-info p {
     font-size: 2.5vw; /* Responsive font size based on viewport width */

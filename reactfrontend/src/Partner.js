@@ -22,14 +22,14 @@ const Partner = () => {
       <div className="partner-row">
         <div className="partner-column">
           <h3>Scalability</h3>
-          <p className="partner-text">Ability to scale solutions to meet growing business demands, ensuring long-term reliability and performance.</p>
+          <p className="partner-text">Rigorous standards for data security and adherence to regulatory requirements are paramount for building trust and safeguarding partner interests.</p>
         </div>
         <div className="partner-column">
-          <h3>Data Security and Compliance</h3>
+          <h3>Security and Compliance</h3>
           <p className="partner-text">Rigorous standards for data security and adherence to regulatory requirements, building trust and safeguarding partner interests.</p>
         </div>
         <div className="partner-column">
-          <h3>Continuous Support and Development</h3>
+          <h3>Support and Development</h3>
           <p className="partner-text">Ongoing support and iterative improvements to AI solutions, keeping systems at the forefront of technology and business needs.</p>
         </div>
       </div>

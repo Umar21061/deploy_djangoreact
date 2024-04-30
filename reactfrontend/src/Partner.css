@@ -20,16 +20,18 @@ body {
   flex-wrap: wrap; /* Allow rows to wrap on small screens */
   justify-content: space-around; /* Evenly space columns horizontally */
   margin-bottom: 20px; /* Add some space between rows */
+
 }
 
 .partner-column {
   flex: 1; /* Each column takes equal space */
-  max-width: 350px; /* Adjust the width of columns as needed */
+  max-width: 370px; /* Adjust the width of columns as needed */
   background-color: black;
   color: white;
-  padding: 20px;
   box-sizing: border-box; /* Include padding in width calculation */
   text-align: left;
+  gap: 40px;
+  margin-right: 20px;
  
 }
 
@@ -40,6 +42,8 @@ body {
 
 .partner-column p {
   margin-bottom: 0;
+  text-align: justify;
+
 }
 
 /* Media query for small screens */

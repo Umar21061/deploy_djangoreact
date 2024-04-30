@@ -17,7 +17,7 @@ import d6 from './image/d13.png'; // Importing image for div6
 const About = () => {
     return (
         <div className="about-section">
-            <h1 className="large-text">WE’RE PARTNERING UP WITH LIKE-MINDED FOUNDERS AND BRANDS SINCE 2012</h1>
+            <h1 className="large-text">WE’RE PARTNERING UP WITH LIKE-MINDED FOUNDERS AND BRANDS SINCE 2018</h1>
             <div className="about-container">
                 <div className="about-row">
                     {/* First Row */}

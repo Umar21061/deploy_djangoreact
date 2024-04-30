@@ -67,28 +67,28 @@ const Portfolio = () => {
                 Your browser does not support the video tag.
             </video>
             <div className="portfolio-content">
-                <h1>We craft cutting-edge solutions powered by AI, driving digital transformation and innovation for businesses worldwide</h1>
+                <h1>We Craft cutting-edge solutions powered by AI, driving digital Transformation and Innovation for businesses worldwide</h1>
                 {/* Add your portfolio items and content here */}
             </div>
             <div className="container">
                 <div className="row">
                     <div className="col-lg-4 col-md-4 col-sm-12">
                         <div className="portfolio-info">
-                            <h2>{yearsOnMarket}</h2>
+                            <h2>{yearsOnMarket}+</h2>
                             <div className="line"></div>
                             <h4>Years on the market</h4>
                         </div>
                     </div>
                     <div className="col-lg-4 col-md-4 col-sm-12">
                         <div className="portfolio-info">
-                            <h2>{expertsOnBoard}</h2>
+                            <h2>{expertsOnBoard}+</h2>
                             <div className="line"></div>
                             <h4>Experts on board</h4>
                         </div>
                     </div>
                     <div className="col-lg-4 col-md-4 col-sm-12">
                         <div className="portfolio-info">
-                            <h2>{completedProjects}</h2>
+                            <h2>{completedProjects}+</h2>
                             <div className="line"></div>
                             <h4>Completed projects</h4>
                         </div>
