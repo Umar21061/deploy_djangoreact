@@ -28,8 +28,8 @@ const LearnMore = ({ uniqueClassName }) => {
         <div className={`container ${uniqueClassName}`}>
             <div className="learnmore-div1">
                 <div className="left-column">
-                <h1>Velocity+ for Enterprises</h1>
-                <p className='learnmore-text'>Embark on a journey of in-depth discovery, user-centric design</p>
+                <h1>Cutting-edge Machine Learning Solutions for Every Industry.</h1>
+                <p className='learnmore-text'>Explore our innovative machine learning solutions, shaping tomorrow's landscape with transformative power. Our advanced algorithms decode data complexities, unlocking insights and propelling industries forward. Harnessing the potential of ML, we revolutionize operations, enhance decision-making, and personalize experiences. Join us on the forefront of technological evolution, driving efficiency, foresight, and seamless automation across diverse sectors. Welcome to the future of machine learning.</p>
                 </div>
                 <div className="right-column">
                     <img src={div1?.['right-column']?.image_url} alt="Right Column Image" />

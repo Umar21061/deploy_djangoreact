@@ -33,6 +33,13 @@ import Ebook from './Ebook';
 import LearnMore from './LearnMore';
 
 import ProjectDetails from './ProjectDetails';
+import LearnMore2 from './LearnMore2';
+import LearnMore3 from './LearnMore3';
+import Learn_More4 from './Learn_More4';
+import LearnMore5 from './LearnMore5';
+import LearnMore6 from './LearnMore6';
+import LearnMore7 from './LearnMore7';
+import LearnMore8 from './LearnMore8';
 
 
 
@@ -69,6 +76,14 @@ function App() {
           <Route path="/contact" element={<ContactForm />} /> {/* Use ContactForm component here */}
           <Route path="/ebook" element={<Ebook />} />
           <Route path="/learnmore" element={<LearnMore />} />
+          <Route path="/learnmore2" element={<LearnMore2 />} />
+          <Route path="/learnmore3" element={<LearnMore3 />} />
+          <Route path="/learnmore4" element={<Learn_More4 />} />
+          <Route path="/learnmore5" element={<LearnMore5 />} />
+          <Route path="/learnmore6" element={<LearnMore6 />} />
+          <Route path="/learnmore7" element={<LearnMore7 />} />
+          <Route path="/learnmore8" element={<LearnMore8 />} />
+      
           <Route path="/project-details/:projectId" element={<ProjectDetails />} />
           <Route path="/portfolioproject" element={<PortfolioProject />} />
           
