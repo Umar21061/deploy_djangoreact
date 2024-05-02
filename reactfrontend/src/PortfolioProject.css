@@ -114,3 +114,19 @@
     text-align: center; /* Center align text */
     z-index: 1; /* Ensure the text is above the video */
 }
+/* Styles for medium screens (e.g., tablets) */
+@media screen and (max-width: 992px) {
+    .video-player {
+        width: calc(33.33% - 10px); /* Display 3 videos per row */
+        max-width: calc(33.33% - 10px); /* Ensure equal width for all videos */
+    }
+}
+
+/* Styles for small screens (e.g., mobile devices) */
+@media screen and (max-width: 576px) {
+    .video-player {
+        width: calc(100% - 20px); /* Display 1 video per row */
+        max-width: calc(100% - 20px); /* Ensure equal width for all videos */
+    }
+}
+

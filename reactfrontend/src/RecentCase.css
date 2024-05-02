@@ -100,41 +100,15 @@
 
 /* Media query for mobile devices */
 @media screen and (max-width: 768px) {
-  .recent-video-container {
-      overflow-x: hidden;
-      overflow-y: auto; /* Allow vertical scrolling */
-      white-space: normal; /* Reset white-space */
-      padding-bottom: 0; /* Remove bottom padding */
-      margin-bottom: 2px; /* Remove bottom margin */
-      display: flex;
-      flex-direction: column; /* Stack videos in a column */
-      align-items: center; /* Center horizontally */
-      height: auto;
-  }
-
-  .recent-video-player-horizontal {
-      margin-right: 0; /* Remove right margin */
-  }
-
   .recent-video-player {
-      width: 100%; /* Take full width */
-      height: auto; /* Let the height adjust */
-      margin: 0; /* Remove margins */
-      margin-bottom: 20px; /* Add 10px more gap */
+    max-width: 100%; /* Adjust video player width for smaller screens */
   }
-
-  .recent-video-player p.recent-video-text {
-      position: relative; /* Reset position */
-      transform: none; /* Reset transform */
-      top: auto; /* Reset top */
-      left: auto; /* Reset left */
-      opacity: 1; /* Show text by default */
-      background-color: transparent; /* Transparent background */
-      padding: 0; /* Remove padding */
-      border-radius: 0; /* Remove border-radius */
-      text-align: left; /* Align text left */
-      z-index: auto; /* Reset z-index */
-      transition: none; /* Remove transition */
-      color: #000; /* Set text color */
+  .recent-video-container {
+    overflow-x: visible; /* Allow content overflow on smaller screens */
+    white-space: normal; /* Reset white space */
+  }
+  .recent-video-player-horizontal {
+    display: block;
+    margin: 0 auto 10px; /* Center align and add margin */
   }
 }
