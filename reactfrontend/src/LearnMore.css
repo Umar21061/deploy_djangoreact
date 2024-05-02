@@ -119,3 +119,44 @@
 .learnmore-text{
   color: black;
 }
+
+/* Responsive CSS for small screens */
+@media only screen and (max-width: 768px) {
+  .learnmore-div1 {
+    flex-direction: column;
+  }
+
+  .left-column,
+  .right-column {
+    flex: none;
+    width: 100%;
+    margin: 0; /* Remove margin for small screens */
+  }
+
+  .learnmore-image {
+    width: 100%;
+    margin: 0; /* Equal margins for images in small screens */
+  }
+
+  .image-row {
+    flex-direction: column;
+  }
+
+  .learnmore-image {
+    margin-bottom: 20px;
+  }
+
+  /* Justify text */
+  .learnmore-div2 {
+    align-items: stretch;
+  }
+
+  .learnmore-div2 p,
+  .learnmore-div2 .numbered-row {
+    justify-content: space-between;
+  }
+
+  .learnmore-div2 .numbered-row p {
+    margin: 5px 0;
+  }
+}
