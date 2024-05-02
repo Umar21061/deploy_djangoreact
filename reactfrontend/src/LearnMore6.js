@@ -2,8 +2,8 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import './LearnMore.css';
 
-const LearnMore6 = () => {
-  const [data, setData] = useState(null);
+const LearnMore6 = ({ uniqueClassName }) => {
+  const [learnMoreData, setLearnMoreData] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
@@ -11,7 +11,7 @@ const LearnMore6 = () => {
     const fetchData = async () => {
       try {
         const response = await axios.get('/api/ai_driven_security/');
-        setData(response.data);
+        setLearnMoreData(response.data);
         setLoading(false);
       } catch (error) {
         setError(error.message);
@@ -30,29 +30,32 @@ const LearnMore6 = () => {
     return <div className="learnmore-div1">Error: {error}</div>;
   }
 
+  const { 'learnmore-div1': div1, 'learnmore-div2': div2, div3 } = learnMoreData;
+
   return (
-    <div>
+    <div className={`container ${uniqueClassName}`}>
       <div className="learnmore-div1">
         <div className="left-column">
-          <h2>The World of AI-Driven Security</h2>
-          <p style={{ color: 'black' }}>As a leading provider of AI-driven security solutions, we leverage cutting-edge technologies to protect your digital assets and safeguard against emerging threats. Our comprehensive suite of security services utilizes advanced machine learning algorithms and behavioral analytics to detect and mitigate potential security risks in real-time. From threat intelligence to endpoint protection, we offer tailored solutions to address the unique security challenges faced by your organization. Partner with us to fortify your defenses and stay one step ahead of cyber adversaries in today's ever-evolving threat landscape.</p>
+          <h2>{div1['left-column']['heading1']}</h2>
+          <p style={{ color: 'black' }}>{div1['left-column']['text']}Embark on a journey of in-depth discovery, user-centric design, tech validation, and strategic foresight together with an all-rounded team of industry pioneers to turn your innovative ideas into tangible products.</p>
         </div>
         <div className="right-column">
-          <img src={data['learnmore-div1']['right-column']['image_url']} alt="Security+" />
+          <img src={div1['right-column']['image_url']} alt="Security+" />
         </div>
       </div>
       <div className="learnmore-div2">
-        <h3 className="heading2">{data['learnmore-div2']['heading2']}</h3>
-        <p className="heading2-text">{data['learnmore-div2']['heading2-text']}</p>
+        <h3 className="heading2">{div2['heading2']}</h3>
+        <p className="heading2-text">{div2['heading2-text']}</p>
+        <h2 className="heading2-heading">{div2['heading2-heading']}</h2>
         <ul>
-          {data['learnmore-div2']['rows'].map((item, index) => (
+          {div2['rows'].map((item, index) => (
             <li key={index} className="numbered-row">
               {item}
             </li>
           ))}
         </ul>
         <div className="image-row">
-          {data['div3'].map((item, index) => (
+          {div3.map((item, index) => (
             <div key={index} className="learnmore-image">
               <img src={item['image_url']} alt={item['title']} />
               <h4 className="image-title">{item['title']}</h4>

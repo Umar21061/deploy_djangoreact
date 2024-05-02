@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import './LearnMore.css';
+import './LearnMore2.css';
 
-const LearnMore8 = () => {
-  const [data, setData] = useState(null);
+const LearnMore8 = ({ uniqueClassName }) => {
+  const [learnMoreData, setLearnMoreData] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
@@ -11,7 +11,7 @@ const LearnMore8 = () => {
     const fetchData = async () => {
       try {
         const response = await axios.get('/api/robotic_process_automation/');
-        setData(response.data);
+        setLearnMoreData(response.data);
         setLoading(false);
       } catch (error) {
         setError(error.message);
@@ -30,29 +30,32 @@ const LearnMore8 = () => {
     return <div className="learnmore-div1">Error: {error}</div>;
   }
 
+  const { 'learnmore-div1': div1, 'learnmore-div2': div2, div3 } = learnMoreData;
+
   return (
-    <div>
+    <div className={`container ${uniqueClassName}`}>
       <div className="learnmore-div1">
         <div className="left-column">
-          <h2>The World of Robotic Process Automation</h2>
-          <p style={{ color: 'black' }}>Experience the revolution in business process automation with our robotic process automation (RPA) solutions. Our RPA tools and technologies streamline repetitive tasks, improve accuracy, and enhance operational efficiency across your organization. From data entry to customer support, we empower businesses to automate manual processes and focus on innovation and growth. Partner with us to unlock the full potential of RPA and transform your business operations.</p>
+          <h2>{div1['left-column']['heading1']}</h2>
+          <p style={{ color: 'black' }}>{div1['left-column']['text']}Experience the revolution in business process automation with our robotic process automation (RPA) solutions. Our RPA tools and technologies streamline repetitive tasks, improve accuracy, and enhance operational efficiency across your organization. From data entry to customer support, we empower businesses to automate manual processes and focus on innovation and growth. Partner with us to unlock the full potential of RPA and transform your business operations.</p>
         </div>
         <div className="right-column">
-          <img src={data['learnmore-div1']['right-column']['image_url']} alt="Robotic Process Automation" />
+          <img src={div1['right-column']['image_url']} alt="Robotic Process Automation" />
         </div>
       </div>
       <div className="learnmore-div2">
-        <h3 className="heading2">{data['learnmore-div2']['heading2']}</h3>
-        <p className="heading2-text">{data['learnmore-div2']['heading2-text']}</p>
+        <h3 className="heading2">{div2['heading2']}</h3>
+        <p className="heading2-text">{div2['heading2-text']}</p>
+        <h2 className="heading2-heading">{div2['heading2-heading']}</h2>
         <ul>
-          {data['learnmore-div2']['rows'].map((item, index) => (
+          {div2['rows'].map((item, index) => (
             <li key={index} className="numbered-row">
               {item}
             </li>
           ))}
         </ul>
         <div className="image-row">
-          {data['div3'].map((item, index) => (
+          {div3.map((item, index) => (
             <div key={index} className="learnmore-image">
               <img src={item['image_url']} alt={item['title']} />
               <h4 className="image-title">{item['title']}</h4>
