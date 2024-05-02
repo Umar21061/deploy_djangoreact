@@ -559,3 +559,63 @@ def get_robotic_process_automation_data(request):
         return JsonResponse(data)
     except ConnectionFailure as e:
         return JsonResponse({'error': str(e)}, status=500)
+
+
+
+def get_web_app_development_data(request):
+    try:
+        client = MongoClient("mongodb+srv://umer:umer123456@cluster0.chseyyo.mongodb.net/")
+        db = client['portfolio']
+        learn_more_collection = db['learn_more_Data']  # Updated collection name
+        
+        data = learn_more_collection.find_one({"category": "Web App Development"})
+        
+        if data is None:
+            return JsonResponse({'error': 'No data found in MongoDB'}, status=404)
+        
+        # Convert MongoDB ObjectId to string
+        data['_id'] = str(data['_id'])
+        
+        return JsonResponse(data)
+    except ConnectionFailure as e:
+        return JsonResponse({'error': 'Failed to connect to MongoDB: {}'.format(str(e))}, status=500)
+    
+def get_product_design_data(request):
+    try:
+        client = MongoClient("mongodb+srv://umer:umer123456@cluster0.chseyyo.mongodb.net/")
+        db = client['portfolio']
+        learn_more_collection = db['learn_more_Data']  # Updated collection name
+        
+        data = learn_more_collection.find_one({"category": "Product Design"})
+        
+        if data is None:
+            return JsonResponse({'error': 'No data found in MongoDB'}, status=404)
+        
+        # Convert MongoDB ObjectId to string
+        data['_id'] = str(data['_id'])
+        
+        return JsonResponse(data)
+    except ConnectionFailure as e:
+        return JsonResponse({'error': 'Failed to connect to MongoDB: {}'.format(str(e))}, status=500)
+    
+
+
+
+
+def get_mobile_development_data(request):
+    try:
+        client = MongoClient("mongodb+srv://umer:umer123456@cluster0.chseyyo.mongodb.net/")
+        db = client['portfolio']
+        learn_more_collection = db['learn_more_Data']  # Updated collection name
+        
+        data = learn_more_collection.find_one({"category": "Mobile Development"})
+        
+        if data is None:
+            return JsonResponse({'error': 'No data found in MongoDB'}, status=404)
+        
+        # Convert MongoDB ObjectId to string
+        data['_id'] = str(data['_id'])
+        
+        return JsonResponse(data)
+    except ConnectionFailure as e:
+        return JsonResponse({'error': 'Failed to connect to MongoDB: {}'.format(str(e))}, status=500)

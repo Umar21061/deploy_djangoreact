@@ -26,12 +26,13 @@ urlpatterns = [
     path('api/ai_driven_security/', views.get_ai_driven_security_data, name='get_ai_driven_security_data'),
      path('api/predictive_analytics/', views.get_predictive_analytics_data, name='get_predictive_analytics_data'),
      path('api/robotic_process_automation/', views.get_robotic_process_automation_data, name='get_robotic_process_automation_data'),
-    
+    path('api/get_web_app_development_data/',views.get_web_app_development_data,name=' get_web_app_development_data'),
    
     
    
-    
-      
+   
+    path('api/get_product_design_data/',views.get_product_design_data,name='get_product_design_data'),
+    path('api/get_mobile_development_data/',views.get_mobile_development_data,name='get_mobile_development_data'),
     
 
    

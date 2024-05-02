@@ -40,6 +40,9 @@ import LearnMore5 from './LearnMore5';
 import LearnMore6 from './LearnMore6';
 import LearnMore7 from './LearnMore7';
 import LearnMore8 from './LearnMore8';
+import LearnMore9 from './LearnMore9';
+import LearnMore10 from './LearnMore10';
+import LearnMore11 from './LearnMore11';
 
 
 
@@ -83,6 +86,9 @@ function App() {
           <Route path="/aisecurity" element={<LearnMore6 />} />
           <Route path="/predictiveanalysis" element={<LearnMore7 />} />
           <Route path="/reboticautomation" element={<LearnMore8 />} />
+          <Route path="/webdevelopment" element={<LearnMore9 />} />
+          <Route path="/productdesign" element={<LearnMore10 />} />
+          <Route path="/mobiledevelopment" element={<LearnMore11 />} />
       
           <Route path="/project-details/:projectId" element={<ProjectDetails />} />
           <Route path="/portfolioproject" element={<PortfolioProject />} />
