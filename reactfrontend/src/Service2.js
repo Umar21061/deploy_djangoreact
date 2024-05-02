@@ -36,7 +36,7 @@ const Service2 = () => {
                   <h3>Machine Learning</h3>
                   <p className="service-text">Empower your business with cutting-edge AI services. Unlock insights, drive efficiency, and innovate like never before with our machine learning solutions.</p>
                   <button className="btn btn learn-btn">
-                    <Link to="/learnmore" style={{ textDecoration: 'none', color: '#443d68' }}>LearnMore</Link>
+                    <Link to="/machinelearning" style={{ textDecoration: 'none', color: '#443d68' }}>LearnMore</Link>
                     <span className="arrow">⇨</span>
                     <div className="line2"></div>
                   </button>
@@ -46,7 +46,7 @@ const Service2 = () => {
                   <h3>Generative AI</h3>
                   <p className="service-text">Unleash the power of creativity with our Generative AI services. From art and music to storytelling and design, explore endless possibilities and redefine what's possible.</p>
                   <button className="btn btn learn-btn">
-                    <Link to="/learnmore2" style={{ textDecoration: 'none', color: '#443d68' }}>LearnMore</Link>
+                    <Link to="/generative_ai" style={{ textDecoration: 'none', color: '#443d68' }}>LearnMore</Link>
                     <span className="arrow">⇨</span>
                     <div className="line2"></div>
                   </button>
@@ -56,7 +56,7 @@ const Service2 = () => {
                   <h3>Language Processing</h3>
                   <p className="service-text">Empower your applications with advanced Language Processing AI. Unlock the full potential of text data for deeper insights and seamless user interactions.</p>
                   <button className="btn btn learn-btn">
-                    <Link to="/learnmore3" style={{ textDecoration: 'none', color: '#443d68' }}>LearnMore</Link>
+                    <Link to="/languageprocessing" style={{ textDecoration: 'none', color: '#443d68' }}>LearnMore</Link>
                     <span className="arrow">⇨</span>
                     <div className="line2"></div>
                   </button>
@@ -81,7 +81,7 @@ const Service2 = () => {
                   <h3>Computer Vision</h3>
                   <p className="service-text">Experience the future of perception with our Computer Vision solutions. From object detection to image classification, revolutionize your business with AI-powered visual intelligence.</p>
                   <button className="btn btn learn-btn">
-                    <Link to="/learnmore4" style={{ textDecoration: 'none', color: '#443d68' }}>LearnMore</Link>
+                    <Link to="/computervision" style={{ textDecoration: 'none', color: '#443d68' }}>LearnMore</Link>
                     <span className="arrow">⇨</span>
                     <div className="line2"></div>
                   </button>
@@ -91,7 +91,7 @@ const Service2 = () => {
                   <h3>Data Analytics</h3>
                   <p className="service-text">Elevate your decision-making with our Data Analytics services. Turn raw data into actionable insights, driving strategic growth and staying ahead of the curve in today's data-driven world.</p>
                   <button className="btn btn learn-btn">
-                    <Link to="/learnmore5" style={{ textDecoration: 'none', color: '#443d68' }}>LearnMore</Link>
+                    <Link to="/dataanalytics" style={{ textDecoration: 'none', color: '#443d68' }}>LearnMore</Link>
                     <span className="arrow">⇨</span>
                     <div className="line2"></div>
                   </button>
@@ -101,7 +101,7 @@ const Service2 = () => {
                   <h3>AI-Driven Security</h3>
                   <p className="service-text">Safeguard your assets with our AI-Driven Security solutions. Detect threats, anticipate risks, and fortify your defenses with cutting-edge technology, ensuring peace of mind in an ever-evolving digital landscape.</p>
                   <button className="btn btn learn-btn">
-                    <Link to="/learnmore6" style={{ textDecoration: 'none', color: '#443d68' }}>LearnMore</Link>
+                    <Link to="/aisecurity" style={{ textDecoration: 'none', color: '#443d68' }}>LearnMore</Link>
                     <span className="arrow">⇨</span>
                     <div className="line2"></div>
                   </button>
@@ -126,7 +126,7 @@ const Service2 = () => {
                   <h3>Predictive Analytics</h3>
                   <p className="service-text">Stay ahead of the game with our Predictive Analytics solutions. Anticipate trends, forecast outcomes, and make informed decisions with confidence, leveraging the power of data-driven insights to drive your success.</p>
                   <button className="btn btn learn-btn">
-                    <Link to="/learnmore7" style={{ textDecoration: 'none', color: '#443d68' }}>LearnMore</Link>
+                    <Link to="/predictiveanalysis" style={{ textDecoration: 'none', color: '#443d68' }}>LearnMore</Link>
                     <span className="arrow">⇨</span>
                     <div className="line2"></div>
                   </button>
@@ -136,7 +136,7 @@ const Service2 = () => {
                   <h3>Robotic Process Automation</h3>
                   <p className="service-text">Automate repetitive tasks and streamline workflows with our Robotic Process Automation solutions. Boost productivity, reduce errors, and free up valuable time for your team to focus on high-value activities, driving efficiency and innovation.</p>
                   <button className="btn btn learn-btn">
-                    <Link to="/learnmore8" style={{ textDecoration: 'none', color: '#443d68' }}>LearnMore</Link>
+                    <Link to="/reboticautomation" style={{ textDecoration: 'none', color: '#443d68' }}>LearnMore</Link>
                     <span className="arrow">⇨</span>
                     <div className="line2"></div>
                   </button>

@@ -75,14 +75,14 @@ function App() {
           <Route path="/apply" element={<Apply />} />
           <Route path="/contact" element={<ContactForm />} /> {/* Use ContactForm component here */}
           <Route path="/ebook" element={<Ebook />} />
-          <Route path="/learnmore" element={<LearnMore />} />
-          <Route path="/learnmore2" element={<LearnMore2 />} />
-          <Route path="/learnmore3" element={<LearnMore3 />} />
-          <Route path="/learnmore4" element={<Learn_More4 />} />
-          <Route path="/learnmore5" element={<LearnMore5 />} />
-          <Route path="/learnmore6" element={<LearnMore6 />} />
-          <Route path="/learnmore7" element={<LearnMore7 />} />
-          <Route path="/learnmore8" element={<LearnMore8 />} />
+          <Route path="/machinelearning" element={<LearnMore />} />
+          <Route path="/generative_ai" element={<LearnMore2 />} />
+          <Route path="/languageprocessing" element={<LearnMore3 />} />
+          <Route path="/computervision" element={<Learn_More4 />} />
+          <Route path="/dataanalytics" element={<LearnMore5 />} />
+          <Route path="/aisecurity" element={<LearnMore6 />} />
+          <Route path="/predictiveanalysis" element={<LearnMore7 />} />
+          <Route path="/reboticautomation" element={<LearnMore8 />} />
       
           <Route path="/project-details/:projectId" element={<ProjectDetails />} />
           <Route path="/portfolioproject" element={<PortfolioProject />} />
