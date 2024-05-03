@@ -17,27 +17,27 @@ const Services = () => {
                     {/* First row */}
                     <div className="service-row">
                         <div className="service-item">
-                        <Link to="/machinelearning"> <img src={i1} alt="Service Icon" /></Link>
+                        <img src={i1} alt="Service Icon" />
                             <h3>Machine Learning</h3>
                         </div>
                         <div className="service-item">
-                        <Link to="/generative_ai">  <img src={i2} alt="Service Icon" /></Link>
+                        <img src={i2} alt="Service Icon" />
                             <h3>Generative AI</h3>
                         </div>
                         <div className="service-item">
-                        <Link to="/languageprocessing">  <img src={i4} alt="Service Icon" /></Link>
+                     <img src={i4} alt="Service Icon" />
                             <h3>Language Processing</h3>
                         </div>
                         <div className="service-item">
-                        <Link to="/computervision">  <img src={i5} alt="Service Icon" /></Link>
+                      <img src={i5} alt="Service Icon" />
                             <h3>Computer Vision</h3>
                         </div>
                         <div className="service-item">
-                        <Link to="/dataanalytics">   <img src={i6} alt="Service Icon" /></Link>
+                          <img src={i6} alt="Service Icon" />
                             <h3>Data Analytics</h3>
                         </div>
                         <div className="service-item">
-                        <Link to="/aisecurity"> <img src={i7} alt="Service Icon" /></Link>
+                        <img src={i7} alt="Service Icon" />
                             <h3>AI-Driven Security</h3>
                         </div>
                     </div>

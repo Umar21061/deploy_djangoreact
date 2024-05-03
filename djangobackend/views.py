@@ -360,33 +360,6 @@ def chat(request):
     
 
 
-
-def get_learn_more_data(request):
-    try:
-        client = MongoClient("mongodb+srv://umer:umer123456@cluster0.chseyyo.mongodb.net/")
-        db = client['portfolio']
-        learn_more_collection = db['learn_more']
-        
-        # Fetch data from MongoDB
-        data = learn_more_collection.find_one({})
-        
-        if data is None:
-            return JsonResponse({'error': 'No data found in MongoDB'}, status=404)
-        
-        # Convert MongoDB ObjectId to string
-        data['_id'] = str(data['_id'])
-        
-        return JsonResponse(data)
-    except ConnectionFailure as e:
-        return JsonResponse({'error': str(e)}, status=500)
-
-
-
-
-
-
-
-
 def project_details(request):
     try:
         # Connect to MongoDB
@@ -416,14 +389,15 @@ def project_details(request):
 
 
 
-def get_generative_ai_data(request):
+def learnmore(request):
     try:
+        service_name = request.GET.get('service_name', None)
         client = MongoClient("mongodb+srv://umer:umer123456@cluster0.chseyyo.mongodb.net/")
         db = client['portfolio']
         learn_more_collection = db['learn_more_Data']  # Updated collection name
         
         # Fetch data from MongoDB with category "Generative AI"
-        data = learn_more_collection.find_one({"category": "Generative AI"})
+        data = learn_more_collection.find_one({"category": service_name})
         
         if data is None:
             return JsonResponse({'error': 'No data found in MongoDB'}, status=404)
@@ -438,184 +412,3 @@ def get_generative_ai_data(request):
 
 
   
-def get_language_processing_data(request):
-    try:
-        client = MongoClient("mongodb+srv://umer:umer123456@cluster0.chseyyo.mongodb.net/")
-        db = client['portfolio']
-        learn_more_collection = db['learn_more_Data']  # Updated collection name
-        
-        # Fetch data from MongoDB with category "Generative AI"
-        data = learn_more_collection.find_one({"category": "Language Processing"})
-        
-        if data is None:
-            return JsonResponse({'error': 'No data found in MongoDB'}, status=404)
-        
-        # Convert MongoDB ObjectId to string
-        data['_id'] = str(data['_id'])
-        
-        return JsonResponse(data)
-    except ConnectionFailure as e:
-        return JsonResponse({'error': str(e)}, status=500)
-
-
-
-
-def get_computer_vision_data(request):
-    try:
-        client = MongoClient("mongodb+srv://umer:umer123456@cluster0.chseyyo.mongodb.net/")
-        db = client['portfolio']
-        learn_more_collection = db['learn_more_Data']  # Updated collection name
-        
-        # Fetch data from MongoDB with category "Generative AI"
-        data = learn_more_collection.find_one({"category": "Computer Vision"})
-        
-        if data is None:
-            return JsonResponse({'error': 'No data found in MongoDB'}, status=404)
-        
-        # Convert MongoDB ObjectId to string
-        data['_id'] = str(data['_id'])
-        
-        return JsonResponse(data)
-    except ConnectionFailure as e:
-        return JsonResponse({'error': str(e)}, status=500)
-
-
-
-def get_data_analytics_data(request):
-    try:
-        client = MongoClient("mongodb+srv://umer:umer123456@cluster0.chseyyo.mongodb.net/")
-        db = client['portfolio']
-        learn_more_collection = db['learn_more_Data']  # Updated collection name
-        
-        # Fetch data from MongoDB with category "Generative AI"
-        data = learn_more_collection.find_one({"category": "Data Analytics"})
-        
-        if data is None:
-            return JsonResponse({'error': 'No data found in MongoDB'}, status=404)
-        
-        # Convert MongoDB ObjectId to string
-        data['_id'] = str(data['_id'])
-        
-        return JsonResponse(data)
-    except ConnectionFailure as e:
-        return JsonResponse({'error': str(e)}, status=500)
-
-
-
-
-def get_ai_driven_security_data(request):
-    try:
-        client = MongoClient("mongodb+srv://umer:umer123456@cluster0.chseyyo.mongodb.net/")
-        db = client['portfolio']
-        learn_more_collection = db['learn_more_Data']  # Updated collection name
-        
-        data = learn_more_collection.find_one({"category": "AI-Driven Security"})
-        
-        if data is None:
-            return JsonResponse({'error': 'No data found in MongoDB'}, status=404)
-        
-        # Convert MongoDB ObjectId to string
-        data['_id'] = str(data['_id'])
-        
-        return JsonResponse(data)
-    except ConnectionFailure as e:
-        return JsonResponse({'error': str(e)}, status=500)
-
-
-def get_predictive_analytics_data(request):
-    try:
-        client = MongoClient("mongodb+srv://umer:umer123456@cluster0.chseyyo.mongodb.net/")
-        db = client['portfolio']
-        learn_more_collection = db['learn_more_Data']  # Updated collection name
-        
-        data = learn_more_collection.find_one({"category": "Predictive Analytics"})
-        
-        if data is None:
-            return JsonResponse({'error': 'No data found in MongoDB'}, status=404)
-        
-        # Convert MongoDB ObjectId to string
-        data['_id'] = str(data['_id'])
-        
-        return JsonResponse(data)
-    except ConnectionFailure as e:
-        return JsonResponse({'error': str(e)}, status=500)
-
-
-
-def get_robotic_process_automation_data(request):
-    try:
-        client = MongoClient("mongodb+srv://umer:umer123456@cluster0.chseyyo.mongodb.net/")
-        db = client['portfolio']
-        learn_more_collection = db['learn_more_Data']  # Updated collection name
-        
-        data = learn_more_collection.find_one({"category": "Robotic Process Automation"})
-        
-        if data is None:
-            return JsonResponse({'error': 'No data found in MongoDB'}, status=404)
-        
-        # Convert MongoDB ObjectId to string
-        data['_id'] = str(data['_id'])
-        
-        return JsonResponse(data)
-    except ConnectionFailure as e:
-        return JsonResponse({'error': str(e)}, status=500)
-
-
-
-def get_web_app_development_data(request):
-    try:
-        client = MongoClient("mongodb+srv://umer:umer123456@cluster0.chseyyo.mongodb.net/")
-        db = client['portfolio']
-        learn_more_collection = db['learn_more_Data']  # Updated collection name
-        
-        data = learn_more_collection.find_one({"category": "Web App Development"})
-        
-        if data is None:
-            return JsonResponse({'error': 'No data found in MongoDB'}, status=404)
-        
-        # Convert MongoDB ObjectId to string
-        data['_id'] = str(data['_id'])
-        
-        return JsonResponse(data)
-    except ConnectionFailure as e:
-        return JsonResponse({'error': 'Failed to connect to MongoDB: {}'.format(str(e))}, status=500)
-    
-def get_product_design_data(request):
-    try:
-        client = MongoClient("mongodb+srv://umer:umer123456@cluster0.chseyyo.mongodb.net/")
-        db = client['portfolio']
-        learn_more_collection = db['learn_more_Data']  # Updated collection name
-        
-        data = learn_more_collection.find_one({"category": "Product Design"})
-        
-        if data is None:
-            return JsonResponse({'error': 'No data found in MongoDB'}, status=404)
-        
-        # Convert MongoDB ObjectId to string
-        data['_id'] = str(data['_id'])
-        
-        return JsonResponse(data)
-    except ConnectionFailure as e:
-        return JsonResponse({'error': 'Failed to connect to MongoDB: {}'.format(str(e))}, status=500)
-    
-
-
-
-
-def get_mobile_development_data(request):
-    try:
-        client = MongoClient("mongodb+srv://umer:umer123456@cluster0.chseyyo.mongodb.net/")
-        db = client['portfolio']
-        learn_more_collection = db['learn_more_Data']  # Updated collection name
-        
-        data = learn_more_collection.find_one({"category": "Mobile Development"})
-        
-        if data is None:
-            return JsonResponse({'error': 'No data found in MongoDB'}, status=404)
-        
-        # Convert MongoDB ObjectId to string
-        data['_id'] = str(data['_id'])
-        
-        return JsonResponse(data)
-    except ConnectionFailure as e:
-        return JsonResponse({'error': 'Failed to connect to MongoDB: {}'.format(str(e))}, status=500)
