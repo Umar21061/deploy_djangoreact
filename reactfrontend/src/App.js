@@ -30,6 +30,7 @@ import Reward from './reward';
 import Bot from './Bot';
 import Premium from './Premium';
 import Ebook from './Ebook';
+import LearnMore from './LearnMore'
 
 
 import ProjectDetails from './ProjectDetails';
@@ -82,17 +83,7 @@ function App() {
 function HomePage({ textData }) {
   return (
     <>
-      <Bot />
-      <Portfolio/>
-      <Services/>
-      <About/>
-      <RecentCase/>
-      <Partner/>
-      <Crew/>
-      <Banner/>
-      <Value/>
-      <Cons/>
-      <Footer/>
+      <LearnMore/>
      
 
       

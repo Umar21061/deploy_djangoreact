@@ -21,8 +21,5 @@ urlpatterns = [
 
 
     path('api/learnmore/', views.learnmore, name='learnmore'),
-   
-   
-   
     path('', views.index, name='index'),
 ]
