@@ -10,7 +10,7 @@ const LearnMore2 = ({ uniqueClassName }) => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get('/api/learnmore/',{params:{service_name:"Machine Learning"}});
+        const response = await axios.get('/api/learnmore/',{params:{service_name:"Generative AI"}});
         setLearnMoreData(response.data);
         setLoading(false);
       } catch (error) {
