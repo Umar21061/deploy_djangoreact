@@ -30,11 +30,16 @@
     text-align: center;
     margin-top: 2%; /* Adjust margin for smaller screens */
 }
+.portfolio-info {
+margin-top: 40px;
 
+}
 .portfolio-info h2 {
     font-size: 6vw; /* Responsive font size based on viewport width */
     margin-bottom: 1%; /* Adjust margin for smaller screens */
     color: white;
+    margin-top: 20px;
+   
 }
 
 
@@ -45,6 +50,7 @@
 
 .portfolio-info h4 {
     color: white;
+    margin-top:20px;
 }
 
 .line {
@@ -79,6 +85,7 @@
 @media screen and (min-width: 768px) {
     .portfolio-info h2 {
         font-size: 4.5em; /* Larger font size for desktop */
+
     }
 
     .portfolio-info p {

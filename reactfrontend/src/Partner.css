@@ -45,6 +45,11 @@ body {
   text-align: justify;
 
 }
+.partner-heading{
+  color: rgb(118,118,118);
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
 
 /* Media query for small screens */
 @media screen and (max-width: 768px) {

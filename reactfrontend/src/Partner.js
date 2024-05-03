@@ -4,7 +4,7 @@ import './Partner.css';
 const Partner = () => {
   return (
     <React.Fragment>
-      <h2 className="partner-heading">WHY PARTNERS CHOOSE US?</h2>
+      <h2  className="partner-heading">WHY PARTNERS CHOOSE US?</h2>
       <div className="partner-row">
         <div className="partner-column">
           <h3>Cutting-Edge Technology</h3>

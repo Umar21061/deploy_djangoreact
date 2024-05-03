@@ -45,6 +45,13 @@ body {
     height: auto;
     
 }
+.service-item img {
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .service-item:hover img {
+    transform: scale(1.1); /* Increase the scale to 110% on hover */
+  }
 
 .service-item h2 {
     margin-top: 10px;
