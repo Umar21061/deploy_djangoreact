@@ -46,7 +46,7 @@ const Service2 = () => {
                   <h3>Generative AI</h3>
                   <p className="service-text">Unleash the power of creativity with our Generative AI services. From art and music to storytelling and design, explore endless possibilities and redefine what's possible.</p>
                   <button className="btn btn learn-btn">
-                    <Link to="/generative_ai" style={{ textDecoration: 'none', color: '#443d68' }}>LearnMore</Link>
+                    <Link to="/generative-ai" style={{ textDecoration: 'none', color: '#443d68' }}>LearnMore</Link>
                     <span className="arrow">⇨</span>
                     <div className="line2"></div>
                   </button>
@@ -163,7 +163,7 @@ const Service2 = () => {
                   <div className="row">
                     <div className="col-md-12 text-left">
                       <button className="btn btn learn-btn">
-                        <Link to="/learnmore" style={{ textDecoration: 'none', color: '#443d68' }}>LearnMore</Link>
+                        <Link to="/productdesign" style={{ textDecoration: 'none', color: '#443d68' }}>LearnMore</Link>
                         <span className="arrow">⇨</span>
                         <div className="line2"></div>
                       </button>
@@ -192,7 +192,7 @@ const Service2 = () => {
                   <div className="row">
                     <div className="col-md-12 text-left">
                       <button className="btn btn learn-btn">
-                        <Link to="/learnmore" style={{ textDecoration: 'none', color: '#443d68' }}>LearnMore</Link>
+                        <Link to="/webdevelopment" style={{ textDecoration: 'none', color: '#443d68' }}>LearnMore</Link>
                         <span className="arrow">⇨</span>
                         <div className="line2"></div>
                       </button>
@@ -221,7 +221,7 @@ const Service2 = () => {
                   <div className="row">
                     <div className="col-md-12 text-left">
                       <button className="btn btn learn-btn">
-                        <Link to="/learnmore" style={{ textDecoration: 'none', color: '#443d68' }}>LearnMore</Link>
+                        <Link to="/mobiledevelopment" style={{ textDecoration: 'none', color: '#443d68' }}>LearnMore</Link>
                         <span className="arrow">⇨</span>
                         <div className="line2"></div>
                       </button>

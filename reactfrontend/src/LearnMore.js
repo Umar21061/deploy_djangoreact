@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import './LearnMore.css'; // Import the CSS file
 
-const LearnMore2 = ({ uniqueClassName }) => {
+const LearnMore = ({ uniqueClassName, category }) => {
   const [learnMoreData, setLearnMoreData] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -10,7 +10,7 @@ const LearnMore2 = ({ uniqueClassName }) => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get('/api/learnmore/',{params:{service_name:"Generative AI"}});
+        const response = await axios.get(`/api/learnmore/?service_name=${category}`);
         setLearnMoreData(response.data);
         setLoading(false);
       } catch (error) {
@@ -20,7 +20,7 @@ const LearnMore2 = ({ uniqueClassName }) => {
     };
 
     fetchData();
-  }, []);
+  }, [category]); // Run effect whenever category changes
 
   if (loading) {
     return <div>Loading...</div>;
@@ -38,7 +38,6 @@ const LearnMore2 = ({ uniqueClassName }) => {
         <div className="left-column">
           <h2>{div1['left-column']['heading1']}</h2>
           <h2>{div1['left-column']['text1']}</h2>
-         
         </div>
         <div className="right-column">
           <img src={div1['right-column']['image_url']} alt="Velocity+" />
@@ -67,4 +66,4 @@ const LearnMore2 = ({ uniqueClassName }) => {
   );
 };
 
-export default LearnMore2;
+export default LearnMore;

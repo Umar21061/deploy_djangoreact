@@ -396,7 +396,6 @@ def learnmore(request):
         db = client['portfolio']
         learn_more_collection = db['learn_more_Data']  # Updated collection name
         
-        # Fetch data from MongoDB with category "Generative AI"
         data = learn_more_collection.find_one({"category": service_name})
         
         if data is None:

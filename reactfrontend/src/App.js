@@ -69,13 +69,26 @@ function App() {
           <Route path="/apply" element={<Apply />} />
           <Route path="/contact" element={<ContactForm />} /> {/* Use ContactForm component here */}
           <Route path="/ebook" element={<Ebook />} />
-      
           <Route path="/project-details/:projectId" element={<ProjectDetails />} />
           <Route path="/portfolioproject" element={<PortfolioProject />} />
+
+          <Route path="/generative-ai" element={<LearnMorePage category="Generative AI" />} />
+          <Route path="/machinelearning" element={<LearnMorePage category="Machine Learning" />} />
+          <Route path="/languageprocessing" element={<LearnMorePage category="Language Processing" />} />
+          <Route path="/dataanalytics" element={<LearnMorePage category="Data Analytics" />} />
+          <Route path="/aisecurity" element={<LearnMorePage category="AI-Driven Security" />} />
+          <Route path="/predictiveanalysis" element={<LearnMorePage category="Predictive Analytics" />} />
+          <Route path="/reboticautomation" element={<LearnMorePage category="Robotic Process Automation" />} />
+          <Route path="/computervision" element={<LearnMorePage category="Computer Vision" />} />
+          <Route path="/productdesign" element={<LearnMorePage category="Product Design" />} />
+          <Route path="/webdevelopment" element={<LearnMorePage category="Web App Development" />} />
+          <Route path="/mobiledevelopment" element={<LearnMorePage category="Mobile Development" />} />
+
           
           
         </Routes>
       </div>
+      
     </Router>
   );
 }
@@ -83,7 +96,17 @@ function App() {
 function HomePage({ textData }) {
   return (
     <>
-      <LearnMore/>
+      <Bot />
+      <Portfolio/>
+      <Services/>
+      <About/>
+      <RecentCase/>
+      <Partner/>
+      <Crew/>
+      <Banner/>
+      <Value/>
+      <Cons/>
+      <Footer/>
      
 
       
@@ -93,5 +116,13 @@ function HomePage({ textData }) {
     </>
   );
 }
+const LearnMorePage = ({ category }) => {
+  return (
+    <div>
+      {/* Pass the category parameter to the LearnMore component */}
+      <LearnMore uniqueClassName="learnmore-page" category={category} />
+    </div>
+  );
+};
 
 export default App;
