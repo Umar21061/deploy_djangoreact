@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import './LearnMore.css'; // Import the CSS file
+import loadingImage from './image/loading3.gif'; 
 
 const LearnMore = ({ uniqueClassName, category }) => {
   const [learnMoreData, setLearnMoreData] = useState(null);
@@ -23,7 +24,10 @@ const LearnMore = ({ uniqueClassName, category }) => {
   }, [category]); // Run effect whenever category changes
 
   if (loading) {
-    return <div>Loading...</div>;
+    return <div style={{ backgroundColor: 'black', display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh' }}>
+    <img src={loadingImage} alt="Loading..." style={{ maxWidth: '50%', maxHeight: '50%', margin: 'auto' }} />
+  </div>
+  ;
   }
 
   if (error) {
