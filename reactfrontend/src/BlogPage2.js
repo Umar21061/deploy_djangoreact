@@ -4,6 +4,8 @@ import './BlogPage2.css'; // Import CSS file
 
 const BlogPage2 = () => {
   const [blogData, setBlogData] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
 
   useEffect(() => {
     const fetchBlogData = async () => {
@@ -11,7 +13,9 @@ const BlogPage2 = () => {
         const response = await axios.get('/api/blogpage2/');
         setBlogData(response.data);
       } catch (error) {
-        console.error('Error fetching blog data:', error);
+        setError(error);
+      } finally {
+        setLoading(false);
       }
     };
 
@@ -19,9 +23,16 @@ const BlogPage2 = () => {
     fetchBlogData();
   }, []); // Empty dependency array ensures the effect runs only once
 
+  if (loading) {
+    return <div>Loading...</div>;
+  }
+
+  if (error) {
+    return <div>Error fetching blog data: {error.message}</div>;
+  }
+
   return (
     <div>
-
       <div className="blockpage2 container">
         {/* Side-by-side divs */}
         {blogData.length > 0 && (
