@@ -1,6 +1,6 @@
-from django.urls import path 
+from django.urls import path, re_path
 from django.contrib import admin
-
+from django.views.generic import TemplateView
 from . import views
 
 urlpatterns = [
@@ -16,10 +16,8 @@ urlpatterns = [
     path('api/get_ebook_data/', views.ebook_data, name='get_ebook_data'),
     path('api/chat/', views.chat, name='chat'),  
     path('api/get_blogs_data/', views.get_blogs_data, name='get_blogs_data'),
-    path('api/get_reward_data/', views.get_reward_data, name='get_reward_data'),
     path('api/project_Details/', views.project_details, name='project_details'),
-
-
     path('api/learnmore/', views.learnmore, name='learnmore'),
-    path('', views.index, name='index'),
+    # Catch-all route for serving React app
+    re_path(r'^.*$', TemplateView.as_view(template_name='index.html')),
 ]

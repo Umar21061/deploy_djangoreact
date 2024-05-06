@@ -12,7 +12,6 @@ import BlogPage2 from './BlogPage2';
 import Cons from './Cons';
 import Footer from './Footer';
 import BlogPage from './BlogPage';
-
 import ServicesPage from './ServicesPage';
 import AboutPage from './AboutPage';
 import PortfolioPage from './PortfolioPage';
@@ -24,18 +23,14 @@ import Value from './Value';
 import Service2 from './Service2';
 import Career from './Career';
 import Apply from './Apply';
-import ContactForm from './Contact'; // Import ContactForm component
+import ContactForm from './Contact';
 import Blogs from './Blogs';
 import Reward from './reward';
 import Bot from './Bot';
 import Premium from './Premium';
 import Ebook from './Ebook';
-import LearnMore from './LearnMore'
-
-
+import LearnMore from './LearnMore';
 import ProjectDetails from './ProjectDetails';
-
-
 
 function App() {
   const [textData, setTextData] = useState('');
@@ -67,11 +62,10 @@ function App() {
           <Route path="/" element={<HomePage textData={textData} />} />
           <Route path="/career" element={<Career />} />
           <Route path="/apply" element={<Apply />} />
-          <Route path="/contact" element={<ContactForm />} /> {/* Use ContactForm component here */}
+          <Route path="/contact" element={<ContactForm />} />
           <Route path="/ebook" element={<Ebook />} />
           <Route path="/project-details/:projectId" element={<ProjectDetails />} />
           <Route path="/portfolioproject" element={<PortfolioProject />} />
-
           <Route path="/generative-ai" element={<LearnMorePage category="Generative AI" />} />
           <Route path="/machinelearning" element={<LearnMorePage category="Machine Learning" />} />
           <Route path="/languageprocessing" element={<LearnMorePage category="Language Processing" />} />
@@ -83,12 +77,8 @@ function App() {
           <Route path="/productdesign" element={<LearnMorePage category="Product Design" />} />
           <Route path="/webdevelopment" element={<LearnMorePage category="Web App Development" />} />
           <Route path="/mobiledevelopment" element={<LearnMorePage category="Mobile Development" />} />
-
-          
-          
         </Routes>
       </div>
-      
     </Router>
   );
 }
@@ -107,19 +97,13 @@ function HomePage({ textData }) {
       <Value/>
       <Cons/>
       <Footer/>
-     
-
-      
-
-
-
     </>
   );
 }
+
 const LearnMorePage = ({ category }) => {
   return (
     <div>
-      {/* Pass the category parameter to the LearnMore component */}
       <LearnMore uniqueClassName="learnmore-page" category={category} />
     </div>
   );
