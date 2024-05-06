@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom'; // Import Link from react-router-dom
 import './Career.css'; // Import the Career CSS file
 import video from './video/v6.mp4'; // Import the video
-import Reward from './reward.js'; // Import Reward component
+
 import Cons from './Cons.js'; // Import Cons component
 import Footer from './Footer.js'; // Import Footer component
 
@@ -54,7 +54,7 @@ const Career = () => {
       </div>
       
     </div>
-    <Reward/>
+   
     <Cons/>
     <Footer/>
     </>
