@@ -9,7 +9,7 @@ const PortfolioPage = () => {
   return (
     <div className="portfoliopage-page">
         <Portfolio/>
-        <PortfolioProject/>
+        
         <Crew/>
       
       <Cons />

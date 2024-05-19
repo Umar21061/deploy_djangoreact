@@ -18,6 +18,14 @@ urlpatterns = [
     path('api/get_blogs_data/', views.get_blogs_data, name='get_blogs_data'),
     path('api/project_Details/', views.project_details, name='project_details'),
     path('api/learnmore/', views.learnmore, name='learnmore'),
+
+    path('api/global_project/', views.global_project, name='api/global_project'),
+    path('api/project-detail/',views.project_detail, name='api/project_detail'),
+
+    
+    
+    
+
     # Catch-all route for serving React app
     re_path(r'^.*$', TemplateView.as_view(template_name='index.html')),
 ]

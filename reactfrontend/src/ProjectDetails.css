@@ -1,58 +1,84 @@
-.project-details-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
+.project_details-container {
+  color: black;
 }
 
-.project-details {
-    margin-top: 20px;
+.project_item {
+  position: relative;
+  margin: 20px auto;
+  max-width: 1200px;
+  padding: 0 20px;
 }
 
-.project-details-item,
-.project-details-background2 {
-    background-size: cover;
-    background-position: center;
-    width: 100%;
-    height: 300px; /* Adjust height as needed */
-    position: relative;
-    margin-bottom: 20px; /* Add margin between items */
+.project_video {
+  width: 100%;
+  height: 70vh;
+  object-fit: cover;
+  margin-bottom: 50px;
+  margin-top: 50px;
 }
 
-.project-details-content,
-.project-details-content2 {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: white;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add text shadow for better readability */
-    padding: 20px;
-    background-color: rgba(0, 0, 0, 0.5); /* Add a semi-transparent background for better contrast */
-    max-width: 80%; /* Limit maximum width of content */
+.project_video_heading {
+  position: absolute;
+  top: 3%; /* Adjust these values as needed */
+  left: 5%; /* Adjust these values as needed */
+  color: white; /* Adjust the color for better visibility */
+  font-family: sans-serif;
+  font-size: 45px; /* Increased font size */
 }
 
-.project-details-content h3,
-.project-details-content p,
-.project-details-content2 h3,
-.project-details-content2 p {
-    margin: 0;
-    text-align: center; /* Center text horizontally */
+.project_video_text {
+  position: absolute;
+  top: 7%; /* Adjust these values as needed */
+  left: 5%; /* Adjust these values as needed */
+  color: white; /* Adjust the color for better visibility */
+  font-family: sans-serif;
+  font-size: 25px; /* Increased font size */
 }
 
-@media screen and (max-width: 768px) {
-    .project-details-item,
-    .project-details-background2 {
-        height: auto; /* Change height to auto for smaller screens */
-    }
-    
-    .project-details-content,
-    .project-details-content2 {
-        max-width: 100%; /* Adjust maximum width for smaller screens */
-    }
+.project_video_heading,
+.project_video_text {
+  width: 50%; /* Ensure the text doesn't overflow */
+}
+
+.project_problem_heading,
+.project_process_heading,
+.project_solution_heading,
+.project_about_text,
+.project_problem_text,
+.project_process_text,
+.project_solution_text {
+  text-align: justify;
+  color: black;
+  font-family: sans-serif;
+}
+
+.project_about_heading {
+  font-size: 40px;
+  color: black;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-family: sans-serif;
+}
+
+.project_image_text {
+  font-size: 40px;
+  color: black;
+  margin-top: 15px;
+  font-family: sans-serif;
+}
+
+/* Images */
+.project_image {
+  margin-top: 40px;
+  display: block;
+  width: 100%;
+  height: 500px;
+  max-width: 100%;
+  margin-top: 50px;
+  margin-bottom: 20px;
+}
+
+/* Images in two columns */
+.project_item .row .col-md-6 .project_image {
+  margin-bottom: 0;
 }

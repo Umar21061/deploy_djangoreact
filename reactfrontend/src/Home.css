@@ -9,35 +9,34 @@
 
 
 .btn-primary {
-    background-color:white;
+    background-color: #5f4fbd; /* Blue background color */
     font-size: 20px;
     position: relative;
     border: 2px solid rgb(195, 195, 207);
     cursor: pointer;
     overflow: hidden;
-    color: black;
-
+    color: white; /* Text color */
 }
 
 .btn-primary::before {
     content: '';
     position: absolute;
     top: 0;
-    left: 0;
+    left: -100%; /* Initially off the screen to the left */
     width: 100%;
     height: 100%;
-    background-image: linear-gradient(120deg, #5f4fbd  0%,  #251f75  100%);
-    transform: translateX(-100%);
-    transition: transform 0.3s ease;
+    background-color: white; /* White slice */
+    transition: left 0.3s ease; /* Transition for left position */
     z-index: -1;
 }
 
 .btn-primary:hover::before {
-    transform: translateX(0);
+    left: 0; /* Slide the white slice in from the left */
 }
 
 .btn-primary:hover {
-    color: white;
+    background-color: white; /* Change background to white on hover */
+    color: black; /* Change text color to black on hover */
     z-index: 1;
 }
 

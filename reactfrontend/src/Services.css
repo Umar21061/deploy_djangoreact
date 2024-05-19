@@ -59,40 +59,41 @@ body {
 
 
 .see-all-button {
-text-decoration: none;
-background-color:white;
-font-size: 20px;
-position: relative;
-border: 2px solid rgb(195, 195, 207);
-cursor: pointer;
-overflow: hidden;
-color: black;
-padding: 10px;
-border-radius: 10px;
-
+    text-decoration: none;
+    background-color: white; /* Initially white background */
+    font-size: 20px;
+    position: relative;
+    border: 2px solid rgb(195, 195, 207);
+    cursor: pointer;
+    overflow: hidden;
+    color: black;
+    padding: 10px;
+    border-radius: 10px;
 }
 
-.see-all-button::before {   
+.see-all-button::before {
     content: '';
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: linear-gradient(120deg, #5f4fbd  0%,  #251f75  100%);
-    transform: translateX(-100%);
-    transition: transform 0.3s ease;
+    background-color: #5f4fbd; /* Blue slice color */
+    transform: translateX(-100%); /* Initially off the screen to the left */
+    transition: transform 0.3s ease; /* Transition for transform */
     z-index: -1;
 }
 
 .see-all-button:hover::before {
-transform: translateX(0); /* Move the element inside the button on hover */
+    transform: translateX(100%); /* Move the blue slice in from the left */
 }
 
 .see-all-button:hover {
-    color: white;
+    background-color: #5f4fbd; /* Change background to blue on hover */
+    color: white; /* Change text color to white on hover */
     z-index: 1;
 }
+
 
 @media screen and (max-width: 768px) {
     .service-item {

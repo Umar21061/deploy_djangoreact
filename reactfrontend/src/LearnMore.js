@@ -41,7 +41,8 @@ const LearnMore = ({ uniqueClassName, category }) => {
       <div className="learnmore-div1">
         <div className="left-column">
           <h2>{div1['left-column']['heading1']}</h2>
-          <h2>{div1['left-column']['text1']}</h2>
+          <p style={{ fontSize: '20px' , marginRight : "20px",color : 'black'}}>{div1['left-column']['text1']}</p>
+
         </div>
         <div className="right-column">
           <img src={div1['right-column']['image_url']} alt="Velocity+" />

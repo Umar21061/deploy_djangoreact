@@ -1,0 +1,128 @@
+.project-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: 100px; /* Add left margin */
+  margin-right: 100px; /* Add right margin */
+}
+
+.option-container {
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.project-button {
+  margin: 5px;
+  padding: 5px 10px;
+  border: 1px solid #ccc;
+  background-color: #f0f0f0;
+  border-radius: 5px;
+  cursor: pointer;
+  border-color: rgb(92, 124, 220);
+}
+
+.name-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.name-button {
+  margin: 5px;
+  padding: 5px 10px;
+  border: 1px solid #ccc;
+  background-color: #f0f0f0;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.name-button:hover {
+  background-color: #e0e0e0;
+}
+
+.project-text {
+  color: white;
+  font-size: 25px;
+  text-align: center; /* Center the text horizontally */
+}
+
+.project-video {
+  width: 350px;
+  height: 400px; 
+  object-fit: cover;
+  margin: auto; /* Center the video horizontally */
+  display: block; /* Ensure proper centering */
+}
+
+/* Remove text decoration from ul */
+.document-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  list-style: none; /* Remove default bullet points */
+}
+
+.document-item {
+  width: calc(33.33% - 20px); /* Calculate width to fit 3 videos with gap */
+  margin-bottom: 20px; /* Add margin to create vertical gap */
+}
+
+/* Position the project video container to the left with margins */
+.project-video-container {
+  position: relative;
+  display: flex;
+  align-items: center; /* Vertically center content */
+  justify-content: center; /* Horizontally center content */
+}
+
+.text-overlay {
+  position: absolute;
+  left: 50%; /* Center horizontally */
+  top: 50%; /* Center vertically */
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  text-align: center; /* Center text horizontally */
+}
+
+/* Responsive styles for tablets */
+@media (max-width: 1024px) {
+  .project-container {
+    margin-left: 50px; /* Adjust left margin for tablet */
+    margin-right: 50px; /* Adjust right margin for tablet */
+  }
+
+  .project-video {
+    width: 80%; /* Adjust video width for tablet */
+    height: auto; /* Maintain aspect ratio */
+  }
+
+  .document-item {
+    width: calc(50% - 10px); /* Adjust width for two columns layout */
+    margin-bottom: 20px; /* Ensure consistent gap */
+  }
+}
+
+/* Responsive styles for small screens */
+@media (max-width: 768px) {
+  .project-container {
+    margin-left: 20px; /* Reduce left margin */
+    margin-right: 20px; /* Reduce right margin */
+  }
+
+  .project-video {
+    width: 100%; /* Make video width responsive */
+    height: auto; /* Maintain aspect ratio */
+  }
+
+  .document-item {
+    width: 100%; /* Make document items stack vertically */
+  }
+
+  .option-container, .name-container {
+    flex-direction: column; /* Stack buttons vertically */
+  }
+
+  .project-text {
+    font-size: 20px; /* Adjust text size for smaller screens */
+  }
+}

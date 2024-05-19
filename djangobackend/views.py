@@ -143,32 +143,7 @@ def get_portfolio_data(request):
 
 
 
-    try:
-        # Connect to MongoDB
-        client = MongoClient("mongodb+srv://umer:umer123456@cluster0.chseyyo.mongodb.net/")
-
-        # Access the portfolio database
-        db = client.portfolio
-
-        # Access the project collection
-        collection = db.project
-
-        # Fetch data from MongoDB
-        data = collection.find({}, {'_id': 0, 'portfolioproject_url.expertise': 1, 'portfolioproject_url.industry': 1})
-
-        # Convert MongoDB cursor to list of dictionaries
-        portfolio_data = list(data)
-
-        # Close MongoDB connection
-        client.close()
-
-        return JsonResponse(portfolio_data, safe=False)
-    except Exception as e:
-        return JsonResponse({'error': str(e)}, status=500)
-    
-
-
-
+   
 
     # views.py
 
@@ -396,6 +371,7 @@ def learnmore(request):
         db = client['portfolio']
         learn_more_collection = db['learn_more_Data']  # Updated collection name
         
+        # Fetch data from MongoDB with category "Generative AI"
         data = learn_more_collection.find_one({"category": service_name})
         
         if data is None:
@@ -410,4 +386,90 @@ def learnmore(request):
 
 
 
-  
+
+
+
+def global_project(request):
+    try:
+        # Connect to MongoDB
+        client = MongoClient("mongodb+srv://umer:umer123456@cluster0.chseyyo.mongodb.net/")
+        db = client['portfolio']
+        global_project_collection = db['global_project']
+        project_category_collection = db['project_category']
+        project_collection = db['project_collection']
+        
+        # Fetch document with the name "Tag" from global_project_collection
+        document = global_project_collection.find_one({"name": "Tag"})
+        
+        if document is None:
+            return JsonResponse({'error': 'Document with name "Tag" not found in MongoDB'}, status=404)
+        
+        # Extract options field from the document
+        options = document.get('options', [])
+        
+        # If "option" parameter is provided in the request
+        selected_option = request.GET.get('option')
+        if selected_option:
+            if selected_option == "All":
+                # Query project_collection for all documents
+                all_documents = project_collection.find({})
+                # Collect all relevant fields from the documents
+                all_documents_list = [
+                    {
+                        "_id": str(doc["_id"]),
+                        "name": doc.get('name'),
+                        "description": doc.get('description'),
+                        "video_url": doc.get('video_url'),
+                        "category": doc.get('category')
+                    } for doc in all_documents
+                ]
+                return JsonResponse({'documents': all_documents_list})
+            else:
+                # Query project_category collection for names corresponding to the selected option
+                category_documents = project_category_collection.find({"tag": selected_option})
+                names = [doc['name'] for doc in category_documents]
+                return JsonResponse({'names': names})
+        
+        # If "category" parameter is provided in the request
+        selected_category = request.GET.get('category')
+        if selected_category:
+            # Define the aggregation pipeline
+            pipeline = [
+                {"$match": {"category": selected_category}},
+                {"$project": {"_id": {"$toString": "$_id"}, "name": 1, "description": 1, "video_url": 1, "category": 1}}
+            ]
+            # Execute the aggregation pipeline
+            documents = list(project_collection.aggregate(pipeline))
+            return JsonResponse({'documents': documents})
+        
+        return JsonResponse({'options': options})
+    
+    except ConnectionFailure as e:
+        return JsonResponse({'error': str(e)}, status=500)
+
+
+def project_detail(request):
+    try:
+        # Connect to MongoDB
+        client = MongoClient("mongodb+srv://umer:umer123456@cluster0.chseyyo.mongodb.net/")
+        db = client['portfolio']
+        project_collection = db['project_collection']
+        
+        # If "category" and "name" parameters are provided in the request
+        selected_category = request.GET.get('category')
+        selected_name = request.GET.get('name')
+        if selected_category and selected_name:
+            
+            # Find the document based on category and name
+            document = project_collection.find_one({"category": selected_category, "name": selected_name})
+            if document:
+                # Convert ObjectId to string for serialization
+                document['_id'] = str(document['_id'])
+                return JsonResponse({'document': document})
+            else:
+                return JsonResponse({'error': 'Document not found'}, status=404)
+        
+        return JsonResponse({'error': 'Category or name parameter is missing from the request'}, status=400)
+    
+    except ConnectionFailure as e:
+        return JsonResponse({'error': str(e)}, status=500)

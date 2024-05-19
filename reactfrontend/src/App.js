@@ -30,7 +30,11 @@ import Bot from './Bot';
 import Premium from './Premium';
 import Ebook from './Ebook';
 import LearnMore from './LearnMore';
+
+import Project from './project';
 import ProjectDetails from './ProjectDetails';
+
+
 
 function App() {
   const [textData, setTextData] = useState('');
@@ -48,6 +52,13 @@ function App() {
       console.error('Error fetching text data:', error);
     }
   };
+  const LearnMorePage = ({ category }) => {
+    return (
+      <div>
+        <LearnMore uniqueClassName="learnmore-page" category={category} />
+      </div>
+    );
+  };
 
   return (
     <Router>
@@ -64,7 +75,6 @@ function App() {
           <Route path="/apply" element={<Apply />} />
           <Route path="/contact" element={<ContactForm />} />
           <Route path="/ebook" element={<Ebook />} />
-          <Route path="/project-details/:projectId" element={<ProjectDetails />} />
           <Route path="/portfolioproject" element={<PortfolioProject />} />
           <Route path="/generative-ai" element={<LearnMorePage category="Generative AI" />} />
           <Route path="/machinelearning" element={<LearnMorePage category="Machine Learning" />} />
@@ -77,6 +87,8 @@ function App() {
           <Route path="/productdesign" element={<LearnMorePage category="Product Design" />} />
           <Route path="/webdevelopment" element={<LearnMorePage category="Web App Development" />} />
           <Route path="/mobiledevelopment" element={<LearnMorePage category="Mobile Development" />} />
+          <Route path="/projectdetails/:category/:name" element={<ProjectDetails />} />
+          <Route path="/project" element={<Project />} />
         </Routes>
       </div>
     </Router>
@@ -87,26 +99,20 @@ function HomePage({ textData }) {
   return (
     <>
       <Bot />
-      <Portfolio/>
-      <Services/>
-      <About/>
-      <RecentCase/>
+      <Portfolio />
+      
+      <Services />
+      <About />
+      <RecentCase />
       <Partner/>
-      <Crew/>
-      <Banner/>
       <Value/>
-      <Cons/>
-      <Footer/>
+     
+      <Cons />
+      <Footer />
     </>
   );
 }
 
-const LearnMorePage = ({ category }) => {
-  return (
-    <div>
-      <LearnMore uniqueClassName="learnmore-page" category={category} />
-    </div>
-  );
-};
+
 
 export default App;
