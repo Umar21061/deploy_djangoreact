@@ -35,6 +35,7 @@
   object-fit: cover;
   margin: auto; /* Center the video horizontally */
   display: block; /* Ensure proper centering */
+  margin-top: 20px;
 }
 
 .recent-case-text-overlay {
