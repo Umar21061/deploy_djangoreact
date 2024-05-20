@@ -16,7 +16,7 @@ import ServicesPage from './ServicesPage';
 import AboutPage from './AboutPage';
 import PortfolioPage from './PortfolioPage';
 import Partner from './Partner';
-import PortfolioProject from './PortfolioProject';
+
 import Banner from './Banner';
 import Crew from './crew';
 import Value from './Value';
@@ -75,7 +75,7 @@ function App() {
           <Route path="/apply" element={<Apply />} />
           <Route path="/contact" element={<ContactForm />} />
           <Route path="/ebook" element={<Ebook />} />
-          <Route path="/portfolioproject" element={<PortfolioProject />} />
+          
           <Route path="/generative-ai" element={<LearnMorePage category="Generative AI" />} />
           <Route path="/machinelearning" element={<LearnMorePage category="Machine Learning" />} />
           <Route path="/languageprocessing" element={<LearnMorePage category="Language Processing" />} />

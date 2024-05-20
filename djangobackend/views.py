@@ -11,6 +11,10 @@ def index(request):
     return render(request, 'index.html')
 
 
+from django.http import JsonResponse
+from pymongo import MongoClient
+from bson import ObjectId
+
 def get_market_data(request):
     try:
         # Connect to MongoDB
@@ -20,10 +24,13 @@ def get_market_data(request):
         db = client.portfolio
 
         # Access the market_data collection
-        market_data_collection = db.market_data
+        market_data_collection = db.global_data
 
-        # Query for the document containing market data
-        market_data_document = market_data_collection.find_one()
+        # Query for the document using its ObjectId
+        market_data_document = market_data_collection.find_one({'_id': ObjectId("660685ed6bc8020d1c75d185")})
+
+        if not market_data_document:
+            return JsonResponse({'error': 'Document not found'}, status=404)
 
         # Extract required values
         years_on_market = market_data_document.get('Years on the market', None)
@@ -39,7 +46,7 @@ def get_market_data(request):
             'Years on the market': years_on_market,
             'Experts on board': experts_on_board,
             'Completed projects': completed_projects,
-            'Time to hire' : time_to_hire
+            'Time to hire': time_to_hire
         }
 
         return JsonResponse(data)
@@ -50,43 +57,7 @@ def get_market_data(request):
 
 
 
-
-    # Connect to MongoDB
-    client = MongoClient("mongodb+srv://umer:umer123456@cluster0.chseyyo.mongodb.net/")
-
-    # Access the portfolio database
-    db = client.portfolio
-
-    # Access the market_data collection
-    market_data_collection = db.market_data
-
-    # Fetch the document containing market data
-    market_data_document = market_data_collection.find_one()
-
-    # Initialize lists to store expertise and industry video data
-    expertise_video_data = []
-    industry_video_data = []
-
-    if market_data_document:
-        # Iterate over expertise categories
-        for expertise_category, subcategories in market_data_document.get('expertise', {}).items():
-            for subcategory in subcategories:
-                url = subcategory  # Assuming each subcategory directly holds the URL
-                category_name = f"{expertise_category} "
-                expertise_video_data.append({'category_name': category_name, 'url': url})
-
-        # Iterate over industry categories
-        for industry_category, subcategories in market_data_document.get('industry', {}).items():
-            for subcategory in subcategories:
-                url = subcategory  # Assuming each subcategory directly holds the URL
-                category_name = f"{industry_category} "
-                industry_video_data.append({'category_name': category_name, 'url': url})
-
-    # Combine expertise and industry video data
-    video_data = {'expertise': expertise_video_data, 'industry': industry_video_data}
-
-    # Return data as JSON response
-    return JsonResponse(video_data)
+  
 
 def get_crew_data(request):
     try:
@@ -117,29 +88,6 @@ def get_crew_data(request):
 
 
 
-def get_portfolio_data(request):
-    try:
-        # Connect to MongoDB
-        client = MongoClient("mongodb+srv://umer:umer123456@cluster0.chseyyo.mongodb.net/")
-
-        # Access the portfolio database
-        db = client.portfolio
-
-        # Access the project2 collection
-        collection = db.project2
-
-        # Fetch data from MongoDB
-        data = collection.find({}, {'_id': 0, 'category': 1, 'urls': 1, 'video_text': 1})
-
-        # Convert MongoDB cursor to list of dictionaries
-        portfolio_data = list(data)
-
-        # Close MongoDB connection
-        client.close()
-
-        return JsonResponse(portfolio_data, safe=False)
-    except Exception as e:
-        return JsonResponse({'error': str(e)}, status=500)
 
 
 
@@ -154,13 +102,17 @@ def get_job_data(request):
     # Connect to MongoDB
     client = MongoClient("mongodb+srv://umer:umer123456@cluster0.chseyyo.mongodb.net/")
     db = client['portfolio']
-    collection = db['job']
+    collection = db['global_data']
 
-    # Retrieve job data from MongoDB
-    job_data = collection.find_one({})
+    # Convert the provided ID to ObjectId
+    document_id = ObjectId("661aea4fb3059fc714db1f13")
 
-    # Convert MongoDB ObjectId to string for JSON serialization
-    job_data['_id'] = str(job_data['_id'])
+    # Retrieve the specific job data from MongoDB
+    job_data = collection.find_one({'_id': document_id})
+
+    if job_data:
+        # Convert MongoDB ObjectId to string for JSON serialization
+        job_data['_id'] = str(job_data['_id'])
 
     # Close MongoDB connection
     client.close()
@@ -173,7 +125,7 @@ def slider_data(request):
         # Connect to MongoDB
         client = MongoClient("mongodb+srv://umer:umer123456@cluster0.chseyyo.mongodb.net/")
         db = client['portfolio']
-        collection = db['slider']
+        collection = db['blogpage1']
 
         # Fetch all documents from the collection
         documents = list(collection.find())
@@ -186,30 +138,60 @@ def slider_data(request):
         return JsonResponse({'error': str(e)}, status=500)
     
 
+
+def slider_data(request):
+    try:
+        # Connect to MongoDB
+        client = MongoClient("mongodb+srv://umer:umer123456@cluster0.chseyyo.mongodb.net/")
+        db = client['portfolio']
+        collection = db['blogpage1']
+
+        # Fetch all documents from the collection
+        documents = list(collection.find())
+
+        # Convert documents to JSON format
+        data = [{'image_url': doc[f'image{i}_url'], 'image_text': doc[f'image{i}_text']} for i, doc in enumerate(documents, start=1)]
+
+        return JsonResponse(data, safe=False)
+    except Exception as e:
+        return JsonResponse({'error': str(e)}, status=500)
+    
+
+
 def ebook_data(request):
     # Connect to MongoDB
     client = MongoClient("mongodb+srv://umer:umer123456@cluster0.chseyyo.mongodb.net/")
     db = client['portfolio']
-    collection = db['job']
+    collection = db['global_data']
 
-    # Retrieve job data from MongoDB
-    ebook_data = collection.find_one({})
+    # Retrieve specific job data from MongoDB
+    document_id = "661aea4fb3059fc714db1f14"
+    ebook_data = collection.find_one({"_id": ObjectId(document_id)})
 
-    # Convert MongoDB ObjectId to string for JSON serialization
-    ebook_data['_id'] = str(ebook_data['_id'])
+    if ebook_data:
+        # Convert MongoDB ObjectId to string for JSON serialization
+        ebook_data['_id'] = str(ebook_data['_id'])
+        response = JsonResponse(ebook_data)
+    else:
+        response = JsonResponse({"error": "Document not found"}, status=404)
 
     # Close MongoDB connection
     client.close()
 
-    return JsonResponse(ebook_data)
+    return response
 
+
+
+from django.http import JsonResponse
+from pymongo import MongoClient
+from bson import ObjectId
 
 def blogpage2(request):
     try:
         # Connect to MongoDB
         client = MongoClient("mongodb+srv://umer:umer123456@cluster0.chseyyo.mongodb.net/")
         db = client['portfolio']
-        collection = db['blogpage2']
+        collection = db['global_data']
 
         # Fetch all documents from the collection
         documents = list(collection.find())
@@ -217,8 +199,9 @@ def blogpage2(request):
         # Convert documents to JSON format
         data = [{'image_url': doc['image_url'], 'description': doc['description'], 'btn': doc['btn1']} for doc in documents]
 
-        # Fetch the new document from the collection
-        new_document = collection.find_one({"btn": "Get the ebook"})  # Assuming "btn" is unique
+        # Fetch the specific document using its ObjectId
+        document_id = ObjectId("661e227214aee6c28c2ae908")
+        new_document = collection.find_one({"_id": document_id})
 
         # Store the new document in a variable named blogpage2
         if new_document:
@@ -233,8 +216,6 @@ def blogpage2(request):
     except Exception as e:
         return JsonResponse({'error': str(e)}, status=500)
 
-from django.http import JsonResponse
-from pymongo import MongoClient
 
 def get_reward_data(request):
     try:
@@ -297,13 +278,31 @@ def save_contact(request):
         # Return error response for disallowed methods
         return JsonResponse({'error': 'Method not allowed'}, status=405)
 # Connect to MongoDB
+from django.http import JsonResponse
+from pymongo import MongoClient
+from bson.objectid import ObjectId
+
+# MongoDB connection details
 client = MongoClient("mongodb+srv://umer:umer123456@cluster0.chseyyo.mongodb.net/")
 db = client['portfolio']
-collection = db['blogs']
+collection = db['global_data']
 
 def get_blogs_data(request):
-    blogs_data = collection.find_one()
-    return JsonResponse(blogs_data['all_category'])
+    try:
+        # Fetch the document with the specified _id
+        document_id = "6620c12e3945bb0994b538e5"
+        blogs_data = collection.find_one({"_id": ObjectId(document_id)})
+        
+        if blogs_data and 'all_category' in blogs_data:
+            # Return the 'all_category' field as a JSON response
+            return JsonResponse(blogs_data['all_category'], safe=False)
+        else:
+            # Return an error message if the document or 'all_category' field is not found
+            return JsonResponse({"error": "Document not found or 'all_category' field missing"}, status=404)
+    except Exception as e:
+        # Return an error message in case of any exceptions
+        return JsonResponse({"error": str(e)}, status=500)
+
 
 @csrf_exempt
 def chat(request):

@@ -6,9 +6,7 @@ from . import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/get_market_data/', views.get_market_data, name='get_market_data'),
-    path('api/get_crew_data/', views.get_crew_data, name='get_crew_data'),
-    path('api/get_job_data/', views.get_job_data, name='get_job_data'),
-    path('api/get_portfolio_data/', views.get_portfolio_data, name='get_portfolio_data'),
+    
     path('api/slider_data/', views.slider_data, name='slider_data'),
     path('api/blogpage2/', views.blogpage2, name='blogpage2'),
     path('api/save_contact/', views.save_contact, name='save_contact'),
