@@ -11,33 +11,30 @@
   margin-bottom: 10px;
 }
 
-.project-button {
-  margin: 20px 5px; /* Add top and bottom margin */
+.project-button, .name-button {
+  margin: 15px 5px; /* Add top and bottom margin */
   padding: 10px 20px; /* Increase padding size */
-  border: 1px solid #ccc;
+  border: none; /* Remove border */
   border-radius: 5px;
   cursor: pointer;
- 
   background-color: transparent; /* Remove background color */
+  color: black; /* Set default text color */
+  font-size: 25px; /* Increase font size */
+}
+
+.project-button:focus,
+.project-button:active,
+.project-button:hover,
+.name-button:focus,
+.name-button:active,
+.name-button:hover {
+  color: blue; /* Change text color to blue on interaction */
 }
 
 .name-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-}
-
-.name-button {
-  margin: 15px 5px; /* Add top and bottom margin */
-  padding: 10px 20px; /* Increase padding size */
-  border: 1px solid #ccc;
-
-  cursor: pointer;
-  background-color: transparent; /* Remove background color */
-}
-
-.name-button:hover {
-  background-color: #e0e0e0;
 }
 
 .project-text {

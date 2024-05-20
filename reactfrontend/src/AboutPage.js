@@ -93,28 +93,28 @@ const Aboutpage = () => {
             <div className="aboutpage-row">
               <div className="col-lg-3 col-md-3 col-sm-6">
                 <div className="aboutpage-info" onMouseEnter={() => handleHover(14)}>
-                  <h1>{yearsOnMarket}</h1>
+                  <h1>{yearsOnMarket}+</h1>
                   <div className="line"></div>
                   <h4 className="about_text1" style={{ color: 'white' }}>Years on the market</h4>
                 </div>
               </div>
               <div className="col-lg-3 col-md-3 col-sm-6">
                 <div className="aboutpage-info" onMouseEnter={() => handleHover(60)}>
-                  <h1>{expertsOnBoard}</h1>
+                  <h1>{expertsOnBoard}+</h1>
                   <div className="line"></div>
                   <h4 className="about_text1" style={{ color: 'white' }}>Experts on board</h4>
                 </div>
               </div>
               <div className="col-lg-3 col-md-3 col-sm-6">
                 <div className="aboutpage-info" onMouseEnter={() => handleHover(400)}>
-                  <h1>{completedProjects}</h1>
+                  <h1>{completedProjects}+</h1>
                   <div className="line"></div>
                   <h4 className="about_text1" style={{ color: 'white' }}>Completed projects</h4>
                 </div>
               </div>
               <div className="col-lg-3 col-md-3 col-sm-6">
                 <div className="aboutpage-info" onMouseEnter={() => handleHover(timeToHire)}>
-                  <h1>{timeToHire}</h1>
+                  <h1>{timeToHire}+</h1>
                   <div className="line"></div>
                   <h4 className="about_text1" style={{ color: 'white' }}>Time to hire (days)</h4>
                 </div>

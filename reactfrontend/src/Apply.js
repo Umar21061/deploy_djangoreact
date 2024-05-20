@@ -1,43 +1,64 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import axios from 'axios';
-import './Apply.css'; 
+import './Contact.css';
+import Footer from './Footer';
 
-const Apply = () => {
-    const [jobData, setJobData] = useState(null);
+const ContactForm = () => {
+  const [formStatus, setFormStatus] = React.useState('Send');
 
-    useEffect(() => {
-        const fetchData = async () => {
-            try {
-                const response = await axios.get('/api/get_job_data');
-                setJobData(response.data);
-            } catch (error) {
-                console.error('Error fetching job data:', error);
-            }
-        };
+  const onSubmit = async (e) => {
+    e.preventDefault();
+    setFormStatus('Submitting...');
+    const { name, email, message } = e.target.elements;
+    let formData = {
+      name: name.value,
+      email: email.value,
+      message: message.value,
+    };
 
-        fetchData();
-    }, []);
+    try {
+      const response = await axios.post('/api/save_contact/', formData);
+      console.log(response.data); // Assuming the backend returns some confirmation
+      setFormStatus('Submitted');
+    } catch (error) {
+      console.error('Error submitting form:', error);
+      setFormStatus('Error');
+    }
+  };
 
-    return (
-        <div className="apply-container">
-            {jobData ? (
-                <div>
-                    <h2 className="apply-heading">{jobData.heading}</h2>
-                    <p className="apply-location">Location: {jobData.location}</p>
-                    <p className="apply-team-size">Team Size: {jobData.team_size}</p>
-                    <p className="apply-compensation">Compensation:</p>
-                    <ul>
-                        <li>CoE: {jobData.compensation.CoE}</li>
-                        <li>B2B: {jobData.compensation.B2B}</li>
-                    </ul>
-                    <p className="apply-description">Job Description:{jobData.job_description}</p>
-                    <button className="apply-button">{jobData.btn}</button>
-                </div>
-            ) : (
-                <p className="loading">Loading...</p>
-            )}
+  return (
+    <div className="contact-container mt-5">
+      <h2 className="mb-3">Get in touch</h2>
+      <form onSubmit={onSubmit}>
+        <div className="row">
+          <div className="col-6 mb-3">
+            <label className="form-label" htmlFor="name">
+              Name
+            </label>
+            <input className="form-control" type="text" id="name" required />
+          </div>
+          <div className="col-6 mb-3">
+            <label className="form-label" htmlFor="email">
+              Email
+            </label>
+            <input className="form-control" type="email" id="email" required />
+          </div>
         </div>
-    );
+        <div className="row">
+          <div className="col-12 mb-3">
+            <label className="form-label" htmlFor="message">
+              Message
+            </label>
+            <textarea className="form-control" id="message" required />
+          </div>
+        </div>
+        <button className="btn btn-contact" type="submit">
+          {formStatus}
+        </button>
+      </form>
+      <Footer/>
+    </div>
+  );
 };
 
-export default Apply;
+export default ContactForm;

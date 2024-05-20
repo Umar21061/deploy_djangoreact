@@ -119,7 +119,7 @@ const Project = () => {
                 onMouseLeave={() => handleMouseLeave(index)}
                 onClick={() => handleVideoClick(doc.name, doc.category)}
               >
-                <video className="project-video" ref={el => videoRefs.current[index] = el} key={doc.video_url}>
+                <video className="project-video" ref={el => videoRefs.current[index] = el} key={doc.video_url} muted>
                   <source src={doc.video_url} type="video/mp4" />
                   Your browser does not support the video tag.
                 </video>

@@ -1,23 +1,25 @@
 .aboutpage-container {
     padding: 34px;
     background-color: black;
- 
 }
 
 .aboutpage-section {
     position: relative;
     overflow: hidden;
-    height: 40vh; /* Set the height to 70vh */
+    height: 60vh; /* Set the height to 60vh */
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-
-
 
 .aboutpage-row {
     display: flex;
     flex-wrap: wrap; /* Allow items to wrap to the next line */
     justify-content: space-between; /* Adjust spacing between items */
+    margin: 0 auto; /* Center the row horizontally */
+    width: 100%;
+    max-width: 1200px; /* Optional: set a max-width to the row for better alignment */
 }
-
 
 .aboutpage-info {
     text-align: center;
@@ -27,17 +29,46 @@
     padding: 0 10px; /* Add padding to each item */
     margin-right: 10px; /* Increase margin between items in row layout */
     color: white;
-   
 }
-
-
 
 .aboutpage-info:last-child {
     margin-right: 0; /* Remove right margin for the last item in row layout */
 }
 
-
 @media only screen and (max-width: 1200px) {
+    .aboutpage-row {
+        justify-content: center; /* Center items horizontally */
+    }
+
+    .aboutpage-info {
+        flex: 1 1 20%; /* Make sure each item is flexible but not full width */
+        max-width: none; /* Remove maximum width */
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    .aboutpage-row {
+        justify-content: center; /* Center items horizontally */
+    }
+
+    .aboutpage-info {
+        flex: 1 1 45%; /* Two items per row */
+        max-width: none; /* Remove maximum width */
+        margin-bottom: 20px; /* Increase margin between items */
+        margin-right: 5%; /* Add margin to the right for spacing */
+    }
+
+    .aboutpage-info:nth-child(2n) {
+        margin-right: 0; /* Remove right margin for every second item */
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .aboutpage-section {
+        height: auto; /* Set height to auto for small screens */
+        margin: 10px 0; /* Add 10px top and bottom margin */
+    }
+
     .aboutpage-row {
         flex-direction: column; /* Set flex direction to column on small screens */
         align-items: center; /* Center items vertically */
@@ -47,16 +78,16 @@
         width: 100%; /* Set width to full for small screens */
         max-width: none; /* Remove maximum width */
         margin-bottom: 20px; /* Increase margin between items in column layout */
+        margin-right: 0; /* Remove right margin */
     }
 }
+
 /* Styling for additional divs */
 
-  /* Centering content inside additional divs */
-  .center-content {
+/* Centering content inside additional divs */
+.center-content {
     text-align: left; /* Align text to the left */
-  }
-  
- 
+}
 
 .aboutpage-info h4 {
     font-size: 20px; /* Adjust font size */
@@ -103,18 +134,4 @@
     100% {
         color: white; /* Final color */
     }
-}
-@media only screen and (max-width: 768px) {
-    .aboutpage-row {
-        flex-direction: column; /* Set flex direction to column on small screens */
-        align-items: center; /* Center items vertically */
-    }
-
-    .aboutpage-info {
-        width: 100%; /* Set width to full for small screens */
-        max-width: none; /* Remove maximum width */
-        margin-bottom: 20px; /* Increase margin between items in column layout */
-    }
-
-  
 }

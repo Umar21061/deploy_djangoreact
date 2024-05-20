@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import './App.css';
 import Header from './Header';
 import Navbar from './Navbar';
@@ -34,14 +34,17 @@ import LearnMore from './LearnMore';
 import Project from './project';
 import ProjectDetails from './ProjectDetails';
 
-
-
 function App() {
   const [textData, setTextData] = useState('');
 
   useEffect(() => {
     fetchTextData();
   }, []);
+
+  useEffect(() => {
+    // Scroll to the top when the route changes
+    window.scrollTo(0, 0);
+  }, [window.location.pathname]);
 
   const fetchTextData = async () => {
     try {
@@ -52,6 +55,7 @@ function App() {
       console.error('Error fetching text data:', error);
     }
   };
+
   const LearnMorePage = ({ category }) => {
     return (
       <div>
@@ -63,7 +67,7 @@ function App() {
   return (
     <Router>
       <div className="App">
-        <Header />
+        <ConditionalHeader />
         <Navbar />
         <Routes>
           <Route path="/services" element={<ServicesPage />} />
@@ -95,24 +99,25 @@ function App() {
   );
 }
 
+function ConditionalHeader() {
+  const location = useLocation();
+  return location.pathname === '/' ? <Header /> : null;
+}
+
 function HomePage({ textData }) {
   return (
     <>
       <Bot />
       <Portfolio />
-      
       <Services />
       <About />
       <RecentCase />
       <Partner/>
       <Value/>
-     
       <Cons />
       <Footer />
     </>
   );
 }
-
-
 
 export default App;

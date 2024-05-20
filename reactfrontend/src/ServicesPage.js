@@ -15,14 +15,16 @@ const ServicesPage = () => {
         <source src={video} type="video/mp4" />
         Your browser does not support the video tag.
       </video>
-      <div className="text-overlay">
-        <h1 className="servicespage-heading">Services developed to make your business thrive</h1>
+      <div className="service-videotext2">
+      We deliver excellence in every project, offering a wide array of services that meet the highest standards of quality.
       </div>
+      <>
       <div>
-      <Service2/>
-      <Cons />
-      <Footer />
-    </div>
+        <Service2 />
+        <Cons />
+        <Footer />
+      </div>
+      </>
     </div>
   );
 };

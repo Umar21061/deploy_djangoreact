@@ -1,6 +1,7 @@
 import React from 'react';
 import axios from 'axios';
 import './Contact.css';
+import Footer from './Footer';
 
 const ContactForm = () => {
   const [formStatus, setFormStatus] = React.useState('Send');
@@ -55,6 +56,7 @@ const ContactForm = () => {
           {formStatus}
         </button>
       </form>
+      <Footer/>
     </div>
   );
 };

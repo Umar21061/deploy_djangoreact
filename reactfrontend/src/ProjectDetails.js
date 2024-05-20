@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import './ProjectDetails.css';
+import Footer from './Footer';
 
 function ProjectDetails() {
   const { category, name } = useParams();
@@ -84,6 +85,7 @@ function ProjectDetails() {
          
         </div>
       )}
+      <Footer/>
     </div>
   );
 }
