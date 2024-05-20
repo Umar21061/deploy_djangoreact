@@ -28,6 +28,7 @@ const RecentCase = () => {
 
   return (
     <div className="recent-case-container">
+      <h2 className="recent-case-heading">Our Project</h2>
       {documents.map((doc, index) => (
         <div key={index} className="recent-case-item">
           <Link to={`/projectdetails/${encodeURIComponent(doc.category)}/${encodeURIComponent(doc.name)}`}>

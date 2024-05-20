@@ -3,7 +3,16 @@
   flex-wrap: wrap;
   justify-content: space-between;
   list-style: none;
-  margin: 50px 100px; /* Add top, bottom, left, and right margins */
+  margin: 60px 120px; /* Set top and bottom margin to 50px */
+}
+
+.recent-case-heading {
+  width: 100%;
+  text-align: center;
+  margin: 0 0 30px 0; /* Set bottom margin to 20px, remove top margin */
+  font-size: 35px;
+  font-family: 'Helvetica Neue', sans-serif;
+  font-weight: bold;
 }
 
 .recent-case-item {
@@ -61,6 +70,7 @@
   padding: 10px 20px;
   border-radius: 5px;
   transition: background-color 0.3s ease, color 0.3s ease;
+  position: relative; /* Ensure the button's before element is positioned correctly */
 }
 
 .btn-primary::before {

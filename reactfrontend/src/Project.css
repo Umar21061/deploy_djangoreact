@@ -12,13 +12,13 @@
 }
 
 .project-button {
-  margin: 5px;
-  padding: 5px 10px;
+  margin: 20px 5px; /* Add top and bottom margin */
+  padding: 10px 20px; /* Increase padding size */
   border: 1px solid #ccc;
-  background-color: #f0f0f0;
   border-radius: 5px;
   cursor: pointer;
-  border-color: rgb(92, 124, 220);
+ 
+  background-color: transparent; /* Remove background color */
 }
 
 .name-container {
@@ -28,12 +28,12 @@
 }
 
 .name-button {
-  margin: 5px;
-  padding: 5px 10px;
+  margin: 15px 5px; /* Add top and bottom margin */
+  padding: 10px 20px; /* Increase padding size */
   border: 1px solid #ccc;
-  background-color: #f0f0f0;
-  border-radius: 5px;
+
   cursor: pointer;
+  background-color: transparent; /* Remove background color */
 }
 
 .name-button:hover {
@@ -63,7 +63,6 @@
   cursor: pointer; /* Indicate video is interactive */
 }
 
-
 /* Remove text decoration from ul */
 .document-list {
   display: flex;
@@ -76,8 +75,6 @@
   width: calc(33.33% - 20px); /* Calculate width to fit 3 videos with gap */
   margin-bottom: 20px; /* Add margin to create vertical gap */
 }
-
-
 
 .text-overlay {
   position: absolute;
