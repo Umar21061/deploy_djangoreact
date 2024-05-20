@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import './Project.css';
 
@@ -8,112 +8,82 @@ const Project = () => {
   const [names, setNames] = useState([]);
   const [documents, setDocuments] = useState([]);
   const [selectedDocument, setSelectedDocument] = useState(null);
+  const videoRefs = useRef([]);
 
   useEffect(() => {
-    // Fetch options on component mount
-    fetch('/api/global_project/')
-      .then(response => {
-        if (!response.ok) {
-          throw new Error('Failed to fetch options');
-        }
-        return response.json();
-      })
-      .then(data => {
-        setOptions(data.options);
-      })
-      .catch(error => {
-        console.error('Error fetching options:', error);
-      });
-
-    // Fetch all documents initially
-    fetch(`/api/global_project/?option=All`)
-      .then(response => {
-        if (!response.ok) {
-          throw new Error('Failed to fetch all documents');
-        }
-        return response.json();
-      })
-      .then(data => {
-        setDocuments(data.documents);
-      })
-      .catch(error => {
-        console.error('Error fetching all documents:', error);
-      });
+    fetchOptions();
+    fetchAllDocuments();
   }, []);
 
-  const handleClick = (option) => {
-    setSelectedOption(option);
-    if (option === "All") {
-      // Fetch all documents if the "All" option is selected
-      fetch(`/api/global_project/?option=All`)
-        .then(response => {
-          if (!response.ok) {
-            throw new Error('Failed to fetch all documents');
-          }
-          return response.json();
-        })
-        .then(data => {
-          setDocuments(data.documents);
-          setNames([]); // Clear names when "All" is selected
-        })
-        .catch(error => {
-          console.error('Error fetching all documents:', error);
-        });
-    } else {
-      // Fetch category names and documents based on the selected option
-      fetch(`/api/global_project/?option=${encodeURIComponent(option)}`)
-        .then(response => {
-          if (!response.ok) {
-            throw new Error('Failed to fetch names and documents');
-          }
-          return response.json();
-        })
-        .then(data => {
-          setNames(data.names);
-          // Fetch documents for each category under the selected option
-          Promise.all(data.names.map(name =>
-            fetch(`/api/global_project/?category=${encodeURIComponent(name)}`)
-              .then(response => {
-                if (!response.ok) {
-                  throw new Error(`Failed to fetch documents for category ${name}`);
-                }
-                return response.json();
-              })
-              .then(categoryData => categoryData.documents)
-          ))
-          .then(docArrays => {
-            const allDocs = docArrays.flat();
-            setDocuments(allDocs);
-          })
-          .catch(error => {
-            console.error('Error fetching documents for categories:', error);
-          });
-        })
-        .catch(error => {
-          console.error('Error fetching names and documents:', error);
-        });
+  const fetchOptions = async () => {
+    try {
+      const response = await fetch('/api/global_project/');
+      if (!response.ok) throw new Error('Failed to fetch options');
+      const data = await response.json();
+      setOptions(data.options);
+    } catch (error) {
+      console.error('Error fetching options:', error);
     }
   };
 
-  const handleNameClick = (category) => {
-    fetch(`/api/global_project/?category=${encodeURIComponent(category)}`)
-      .then(response => {
-        if (!response.ok) {
-          throw new Error('Failed to fetch documents');
-        }
-        return response.json();
-      })
-      .then(data => {
-        setDocuments(data.documents);
-      })
-      .catch(error => {
-        console.error('Error fetching documents:', error);
-      });
+  const fetchAllDocuments = async () => {
+    try {
+      const response = await fetch('/api/global_project/?option=All');
+      if (!response.ok) throw new Error('Failed to fetch all documents');
+      const data = await response.json();
+      setDocuments(data.documents);
+    } catch (error) {
+      console.error('Error fetching all documents:', error);
+    }
+  };
+
+  const handleClick = async (option) => {
+    setSelectedOption(option);
+    if (option === 'All') {
+      fetchAllDocuments();
+      setNames([]);
+    } else {
+      try {
+        const response = await fetch(`/api/global_project/?option=${encodeURIComponent(option)}`);
+        if (!response.ok) throw new Error('Failed to fetch names and documents');
+        const data = await response.json();
+        setNames(data.names);
+        const docArrays = await Promise.all(
+          data.names.map(name => fetch(`/api/global_project/?category=${encodeURIComponent(name)}`).then(res => res.json()).then(data => data.documents))
+        );
+        setDocuments(docArrays.flat());
+      } catch (error) {
+        console.error('Error fetching names and documents:', error);
+      }
+    }
+  };
+
+  const handleNameClick = async (category) => {
+    try {
+      const response = await fetch(`/api/global_project/?category=${encodeURIComponent(category)}`);
+      if (!response.ok) throw new Error('Failed to fetch documents');
+      const data = await response.json();
+      setDocuments(data.documents);
+    } catch (error) {
+      console.error('Error fetching documents:', error);
+    }
   };
 
   const handleVideoClick = (name, category) => {
-    console.log('Selected document:', name, category);
     setSelectedDocument({ name, category });
+  };
+
+  const handleMouseEnter = (index) => {
+    if (videoRefs.current[index]) {
+      videoRefs.current[index].play();
+    }
+  };
+
+  const handleMouseLeave = (index) => {
+    if (videoRefs.current[index]) {
+      videoRefs.current[index].pause();
+      videoRefs.current[index].currentTime = 0; // Reset video to start
+    }
   };
 
   return (
@@ -121,11 +91,7 @@ const Project = () => {
       {options.length > 0 ? (
         <div className="option-container">
           {options.map((option, index) => (
-            <button
-              key={index}
-              onClick={() => handleClick(option)}
-              className={`project-button ${selectedOption === option ? 'selected' : ''}`}
-            >
+            <button key={index} onClick={() => handleClick(option)} className={`project-button ${selectedOption === option ? 'selected' : ''}`}>
               {option}
             </button>
           ))}
@@ -148,8 +114,12 @@ const Project = () => {
         {documents.map((doc, index) => (
           <div key={index} className="document-item">
             <Link to={`/projectdetails/${encodeURIComponent(doc.category)}/${encodeURIComponent(doc.name)}`}>
-              <div className="project-video-container" onClick={() => handleVideoClick(doc.name, doc.category)}>
-                <video className="project-video" controls autoPlay key={doc.video_url}>
+              <div className="project-video-container"
+                onMouseEnter={() => handleMouseEnter(index)}
+                onMouseLeave={() => handleMouseLeave(index)}
+                onClick={() => handleVideoClick(doc.name, doc.category)}
+              >
+                <video className="project-video" ref={el => videoRefs.current[index] = el} key={doc.video_url}>
                   <source src={doc.video_url} type="video/mp4" />
                   Your browser does not support the video tag.
                 </video>

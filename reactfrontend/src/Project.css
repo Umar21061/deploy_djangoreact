@@ -52,7 +52,17 @@
   object-fit: cover;
   margin: auto; /* Center the video horizontally */
   display: block; /* Ensure proper centering */
+  pointer-events: none; /* Disable default controls */
 }
+
+.project-video-container {
+  position: relative;
+  display: flex;
+  align-items: center; /* Vertically center content */
+  justify-content: center; /* Horizontally center content */
+  cursor: pointer; /* Indicate video is interactive */
+}
+
 
 /* Remove text decoration from ul */
 .document-list {
@@ -67,21 +77,21 @@
   margin-bottom: 20px; /* Add margin to create vertical gap */
 }
 
-/* Position the project video container to the left with margins */
-.project-video-container {
-  position: relative;
-  display: flex;
-  align-items: center; /* Vertically center content */
-  justify-content: center; /* Horizontally center content */
-}
+
 
 .text-overlay {
   position: absolute;
-  left: 50%; /* Center horizontally */
-  top: 50%; /* Center vertically */
+  left: 50%;
+  top: 50%;
   transform: translate(-50%, -50%);
   z-index: 1;
-  text-align: center; /* Center text horizontally */
+  text-align: center;
+  opacity: 0; /* Initially hidden */
+  transition: opacity 0.3s; /* Smooth transition */
+}
+
+.project-video-container:hover .text-overlay {
+  opacity: 1; /* Show on hover */
 }
 
 /* Responsive styles for tablets */

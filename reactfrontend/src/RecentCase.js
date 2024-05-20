@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import './RecentCase.css';
 
@@ -31,24 +31,62 @@ const RecentCase = () => {
       {documents.map((doc, index) => (
         <div key={index} className="recent-case-item">
           <Link to={`/projectdetails/${encodeURIComponent(doc.category)}/${encodeURIComponent(doc.name)}`}>
-            <div className="recent-case-video-container">
-              <video className="recent-case-video" controls autoPlay key={doc.video_url}>
-                <source src={doc.video_url} type="video/mp4" />
-                Your browser does not support the video tag.
-              </video>
-              <div className="recent-case-text-overlay">
-                <p className="recent-case-text">{doc.name}</p>
-                <p className="recent-case-text">{doc.description}</p>
-              </div>
-            </div>
+            <RecentCaseVideo
+              videoUrl={doc.video_url}
+              name={doc.name}
+              description={doc.description}
+            />
           </Link>
         </div>
       ))}
       <div className="centered-button-container">
-        <Link to="/somepage">
+        <Link to="/project">
           <button className="btn-primary">See More</button>
         </Link>
       </div>
+    </div>
+  );
+};
+
+const RecentCaseVideo = ({ videoUrl, name, description }) => {
+  const videoRef = useRef(null);
+  const [textVisible, setTextVisible] = useState(false);
+
+  const handleMouseEnter = () => {
+    if (videoRef.current) {
+      videoRef.current.play();
+    }
+    setTextVisible(true);
+  };
+
+  const handleMouseLeave = () => {
+    if (videoRef.current) {
+      videoRef.current.pause();
+      videoRef.current.currentTime = 0; // Reset video to start
+    }
+    setTextVisible(false);
+  };
+
+  return (
+    <div
+      className="recent-case-video-container"
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
+    >
+      <video
+        className="recent-case-video"
+        ref={videoRef}
+        muted
+      >
+        <source src={videoUrl} type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+      {textVisible && (
+        <div className="recent-case-text-overlay">
+          <p className="recent-case-text">{name}</p>
+          <p className="recent-case-text">{description}</p>
+        </div>
+      )}
     </div>
   );
 };
