@@ -447,6 +447,9 @@ def global_project(request):
         return JsonResponse({'error': str(e)}, status=500)
 
 
+from bson import ObjectId
+from pymongo import MongoClient
+
 def project_detail(request):
     try:
         # Connect to MongoDB
@@ -458,13 +461,38 @@ def project_detail(request):
         selected_category = request.GET.get('category')
         selected_name = request.GET.get('name')
         if selected_category and selected_name:
+            # Define the aggregation pipeline to match the document and include necessary fields
+            pipeline = [
+                {"$match": {"category": selected_category, "name": selected_name}},
+                {"$project": {
+                    "_id": {"$toString": "$_id"},
+                    "video_url": 1,
+                    "video_heading2": 1,
+                    "video_text2": 1,
+                    "about_heading": 1,
+                    "about_text": 1,
+                    "about_heading2": 1,
+                    "about_text2": 1,
+                    "about_text3": 1,
+                    "about_heading3": 1,
+                    "about_text4": 1,
+                    "about_heading4": 1,
+                    "about_text5": 1,
+                    "image_text": 1,
+                    "image_url": 1,
+                    "image_url1": 1,
+                    "image_url2": 1,
+                    "image_url3": 1,
+                    "image_url4": 1
+                }}
+            ]
             
-            # Find the document based on category and name
-            document = project_collection.find_one({"category": selected_category, "name": selected_name})
+            # Execute the aggregation pipeline
+            document = project_collection.aggregate(pipeline)
+            document = list(document)  # Convert cursor to list
+            
             if document:
-                # Convert ObjectId to string for serialization
-                document['_id'] = str(document['_id'])
-                return JsonResponse({'document': document})
+                return JsonResponse({'document': document[0]})  # Return the first document (assuming there's only one match)
             else:
                 return JsonResponse({'error': 'Document not found'}, status=404)
         
