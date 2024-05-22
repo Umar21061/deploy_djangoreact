@@ -140,6 +140,7 @@
   .learnmore-image {
     width: 100%;
     margin: 0 0 20px 0; /* Equal margins for images in small screens */
+    box-sizing: border-box; /* Ensure padding and border are included in the element's total width and height */
   }
 
   .learnmore-image img {
