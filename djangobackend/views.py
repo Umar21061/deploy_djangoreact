@@ -10,8 +10,6 @@ from pymongo.errors import ConnectionFailure
 from bson import ObjectId
 
 
-def index(request):
-    return render(request, 'index.html')
 
 
 
