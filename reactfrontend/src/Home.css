@@ -38,7 +38,6 @@
 }
 
 
-
 .text-black {
     color: white;
 }
@@ -68,40 +67,19 @@
 }
 
 
-
-
-
-@media (max-width: 768px) {
-    .navbar-logo {
-        margin-left: 10px;
-    }
-   
-
-    .menu-item {
-        margin-right: 0;
+@media (max-width: 576px) {
+    /* Adjust font size for small screens */
+    .header-text-header {
+        font-size: 5vw; 
     }
 
-    .btn-primary {
-        margin-right: 10px;
-    }
-}
-
-/* Enable hover line for desktop screens */
-@media (min-width: 1200px) {
-    .menu-item::after {
-        content: '';
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        width: 0;
-        height: 2px;
-        background-color: transparent;
-        transition: width 0.1s ease;
-        display: block; /* Enable display for desktop screens */
+    body {
+        overflow-x: hidden; /* Hide horizontal scrollbar */
     }
 
-    .menu-item:hover::after {
-        width: 100%;
-        background-image: linear-gradient(120deg, #8b8da8 0%, #4a3faf 100%);
+    /* Center content with equal left and right margins */
+    .container {
+        padding-left: 15px;
+        padding-right: 15px;
     }
 }
