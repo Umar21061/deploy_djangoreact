@@ -1,12 +1,12 @@
 .aboutpage-container {
     padding: 34px;
-    background-color: black;
+    background-color: white;
 }
 
 .aboutpage-section {
     position: relative;
     overflow: hidden;
-    height: 60vh; /* Set the height to 60vh */
+    height: 30vh; /* Set the height to 60vh */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -23,12 +23,12 @@
 
 .aboutpage-info {
     text-align: center;
-    margin-top: 20px;
+    margin-top: 10px;
     flex: 1; /* Allow each item to grow equally */
     max-width: 200px; /* Limit maximum width of each item */
     padding: 0 10px; /* Add padding to each item */
     margin-right: 10px; /* Increase margin between items in row layout */
-    color: white;
+    color: black;
 }
 
 .aboutpage-info:last-child {
@@ -91,7 +91,7 @@
 
 .aboutpage-info h4 {
     font-size: 20px; /* Adjust font size */
-    color: white;
+    color:black
 }
 
 .line {
@@ -120,7 +120,7 @@
 
 @keyframes updateNumber {
     0% {
-        color: white; /* Initial color */
+        color: black; /* Initial color */
     }
     25% {
         color: rgb(138, 123, 202); /* Color transition */
@@ -132,6 +132,6 @@
         color: rgb(3, 7, 63); /* Color transition */
     }
     100% {
-        color: white; /* Final color */
+        color: black; /* Final color */
     }
 }

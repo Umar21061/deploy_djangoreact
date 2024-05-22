@@ -8,23 +8,23 @@ import About from './About';
 import Portfolio from './Portfolio';
 import Services from './Services';
 import RecentCase from './RecentCase';
-import BlogPage2 from './BlogPage2';
+
 import Cons from './Cons';
 import Footer from './Footer';
-import BlogPage from './BlogPage';
+
 import ServicesPage from './ServicesPage';
 import AboutPage from './AboutPage';
 import PortfolioPage from './PortfolioPage';
 import Partner from './Partner';
 
-import Banner from './Banner';
+
 import Crew from './crew';
 import Value from './Value';
 import Service2 from './Service2';
 import Career from './Career';
 import Apply from './Apply';
 import ContactForm from './Contact';
-import Blogs from './Blogs';
+import BlogPage from './BlogPage';
 import Reward from './reward';
 import Bot from './Bot';
 import Premium from './Premium';
@@ -33,6 +33,7 @@ import LearnMore from './LearnMore';
 
 import Project from './project';
 import ProjectDetails from './ProjectDetails';
+import BlogData from './BlogData';
 
 function App() {
   const [textData, setTextData] = useState('');
@@ -73,12 +74,16 @@ function App() {
           <Route path="/services" element={<ServicesPage />} />
           <Route path="/about" element={<AboutPage />} />
           <Route path="/portfolio" element={<PortfolioPage />} />
-          <Route path="/blog" element={<BlogPage />} />
+        
+          
           <Route path="/" element={<HomePage textData={textData} />} />
           <Route path="/career" element={<Career />} />
           <Route path="/apply" element={<Apply />} />
           <Route path="/contact" element={<ContactForm />} />
           <Route path="/ebook" element={<Ebook />} />
+          <Route path="/blogdata/:name" element={<BlogData />} />
+
+          <Route path="/blogpage" element={<BlogPage />} />
           
           <Route path="/generative-ai" element={<LearnMorePage category="Generative AI" />} />
           <Route path="/machinelearning" element={<LearnMorePage category="Machine Learning" />} />
@@ -107,15 +112,15 @@ function ConditionalHeader() {
 function HomePage({ textData }) {
   return (
     <>
-      <Bot />
-      <Portfolio />
-      <Services />
-      <About />
-      <RecentCase />
+      <Bot/>
+      <Portfolio/>
+      <Services/>
+      <About/>
+      <RecentCase/>
       <Partner/>
       <Value/>
-      <Cons />
-      <Footer />
+      <Cons/>
+      <Footer/>
     </>
   );
 }

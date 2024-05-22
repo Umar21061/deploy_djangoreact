@@ -31,7 +31,7 @@ function ProjectDetails() {
   }, [category, name]);
 
   if (loading) {
-    return  <div style={{ backgroundColor: 'black', display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh' }}>
+    return  <div style={{ backgroundColor: 'white', display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh' }}>
     <img src={loadingImage} alt="Loading..." style={{ maxWidth: '50%', maxHeight: '50%', margin: 'auto' }} />
   </div>
   }

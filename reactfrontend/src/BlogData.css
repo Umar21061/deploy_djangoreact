@@ -1,0 +1,86 @@
+/* Ensure all text is black */
+.blogdata-container-fluid * {
+    color: black;
+}
+
+/* Make the container fluid and full width */
+.blogdata-container-fluid {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+/* Styling for the blog document container */
+
+
+/* Styling for images */
+.blogdata-img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Container for title, date, and time */
+.blogdata-header {
+    position: absolute;
+    top: 60px;
+    left: 20px;
+    display: flex;
+    gap: 10px; /* Gap between elements */
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.blogdata-title {
+    margin-top: 550px;
+    margin-left: 30px;
+    color: white;
+    font-size: 40px;
+    text-align: justify;
+}
+
+.blogdata-date-time {
+    display: flex;
+    gap: 10px;
+    margin-top: 200px;
+    margin-left: 30px;
+    font-size: 25px;
+    
+}
+
+/* Ensure alignment */
+.blogdata-date,
+.blogdata-time {
+    margin: 0;
+    color: white;
+}
+
+/* Styling for section headings and texts */
+.blogdata-section {
+    margin: 20px 0;
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+.blogdata-about-heading,
+.blogdata-blog-heading {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    text-align: justify;
+}
+
+.blogdata-about-text,
+.blogdata-blog-text {
+    font-size: 1em;
+    line-height: 1.5;
+    text-align: justify;
+}
+
+/* Media query for small screens */
+@media only screen and (max-width: 768px) {
+    .blogdata-title ,.blogdata-about-heading,
+    .blogdata-blog-heading,.blogdata-about-text,
+    .blogdata-blog-text{
+        text-align: justify;
+    }
+}

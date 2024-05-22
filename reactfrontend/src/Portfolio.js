@@ -2,11 +2,10 @@ import React, { useState, useEffect } from 'react';
 import './Portfolio.css'; // Import CSS styles for the Portfolio component
 import video from './video/v4.mp4'; // Update the path to the video file
 
-
 const Portfolio = () => {
-    const [yearsOnMarket, setYearsOnMarket] = useState(0);
-    const [expertsOnBoard, setExpertsOnBoard] = useState(0);
-    const [completedProjects, setCompletedProjects] = useState(0);
+    const [yearsOnMarket, setYearsOnMarket] = useState(1);
+    const [expertsOnBoard, setExpertsOnBoard] = useState(1);
+    const [completedProjects, setCompletedProjects] = useState(1);
     const [targetYears, setTargetYears] = useState(0);
     const [targetExperts, setTargetExperts] = useState(0);
     const [targetProjects, setTargetProjects] = useState(0);

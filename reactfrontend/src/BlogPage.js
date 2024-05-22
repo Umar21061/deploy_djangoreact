@@ -1,76 +1,111 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
+import axios from 'axios';
 import './BlogPage.css';
-import BlogPage2 from './BlogPage2';
-import Blogs from './Blogs'
-import Premium from './Premium';
+import { Link, Routes, Route } from 'react-router-dom'; // Import Routes and Route
+import BlogData from './BlogData'; // Assuming BlogData component path
 
 const BlogPage = () => {
-    const [slides, setSlides] = useState([]);
-    const [currentSlide, setCurrentSlide] = useState(0);
+    const [tags, setTags] = useState([]);
+    const [documents, setDocuments] = useState([]);
+    const [error, setError] = useState(null);
+    const [selectedDocumentName, setSelectedDocumentName] = useState(null);
 
     useEffect(() => {
-        const fetchSliderData = async () => {
-            try {
-                const response = await fetch('/api/slider_data'); // Replace '/api/slider_data' with your actual backend endpoint URL
-                if (!response.ok) {
-                    throw new Error('Failed to fetch slider data');
+        // Fetch tags
+        axios.get('/api/blog_page/')
+            .then(response => {
+                console.log('Tags response:', response.data);
+                if (response.data.options) {
+                    setTags(response.data.options);
+                } else {
+                    setError('No options found in the response.');
                 }
-                const data = await response.json();
-                setSlides(data);
-            } catch (error) {
-                console.error('Error fetching slider data:', error);
-            }
-        };
+            })
+            .catch(error => {
+                console.error('There was an error fetching the tags!', error);
+                setError('There was an error fetching the tags!');
+            });
 
-        fetchSliderData();
+        // Fetch documents for "All Categories" when the component mounts
+        axios.get('/api/blog_page/', { params: { tag: 'All Categories' } })
+            .then(response => {
+                console.log('Documents response:', response.data);
+                if (response.data.documents) {
+                    setDocuments(response.data.documents);
+                } else {
+                    setError('No documents found for the selected tag.');
+                }
+            })
+            .catch(error => {
+                console.error('There was an error fetching the documents!', error);
+                setError('There was an error fetching the documents!');
+            });
     }, []);
 
-    const nextSlide = () => {
-        setCurrentSlide(prevSlide => (prevSlide === slides.length - 1 ? 0 : prevSlide + 1));
+    const handleTagClick = (tag) => {
+        setError(null);
+        axios.get('/api/blog_page/', { params: { tag } })
+            .then(response => {
+                console.log('Documents response:', response.data);
+                if (response.data.documents) {
+                    setDocuments(response.data.documents);
+                } else {
+                    setError('No documents found for the selected tag.');
+                }
+            })
+            .catch(error => {
+                console.error('There was an error fetching the documents!', error);
+                setError('There was an error fetching the documents!');
+            });
     };
 
-    const prevSlide = () => {
-        setCurrentSlide(prevSlide => (prevSlide === 0 ? slides.length - 1 : prevSlide - 1));
+    const handleDocumentClick = (name) => {
+        setSelectedDocumentName(name);
     };
-
-    useEffect(() => {
-        const handleKeyDown = (event) => {
-            if (event.key === 'ArrowLeft') {
-                prevSlide();
-            } else if (event.key === 'ArrowRight') {
-                nextSlide();
-            }
-        };
-
-        window.addEventListener('keydown', handleKeyDown);
-
-        return () => {
-            window.removeEventListener('keydown', handleKeyDown);
-        };
-    }, [slides]);
 
     return (
-        <div className="blog-page">
-            {slides.length > 0 && (
-                <div className="heading-container" style={{backgroundImage: `url(${slides[currentSlide].image_url})`}}>
-                    <h1>{slides[currentSlide].image_text}</h1>
-                </div>
-            )}
-            <div className="slider-arrows">
-                <button className="prev" onClick={prevSlide}>&#10094;</button>
-                <button className="next" onClick={nextSlide}>&#10095;</button>
+        <div className="blog-container">
+            <h1 className='blogs-heading'>Welcome To Our Blogs</h1>
+            {error && <p style={{ color: 'red' }}>{error}</p>}
+            <div className="blog-button-container">
+                {tags.length > 0 ? (
+                    tags.map((tag, index) => (
+                        <button key={index} onClick={() => handleTagClick(tag)}>
+                            {tag}
+                        </button>
+                    ))
+                ) : (
+                    <p>Loading tags...</p>
+                )}
             </div>
-            <>
-            <BlogPage2/>
-            <Blogs/>
-            <Premium/>
-            
-            
-            </>
-           
-        </div>
 
+            <div className="blog-documents-container">
+                {documents.length > 0 ? (
+                    documents.map(doc => (
+                        <div key={doc._id} className="blog-document-wrapper">
+                            <Link to={`/blogdata/${doc.name}`} className="blog-document-link" onClick={() => handleDocumentClick(doc.name)}>
+                                <div className="blog-document">
+                                    <p>{doc.description}</p>
+                                    <img src={doc.image_url} alt={doc.name} />
+                                </div>
+                            </Link>
+                        </div>
+                    ))
+                ) : (
+                    <p>Select a tag to see documents.</p>
+                )}
+            </div>
+
+            {selectedDocumentName && (
+                <p>Selected Document Name: {selectedDocumentName}</p>
+            )}
+
+            {/* Define the routes for detailed document views */}
+            <Routes>
+                <Route path="/blogdata/:name" element={<BlogData />} />
+            </Routes>
+        </div>
     );
-}
+};
 
 export default BlogPage;
