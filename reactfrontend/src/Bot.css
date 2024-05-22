@@ -8,19 +8,20 @@
     flex-direction: row; /* Change to row to align items horizontally */
     align-items: center; /* Align items vertically */
     margin-bottom: 20px;
- 
+    overflow-x: hidden; /* Prevent horizontal scrolling */
 }
 
 body {
     background-color: white;
     color: black; /* Text color */
+    margin: 0; /* Reset default margin */
 }
 
 #chat-box {
     display: flex;
     flex-direction: row;
     align-items: center; /* Align items vertically */
-    margin-left: 0; /* Reset margin */
+    margin: 0 20px; /* Equal left and right margin */
 }
 
 #chat-box div {
@@ -79,9 +80,11 @@ body {
     background-color: rgb(51, 52, 117); /* Darken button color on hover */
     border: 1px solid rgb(51, 52, 117);
 }
-.lead{
+
+.lead {
     margin-bottom: 30px;
 }
+
 @media (max-width: 768px) {
     body {
         overflow-x: hidden; /* Prevent horizontal scrolling */
@@ -104,12 +107,12 @@ body {
         margin: 0 auto; /* Center the image */
         margin-right: 10px;
     }
-    
+
     .get-in-touch-button {
         margin-bottom: 20px; /* Add margin bottom after "Get in touch" button */
     }
-    .bot-text{
+
+    .bot-text {
         margin-top: 20px;
-        
     }
 }
