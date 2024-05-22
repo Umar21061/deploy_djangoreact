@@ -82,7 +82,6 @@
   width: 30%;
   margin-right: 1%;
   margin-bottom: 50px;
-  box-sizing: border-box; /* Ensure padding and border are included in the element's total width and height */
 }
 
 .learnmore-image:last-child {
@@ -134,27 +133,19 @@
     margin: 0; /* Remove margin for medium screens */
   }
 
-  .right-column {
-    margin-top: 20px;
-    display: block;
-    text-align: center;
-  }
-
   .image-row {
     flex-direction: column;
-    align-items: center; /* Center the images */
   }
 
   .learnmore-image {
     width: 100%;
-    max-width: 300px; /* Limit the max width of the images */
-    margin: 0 0 20px 0; /* Equal margins for images */
+    margin: 0 0 20px 0; /* Equal margins for images in medium screens */
+    box-sizing: border-box; /* Ensure padding and border are included in the element's total width and height */
   }
 
   .learnmore-image img {
     display: block;
-    max-width: 100%;
-    height: auto;
+    width: 100%;
   }
 
   .learnmore-div2 {
@@ -176,27 +167,19 @@
     margin: 0; /* Remove margin for small screens */
   }
 
-  .right-column {
-    margin-top: 20px;
-    display: block;
-    text-align: center;
-  }
-
   .image-row {
     flex-direction: column;
-    align-items: center; /* Center the images */
   }
 
   .learnmore-image {
     width: 100%;
-    max-width: 300px; /* Limit the max width of the images */
-    margin: 0 0 20px 0; /* Equal margins for images */
+    margin: 0 0 20px 0; /* Equal margins for images in small screens */
+    box-sizing: border-box; /* Ensure padding and border are included in the element's total width and height */
   }
 
   .learnmore-image img {
     display: block;
-    max-width: 100%;
-    height: auto;
+    width: 100%;
   }
 
   .learnmore-div2 {
@@ -218,27 +201,19 @@
     margin: 0; /* Remove margin for very small screens */
   }
 
-  .right-column {
-    margin-top: 20px;
-    display: block;
-    text-align: center;
-  }
-
   .image-row {
     flex-direction: column;
-    align-items: center; /* Center the images */
   }
 
   .learnmore-image {
     width: 100%;
-    max-width: 300px; /* Limit the max width of the images */
-    margin: 0 0 20px 0; /* Equal margins for images */
+    margin: 0 0 20px 0; /* Equal margins for images in very small screens */
+    box-sizing: border-box; /* Ensure padding and border are included in the element's total width and height */
   }
 
   .learnmore-image img {
     display: block;
-    max-width: 100%;
-    height: auto;
+    width: 100%;
   }
 
   .learnmore-div2 {
