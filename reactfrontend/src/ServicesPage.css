@@ -12,11 +12,11 @@
 
 .service-videotext2 {
     position: absolute;
-    top: 2.5%; /* Adjust this value to position the text vertically */
+    top: 2%; /* Adjust this value to position the text vertically */
     left: 50%;
     transform: translateX(-50%);
     color: white;
-    font-size: 45px;
+    font-size: 50px;
     padding: 0 10px;
     background-color: rgba(0, 0, 0, 0.5); /* Optional: Add background for better text visibility */
     border-radius: 8px; /* Optional: Rounded corners for text background */
