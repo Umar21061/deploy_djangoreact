@@ -121,7 +121,6 @@
     text-align: justify;
 }
 
-
 /* Media Query for Small Screens */
 @media (max-width: 767px) {
     .headingto {
@@ -141,7 +140,34 @@
     .x3-image {
         width: 100%; /* Make images full width for small screens */
     }
+
     .col-md-4 p {
-    text-align: justify;
+        text-align: justify;
+    }
+
+    /* Updated styles for buttons */
+    .btn.learn-btn {
+        width: 45%; /* Set button width */
+        margin: 0 2.5%; /* Equal left and right margin */
+    }
+
+    .container-service2 .row-servce .btn {
+        width: 45%; /* Set button width */
+        margin: 0 2.5%; /* Equal left and right margin */
+    }
 }
+
+/* Media Query for Tablets (1024px) */
+@media (min-width: 768px) and (max-width: 1024px) {
+    /* Keep styles the same as desktop */
+    .col-md-4 p {
+        text-align: justify;
+    }
+
+    /* Keep button styles the same as desktop */
+    .btn.learn-btn,
+    .container-service2 .row-servce .btn {
+        width: auto; /* Set button width to auto */
+        margin: 0 5px; /* Set left and right margin */
+    }
 }
