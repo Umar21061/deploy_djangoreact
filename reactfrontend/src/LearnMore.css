@@ -134,6 +134,12 @@
     margin: 0; /* Remove margin for medium screens */
   }
 
+  .right-column {
+    margin-top: 20px;
+    display: block;
+    text-align: center;
+  }
+
   .image-row {
     flex-direction: column;
     align-items: center; /* Center the images */
@@ -170,6 +176,12 @@
     margin: 0; /* Remove margin for small screens */
   }
 
+  .right-column {
+    margin-top: 20px;
+    display: block;
+    text-align: center;
+  }
+
   .image-row {
     flex-direction: column;
     align-items: center; /* Center the images */
@@ -204,6 +216,12 @@
     flex: none;
     width: 100%;
     margin: 0; /* Remove margin for very small screens */
+  }
+
+  .right-column {
+    margin-top: 20px;
+    display: block;
+    text-align: center;
   }
 
   .image-row {
