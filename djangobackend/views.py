@@ -6,7 +6,6 @@ from django.views.decorators.csrf import csrf_exempt
 import json
 from openai import OpenAI
 from pymongo.errors import ConnectionFailure
-
 from bson import ObjectId
 
 
@@ -14,7 +13,6 @@ from bson import ObjectId
 
 
 
-# Define a global MongoClient object to reuse connections
 client = MongoClient("mongodb+srv://umer:umer123456@cluster0.chseyyo.mongodb.net/")
 # Access the portfolio database
 db = client.portfolio
