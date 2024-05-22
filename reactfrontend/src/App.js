@@ -35,7 +35,7 @@ import Project from './project';
 import ProjectDetails from './ProjectDetails';
 import BlogData from './BlogData';
 import AboutBanner from './AboutBanner';
-import Title from './Title'; // Import the Title component
+import Title from './Title';
 
 function App() {
   const [textData, setTextData] = useState('');
@@ -70,7 +70,6 @@ function App() {
   return (
     <Router>
       <div className="App">
-        <Title /> {/* Render the Title component */}
         <ConditionalHeader />
         <Navbar />
         <Routes>
@@ -115,7 +114,7 @@ function ConditionalHeader() {
 function HomePage({ textData }) {
   return (
     <>
-      {/* Your components */}
+      <Title/>
       <Bot/>
       <Portfolio/>
       <Services/>
