@@ -82,6 +82,7 @@
   width: 30%;
   margin-right: 1%;
   margin-bottom: 50px;
+  box-sizing: border-box; /* Ensure padding and border are included in the element's total width and height */
 }
 
 .learnmore-image:last-child {
@@ -138,14 +139,14 @@
   }
 
   .learnmore-image {
-    width: 100%;
-    margin: 0 0 20px 0; /* Equal margins for images in medium screens */
-    box-sizing: border-box; /* Ensure padding and border are included in the element's total width and height */
+    width: calc(100% - 40px); /* Full width minus padding */
+    margin: 0 auto 20px auto; /* Center image with auto margins */
   }
 
   .learnmore-image img {
     display: block;
-    width: 100%;
+    max-width: 100%;
+    height: auto;
   }
 
   .learnmore-div2 {
@@ -172,14 +173,14 @@
   }
 
   .learnmore-image {
-    width: 100%;
-    margin: 0 0 20px 0; /* Equal margins for images in small screens */
-    box-sizing: border-box; /* Ensure padding and border are included in the element's total width and height */
+    width: calc(100% - 30px); /* Full width minus padding */
+    margin: 0 auto 20px auto; /* Center image with auto margins */
   }
 
   .learnmore-image img {
     display: block;
-    width: 100%;
+    max-width: 100%;
+    height: auto;
   }
 
   .learnmore-div2 {
@@ -206,14 +207,14 @@
   }
 
   .learnmore-image {
-    width: 100%;
-    margin: 0 0 20px 0; /* Equal margins for images in very small screens */
-    box-sizing: border-box; /* Ensure padding and border are included in the element's total width and height */
+    width: calc(100% - 20px); /* Full width minus padding */
+    margin: 0 auto 20px auto; /* Center image with auto margins */
   }
 
   .learnmore-image img {
     display: block;
-    width: 100%;
+    max-width: 100%;
+    height: auto;
   }
 
   .learnmore-div2 {
