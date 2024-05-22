@@ -115,15 +115,7 @@ function HomePage({ textData }) {
   return (
     <>
      
-      <Bot/>
-      <Portfolio/>
-      <Services/>
-      <About/>
-      <RecentCase/>
-      <Partner/>
-      <Value/>
-      <Cons/>
-      <Footer/>
+      
     </>
   );
 }
