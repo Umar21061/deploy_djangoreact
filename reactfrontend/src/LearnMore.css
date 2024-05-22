@@ -119,11 +119,45 @@
   color: black;
 }
 
-/* Responsive CSS for small screens */
+/* Responsive CSS for specific breakpoints */
+@media only screen and (max-width: 1024px) {
+  .learnmore-div1 {
+    flex-direction: column;
+    padding: 0 20px; /* Equal left and right padding */
+  }
+
+  .left-column,
+  .right-column {
+    flex: none;
+    width: 100%;
+    margin: 0; /* Remove margin for medium screens */
+  }
+
+  .image-row {
+    flex-direction: column;
+  }
+
+  .learnmore-image {
+    width: 100%;
+    margin: 0 0 20px 0; /* Equal margins for images in medium screens */
+    box-sizing: border-box; /* Ensure padding and border are included in the element's total width and height */
+  }
+
+  .learnmore-image img {
+    display: block;
+    width: 100%;
+  }
+
+  .learnmore-div2 {
+    align-items: stretch;
+    margin: 0 20px; /* Equal left and right margin */
+  }
+}
+
 @media only screen and (max-width: 768px) {
   .learnmore-div1 {
     flex-direction: column;
-    padding: 0 10px; /* Equal left and right padding */
+    padding: 0 15px; /* Equal left and right padding */
   }
 
   .left-column,
@@ -150,16 +184,40 @@
 
   .learnmore-div2 {
     align-items: stretch;
-    margin: 0 10px; /* Equal left and right margin */
+    margin: 0 15px; /* Equal left and right margin */
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .learnmore-div1 {
+    flex-direction: column;
+    padding: 0 10px; /* Equal left and right padding */
   }
 
-  .learnmore-div2 p,
-  .learnmore-div2 .numbered-row {
-    justify-content: flex-start;
+  .left-column,
+  .right-column {
+    flex: none;
+    width: 100%;
+    margin: 0; /* Remove margin for very small screens */
+  }
+
+  .image-row {
+    flex-direction: column;
+  }
+
+  .learnmore-image {
+    width: 100%;
+    margin: 0 0 20px 0; /* Equal margins for images in very small screens */
+    box-sizing: border-box; /* Ensure padding and border are included in the element's total width and height */
+  }
+
+  .learnmore-image img {
+    display: block;
     width: 100%;
   }
 
-  .learnmore-div2 .numbered-row p {
-    margin: 5px 0;
+  .learnmore-div2 {
+    align-items: stretch;
+    margin: 0 10px; /* Equal left and right margin */
   }
 }
