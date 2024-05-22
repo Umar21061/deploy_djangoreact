@@ -1,11 +1,21 @@
+// Header.js
+
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-
-import './Home.css';
 
 const Header = () => {
     return (
         <div>
+            <style>
+                {`
+                /* Add internal CSS for responsiveness */
+                @media (max-width: 767px) {
+                    body {
+                        overflow-x: hidden; /* Hide horizontal scrollbar */
+                    }
+                }
+                `}
+            </style>
             <div className="header-row bg-green-yellow text-white py-1 text-center ">
                 <div className="container-fluid">
                     <div className="row align-items-center">

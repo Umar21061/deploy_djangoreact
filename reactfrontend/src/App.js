@@ -116,7 +116,14 @@ function HomePage({ textData }) {
     <>
      
       <Bot/>
-      
+      <Portfolio/>
+      <Services/>
+      <About/>
+      <RecentCase/>
+      <Partner/>
+      <Value/>
+      <Cons/>
+      <Footer/>
     </>
   );
 }
