@@ -143,4 +143,15 @@ body {
     .bot-container {
         height: auto; /* Set automatic height for tablets */
     }
+
+    /* Adjust styling of input fields and button */
+    #chat-box input[type="text"],
+    #chat-box input[type="submit"] {
+        width: calc(100% - 90px); /* Adjust width of text field */
+    }
+
+    #chat-box img {
+        width: 70px; /* Adjust image width */
+        margin-right: 10px; /* Adjust image margin */
+    }
 }

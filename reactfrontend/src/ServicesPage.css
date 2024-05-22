@@ -2,7 +2,6 @@
 
 .servicespage-container {
     position: relative;
-    
 }
 
 .servicespage-video {
@@ -23,6 +22,13 @@
     border-radius: 8px; /* Optional: Rounded corners for text background */
 }
 
+@media (max-width: 1024px) {
+    .service-videotext2 {
+        font-size: 30px; /* Adjust font size for smaller screens */
+        padding: 0 7px;
+    }
+}
+
 @media (max-width: 768px) {
     .servicespage-video {
         height: auto; /* Adjust the height for smaller screens */
@@ -31,5 +37,12 @@
     .service-videotext2 {
         font-size: 20px; /* Adjust font size for smaller screens */
         padding: 0 5px;
+    }
+}
+
+@media (max-width: 576px) {
+    .service-videotext2 {
+        font-size: 15px; /* Adjust font size for even smaller screens */
+        padding: 0 3px;
     }
 }
