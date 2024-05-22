@@ -35,7 +35,7 @@ import Project from './project';
 import ProjectDetails from './ProjectDetails';
 import BlogData from './BlogData';
 import AboutBanner from './AboutBanner';
-import Title from './Title';
+
 
 function App() {
   const [textData, setTextData] = useState('');
@@ -114,7 +114,7 @@ function ConditionalHeader() {
 function HomePage({ textData }) {
   return (
     <>
-      <Title/>
+     
       <Bot/>
       <Portfolio/>
       <Services/>

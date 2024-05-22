@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import rbImage from './image/rb.gif';
 import './Bot.css';
-import Title from './Title';
+
 
 const Bot = () => {
     const [messages, setMessages] = useState([]);
