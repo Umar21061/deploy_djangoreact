@@ -49,3 +49,35 @@
       font-size: 14px; /* Adjust font size for small screens */
     }
   }
+  /* Media query for small screens */
+@media screen and (max-width: 1024px) {
+  .value-wrapper {
+    flex-direction: column;
+    align-items: center;
+    width: 90%; /* Adjust width for small screens */
+    max-width: 600px; /* Max width for small screens */
+    margin-left: auto; /* Center content horizontally */
+    margin-right: auto; /* Center content horizontally */
+  }
+  
+  .value-heading,
+  .value-paragraph {
+    width: 100%;
+    margin-left: 0; /* Reset margin for small screens */
+    margin-right: 0; /* Reset margin for small screens */
+    font-size: 14px; /* Adjust font size for small screens */
+  }
+}
+
+/* Additional Media queries for specific screen widths */
+@media screen and (max-width: 768px) {
+  .value-wrapper {
+    max-width: 90%; /* Max width for smaller screens */
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .value-wrapper {
+    max-width: 100%; /* Max width for extra small screens */
+  }
+}

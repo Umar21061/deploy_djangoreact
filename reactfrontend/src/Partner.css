@@ -20,7 +20,6 @@ body {
   flex-wrap: wrap; /* Allow rows to wrap on small screens */
   justify-content: space-around; /* Evenly space columns horizontally */
   margin-bottom: 20px; /* Add some space between rows */
-
 }
 
 .partner-column {
@@ -32,23 +31,24 @@ body {
   text-align: left;
   gap: 40px;
   margin-right: 20px;
- 
 }
 
 .partner-column h3 {
   margin-top: 0;
   margin-bottom: 30px; /* Add 30px bottom margin after heading */
+  text-align: center; /* Center align heading */
 }
 
 .partner-column p {
   margin-bottom: 0;
   text-align: justify;
-
 }
-.partner-heading{
-  color: rgb(118,118,118);
+
+.partner-heading {
+  color: rgb(118, 118, 118);
   margin-top: 50px;
   margin-bottom: 50px;
+  text-align: center; /* Center align partner heading */
 }
 
 /* Media query for small screens */
@@ -57,10 +57,15 @@ body {
     flex-basis: calc(100% - 40px); /* Each column takes 100% of the available space with margin */
     text-align: left;
     padding: 20px 0; /* Adjust padding to ensure equal row start and end */
+    margin-right: 0; /* Reset right margin for small screens */
+  }
+
+  .partner-heading {
+    margin-left: 20px; /* Add left margin for centering on small screens */
+    margin-right: 20px; /* Add right margin for centering on small screens */
   }
   
-.partner-column p {
-  text-align: justify;
-}
-
+  .partner-column p {
+    text-align: justify;
+  }
 }
