@@ -4,6 +4,9 @@ import logo from './image/sh.png'; // Import the logo image
 
 const MyComponent = () => {
   useEffect(() => {
+    // Set the document title immediately upon component mount
+    document.title = "System Heuristics";
+
     // Create a link element for the logo
     const logoLink = document.createElement('link');
     logoLink.rel = 'icon';
@@ -19,12 +22,12 @@ const MyComponent = () => {
 
   return (
     <div>
+      {/* Use Helmet for other meta tags if needed */}
       <Helmet>
-        <title>System Heuristics</title>
         <meta name="description" content="This is my component" />
         <link rel="canonical" href="https://www.example.com/my-component" />
       </Helmet>
-     
+      {/* Your component content */}
     </div>
   );
 };
