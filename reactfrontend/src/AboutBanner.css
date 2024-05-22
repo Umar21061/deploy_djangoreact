@@ -19,12 +19,14 @@
     text-align: center;
     color: white;
     padding: 0 20px;
+    width: calc(100% - 40px); /* Subtract padding to fit within the image */
   }
   
   .about-banner-heading {
     font-size: 3rem;
     font-weight: bold;
     line-height: 1.2;
+    margin: 0;
   }
   
   /* Responsive styles */
@@ -41,6 +43,11 @@
   @media (max-width: 480px) {
     .about-banner-container {
       height: 40vh;
+    }
+  
+    .about-banner-text {
+      padding: 0 10px;
+      width: calc(100% - 20px); /* Adjust width to maintain margins */
     }
   
     .about-banner-heading {
