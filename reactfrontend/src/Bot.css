@@ -37,7 +37,7 @@ body {
 }
 
 #chat-box img {
-    width: 120px; /* Adjust the width to your preference */
+    width: 100px; /* Adjust the width to your preference */
     height: auto; /* Maintain aspect ratio */
     margin-right: 0; /* Remove the margin between the image and the form */
     margin-left: 20px; /* Adjust margin to position the image */
@@ -94,8 +94,7 @@ body {
     #chat-container {
         flex-direction: column; /* Change back to column in mobile view */
         align-items: center; /* Align items to the center */
-        margin-left: 20px; /* Add left margin to chat container */
-        margin-right: 20px; /* Add right margin to chat container */
+        margin: 0 10px; /* Add equal left and right margin */
     }
 
     #chat-box {
@@ -114,5 +113,28 @@ body {
 
     .bot-text {
         margin-top: 20px;
+    }
+}
+
+@media (max-width: 576px) {
+    #chat-box img {
+        width: 50px; /* Adjust the width for smaller screens */
+    }
+
+    #chat-container {
+        margin: 0 5px; /* Adjust margin for smaller screens */
+    }
+
+    #chat-box {
+        margin: 0; /* Reset margin */
+    }
+
+    #chat-box form {
+        margin-right: 5px; /* Adjust margin for smaller screens */
+    }
+
+    .bot-message,
+    .user-message {
+        font-size: 14px; /* Adjust font size for smaller screens */
     }
 }
