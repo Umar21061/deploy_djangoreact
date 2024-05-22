@@ -2,9 +2,9 @@ import React, { useEffect, useState } from 'react';
 import './Aboutpage.css';
 import Cons from './Cons';
 import Footer from './Footer';
-
 import Crew from './crew';
 import Value from './Value';
+import AboutBanner from './AboutBanner';
 
 
 const Aboutpage = () => {
@@ -84,7 +84,9 @@ const Aboutpage = () => {
   };
 
   return (
+    
     <div className="about-page">
+      <AboutBanner/>
       
       
       <div className="aboutpage-container">

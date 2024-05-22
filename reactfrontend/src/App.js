@@ -34,6 +34,7 @@ import LearnMore from './LearnMore';
 import Project from './project';
 import ProjectDetails from './ProjectDetails';
 import BlogData from './BlogData';
+import AboutBanner from './AboutBanner';
 
 function App() {
   const [textData, setTextData] = useState('');

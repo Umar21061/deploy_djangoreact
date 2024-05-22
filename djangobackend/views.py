@@ -7,25 +7,24 @@ import json
 from openai import OpenAI
 from pymongo.errors import ConnectionFailure
 
+from bson import ObjectId
+
+
 def index(request):
     return render(request, 'index.html')
 
 
-from django.http import JsonResponse
-from pymongo import MongoClient
-from bson import ObjectId
+
+
+# Define a global MongoClient object to reuse connections
+client = MongoClient("mongodb+srv://umer:umer123456@cluster0.chseyyo.mongodb.net/")
+# Access the portfolio database
+db = client.portfolio
+# Access the market_data collection
+market_data_collection = db.global_data
 
 def get_market_data(request):
     try:
-        # Connect to MongoDB
-        client = MongoClient("mongodb+srv://umer:umer123456@cluster0.chseyyo.mongodb.net/")
-
-        # Access the portfolio database
-        db = client.portfolio
-
-        # Access the market_data collection
-        market_data_collection = db.global_data
-
         # Query for the document using its ObjectId
         market_data_document = market_data_collection.find_one({'_id': ObjectId("660685ed6bc8020d1c75d185")})
 
@@ -38,9 +37,6 @@ def get_market_data(request):
         completed_projects = market_data_document.get('Completed projects', None)
         time_to_hire = market_data_document.get('Time to hire', None)
 
-        # Close MongoDB connection
-        client.close()
-
         # Prepare response data
         data = {
             'Years on the market': years_on_market,
@@ -52,10 +48,6 @@ def get_market_data(request):
         return JsonResponse(data)
     except Exception as e:
         return JsonResponse({'error': str(e)}, status=500)
-
-
-
-
 
   
 
