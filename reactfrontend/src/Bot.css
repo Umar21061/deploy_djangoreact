@@ -138,3 +138,9 @@ body {
         font-size: 14px; /* Adjust font size for smaller screens */
     }
 }
+/* For tablets */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .bot-container {
+        height: auto; /* Set automatic height for tablets */
+    }
+}
