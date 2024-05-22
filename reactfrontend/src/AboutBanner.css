@@ -1,0 +1,50 @@
+/* AboutBanner.css */
+
+.about-banner-container {
+    height: 60vh;
+    position: relative;
+  }
+  
+  .about-banner-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .about-banner-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    padding: 0 20px;
+  }
+  
+  .about-banner-heading {
+    font-size: 3rem;
+    font-weight: bold;
+    line-height: 1.2;
+  }
+  
+  /* Responsive styles */
+  @media (max-width: 768px) {
+    .about-banner-container {
+      height: 50vh;
+    }
+  
+    .about-banner-heading {
+      font-size: 2rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .about-banner-container {
+      height: 40vh;
+    }
+  
+    .about-banner-heading {
+      font-size: 1.5rem;
+    }
+  }
+  
