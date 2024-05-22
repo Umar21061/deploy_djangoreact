@@ -121,7 +121,7 @@ function HomePage({ textData }) {
       <About/>
       <RecentCase/>
       <Partner/>
-      <Value/>
+     
       <Cons/>
       <Footer/>
     </>
