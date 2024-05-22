@@ -114,8 +114,15 @@ function ConditionalHeader() {
 function HomePage({ textData }) {
   return (
     <>
-    <Bot/>
-      
+     <Bot/>
+      <Portfolio/>
+      <Services/>
+      <About/>
+      <RecentCase/>
+      <Partner/>
+      <Value/>
+      <Cons/>
+      <Footer/>
       
     </>
   );
