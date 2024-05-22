@@ -102,6 +102,7 @@ body {
     #chat-box img {
         width: 70px; /* Adjust the width to your preference */
         margin: 0 auto; /* Center the image */
+        margin-right: 10px;
     }
     
     .get-in-touch-button {
