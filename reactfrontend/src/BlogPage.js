@@ -1,8 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import './BlogPage.css';
-import { Link, Routes, Route } from 'react-router-dom'; // Import Routes and Route
-import BlogData from './BlogData'; // Assuming BlogData component path
+import { Link, Routes, Route } from 'react-router-dom';
+import BlogData from './BlogData';
+import Premium from './Premium';
+import Cons from './Cons';
+import Footer from './Footer';
 
 const BlogPage = () => {
     const [tags, setTags] = useState([]);
@@ -64,47 +67,52 @@ const BlogPage = () => {
     };
 
     return (
-        <div className="blog-container">
-            <h1 className='blogs-heading'>Welcome To Our Blogs</h1>
-            {error && <p style={{ color: 'red' }}>{error}</p>}
-            <div className="blog-button-container">
-                {tags.length > 0 ? (
-                    tags.map((tag, index) => (
-                        <button key={index} onClick={() => handleTagClick(tag)}>
-                            {tag}
-                        </button>
-                    ))
-                ) : (
-                    <p>Loading tags...</p>
+        <>
+            <div className="blog-container">
+                <h1 className='blogs-heading'>Welcome To Our Blogs</h1>
+                {error && <p style={{ color: 'red' }}>{error}</p>}
+                <div className="blog-button-container">
+                    {tags.length > 0 ? (
+                        tags.map((tag, index) => (
+                            <button key={index} onClick={() => handleTagClick(tag)}>
+                                {tag}
+                            </button>
+                        ))
+                    ) : (
+                        <p>Loading tags...</p>
+                    )}
+                </div>
+
+                <div className="blog-documents-container">
+                    {documents.length > 0 ? (
+                        documents.map(doc => (
+                            <div key={doc._id} className="blog-document-wrapper">
+                                <Link to={`/blogdata/${doc.name}`} className="blog-document-link" onClick={() => handleDocumentClick(doc.name)}>
+                                    <div className="blog-document">
+                                        <p>{doc.description}</p>
+                                        <img src={doc.image_url} alt={doc.name} />
+                                    </div>
+                                </Link>
+                            </div>
+                        ))
+                    ) : (
+                        <p>Select a tag to see documents.</p>
+                    )}
+                </div>
+
+                {selectedDocumentName && (
+                    <p>Selected Document Name: {selectedDocumentName}</p>
                 )}
+
+                {/* Define the routes for detailed document views */}
+                <Routes>
+                    <Route path="/blogdata/:name" element={<BlogData />} />
+                </Routes>
             </div>
-
-            <div className="blog-documents-container">
-                {documents.length > 0 ? (
-                    documents.map(doc => (
-                        <div key={doc._id} className="blog-document-wrapper">
-                            <Link to={`/blogdata/${doc.name}`} className="blog-document-link" onClick={() => handleDocumentClick(doc.name)}>
-                                <div className="blog-document">
-                                    <p>{doc.description}</p>
-                                    <img src={doc.image_url} alt={doc.name} />
-                                </div>
-                            </Link>
-                        </div>
-                    ))
-                ) : (
-                    <p>Select a tag to see documents.</p>
-                )}
-            </div>
-
-            {selectedDocumentName && (
-                <p>Selected Document Name: {selectedDocumentName}</p>
-            )}
-
-            {/* Define the routes for detailed document views */}
-            <Routes>
-                <Route path="/blogdata/:name" element={<BlogData />} />
-            </Routes>
-        </div>
+            <Premium />
+            <Cons />
+            <Footer />
+        </>
     );
 };
 
