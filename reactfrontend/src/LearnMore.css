@@ -1,3 +1,4 @@
+/* Base CSS */
 .learnmore-div1 {
   margin-bottom: 40px;
   border: 1px solid #5b5ca1;
@@ -8,20 +9,15 @@
 .left-column {
   flex: 1;
   color: black;
- 
-  
 }
-
 
 .right-column {
   flex: 1;
 }
 
-.heading2-text{
+.heading2-text {
   color: black;
 }
-
-
 
 .learnmore-div2 {
   display: flex;
@@ -53,7 +49,6 @@
   margin-top: 5px;
   color: black;
 }
-
 
 .heading2-text {
   margin-bottom: 20px;
@@ -119,7 +114,8 @@
 .learnmore-image .image-title {
   bottom: 0;
 }
-.learnmore-text{
+
+.learnmore-text {
   color: black;
 }
 
@@ -127,6 +123,7 @@
 @media only screen and (max-width: 768px) {
   .learnmore-div1 {
     flex-direction: column;
+    padding: 0 10px; /* Equal left and right padding */
   }
 
   .left-column,
@@ -136,27 +133,29 @@
     margin: 0; /* Remove margin for small screens */
   }
 
-  .learnmore-image {
-    width: 100%;
-    margin: 0; /* Equal margins for images in small screens */
-  }
-
   .image-row {
     flex-direction: column;
   }
 
   .learnmore-image {
-    margin-bottom: 20px;
+    width: 100%;
+    margin: 0 0 20px 0; /* Equal margins for images in small screens */
   }
 
-  /* Justify text */
+  .learnmore-image img {
+    display: block;
+    width: 100%;
+  }
+
   .learnmore-div2 {
     align-items: stretch;
+    margin: 0 10px; /* Equal left and right margin */
   }
 
   .learnmore-div2 p,
   .learnmore-div2 .numbered-row {
-    justify-content: space-between;
+    justify-content: flex-start;
+    width: 100%;
   }
 
   .learnmore-div2 .numbered-row p {
