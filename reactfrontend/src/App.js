@@ -114,7 +114,8 @@ function ConditionalHeader() {
 function HomePage({ textData }) {
   return (
     <>
-     
+     <Bot/>
+      
       
     </>
   );
