@@ -32,7 +32,7 @@ const LearnMore = ({ uniqueClassName, category }) => {
   if (loading) {
     return (
       <div style={{ backgroundColor: 'white', display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh' }}>
-      <img src={loadingImage} alt="Loading..." style={{ maxWidth: '30%', maxHeight: '50%', margin: 'auto' }} />
+      <img src={loadingImage} alt="Loading..." style={{ maxWidth: '20%', maxHeight: '30%', margin: 'auto' }} />
   </div>
     );
   }
@@ -52,7 +52,7 @@ const LearnMore = ({ uniqueClassName, category }) => {
             <p style={{ fontSize: '20px' , marginRight : "20px",color : 'black'}}>{div1['left-column']['text1']}</p>
           </div>
           <div className="right-column">
-            <img src={div1['right-column']['image_url']} alt="Velocity+" />
+            <img className='right-image' src={div1['right-column']['image_url']} alt="Velocity+" />
           </div>
         </div>
         <div className="learnmore-div2">
