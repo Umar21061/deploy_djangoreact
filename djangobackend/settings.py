@@ -133,3 +133,4 @@ load_dotenv()
 
 # Retrieve OpenAI API key from environment variable
 OPENAI_API_KEY = os.getenv('open_ai_key')
+MONGO_URL = os.getenv('MONGO_URL')

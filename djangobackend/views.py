@@ -8,8 +8,10 @@ from bson import ObjectId
 from openai import OpenAI
 
 # MongoDB connection URL
-MONGO_URL = "mongodb+srv://umer:umer123456@cluster0.chseyyo.mongodb.net/"
+MONGO_URL = settings.MONGO_URL
 
+
+client = OpenAI(api_key=settings.OPENAI_API_KEY)
 # Helper function to get MongoDB client
 def get_mongo_client():
     return MongoClient(MONGO_URL)
