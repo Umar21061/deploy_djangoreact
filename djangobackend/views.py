@@ -16,7 +16,7 @@ client = OpenAI(api_key=settings.OPENAI_API_KEY)
 def get_mongo_client():
     return MongoClient(MONGO_URL)
 
-def get_market_data(request):
+def get_couting_number(request):
     try:
         client = get_mongo_client()
         db = client.portfolio

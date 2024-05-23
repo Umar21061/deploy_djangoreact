@@ -16,7 +16,7 @@ const Portfolio = () => {
 
     const fetchMarketData = async () => {
         try {
-            const response = await fetch('/api/get_market_data/');
+            const response = await fetch('/api/get_couting_number/');
             const data = await response.json();
             setTargetYears(data['Years on the market']);
             setTargetExperts(data['Experts on board']);

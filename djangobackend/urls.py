@@ -5,7 +5,7 @@ from . import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('api/get_market_data/', views.get_market_data, name='get_market_data'),
+    path('api/get_couting_number/', views.get_couting_number, name='get_couting_number'),
     
   
     path('api/save_contact/', views.save_contact, name='save_contact'),
