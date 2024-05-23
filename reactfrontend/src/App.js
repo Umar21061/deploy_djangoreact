@@ -35,6 +35,7 @@ import Project from './project';
 import ProjectDetails from './ProjectDetails';
 import BlogData from './BlogData';
 import AboutBanner from './AboutBanner';
+import BlogSlider from './BlogSlider';
 
 
 function App() {

@@ -6,6 +6,7 @@ import BlogData from './BlogData';
 import Premium from './Premium';
 import Cons from './Cons';
 import Footer from './Footer';
+import BlogSlider from './BlogSlider';
 
 const BlogPage = () => {
     const [tags, setTags] = useState([]);
@@ -68,6 +69,7 @@ const BlogPage = () => {
 
     return (
         <>
+        <BlogSlider />
             <div className="blog-container">
                 <h1 className='blogs-heading'>Welcome To Our Blogs</h1>
                 {error && <p style={{ color: 'red' }}>{error}</p>}
