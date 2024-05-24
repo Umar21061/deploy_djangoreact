@@ -25,10 +25,9 @@ import Career from './Career';
 import Apply from './Apply';
 import ContactForm from './Contact';
 import BlogPage from './BlogPage';
-import Reward from './reward';
+
 import Bot from './Bot';
 import Premium from './Premium';
-import Ebook from './Ebook';
 import LearnMore from './LearnMore';
 
 import Project from './project';
@@ -83,7 +82,7 @@ function App() {
           <Route path="/career" element={<Career />} />
           <Route path="/apply" element={<Apply />} />
           <Route path="/contact" element={<ContactForm />} />
-          <Route path="/ebook" element={<Ebook />} />
+         
           <Route path="/blogdata/:name" element={<BlogData />} />
 
           <Route path="/blogpage" element={<BlogPage />} />

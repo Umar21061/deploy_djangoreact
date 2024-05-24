@@ -9,8 +9,8 @@ urlpatterns = [
     
   
     path('api/save_contact/', views.save_contact, name='save_contact'),
-    path('api/get_reward_data/', views.get_reward_data, name='get_reward_data'),
-    path('api/get_ebook_data/', views.ebook_data, name='get_ebook_data'),
+    
+  
     path('api/chat/', views.chat, name='chat'),  
     path('api/blog_page/', views.blog_page, name='blog_page'),
      path('api/blog_data/', views.blog_data, name='blog_data'),

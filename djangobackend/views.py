@@ -65,36 +65,9 @@ def get_job_data(request):
     except Exception as e:
         return JsonResponse({'error': str(e)}, status=500)
 
-def ebook_data(request):
-    try:
-        client = get_mongo_client()
-        db = client.portfolio
-        collection = db.global_data
-        document_id = "661aea4fb3059fc714db1f14"
-        ebook_data = collection.find_one({"_id": ObjectId(document_id)})
 
-        if ebook_data:
-            ebook_data['_id'] = str(ebook_data['_id'])
-            response = JsonResponse(ebook_data)
-        else:
-            response = JsonResponse({"error": "Document not found"}, status=404)
 
-        client.close()
-        return response
-    except Exception as e:
-        return JsonResponse({'error': str(e)}, status=500)
 
-def get_reward_data(request):
-    try:
-        client = get_mongo_client()
-        db = client.portfolio
-        reward_collection = db.reward
-        reward_documents = reward_collection.find({}, {'_id': 0})
-        reward_data = list(reward_documents)
-        client.close()
-        return JsonResponse(reward_data, safe=False)
-    except Exception as e:
-        return JsonResponse({'error': str(e)}, status=500)
 
 @csrf_exempt
 def save_contact(request):
