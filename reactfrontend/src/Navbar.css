@@ -4,7 +4,6 @@
     width: auto;
 }
 
-
 .btn-primary {
     background-color: #5f4fbd; /* Blue background color */
     font-size: 20px;
@@ -37,7 +36,6 @@
     z-index: 1;
 }
 
-
 .text-black {
     color: white;
 }
@@ -50,9 +48,22 @@
     text-decoration: none;
 }
 
-/* Initially set the ::after pseudo-element to not display */
 .menu-item::after {
-    display: none;
+    content: '';
+    position: absolute;
+    bottom: -2px; /* Positioning the line slightly below the text */
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(120deg, #5f4fbd 0%, #251f75 100%); /* Linear gradient for the line */
+    transform: scaleX(0); /* Initially scaled down to 0 */
+    transition: transform 0.3s ease; /* Smooth transition for scaling */
+    transform-origin: bottom right; /* Origin point for the scale */
+}
+
+.menu-item:hover::after {
+    transform: scaleX(1); /* Scale to full width on hover */
+    transform-origin: bottom left; /* Change origin point to left */
 }
 
 .navbar-nav .nav-link {
@@ -62,15 +73,15 @@
 .navbar {
     background-color: white !important;
 }
+
 .navbar-nav .nav-link.active {
     color: black;
 }
 
-
 @media (max-width: 576px) {
     /* Adjust font size for small screens */
     .header-text-header {
-        font-size: 5vw; 
+        font-size: 5vw;
     }
 
     body {

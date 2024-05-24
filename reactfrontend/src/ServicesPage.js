@@ -16,7 +16,7 @@ const ServicesPage = () => {
         Your browser does not support the video tag.
       </video>
       <div className="service-videotext2">
-      We deliver excellence in every project, offering a wide array of services that meet the highest standards of quality.
+      We deliver excellence in every project, offering a wide array of services that meet the standards of quality
       </div>
       <>
       <div>
