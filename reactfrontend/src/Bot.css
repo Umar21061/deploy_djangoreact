@@ -1,3 +1,8 @@
+body {
+    background-color: white;
+    color: black; /* Text color */
+    margin: 0; /* Reset default margin */
+}
 .bot-container {
     margin-top: 40px;
     height: 70vh;
@@ -11,11 +16,7 @@
     overflow-x: hidden; /* Prevent horizontal scrolling */
 }
 
-body {
-    background-color: white;
-    color: black; /* Text color */
-    margin: 0; /* Reset default margin */
-}
+
 
 #chat-box {
     display: flex;
@@ -42,6 +43,7 @@ body {
     height: auto; /* Maintain aspect ratio */
     margin-right: 0; /* Remove the margin between the image and the form */
     margin-left: 20px; /* Adjust margin to position the image */
+    
 }
 
 .user-message {
@@ -132,6 +134,7 @@ body {
 
     #chat-box form {
         margin-right: 5px; /* Adjust margin for smaller screens */
+        margin-top: 10px;
     }
 
     .bot-message,
