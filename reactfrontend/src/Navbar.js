@@ -16,7 +16,10 @@ const Navbar = () => {
             <div className="container">
                 <NavLink className="navbar-brand" to="/">
                     <img src={logo} alt="Logo" className="navbar-logo" /> 
-                    <span className="logo-text">System Heuristics</span>
+                    
+                </NavLink>
+                <NavLink className="navbar-brand" to="/">
+                <span className="logo-text">System Heuristics</span>
                 </NavLink>
                 <button
                     className="navbar-toggler"
