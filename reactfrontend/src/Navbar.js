@@ -15,7 +15,8 @@ const Navbar = () => {
         <nav className={`navbar navbar-expand-lg  ${expanded ? 'expanded' : ''}`}>
             <div className="container">
                 <NavLink className="navbar-brand" to="/">
-                    <img src={logo} alt="Logo" className="navbar-logo" /> System Heuristics
+                    <img src={logo} alt="Logo" className="navbar-logo" /> 
+                    <span className="logo-text">System Heuristics</span>
                 </NavLink>
                 <button
                     className="navbar-toggler"
@@ -44,7 +45,7 @@ const Navbar = () => {
                     </ul>
                     <div className="navbar-text">
                         <Link to="/contact">
-                            <button className="btn btn-primary">Get in Touch</button>
+                            <button className="btn btn-primary1">Get in Touch</button>
                         </Link>
                     </div>
                 </div>
