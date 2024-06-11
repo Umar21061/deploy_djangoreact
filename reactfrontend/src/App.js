@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import './App.css';
-import Header from './Header';
+
 import Navbar from './Navbar';
 import Hero from './Hero';
 import About from './About';
@@ -70,7 +70,7 @@ function App() {
   return (
     <Router>
       <div className="App">
-        <ConditionalHeader />
+       
         <Navbar />
         <Routes>
           <Route path="/services" element={<ServicesPage />} />
@@ -106,10 +106,7 @@ function App() {
   );
 }
 
-function ConditionalHeader() {
-  const location = useLocation();
-  return location.pathname === '/' ? <Header /> : null;
-}
+
 
 function HomePage({ textData }) {
   return (

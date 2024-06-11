@@ -69,13 +69,7 @@ const Bot = () => {
                 <div id="chat-container" className="col-lg-5 bot d-flex flex-column justify-content-start"> {/* Move the bot to the top */}
                     <div id="chat-box">
                         <div>
-                            {!showGreeting && messages.map((message, index) => (
-                                <p key={index} className="bot-message">{message.content}</p>
-                            ))}
-                            {showGreeting &&
-                                <p className='bot-text'>Hello! How can I assist you today?</p>
-                            }
-                            <form onSubmit={handleSubmit}>
+                        <form onSubmit={handleSubmit}>
                                 <input
                                     type="text"
                                     value={userMessage}
@@ -84,6 +78,13 @@ const Bot = () => {
                                 />
                                 <input type="submit" value="Ask" />
                             </form>
+                            {!showGreeting && messages.map((message, index) => (
+                                <p key={index} className="bot-message">{message.content}</p>
+                            ))}
+                            {showGreeting &&
+                                <p className='bot-text'>Hello! How can I assist you today?</p>
+                            }
+                            
                         </div>
                         <img src={rbImage} alt="Robot" />
                     </div>

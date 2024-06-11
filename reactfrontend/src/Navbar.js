@@ -15,7 +15,7 @@ const Navbar = () => {
         <nav className={`navbar navbar-expand-lg  ${expanded ? 'expanded' : ''}`}>
             <div className="container">
                 <NavLink className="navbar-brand" to="/">
-                    <img src={logo} alt="Logo" className="navbar-logo" />
+                    <img src={logo} alt="Logo" className="navbar-logo" /> System Heuristics
                 </NavLink>
                 <button
                     className="navbar-toggler"
