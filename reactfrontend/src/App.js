@@ -9,7 +9,7 @@ import Portfolio from './Portfolio';
 import Services from './Services';
 import RecentCase from './RecentCase';
 
-import Cons from './Cons';
+
 import Footer from './Footer';
 
 import ServicesPage from './ServicesPage';
@@ -118,7 +118,7 @@ function HomePage({ textData }) {
       <RecentCase/>
       <Partner/>
       <Value/>
-      <Cons/>
+     
       <Footer/>
       
     </>

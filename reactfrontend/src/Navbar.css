@@ -1,36 +1,33 @@
 /* Home Button Styles */
+.navbar {
+    background-color: #0560e0;
+}
+
 .navbar-logo {
+   
     height: 60px;
     width: auto;
+
 }
 
 .logo-text{
     color: white;
-    font-size: 22px;
+    font-size: 2rem;
     font-family: 'Helvetica Neue', sans-serif;
-    margin-left: 10px;
+    padding: 5px;
 }
 
-.btn-primary1 {
+.nav-btn{
     background-color: white; /* Blue background color */
     font-size: 20px;
     position: relative;
-    
     cursor: pointer;
     overflow: hidden;
-    color: black; /* Text color */
+    color: royalblue; /* Text color */
+    border: 2px solid #0560e0 ;
+    border-radius: 5px;
+    padding: 7px;
 }
-
-
-
-
-
-.btn-primary1:hover {
-    background-color: black; /* Change background to white on hover */
-    color: white; /* Change text color to black on hover */
-    z-index: 1;
-}
-
 .text-black {
     color: white;
 }
@@ -63,14 +60,6 @@
 
 .navbar-nav .nav-link {
     color: white;
-}
-
-.navbar {
-    background-color: #0560e0;
-}
-
-.navbar-nav .nav-link.active {
-    color: black;
 }
 
 @media (max-width: 576px) {

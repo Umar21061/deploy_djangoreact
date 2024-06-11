@@ -1,25 +1,38 @@
 import React from 'react';
 import './Footer.css';
-import instaIcon from './image/gmail.png';
+import instaIcon from './image/insta.webp';
 import linkedinIcon from './image/linkedin.webp';
-import gmailIcon from './image/mail.webp';
+import gmailIcon from './image/gmail.png';
 import fbIcon from './image/fb.webp';
+import logo from './image/nlogo.jpg';
 
 const Footer = () => {
   return (
     <footer className="footer">
       <div className="footer-content">
-        <div className="left">
-          <button className="privacy-policy-button">Privacy Policy</button>
+        <div className="column">
+          <img src={logo} alt="System Heuristics Logo" className="logo" />
+          <p>System Heuristics</p>
+          <div className="social-icons">
+            <img src={instaIcon} alt="Instagram" className="social-icon" />
+            <img src={linkedinIcon} alt="LinkedIn" className="social-icon" />
+            <img src={gmailIcon} alt="Gmail" className="social-icon" />
+            <img src={fbIcon} alt="Facebook" className="social-icon" />
+          </div>
+          <p>1234 Street Address, City, State, ZIP</p>
         </div>
-        <div className="center">
-          <img src={instaIcon} alt="Instagram" className="social-icon" />
-          <img src={linkedinIcon} alt="LinkedIn" className="social-icon" />
-          <img src={gmailIcon} alt="Gmail" className="social-icon" />
-          <img src={fbIcon} alt="Fb" className="social-icon" />
+        <div className="column">
+          <h3>Services</h3>
+          <p>Service 1</p>
+          <p>Service 2</p>
+          <p>Service 3</p>
+          <p>Service 4</p>
         </div>
-        <div className="right">
-          <p>All rights reserved by SystemHeuristics.com</p>
+        <div className="column">
+          <button className="get-in-touch-button">Get in Touch</button>
+          <p>Phone: (123) 456-7890</p>
+          <p>Email: info@systemheuristics.com</p>
+          <button className="free-consultation-button">Get Free Consultation</button>
         </div>
       </div>
     </footer>

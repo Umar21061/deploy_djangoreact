@@ -58,15 +58,15 @@ const Bot = () => {
         <div className="container bot-container">
             <div className="row bot-row">
                 <div className="col-lg-7 bot">
-                    <h1 className="lead display-5 fw-bold lh-1 mb-3 slice-left-to-right">We Empower Businesses with our AI expertise, Transforming complex data into Actionable insights.</h1>
-                    <h6 className="lead slice-left-to-right">We leverage the power of Artificial Intelligence to fuel Innovation and drive strategic growth across industries.</h6>
+                    <h1 className=" lead1 display-5 fw-bold lh-1 mb-3 slice-left-to-right">We Empower Businesses to Maximize Revenues Using Our AI Expertise</h1>
+                    <h6 className="lead slice-left-to-right">Unlock innovation and drive strategic growth with our top-tier AI solutions. We enhance efficiency, optimize operations, and open new opportunities, ensuring your business stays ahead in a competitive landscape.</h6>
                     <div className="d-grid gap-2 d-md-flex justify-content-md-start">
                         <Link to="/contact">
-                            <button type="button" className="btn btn-primary btn-lg px-4 me-md-2 slice-left-to-right">Get in Touch</button>
+                            <button type="button" className="btn btn-primary2 btn-lg px-4 me-md-2 slice-left-to-right">Get in Touch</button>
                         </Link>
                     </div>
                 </div>
-                <div id="chat-container" className="col-lg-5 bot d-flex flex-column justify-content-start"> {/* Move the bot to the top */}
+                <div id="chat-container" className="col-lg-4 bot d-flex flex-column justify-content-start"> {/* Move the bot to the top */}
                     <div id="chat-box">
                         <div>
                         <form onSubmit={handleSubmit}>

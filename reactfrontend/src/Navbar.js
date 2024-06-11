@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { NavLink, Link } from 'react-router-dom'; // Import Link along with NavLink
 import 'bootstrap/dist/css/bootstrap.min.css';
-import logo from './image/logosh.png';
+import logo from './image/nlogo.jpg';
 import './Navbar.css';
 
 const Navbar = () => {
@@ -45,7 +45,7 @@ const Navbar = () => {
                     </ul>
                     <div className="navbar-text">
                         <Link to="/contact">
-                            <button className="btn btn-primary1">Get in Touch</button>
+                            <button className="nav-btn">Get in Touch</button>
                         </Link>
                     </div>
                 </div>

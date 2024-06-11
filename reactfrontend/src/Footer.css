@@ -1,47 +1,47 @@
-/* Default styles */
 .footer {
-  width: 100%;
-  background-color: black;
+  background-color: #0560e0;
+  color: white;
   padding: 20px 0;
-  
+  text-align: center;
 }
 
 .footer-content {
   display: flex;
-  justify-content: space-around; /* Align content to the left */
+  justify-content: space-around;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  padding: 20px;
 }
 
-.privacy-policy-button {
+.column {
+  flex: 1;
+  padding: 10px;
+  min-width: 200px;
   text-align: left;
-  background-color: black;
+}
+
+.logo {
+  width: 100px;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 10px 0;
+}
+
+.social-icon {
+  width: 30px;
+  height: 30px;
+}
+
+.get-in-touch-button,
+.free-consultation-button {
+  background-color: #007bff;
   color: white;
   border: none;
-}
-
-p {
-  text-align: left; /* Align paragraph text to the left */
-  color: white;
-  margin-right: 30px
-}
-.social-icon {
-  width: 30px; /* Adjust the size as needed */
-  height: 30px; /* Adjust the size as needed */
-  margin-right: 10px; /* Adjust spacing between icons */
-}
-
-/* Media queries for responsiveness */
-@media screen and (max-width: 768px) {
-  .footer-content {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .privacy-policy-button {
-    margin-bottom: 10px; /* Add space between button and paragraph */
-    text-align: center; /* Center button */
-  }
-
-  p {
-    text-align: center; /* Center paragraph text */
-  }
+  padding: 10px 20px;
+  margin: 10px 0;
+  cursor: pointer;
 }
