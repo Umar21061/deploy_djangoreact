@@ -47,7 +47,7 @@
     position: absolute;
     bottom: -2px; /* Positioning the line slightly below the text */
     left: 0;
-    width: 80%;
+    width: 92%;
     height: 3px;
     background: white; /* Linear gradient for the line */
     transform: scaleX(0); /* Initially scaled down to 0 */
