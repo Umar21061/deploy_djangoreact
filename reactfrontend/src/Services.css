@@ -1,6 +1,6 @@
 .container-services {
-    border: 1px solid  rgb(195, 202, 224); /* Light border color */
-    box-shadow: 0 4px 8px rgba(230, 230, 230, 0.5); /* Light blue box shadow */
+    border: 1px solid rgb(195, 202, 224); /* Light border color */
+    box-shadow: 0 4px 8px rgba(0, 0, 255, 0.5); /* Blue box shadow */
     padding: 20px; /* Optional padding */
     border-radius: 8px; /* Optional rounded corners */
     margin-left: 150px; /* Center element horizontally */
