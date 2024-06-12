@@ -15,31 +15,41 @@
 
 .column {
   flex: 1;
- 
+  padding: 10px;
   min-width: 200px;
   margin: 0 10px;  /* Add equal left and right margins */
   text-align: left;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.column:last-child {
+  text-align: left; /* Ensure text is left-aligned */
+  align-items: flex-start; /* Ensure items are aligned to the start (left) */
 }
 
 .logo {
   width: 100px;
-  margin-left: 50px;
-  margin-bottom: 20px;
+  align-self: center; /* Align logo to the right */
+  margin-bottom: 10px;
 }
-.logo-text2{
-  font-size: 26px;
+
+.logo-text2 {
+  font-size: 25px;
+  margin-bottom: 10px;
 }
+
 .social-icons {
   display: flex;
   justify-content: center;
-  gap: 10px;
-  margin-left: 50px;
+  gap: 20px;
+  margin: 10px 0;
 }
 
 .social-icon {
-  width: 35px;
-  height: 35px;
-  gap: 5px;
+  width: 37px;
+  height: 37px;
 }
 
 .get-in-touch-button,
@@ -50,4 +60,5 @@
   padding: 10px 20px;
   margin: 10px 0;
   cursor: pointer;
+  text-justify: left;
 }
