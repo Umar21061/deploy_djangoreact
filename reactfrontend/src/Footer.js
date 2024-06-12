@@ -12,14 +12,14 @@ const Footer = () => {
       <div className="footer-content">
         <div className="column">
           <img src={logo} alt="System Heuristics Logo" className="logo" />
-          <p>System Heuristics</p>
+          <span className="logo-text2">System Heuristics</span>
           <div className="social-icons">
             <img src={instaIcon} alt="Instagram" className="social-icon" />
             <img src={linkedinIcon} alt="LinkedIn" className="social-icon" />
             <img src={gmailIcon} alt="Gmail" className="social-icon" />
             <img src={fbIcon} alt="Facebook" className="social-icon" />
           </div>
-          <p>1234 Street Address, City, State, ZIP</p>
+        
         </div>
         <div className="column">
           <h3>Services</h3>
@@ -32,6 +32,7 @@ const Footer = () => {
           <button className="get-in-touch-button">Get in Touch</button>
           <p>Phone: (123) 456-7890</p>
           <p>Email: info@systemheuristics.com</p>
+          <p>1234 Street Address, City, State, ZIP</p>
           <button className="free-consultation-button">Get Free Consultation</button>
         </div>
       </div>

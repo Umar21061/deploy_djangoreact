@@ -7,7 +7,7 @@
 
 .footer-content {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: flex-start;
   flex-wrap: wrap;
   padding: 20px;
@@ -15,25 +15,31 @@
 
 .column {
   flex: 1;
-  padding: 10px;
+ 
   min-width: 200px;
+  margin: 0 10px;  /* Add equal left and right margins */
   text-align: left;
 }
 
 .logo {
   width: 100px;
+  margin-left: 50px;
+  margin-bottom: 20px;
 }
-
+.logo-text2{
+  font-size: 26px;
+}
 .social-icons {
   display: flex;
   justify-content: center;
   gap: 10px;
-  margin: 10px 0;
+  margin-left: 50px;
 }
 
 .social-icon {
-  width: 30px;
-  height: 30px;
+  width: 35px;
+  height: 35px;
+  gap: 5px;
 }
 
 .get-in-touch-button,

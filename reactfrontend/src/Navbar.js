@@ -34,13 +34,16 @@ const Navbar = () => {
                             <NavLink className="nav-link menu-item" activeClassName="active" to="/services">Services</NavLink>
                         </li>
                         <li className="nav-item">
+                            <NavLink className="nav-link menu-item" activeClassName="active" to="/portfolio">Industries</NavLink>
+                        </li>
+                        <li className="nav-item">
                             <NavLink className="nav-link menu-item" activeClassName="active" to="/portfolio">Portfolio</NavLink>
                         </li>
                         <li className="nav-item">
                             <NavLink className="nav-link menu-item" activeClassName="active" to="/about">About</NavLink>
                         </li>
                         <li className="nav-item">
-                            <NavLink className="nav-link menu-item" activeClassName="active" to="/blogpage">Blog</NavLink>
+                            <NavLink className="nav-link menu-item" activeClassName="active" to="/blogpage">Resources</NavLink>
                         </li>
                         <li className="nav-item">
                             <NavLink className="nav-link menu-item" activeClassName="active" to="/career">Career</NavLink>
@@ -48,7 +51,7 @@ const Navbar = () => {
                     </ul>
                     <div className="navbar-text">
                         <Link to="/contact">
-                            <button className="nav-btn">Get in Touch</button>
+                            <button className="nav-btn">Free Strategy Call</button>
                         </Link>
                     </div>
                 </div>

@@ -15,9 +15,10 @@ const Services = () => {
     }, []);
 
     return (
-        <div className='container'>
+        <div className='container-services'>
             <div className="services-section">
-                <h1 className='services-heading'>Our Services</h1>
+            <h1 className='heading display-5 fw-bold lh-1 mb-5 slice-left-to-right' style={{ marginBottom: '130px' }}>Our Services</h1>
+
                 <div className="service-container">
                     {/* First row */}
                     <div className="service-row">
@@ -51,7 +52,7 @@ const Services = () => {
                 {/* Button to see all services */}
                 <div >
                     <Link to="/services">
-                        <button className="see-all-button">See all services</button>
+                        <button className="btn btn-primary2 ">See all services</button>
                     </Link>
                 </div>
             </div>

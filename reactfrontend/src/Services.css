@@ -1,30 +1,34 @@
-/* Set background color to black and text color to white */
+.container-services {
+    border: 1px solid  rgb(195, 202, 224); /* Light border color */
+    box-shadow: 0 4px 8px rgba(230, 230, 230, 0.5); /* Light blue box shadow */
+    padding: 20px; /* Optional padding */
+    border-radius: 8px; /* Optional rounded corners */
+    margin-left: 150px; /* Center element horizontally */
+    margin-right: 150px; /* Center element horizontally */
+    margin-bottom: 100px;
+    
+
+}
+
 body {
     background-color: black;
     color: white;
 }
 
-/* Add space after h1 */
-.services-heading{
-   
-    text-align: center;
-    margin-bottom: 50px; 
-    font-size: 35px;
-    font-family: 'Helvetica Neue', sans-serif;
-    font-weight: bold;
+.heading {
+    color: royalblue;
 }
 
 .services-section {
     text-align: center;
     padding: 40px;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
 }
 
 .service-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    
 }
 
 .service-row {
@@ -32,7 +36,6 @@ body {
     flex-wrap: wrap;
     justify-content: space-between;
     margin-bottom: 20px;
-    
 }
 
 .service-item {
@@ -43,56 +46,22 @@ body {
 .service-item img {
     max-width: 15%;
     height: auto;
-    
-}
-.service-item img {
     transition: transform 0.3s ease-in-out;
-  }
-  
-  .service-item:hover img {
+}
+
+.service-item:hover img {
     transform: scale(1.1); /* Increase the scale to 110% on hover */
-  }
+}
 
-.service-item h2 {
+.service-item h3 {
     margin-top: 10px;
+    transition: color 0.3s ease-in-out;
 }
 
-
-.see-all-button {
-    text-decoration: none;
-    background-color: white; /* Initially white background */
-    font-size: 20px;
-    position: relative;
-    border: 2px solid rgb(195, 195, 207);
-    cursor: pointer;
-    overflow: hidden;
-    color: black;
-    padding: 10px;
-    border-radius: 10px;
+.service-item:hover h3 {
+    color: royalblue; /* Change h3 color to royal blue on hover */
 }
 
-.see-all-button::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: #5f4fbd; /* Blue slice color */
-    transform: translateX(-100%); /* Initially off the screen to the left */
-    transition: transform 0.3s ease; /* Transition for transform */
-    z-index: -1;
-}
-
-.see-all-button:hover::before {
-    transform: translateX(100%); /* Move the blue slice in from the left */
-}
-
-.see-all-button:hover {
-    background-color: #5f4fbd; /* Change background to blue on hover */
-    color: white; /* Change text color to white on hover */
-    z-index: 1;
-}
 
 
 @media (max-width: 768px) {
@@ -132,23 +101,17 @@ body {
     }
 }
 
-
 @media screen and (max-width: 576px) {
     .service-item {
         flex-basis: calc(100% - 20px); /* Adjust width for responsiveness */
     }
 
-.service-item img {
-    max-width: 15%;
-    height: auto;
-    
-}
+    .service-item img {
+        max-width: 15%;
+        height: auto;
+    }
 
-.see-all-button {
-    font-size: 15px;
-
-}
-
-
-
+    .see-all-button {
+        font-size: 15px;
+    }
 }
