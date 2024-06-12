@@ -57,7 +57,9 @@ body {
 .service-item h3 {
     margin-top: 10px;
     transition: color 0.3s ease-in-out;
+    
 }
+
 
 .service-item:hover h3 {
     color: royalblue; /* Change h3 color to royal blue on hover */
