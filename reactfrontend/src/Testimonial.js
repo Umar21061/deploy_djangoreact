@@ -25,6 +25,27 @@ const Testimonial = () => {
       name: "Michael Brown",
       company: "Company ZYX"
     },
+    {
+        text:"System Heuristics Company is at the forefront of evolutionizing business systems analysis and optimization, setting new standards for innovation and efficiency.",
+        name: "John Doe",
+        company: "Company XYZ"
+      },
+      {
+        text: "System Heuristics Company is at the forefront of evolutionizing business systems analysis and optimization, setting new standards for innovation and efficiency.",
+        name: "Jane Smith",
+        company: "Company ABC"
+      },
+      {
+        text: "System Heuristics Company is at the forefront of evolutionizing business systems analysis and optimization, setting new standards for innovation and efficiency.",
+        name: "Sarah Johnson",
+        company: "Company 123"
+      },
+      {
+        text: "System Heuristics Company is at the forefront of evolutionizing business systems analysis and optimization, setting new standards for innovation and efficiency..",
+        name: "Michael Brown",
+        company: "Company ZYX"
+      },
+    
   ];
 
   return (
@@ -39,12 +60,12 @@ const Testimonial = () => {
               <div className="center">
                 <img src={circleImage} alt="Circle" className="circle-image" />
               </div>
-              <div className='wave'>
+             
               <div className="name-company">
                 <div className="color-layer"></div>
                 <div className="name">{testimonial.name}</div>
                 <div className="company">{testimonial.company}</div>
-              </div>
+              
               </div>
             </div>
           ))}

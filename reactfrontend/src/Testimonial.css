@@ -1,12 +1,11 @@
+
 .testimonial {
     text-align: center; /* Adjusted text alignment */
-    
 }
 
 .testimonial p {
     text-align: justify; /* Justify text alignment */
     text-align: left; /* Align text to the left */
-    
 }
 
 .heading-class {
@@ -20,17 +19,33 @@
 
 .blocks {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    flex-wrap: nowrap;
+    overflow-x: auto;
     margin-top: 20px;
     margin-bottom: 200px;
-    height: 300px;
-    
-    
+    height: 400px;
+    padding: 0 10px;
+    scrollbar-width: thin; /* Width of the scrollbar */
+    scrollbar-color: transparent transparent; /* Color of the scrollbar track and thumb */
 }
+
+.blocks::-webkit-scrollbar {
+    width: 5px; /* Width of the scrollbar */
+}
+
+.blocks::-webkit-scrollbar-track {
+    background: transparent; /* Background color of the scrollbar track */
+}
+
+.blocks::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.3); /* Color of the scrollbar thumb */
+    border-radius: 10px; /* Border radius of the scrollbar thumb */
+}
+
+
 .block {
-    flex: 1 1 calc(25% - 20px); /* Three blocks per row, subtracting margin */
-    margin: 10px; /* Equal margin around each block */
+    flex: 0 0 23.2%; /* Each block takes 25% of the container's width */
+    margin: 0 10px; /* Equal margin left and right */
     position: relative;
     border: 1px solid #ccc; /* Added border */
     border-radius: 5px; /* Added border radius */
@@ -42,11 +57,10 @@
     padding: 10px;
 }
 
+
 .block p {
     margin-bottom: 10px;
-    text-align: left; /* Center text inside block */
-    align-items: justify;
-
+    text-align: left; /* Align text inside block */
 }
 
 .circle-image {
@@ -59,9 +73,7 @@
 .name-company {
     position: relative;
     text-align: center; /* Center text inside name-company div */
-   
 }
-
 
 .name,
 .company {
@@ -70,6 +82,7 @@
     color: white;
     margin-top: 5px;
 }
+
 .block:nth-child(1)::after {
     content: '';
     border-top-left-radius: 0% 100%;
@@ -81,6 +94,7 @@
     background-color: #cc4b52; /* Color for block 1 */
     height: 35%;
 }
+
 .block:nth-child(2)::after {
     content: '';
     border-top-left-radius: 50% 100%;
@@ -89,7 +103,7 @@
     bottom: 0;
     z-index: -1;
     width: 100%;
-    background-color: #6819cf; /* Color for block 1 */
+    background-color: #6819cf; /* Color for block 2 */
     height: 35%;
 }
 
@@ -101,10 +115,9 @@
     bottom: 0;
     z-index: -1;
     width: 100%;
-    background-color: #2a9c9c; /* Color for block 1 */
+    background-color: #2a9c9c; /* Color for block 3 */
     height: 35%;
 }
-
 
 .block:nth-child(4)::after {
     content: '';
@@ -114,6 +127,54 @@
     bottom: 0;
     z-index: -1;
     width: 100%;
-    background-color: #3fad29; /* Color for block 1 */
+    background-color: #3fad29; /* Color for block 4 */
+    height: 35%;
+}
+
+.block:nth-child(5)::after {
+    content: '';
+    border-top-left-radius: 0% 100%;
+    border-top-right-radius: 50% 100%;
+    position: absolute;
+    bottom: 0;
+    z-index: -1;
+    width: 100%;
+    background-color: #248b58; /* Color for block 5 */
+    height: 35%;
+}
+
+.block:nth-child(6)::after {
+    content: '';
+    border-top-left-radius: 50% 100%;
+    border-top-right-radius: 50% 0%;
+    position: absolute;
+    bottom: 0;
+    z-index: -1;
+    width: 100%;
+    background-color: #cf1974; /* Color for block 6 */
+    height: 35%;
+}
+
+.block:nth-child(7)::after {
+    content: '';
+    border-top-left-radius: 0% 100%;
+    border-top-right-radius: 50% 100%;
+    position: absolute;
+    bottom: 0;
+    z-index: -1;
+    width: 100%;
+    background-color: #6d6711; /* Color for block 7 */
+    height: 35%;
+}
+
+.block:nth-child(8)::after {
+    content: '';
+    border-top-left-radius: 50% 100%;
+    border-top-right-radius: 50% 0%;
+    position: absolute;
+    bottom: 0;
+    z-index: -1;
+    width: 100%;
+    background-color: #21a506; /* Color for block 8 */
     height: 35%;
 }
