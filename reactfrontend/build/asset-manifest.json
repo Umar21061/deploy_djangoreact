@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.12e0a975.css",
-    "main.js": "/static/js/main.37d04b0b.js",
+    "main.css": "/static/css/main.4e014cf6.css",
+    "main.js": "/static/js/main.9b598626.js",
     "static/media/v6.mp4": "/static/media/v6.405cc4306d6dfc09f41f.mp4",
     "static/media/v1.mp4": "/static/media/v1.a2c4a933cfc6104013d1.mp4",
     "static/media/v4.mp4": "/static/media/v4.cf4c4bb2dde62f153cc6.mp4",
@@ -17,6 +17,7 @@
     "static/media/team.jpg": "/static/media/team.d00a20259ad2cfc28ab2.jpg",
     "static/media/x3.png": "/static/media/x3.49ee1f82751cfb2dd11b.png",
     "static/media/x1.png": "/static/media/x1.df9f1d5417fe5fb020c2.png",
+    "static/media/umar.jpg": "/static/media/umar.97d87cd34833c87e64f0.jpg",
     "static/media/x2.png": "/static/media/x2.0cba5585450d44676f1a.png",
     "static/media/nlogo.jpg": "/static/media/nlogo.3ff3f1a7252cd28aea15.jpg",
     "static/media/service5.png": "/static/media/service5.f49ecd52a4f68eb19cbc.png",
@@ -28,11 +29,11 @@
     "static/media/insta.webp": "/static/media/insta.c81a0bac726bf1d4ee05.webp",
     "static/media/fb.webp": "/static/media/fb.f0af1c5c8f189ab7b2fc.webp",
     "index.html": "/index.html",
-    "main.12e0a975.css.map": "/static/css/main.12e0a975.css.map",
-    "main.37d04b0b.js.map": "/static/js/main.37d04b0b.js.map"
+    "main.4e014cf6.css.map": "/static/css/main.4e014cf6.css.map",
+    "main.9b598626.js.map": "/static/js/main.9b598626.js.map"
   },
   "entrypoints": [
-    "static/css/main.12e0a975.css",
-    "static/js/main.37d04b0b.js"
+    "static/css/main.4e014cf6.css",
+    "static/js/main.9b598626.js"
   ]
 }

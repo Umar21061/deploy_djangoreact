@@ -35,6 +35,7 @@ import ProjectDetails from './ProjectDetails';
 import BlogData from './BlogData';
 import AboutBanner from './AboutBanner';
 import BlogSlider from './BlogSlider';
+import Testimonial from './Testimonial';
 
 
 function App() {
@@ -114,11 +115,8 @@ function HomePage({ textData }) {
      <Bot/>
       
       <Services/>
-      <About/>
-      <RecentCase/>
-      <Partner/>
-      <Portfolio/>
-      <Value/>
+      <Testimonial/>
+      
      
       <Footer/>
       

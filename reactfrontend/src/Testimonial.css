@@ -1,0 +1,119 @@
+.testimonial {
+    text-align: center; /* Adjusted text alignment */
+    
+}
+
+.testimonial p {
+    text-align: justify; /* Justify text alignment */
+    text-align: left; /* Align text to the left */
+    
+}
+
+.heading-class {
+    font-size: 24px;
+    margin-top: 20px;
+}
+
+.description {
+    margin-top: 10px;
+}
+
+.blocks {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 20px;
+    margin-bottom: 200px;
+    height: 300px;
+    
+    
+}
+.block {
+    flex: 1 1 calc(25% - 20px); /* Three blocks per row, subtracting margin */
+    margin: 10px; /* Equal margin around each block */
+    position: relative;
+    border: 1px solid #ccc; /* Added border */
+    border-radius: 5px; /* Added border radius */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Added box shadow */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+.block p {
+    margin-bottom: 10px;
+    text-align: left; /* Center text inside block */
+    align-items: justify;
+
+}
+
+.circle-image {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+.name-company {
+    position: relative;
+    text-align: center; /* Center text inside name-company div */
+   
+}
+
+
+.name,
+.company {
+    position: relative;
+    z-index: 1;
+    color: white;
+    margin-top: 5px;
+}
+.block:nth-child(1)::after {
+    content: '';
+    border-top-left-radius: 0% 100%;
+    border-top-right-radius: 50% 100%;
+    position: absolute;
+    bottom: 0;
+    z-index: -1;
+    width: 100%;
+    background-color: #cc4b52; /* Color for block 1 */
+    height: 35%;
+}
+.block:nth-child(2)::after {
+    content: '';
+    border-top-left-radius: 50% 100%;
+    border-top-right-radius: 50% 0%;
+    position: absolute;
+    bottom: 0;
+    z-index: -1;
+    width: 100%;
+    background-color: #6819cf; /* Color for block 1 */
+    height: 35%;
+}
+
+.block:nth-child(3)::after {
+    content: '';
+    border-top-left-radius: 0% 100%;
+    border-top-right-radius: 50% 100%;
+    position: absolute;
+    bottom: 0;
+    z-index: -1;
+    width: 100%;
+    background-color: #2a9c9c; /* Color for block 1 */
+    height: 35%;
+}
+
+
+.block:nth-child(4)::after {
+    content: '';
+    border-top-left-radius: 50% 100%;
+    border-top-right-radius: 50% 0%;
+    position: absolute;
+    bottom: 0;
+    z-index: -1;
+    width: 100%;
+    background-color: #3fad29; /* Color for block 1 */
+    height: 35%;
+}

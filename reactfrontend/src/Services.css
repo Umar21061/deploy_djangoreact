@@ -57,6 +57,7 @@ body {
 .service-item h3 {
     margin-top: 10px;
     transition: color 0.3s ease-in-out;
+    text-decoration: none; /* Remove underline */
     
 }
 
