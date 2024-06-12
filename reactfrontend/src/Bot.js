@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import rbImage from './image/rb.gif';
+import bg from './image/bg.jpg';
 import './Bot.css';
-
 
 const Bot = () => {
     const [messages, setMessages] = useState([]);
@@ -55,7 +55,7 @@ const Bot = () => {
     };
 
     return (
-        <div className="container bot-container">
+        <div className="container bot-container" style={{ backgroundImage: `url(${bg})`, backgroundSize: 'cover', backgroundPosition: 'center', padding: '20px' }}>
             <div className="row bot-row">
                 <div className="col-lg-7 bot">
                     <h1 className=" lead1 display-5 fw-bold lh-1 mb-3 slice-left-to-right">We Empower Businesses to Maximize Revenues Using Our AI Expertise</h1>
@@ -69,7 +69,7 @@ const Bot = () => {
                 <div id="chat-container" className="col-lg-4 bot d-flex flex-column justify-content-start"> {/* Move the bot to the top */}
                     <div id="chat-box">
                         <div>
-                        <form onSubmit={handleSubmit}>
+                            <form onSubmit={handleSubmit}>
                                 <input
                                     type="text"
                                     value={userMessage}
@@ -84,13 +84,11 @@ const Bot = () => {
                             {showGreeting &&
                                 <p className='bot-text'>Hello! How can I assist you today?</p>
                             }
-                            
                         </div>
                         <img src={rbImage} alt="Robot" />
                     </div>
                 </div>
             </div>
-         
         </div>
     );
 };

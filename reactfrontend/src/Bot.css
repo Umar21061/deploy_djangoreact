@@ -3,11 +3,19 @@ body {
     color: black; /* Text color */
     margin: 0; /* Reset default margin */
 }
+
+
 .bot-container {
     margin-top: 80px;
     height: 70vh;
-    
+    background-image: url('./image/bg.jpg'); /* Add background image */
+    background-size: cover; /* Cover the entire container */
+    background-position: center; /* Center the image */
+    padding: 20px; /* Add padding to the container */
 }
+
+/* Other styles remain the same */
+
 .btn-primary2 {
     background-color: #0560e0; /* Blue background color */
     font-size: 20px;
