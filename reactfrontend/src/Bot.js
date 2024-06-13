@@ -55,7 +55,7 @@ const Bot = () => {
     };
 
     return (
-        <div className="bot-container container-fluid" style={{ backgroundImage: `url(${bg})`, backgroundSize: 'cover', backgroundPosition: 'center', padding: '20px' }}>
+        <div className="bot-container container-fluid" style={{ backgroundImage: `url(${bg})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
             <div className="row bot-row">
                 <div className="col-lg-7 bot">
                     <h1 className=" lead1 display-5 fw-bold lh-1 mb-3 slice-left-to-right">We Empower Businesses to Maximize Revenues Using Our AI Expertise</h1>
