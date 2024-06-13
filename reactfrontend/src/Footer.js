@@ -1,6 +1,6 @@
 import React from 'react';
 import './Footer.css';
-import instaIcon from './image/insta.webp';
+import instaIcon from './image/gmail2.png';
 import linkedinIcon from './image/linkedin.webp';
 import gmailIcon from './image/gmail.png';
 import fbIcon from './image/fb.webp';
