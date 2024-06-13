@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.2e80c41c.css",
-    "main.js": "/static/js/main.e3cc5e9f.js",
+    "main.css": "/static/css/main.0092250b.css",
+    "main.js": "/static/js/main.190ec627.js",
     "static/media/v6.mp4": "/static/media/v6.405cc4306d6dfc09f41f.mp4",
     "static/media/v1.mp4": "/static/media/v1.a2c4a933cfc6104013d1.mp4",
     "static/media/v4.mp4": "/static/media/v4.cf4c4bb2dde62f153cc6.mp4",
@@ -25,15 +25,16 @@
     "static/media/linkedin.webp": "/static/media/linkedin.a9d7df433286d0d68d00.webp",
     "static/media/service2.png": "/static/media/service2.a8190f13e2ad650d383c.png",
     "static/media/service3.png": "/static/media/service3.62afa25fe633a2454c47.png",
+    "static/media/linkdin.webp": "/static/media/linkdin.eface98b949a8aa58ef7.webp",
     "static/media/lg4.jpg": "/static/media/lg4.22b8a5b7d6c1731d1662.jpg",
     "static/media/insta.webp": "/static/media/insta.c81a0bac726bf1d4ee05.webp",
     "static/media/fb.webp": "/static/media/fb.f0af1c5c8f189ab7b2fc.webp",
     "index.html": "/index.html",
-    "main.2e80c41c.css.map": "/static/css/main.2e80c41c.css.map",
-    "main.e3cc5e9f.js.map": "/static/js/main.e3cc5e9f.js.map"
+    "main.0092250b.css.map": "/static/css/main.0092250b.css.map",
+    "main.190ec627.js.map": "/static/js/main.190ec627.js.map"
   },
   "entrypoints": [
-    "static/css/main.2e80c41c.css",
-    "static/js/main.e3cc5e9f.js"
+    "static/css/main.0092250b.css",
+    "static/js/main.190ec627.js"
   ]
 }

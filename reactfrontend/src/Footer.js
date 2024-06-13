@@ -5,6 +5,8 @@ import linkedinIcon from './image/linkedin.webp';
 import gmailIcon from './image/gmail.png';
 import fbIcon from './image/fb.webp';
 import logo from './image/nlogo.jpg';
+import linkdin2 from './image/linkdin.webp';
+
 
 const Footer = () => {
   return (
@@ -18,6 +20,7 @@ const Footer = () => {
             <img src={linkedinIcon} alt="LinkedIn" className="social-icon" />
             <img src={gmailIcon} alt="Gmail" className="social-icon" />
             <img src={fbIcon} alt="Facebook" className="social-icon" />
+            <img src={linkdin2} alt="linkdin2" className="social-icon" />
           </div>
         
         </div>

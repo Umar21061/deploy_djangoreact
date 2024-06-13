@@ -7,8 +7,6 @@
     margin-right: 150px; /* Center element horizontally */
     margin-bottom: 100px;
     margin-top: 60px;
-    
-
 }
 
 body {
@@ -50,23 +48,24 @@ body {
     transition: transform 0.3s ease-in-out;
 }
 
+.service-item h3 {
+    color: black; /* Initial h3 color */
+    text-decoration: none; /* Remove underline */
+    margin-top: 10px;
+    transition: color 0.3s ease-in-out;
+}
+
+.service-item a {
+    text-decoration: none; /* Remove underline from the link */
+}
+
 .service-item:hover img {
     transform: scale(1.1); /* Increase the scale to 110% on hover */
 }
 
-.service-item h3 {
-    margin-top: 10px;
-    transition: color 0.3s ease-in-out;
-    text-decoration: none; /* Remove underline */
-    
-}
-
-
 .service-item:hover h3 {
     color: royalblue; /* Change h3 color to royal blue on hover */
 }
-
-
 
 @media (max-width: 768px) {
     body {
