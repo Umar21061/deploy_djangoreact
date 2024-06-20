@@ -113,6 +113,7 @@ function App() {
 function HomePage({ textData }) {
   return (
     <>
+    
      <Industry/>
     
       

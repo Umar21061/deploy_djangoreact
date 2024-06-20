@@ -2,7 +2,6 @@
     padding: 20px;
     margin: 0 auto; /* Center the container */
     max-width: 1200px; /* Set a max width for the container */
-    margin-top: 50px;
   }
   
   .industry-row {
@@ -19,7 +18,7 @@
     background-color: #2c3e50; /* Default background color */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     overflow: hidden; /* Ensure the pseudo-element is contained */
-    transform: skew(-5deg); /* Tilt the rectangle */
+    transform: skew(-10deg); /* Tilt the rectangle more towards right */
     transition: transform 0.3s ease; /* Smooth hover effect */
   }
   
@@ -31,13 +30,13 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    transform: skew(5deg); /* Unskew content */
+    transform: skew(10deg); /* Unskew content */
   }
   
   .industry-text {
     flex: 1;
     padding-right: 20px;
-    transform: skew(-5deg); /* Skew text */
+    transform: skew(-10deg); /* Skew text */
   }
   
   .industry-text h3 {
@@ -49,7 +48,7 @@
   
   .industry-image {
     flex-shrink: 0;
-    transform: skew(-5deg); /* Skew image */
+    transform: skew(-10deg); /* Skew image */
     margin-left: 10px; /* Add a gap between text and image */
   }
   
