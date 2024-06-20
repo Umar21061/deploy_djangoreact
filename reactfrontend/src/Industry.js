@@ -34,12 +34,15 @@ const Industry = () => {
 
   const chunkedData = chunkArray(industryData, 2);
 
+  // List of dark colors to be used for background
+  const darkColors = ['#BFE92E', '#EDDA34', '#2FEF4C', '#2FEFB5', '#2FA0EF', '#B91ADC'];
+
   return (
     <div className="industry-container">
       {chunkedData.map((row, rowIndex) => (
         <div key={rowIndex} className="industry-row">
           {row.map((industry, index) => (
-            <div key={index} className={`industry-item ${index === 0 ? 'left-radius' : 'right-radius'} ${index % 2 === 0 ? 'even' : 'odd'}`}>
+            <div key={index} className={`industry-item ${index === 0 ? 'left-radius' : 'right-radius'}`} style={{ backgroundColor: darkColors[(rowIndex * 2 + index) % darkColors.length] }}>
               {index % 2 === 0 ? (
                 <>
                   <div className="industry-text">

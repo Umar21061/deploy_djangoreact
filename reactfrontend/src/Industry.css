@@ -1,8 +1,5 @@
 .industry-container {
     padding: 20px;
-    background-color: #f0f0f0;
-    border: 1px solid #ccc;
-    border-radius: 5px;
     margin: 0 auto; /* Center the container */
     max-width: 1200px; /* Set a max width for the container */
   }
@@ -20,17 +17,10 @@
     align-items: center;
     width: 48%; /* Adjust width to fit two items per row with spacing */
     padding: 15px;
+    color: #fff; /* Set text color to white */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     border-radius: 5px;
     gap: 10px;
-  }
-  
-  .industry-item.even {
-    background-color: #d1e7dd; /* Greenish background for even items */
-  }
-  
-  .industry-item.odd {
-    background-color: #f8d7da; /* Reddish background for odd items */
   }
   
   .industry-text {
@@ -39,12 +29,10 @@
   }
   
   .industry-text h3 {
-    color: #333;
     margin-bottom: 10px;
   }
   
   .industry-text p {
-    color: #666;
   }
   
   .industry-image {
