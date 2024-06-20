@@ -353,23 +353,48 @@ def get_industry_data(request):
 
 def get_industry_details(request):
     try:
-        client = get_mongo_client()
+        client = get_mongo_client()  # Assuming this function gets your MongoDB client
         db = client.portfolio  # Assuming 'portfolio' is your database name
         industry_collection = db.industry  # Assuming 'industry' is your collection name
+        
+        # Query MongoDB to fetch documents, selecting specific fields
         industry_documents = industry_collection.find({}, {
-            '_id': 0,
+            '_id': 0,  # Exclude _id field
+            'name': 1,
             'heading1': 1,
             'text1': 1,
             'button': 1,
             'image1': 1,
             'heading2': 1,
-            'title': 1,
-            'logo': 1,
-            'title_description': 1,
-            'title_image': 1
+            'title1': 1,
+            'logo1': 1,
+            'title_description1': 1,
+            'title2': 1,
+            'logo2': 1,
+            'title_description2': 1,
+            'title3': 1,
+            'logo3': 1,
+            'title_description3': 1,
+            'title4': 1,
+            'logo4': 1,
+            'title_description4': 1,
+            'title5': 1,
+            'logo5': 1,
+            'title_description5': 1,
+            'title6': 1,
+            'logo6': 1,
+            'title_description6': 1,
         })
+        
+        # Convert MongoDB cursor to list of dictionaries
         industry_list = list(industry_documents)
+        
+        # Close MongoDB client connection
         client.close()
+        
+        # Return JSON response with industry data
         return JsonResponse(industry_list, safe=False)
+    
     except Exception as e:
+        # Handle any exceptions and return error response
         return JsonResponse({'error': str(e)})

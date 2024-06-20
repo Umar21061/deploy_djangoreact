@@ -114,7 +114,7 @@ function HomePage({ textData }) {
   return (
     <>
     
-     <Industry/>
+     <Industry_details/>
     
       
     </>
