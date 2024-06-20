@@ -2,6 +2,7 @@
     padding: 20px;
     margin: 0 auto; /* Center the container */
     max-width: 1200px; /* Set a max width for the container */
+    margin-top: 50px;
   }
   
   .industry-row {
@@ -11,21 +12,32 @@
   }
   
   .industry-item {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
+    position: relative; /* Necessary for the pseudo-element positioning */
     width: 48%; /* Adjust width to fit two items per row with spacing */
     padding: 15px;
     color: #fff; /* Set text color to white */
+    background-color: #2c3e50; /* Default background color */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    border-radius: 5px;
-    gap: 10px;
+    overflow: hidden; /* Ensure the pseudo-element is contained */
+    transform: skew(-5deg); /* Tilt the rectangle */
+    transition: transform 0.3s ease; /* Smooth hover effect */
+  }
+  
+  .industry-item:hover {
+    transform: skew(0deg); /* Straighten on hover */
+  }
+  
+  .industry-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transform: skew(5deg); /* Unskew content */
   }
   
   .industry-text {
     flex: 1;
     padding-right: 20px;
+    transform: skew(-5deg); /* Skew text */
   }
   
   .industry-text h3 {
@@ -37,22 +49,37 @@
   
   .industry-image {
     flex-shrink: 0;
+    transform: skew(-5deg); /* Skew image */
+    margin-left: 10px; /* Add a gap between text and image */
   }
   
   .industry-image img {
     max-width: 150px;
     height: auto;
-    border-radius: 5px;
   }
   
-  /* Custom radius for items based on their position in the row */
-  .left-radius {
-    border-top-right-radius: 50%;
-    border-bottom-right-radius: 50%;
+  /* Different background colors for variety */
+  .industry-item:nth-child(1) {
+    background-color: #BFE92E;
   }
   
-  .right-radius {
-    border-top-left-radius: 50%;
-    border-bottom-left-radius: 50%;
+  .industry-item:nth-child(2) {
+    background-color: #EDDA34;
+  }
+  
+  .industry-item:nth-child(3) {
+    background-color: #2FEF4C;
+  }
+  
+  .industry-item:nth-child(4) {
+    background-color: #2FEFB5;
+  }
+  
+  .industry-item:nth-child(5) {
+    background-color: #2FA0EF;
+  }
+  
+  .industry-item:nth-child(6) {
+    background-color: #B91ADC;
   }
   

@@ -42,28 +42,16 @@ const Industry = () => {
       {chunkedData.map((row, rowIndex) => (
         <div key={rowIndex} className="industry-row">
           {row.map((industry, index) => (
-            <div key={index} className={`industry-item ${index === 0 ? 'left-radius' : 'right-radius'}`} style={{ backgroundColor: darkColors[(rowIndex * 2 + index) % darkColors.length] }}>
-              {index % 2 === 0 ? (
-                <>
-                  <div className="industry-text">
-                    <h3>{industry.name}</h3>
-                    <p>{industry.description}</p>
-                  </div>
-                  <div className="industry-image">
-                    <img src={industry.image} alt={industry.name} />
-                  </div>
-                </>
-              ) : (
-                <>
-                  <div className="industry-image">
-                    <img src={industry.image} alt={industry.name} />
-                  </div>
-                  <div className="industry-text">
-                    <h3>{industry.name}</h3>
-                    <p>{industry.description}</p>
-                  </div>
-                </>
-              )}
+            <div key={`${rowIndex}-${index}`} className="industry-item" style={{ backgroundColor: darkColors[(rowIndex * 2 + index) % darkColors.length] }}>
+              <div className="industry-content">
+                <div className="industry-text">
+                  <h3>{industry.name}</h3>
+                  <p>{industry.description}</p>
+                </div>
+                <div className="industry-image">
+                  <img src={industry.image} alt={industry.name} />
+                </div>
+              </div>
             </div>
           ))}
         </div>
