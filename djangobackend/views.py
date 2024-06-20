@@ -331,3 +331,45 @@ def blog_data(request):
     
     except ConnectionFailure as e:
         return JsonResponse({'error': str(e)}, status=500)
+
+
+
+
+
+
+def get_industry_data(request):
+    try:
+        client = get_mongo_client()
+        db = client.portfolio  # Assuming 'portfolio' is your database name
+        industry_collection = db.industry  # Assuming 'industry' is your collection name
+        industry_documents = industry_collection.find({}, {'_id': 0, 'name': 1, 'description': 1, 'image': 1})
+        industry_list = list(industry_documents)
+        client.close()
+        return JsonResponse(industry_list, safe=False)
+    except Exception as e:
+        return JsonResponse({'error': str(e)})
+    
+
+
+def get_industry_details(request):
+    try:
+        client = get_mongo_client()
+        db = client.portfolio  # Assuming 'portfolio' is your database name
+        industry_collection = db.industry  # Assuming 'industry' is your collection name
+        industry_documents = industry_collection.find({}, {
+            '_id': 0,
+            'heading1': 1,
+            'text1': 1,
+            'button': 1,
+            'image1': 1,
+            'heading2': 1,
+            'title': 1,
+            'logo': 1,
+            'title_description': 1,
+            'title_image': 1
+        })
+        industry_list = list(industry_documents)
+        client.close()
+        return JsonResponse(industry_list, safe=False)
+    except Exception as e:
+        return JsonResponse({'error': str(e)})

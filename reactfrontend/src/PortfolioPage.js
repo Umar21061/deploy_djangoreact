@@ -2,7 +2,7 @@ import React from 'react';
 import Portfolio from './Portfolio';
 import Cons from './Cons';
 import Footer from './Footer';
-import Crew from './crew';
+
 import Project from './project';
 
 const PortfolioPage = () => {
@@ -11,7 +11,7 @@ const PortfolioPage = () => {
         <Portfolio/>
         <Project/>
         
-        <Crew/>
+       
       
       <Cons />
       <Footer />

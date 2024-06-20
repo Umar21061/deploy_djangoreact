@@ -22,6 +22,12 @@ urlpatterns = [
     path('api/global_project/', views.global_project, name='api/global_project'),
     path('api/project-detail/',views.project_detail, name='api/project_detail'),
 
+     path('api/industry-data/', views.get_industry_data, name='api_industry_data'),
+
+
+
+     path('api/industry-details/', views.get_industry_details, name='api_industry_details'),
+
     
     
     

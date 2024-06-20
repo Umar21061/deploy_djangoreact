@@ -38,6 +38,8 @@
     text-decoration: none;
     gap: 2px;
     margin-right: 3px;
+    color: white; /* Ensure default color is white */
+    transition: color 0.3s ease;
 }
 
 .menu-item::after {
@@ -56,6 +58,12 @@
 .menu-item:hover::after {
     transform: scaleX(1); /* Scale to full width on hover */
     transform-origin: bottom left; /* Change origin point to left */
+}
+
+.menu-item:hover,
+.menu-item:focus,
+.menu-item:active {
+    color: yellow; /* Yellow color on hover, focus, and active states */
 }
 
 .navbar-nav .nav-link {

@@ -36,7 +36,8 @@ import BlogData from './BlogData';
 import AboutBanner from './AboutBanner';
 import BlogSlider from './BlogSlider';
 import Testimonial from './Testimonial';
-
+import Industry from './Industry';
+import Industry_details from './Industry_details';
 
 function App() {
   const [textData, setTextData] = useState('');
@@ -112,13 +113,8 @@ function App() {
 function HomePage({ textData }) {
   return (
     <>
-     <Bot/>
-      
-      <Services/>
-      <Testimonial/>
-      
-     
-      <Footer/>
+     <Industry/>
+    
       
     </>
   );
