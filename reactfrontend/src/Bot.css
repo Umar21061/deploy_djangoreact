@@ -119,24 +119,20 @@ body {
     margin-bottom: 40px;
 }
 
+
 @media (max-width: 768px) {
     body {
-        overflow-x: hidden; /* Prevent horizontal scrolling */
         overflow-y: auto; /* Enable vertical scrolling */
     }
 
     #chat-container {
-        flex-direction: column; /* Change back to column in mobile view */
-        align-items: center; /* Align items to the center */
-        margin: 0 10px; /* Add equal left and right margin */
-    }
-
-    #chat-box {
-        margin: 0; /* Reset margin */
+        flex-direction: column; /* Align items vertically */
+        align-items: center; /* Align items to center */
+        margin: 0 10px; /* Equal left and right margin */
     }
 
     #chat-box img {
-        width: 70px; /* Adjust the width to your preference */
+        width: 70px; /* Adjust image width */
         margin: 0 auto; /* Center the image */
         margin-right: 10px;
     }
@@ -146,41 +142,20 @@ body {
     }
 
     .bot-text {
-        margin-top: 20px;
+        margin-top: 20px; /* Adjust margin top for bot-text */
+    }
+
+    .user-message,
+    .bot-message {
+        font-size: 14px; /* Adjust font size for messages */
     }
 }
 
-@media (max-width: 576px) {
-    #chat-box img {
-        width: 50px; /* Adjust the width for smaller screens */
-    }
-
-    #chat-container {
-        margin: 0 5px; /* Adjust margin for smaller screens */
-    }
-
-    #chat-box {
-        margin: 0; /* Reset margin */
-    }
-
-    #chat-box form {
-        margin-right: 5px; /* Adjust margin for smaller screens */
-        margin-top: 10px;
-    }
-
-    .bot-message,
-    .user-message {
-        font-size: 14px; /* Adjust font size for smaller screens */
-    }
-}
-
-/* For tablets */
 @media (min-width: 768px) and (max-width: 1024px) {
     .bot-container {
         height: auto; /* Set automatic height for tablets */
     }
 
-    /* Adjust styling of input fields and button */
     #chat-box input[type="text"],
     #chat-box input[type="submit"] {
         width: calc(100% - 90px); /* Adjust width of text field */

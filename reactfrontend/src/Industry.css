@@ -22,6 +22,7 @@
     overflow: hidden; /* Ensure the pseudo-element is contained */
     transform: skew(-10deg); /* Tilt the rectangle more towards right */
     transition: transform 0.3s ease; /* Smooth hover effect */
+    text-decoration: none;
   }
   
   .industry-item:hover {

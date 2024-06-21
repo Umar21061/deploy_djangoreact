@@ -1,6 +1,8 @@
+// Industry.js
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import './Industry.css'; // Import your CSS file for styling
+import { Link } from 'react-router-dom';
+import './Industry.css';
 
 const Industry = () => {
   const [industryData, setIndustryData] = useState([]);
@@ -9,7 +11,6 @@ const Industry = () => {
     const fetchIndustryData = async () => {
       try {
         const response = await axios.get('/api/industry-data/');
-        console.log('API response:', response.data); // Log the response data
         if (Array.isArray(response.data)) {
           setIndustryData(response.data);
         } else {
@@ -23,7 +24,6 @@ const Industry = () => {
     fetchIndustryData();
   }, []);
 
-  // Function to chunk the industryData into arrays of 2 items each
   const chunkArray = (arr, chunkSize) => {
     let chunks = [];
     for (let i = 0; i < arr.length; i += chunkSize) {
@@ -33,8 +33,6 @@ const Industry = () => {
   };
 
   const chunkedData = chunkArray(industryData, 2);
-
-  // List of dark colors to be used for background
   const darkColors = ['#BFE92E', '#EDDA34', '#2FEF4C', '#2FEFB5', '#2FA0EF', '#B91ADC'];
 
   return (
@@ -42,7 +40,12 @@ const Industry = () => {
       {chunkedData.map((row, rowIndex) => (
         <div key={rowIndex} className="industry-row">
           {row.map((industry, index) => (
-            <div key={`${rowIndex}-${index}`} className="industry-item" style={{ backgroundColor: darkColors[(rowIndex * 2 + index) % darkColors.length] }}>
+            <Link
+              key={`${rowIndex}-${index}`}
+              to={`/industrydetailpage/${encodeURIComponent(industry.name)}`}
+              className="industry-item"
+              style={{ backgroundColor: darkColors[(rowIndex * 2 + index) % darkColors.length] }}
+            >
               <div className="industry-content">
                 <div className="industry-text">
                   <h3>{industry.name}</h3>
@@ -52,7 +55,7 @@ const Industry = () => {
                   <img src={industry.image} alt={industry.name} />
                 </div>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
       ))}

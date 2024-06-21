@@ -1,16 +1,18 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import './Industry_details.css';  
+import { useParams } from 'react-router-dom';
+import './Industry_details.css';
 
 const IndustryDetails = () => {
   const [industryData, setIndustryData] = useState([]);
+  const { industryName } = useParams(); // Get the industry name from the URL
 
   useEffect(() => {
     const fetchIndustryData = async () => {
       try {
         const response = await axios.get('/api/industry-details/');
-        // Filter data where name === "Healthcare"
-        const filteredData = response.data.filter(item => item.name === "Healthcare");
+        // Filter data based on the industry name from the URL
+        const filteredData = response.data.filter(item => item.name === industryName);
         setIndustryData(filteredData);
       } catch (error) {
         console.error('Error fetching industry data:', error);
@@ -18,9 +20,8 @@ const IndustryDetails = () => {
     };
 
     fetchIndustryData();
-  }, []);
+  }, [industryName]); // Fetch data whenever the industryName changes
 
-  // Assuming industryData is structured correctly based on your data model
   return (
     <div className="industry_details-container">
       {industryData.map((industry, index) => (

@@ -1,6 +1,10 @@
 /* Home Button Styles */
 .navbar {
     background-color: #0560e0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
 }
 
 .navbar-logo {
@@ -16,12 +20,12 @@
 }
 
 .nav-btn {
-    background-color: white; /* Blue background color */
+    background-color: white;
     font-size: 18px;
     position: relative;
     cursor: pointer;
     overflow: hidden;
-    color: royalblue; /* Text color */
+    color: royalblue;
     border: 2px solid #0560e0;
     border-radius: 5px;
     padding: 7px;
@@ -38,32 +42,32 @@
     text-decoration: none;
     gap: 2px;
     margin-right: 3px;
-    color: white; /* Ensure default color is white */
+    color: white;
     transition: color 0.3s ease;
 }
 
 .menu-item::after {
     content: '';
     position: absolute;
-    bottom: -2px; /* Positioning the line slightly below the text */
+    bottom: -2px;
     left: 0;
     width: 92%;
     height: 3px;
-    background: white; /* Linear gradient for the line */
-    transform: scaleX(0); /* Initially scaled down to 0 */
-    transition: transform 0.3s ease; /* Smooth transition for scaling */
-    transform-origin: bottom right; /* Origin point for the scale */
+    background: white;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+    transform-origin: bottom right;
 }
 
 .menu-item:hover::after {
-    transform: scaleX(1); /* Scale to full width on hover */
-    transform-origin: bottom left; /* Change origin point to left */
+    transform: scaleX(1);
+    transform-origin: bottom left;
 }
 
 .menu-item:hover,
 .menu-item:focus,
 .menu-item:active {
-    color: yellow; /* Yellow color on hover, focus, and active states */
+    color: yellow;
 }
 
 .navbar-nav .nav-link {
@@ -74,22 +78,80 @@
 .navbar-nav .nav-link:hover,
 .navbar-nav .nav-link:focus,
 .navbar-nav .nav-link:active {
-    color: yellow; /* Yellow color on hover, focus, and active states */
+    color: yellow;
+}
+/* Navbar.css */
+
+.navbar-toggler {
+    color: white; /* Set the color of the toggler icon */
+    background-color: white;
 }
 
-@media (max-width: 576px) {
-    /* Adjust font size for small screens */
-    .header-text-header {
-        font-size: 5vw;
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
     }
 
-    body {
-        overflow-x: hidden; /* Hide horizontal scrollbar */
+    .logo-text {
+        font-size: 1.5rem;
+        padding: 5px 0;
     }
 
-    /* Center content with equal left and right margins */
-    .container {
-        padding-left: 15px;
-        padding-right: 15px;
+    .navbar-nav {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .menu-item {
+        margin: 5px 0;
+        font-size: 16px;
+    }
+
+    .nav-btn {
+        width: 100%;
+        text-align: center;
+        margin-top: 10px;
+        background-color: white;
+        color: royalblue;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        padding: 10px;
+    }
+
+    .logo-text {
+        font-size: 1.2rem;
+    }
+
+    .menu-item {
+        font-size: 15px;
+    }
+
+    .nav-btn {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar {
+        padding: 5px;
+    }
+
+    .logo-text {
+        font-size: 1rem;
+    }
+
+    .menu-item {
+        font-size: 14px;
+    }
+
+    .nav-btn {
+        font-size: 14px;
     }
 }

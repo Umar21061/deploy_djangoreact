@@ -39,6 +39,7 @@ import Testimonial from './Testimonial';
 import Industry from './Industry';
 import Industry_details from './Industry_details';
 
+
 function App() {
   const [textData, setTextData] = useState('');
 
@@ -102,6 +103,8 @@ function App() {
           <Route path="/mobiledevelopment" element={<LearnMorePage category="Mobile Development" />} />
           <Route path="/projectdetails/:category/:name" element={<ProjectDetails />} />
           <Route path="/project" element={<Project />} />
+          <Route path="/industrydetailpage/:industryName" element={<Industry_details />} /> 
+          
         </Routes>
       </div>
     </Router>
@@ -113,10 +116,14 @@ function App() {
 function HomePage({ textData }) {
   return (
     <>
-    <Industry/>
-    
-     <Industry_details/>
-    
+     <Bot/>
+      
+      <Services/>
+      <Testimonial/>
+      <Industry/>
+      <Industry_details/>
+     
+      <Footer/>
       
     </>
   );
