@@ -80,7 +80,7 @@ const Testimonial = () => {
   return (
     <div className="container">
       <div className="testimonial">
-        <div  className='heading display-5 fw-bold lh-1 mb-5 slice-left-to-right' style={{ marginBottom: '40px' }}>Reviews</div>
+        <div  className='heading display-5 fw-bold lh-1 mb-5 slice-left-to-right' style={{ marginBottom: '40px',marginTop: '100px' }}>Reviews</div>
         <div className="description">This is our views description</div>
         <div className="blocks">
           {testimonials.map((testimonial, index) => (
