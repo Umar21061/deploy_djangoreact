@@ -1,4 +1,3 @@
-/* Home Button Styles */
 .navbar {
     background-color: #0560e0;
     display: flex;
@@ -64,13 +63,15 @@
     transform-origin: bottom left;
 }
 
-
-
 .navbar-nav .nav-link {
     color: white;
     transition: color 0.3s ease;
 }
 
+/* Ensure active link remains white */
+.navbar-nav .nav-link.active {
+    color: white;
+}
 
 /* Navbar.css */
 
