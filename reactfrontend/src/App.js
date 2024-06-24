@@ -38,6 +38,7 @@ import BlogSlider from './BlogSlider';
 import Testimonial from './Testimonial';
 import Industry from './Industry';
 import Industry_details from './Industry_details';
+import IndustryPage from './IndustryPage';
 
 
 function App() {
@@ -104,6 +105,7 @@ function App() {
           <Route path="/projectdetails/:category/:name" element={<ProjectDetails />} />
           <Route path="/project" element={<Project />} />
           <Route path="/industrydetailpage/:industryName" element={<Industry_details />} /> 
+          <Route path="/industrypage2" element={<IndustryPage />} />
           
         </Routes>
       </div>
@@ -116,16 +118,8 @@ function App() {
 function HomePage({ textData }) {
   return (
     <>
-     <Bot/>
-      
-      <Services/>
-     
-      <Industry/>
-      <Portfolio/>
-      <Testimonial/>
-      
-     
-      <Footer/>
+    
+      <IndustryPage/>
       
     </>
   );

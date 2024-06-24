@@ -30,18 +30,19 @@ const Navbar = () => {
                 </button>
                 <div className={`collapse navbar-collapse justify-content-end ${expanded ? 'show' : ''}`}>
                     <ul className="navbar-nav">
+                    <li className="nav-item">
+                            <NavLink className="nav-link menu-item" activeClassName="active" to="/about">About</NavLink>
+                        </li>
                         <li className="nav-item">
                             <NavLink className="nav-link menu-item" activeClassName="active" to="/services">Services</NavLink>
                         </li>
                         <li className="nav-item">
-                            <NavLink className="nav-link menu-item" activeClassName="active" to="/portfolio">Industries</NavLink>
+                            <NavLink className="nav-link menu-item" activeClassName="active" to="/industrypage2">Industries</NavLink>
                         </li>
                         <li className="nav-item">
                             <NavLink className="nav-link menu-item" activeClassName="active" to="/portfolio">Portfolio</NavLink>
                         </li>
-                        <li className="nav-item">
-                            <NavLink className="nav-link menu-item" activeClassName="active" to="/about">About</NavLink>
-                        </li>
+                      
                         <li className="nav-item">
                             <NavLink className="nav-link menu-item" activeClassName="active" to="/blogpage">Resources</NavLink>
                         </li>
