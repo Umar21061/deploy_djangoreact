@@ -37,6 +37,10 @@ const Industry = () => {
 
   return (
     <div className="industry-container">
+      <div className="d-flex justify-content-center align-items-center" style={{ marginBottom: '40px' }}>
+    <div className='heading display-5 fw-bold lh-1 mb-5 slice-left-to-right' >Industries</div>
+</div>
+
       {chunkedData.map((row, rowIndex) => (
         <div key={rowIndex} className="industry-row">
           {row.map((industry, index) => (
