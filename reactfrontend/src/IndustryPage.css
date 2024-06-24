@@ -78,6 +78,17 @@
     transform: skewX(-23deg); /* Skew the image horizontally */
 }
 
+  
+.image2 img {
+    width: 70%;
+    height: 90%;
+    object-fit: cover;
+    border-radius: 40px;
+    transform: skewX(-23deg); /* Skew the image horizontally */
+}
+
+
+
 
 
   

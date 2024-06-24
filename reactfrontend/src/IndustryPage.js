@@ -40,7 +40,7 @@ const IndustryPage = () => {
 
       {/* FinTech Section */}
       <div className="industry-container left-layout FinTech">
-        <div className="image">
+        <div className="image2">
           <img src={fintechImage} alt="FinTech" />
         </div>
         <div className="content">
@@ -68,7 +68,7 @@ const IndustryPage = () => {
 
       {/* Education Section */}
       <div className="industry-container left-layout Education">
-        <div className="image">
+        <div className="image2">
           <img src={educationImage} alt="Education" />
         </div>
         <div className="content">
@@ -96,7 +96,7 @@ const IndustryPage = () => {
 
       {/* Logistics Section */}
       <div className="industry-container left-layout Logistics">
-        <div className="image">
+        <div className="image2">
           <img src={logisticsImage} alt="Logistic" />
         </div>
         <div className="content">
