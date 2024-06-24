@@ -4,7 +4,6 @@ import React from 'react';
 import './ServicesPage.css';
 import video from './video/v4.mp4';
 
-import Cons from './Cons';
 import Footer from './Footer';
 import Service2 from './Service2';
 
@@ -21,7 +20,7 @@ const ServicesPage = () => {
       <>
       <div>
         <Service2 />
-        <Cons />
+      
         <Footer />
       </div>
       </>

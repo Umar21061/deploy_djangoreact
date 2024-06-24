@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './Career.css';
 import video from './video/v6.mp4';
-import Cons from './Cons.js';
+
 import Footer from './Footer.js';
 
 const Career = () => {
@@ -67,7 +67,7 @@ const Career = () => {
           ))}
         </div>
       </div>
-      <Cons />
+    
       <Footer />
     </>
   );
