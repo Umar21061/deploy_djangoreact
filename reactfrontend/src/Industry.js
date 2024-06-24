@@ -36,7 +36,7 @@ const Industry = () => {
   const darkColors = ['#BFE92E', '#EDDA34', '#2FEF4C', '#2FEFB5', '#2FA0EF', '#B91ADC'];
 
   return (
-    <div className="industry-container">
+    <div className="industry1-container container">
       <div className="d-flex justify-content-center align-items-center" style={{ marginBottom: '40px' }}>
     <div className='heading display-5 fw-bold lh-1 mb-5 slice-left-to-right' >Industries</div>
 </div>
