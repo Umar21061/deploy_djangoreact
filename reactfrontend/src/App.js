@@ -107,6 +107,7 @@ function App() {
           <Route path="/industrydetailpage/:industryName" element={<Industry_details />} /> 
           <Route path="/industry" element={<IndustryPage />} />
           
+          
         </Routes>
       </div>
     </Router>

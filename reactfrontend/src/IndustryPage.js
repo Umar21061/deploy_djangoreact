@@ -2,6 +2,7 @@
 import React from 'react';
 import './IndustryPage.css'; // Import the CSS file for styling
 import blog1 from './image/industry.jpg'; // Import the initial background image
+import Footer from './Footer';
 
 // Example imports for industry images
 import healthcareImage from './image/a2.jpg';
@@ -13,6 +14,7 @@ import logisticsImage from './image/a2.jpg';
 
 const IndustryPage = () => {
   return (
+    <>
     <div className="industry-page">
       <div className="image-container">
         <img src={blog1} alt="Industry" className="background-image" />
@@ -110,6 +112,8 @@ const IndustryPage = () => {
       </div>
     </div>
     </div>
+    <Footer/>
+    </>
   );
 };
 

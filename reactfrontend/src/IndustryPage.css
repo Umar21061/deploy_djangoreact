@@ -103,6 +103,7 @@
   text-decoration: none;
   display: inline-block;
   transition: background-color 0.3s, color 0.3s;
+  border-radius: 10px;
 }
 
 .viewmore:hover {
