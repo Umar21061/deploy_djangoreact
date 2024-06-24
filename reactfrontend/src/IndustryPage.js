@@ -23,6 +23,7 @@ const IndustryPage = () => {
          
         </div>
       </div>
+      <div className='container'>
 
       {/* Healthcare Section */}
       <div className="industry-container left-layout Healthcare">
@@ -107,6 +108,7 @@ const IndustryPage = () => {
           </div>
         </div>
       </div>
+    </div>
     </div>
   );
 };
