@@ -3,7 +3,7 @@ import axios from 'axios';
 import './LearnMore.css'; // Import the CSS file
 import loadingImage from './image/loading3.gif'; 
 import Footer from './Footer';
-import Cons from './Cons';
+
 
 const LearnMore = ({ uniqueClassName, category }) => {
   const [learnMoreData, setLearnMoreData] = useState(null);
@@ -75,7 +75,7 @@ const LearnMore = ({ uniqueClassName, category }) => {
           </div>
         </div>
       </div>
-      <Cons/>
+    
       <Footer/>
     </>
   );
