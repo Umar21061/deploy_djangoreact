@@ -20,8 +20,8 @@
     display: flex;
     flex-wrap: nowrap;
     overflow-x: auto;
-    margin-top: 20px;
-    margin-bottom: 200px;
+    margin-top: 50px;
+    margin-bottom: 80px;
     height: 400px;
     padding: 0 10px;
     scrollbar-width: thin; /* Width of the scrollbar */
