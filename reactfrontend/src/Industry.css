@@ -11,6 +11,8 @@
     display: flex;
     justify-content: space-between; /* Space between the two items */
     margin-bottom: 50px;
+    gap : 50px;
+    
   }
   
   .industry-item {
@@ -24,6 +26,8 @@
     transform: skew(-10deg); /* Tilt the rectangle more towards right */
     transition: transform 0.3s ease; /* Smooth hover effect */
     text-decoration: none;
+    border-radius: 6px;
+    
   }
   
   .industry-item:hover {
@@ -47,8 +51,7 @@
     margin-bottom: 10px;
   }
   
-  .industry-text p {
-  }
+ 
   
   .industry-image {
     flex-shrink: 0;

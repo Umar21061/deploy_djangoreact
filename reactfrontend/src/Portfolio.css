@@ -56,19 +56,15 @@ margin-top: 40px;
 .line {
     width: 15%; /* Responsive width based on parent container */
     height: 0.5vw; /* Responsive height */
-    background: linear-gradient(120deg, #5f4fbd 0%, #251f75 100%); /* Updated gradient background */
+    background: linear-gradient(120deg, #cee742 0%, #6e6eff 100%); /* Updated gradient background */
     margin: 2% auto; /* Adjust margin for smaller screens */
 }
 
 .portfolio-info:hover .line {
     animation: moveLine 2s forwards;
-    background: linear-gradient(120deg, #5f4fbd 0%, #251f75 100%); /* Apply gradient on hover */
+    background: linear-gradient(120deg, #cee742 0%, #6e6eff 100%); /* Apply gradient on hover */
 }
 
-.portfolio-info:hover h2 {
-    animation: updateNumber 2s forwards;
-    color: rgb(255, 255, 255); 
-}
 
 
 @keyframes moveLine {
