@@ -105,7 +105,7 @@ function App() {
           <Route path="/projectdetails/:category/:name" element={<ProjectDetails />} />
           <Route path="/project" element={<Project />} />
           <Route path="/industrydetailpage/:industryName" element={<Industry_details />} /> 
-          <Route path="/industrypage2" element={<IndustryPage />} />
+          <Route path="/industry" element={<IndustryPage />} />
           
         </Routes>
       </div>
@@ -118,8 +118,13 @@ function App() {
 function HomePage({ textData }) {
   return (
     <>
-    
-      <IndustryPage/>
+     <Bot/>
+      <Services/>
+      <Industry/>
+      <Portfolio/>
+      <Testimonial/>
+      <Footer/>
+      
       
     </>
   );
