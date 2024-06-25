@@ -1,3 +1,234 @@
+body {
+  background-color: white;
+  color: black; /* Text color */
+}
+
+.bot-container {
+  height: 93vh;
+  background-image: url('./image/bg.jpg'); /* Add background image */
+  background-size: cover; /* Cover the entire container */
+  background-position: center; /* Center the image */
+  padding: 10vh 0vh;
+}
+.bot-row {
+  margin-left: 100px;
+  margin-right: 100px;
+  margin-top: 50px;
+}
+
+/* Other styles remain the same */
+
+.btn-primary2 {
+  background-color: #0560e0; /* Blue background color */
+  font-size: 20px;
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+  color: white; /* Text color */
+  border: 2px solid #0560e0;
+  border-radius: 5px;
+}
+
+.btn-primary2:hover {
+  border: 2px solid #0560e0; /* Change background to white on hover */
+  color: black; /* Change text color to black on hover */
+  z-index: 1;
+}
+
+#chat-container {
+  display: flex;
+  flex-direction: row; /* Change to row to align items horizontally */
+  align-items: center; /* Align items vertically */
+  margin-bottom: 20px;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+  margin-left: 40px;
+}
+
+#chat-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Align items vertically */
+  margin: 0 20px; /* Equal left and right margin */
+}
+
+#chat-box div {
+  flex: 1; /* Fill remaining space */
+}
+
+#chat-box form {
+  display: flex;
+  flex-direction: row; /* Align items horizontally */
+  align-items: center;
+  /* Add margin to the right to create space between the image and the form */
+  margin-bottom: 10px; /* Add padding inside the form */
+}
+
+#chat-box input[type="text"],
+#chat-box input[type="submit"] {
+  border: 1px solid grey; /* Add a 5px solid grey border */
+  border-radius: 8px;
+  padding: 15px; /* Add padding inside the input fields */
+  margin-right: 10px; /* Margin between input fields and button */
+  width: calc(70% - 10px); /* Adjust width of input fields */
+}
+
+#chat-box input[type="submit"] {
+  background-color: #0560e0; /* Change button background color */
+  color: white; /* Button text color */
+  cursor: pointer; /* Change cursor to pointer on hover */
+  border: 2px solid #0560e0;
+  border-radius: 4px;
+  padding: 15px 30px; /* Add padding inside the send button */
+  width: calc(30% - 10px); /* Adjust width of button */
+}
+
+#chat-box input[type="submit"]:hover {
+  background-color: white;
+  border: 2px solid #0560e0;
+  color: black;
+}
+
+.lead1 {
+  margin-bottom: 50px;
+  color: royalblue;
+}
+
+.lead {
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+#chat-box img {
+  width: 100%; /* Full width */
+  height: auto; /* Maintain aspect ratio */
+  margin-top: 10px; /* Margin top */
+}
+
+@media (max-width: 1024px) {
+  .bot-container {
+      height: auto; /* Set automatic height for tablets */
+      padding: 10px; /* Add padding for small screens */
+  }
+
+  .bot-row {
+      margin: 10px; /* Equal margin for small screens */
+  }
+
+  .lead1,
+  .lead {
+      margin-top: 20px; /* Margin top for small screens */
+      margin-left: 0; /* Zero left margin for small screens */
+      margin-right: 0; /* Zero right margin for small screens */
+      text-align: left; /* Align text to left */
+  }
+
+  .btn-primary2 {
+      margin-bottom: 10px;
+      margin-left: 10px; /* Add margin bottom for button */
+  }
+
+  #chat-container {
+      flex-direction: column; /* Align items vertically */
+      align-items: center; /* Align items to center */
+      margin: 0 10px; /* Equal left and right margin */
+  }
+
+  #chat-box {
+      width: 100%; /* Full width */
+      margin: 0 10px; /* Margin for small screens */
+      align-items: flex-start; /* Align items to the start (left) */
+  }
+
+  #chat-box form {
+      width: 100%; /* Full width */
+      flex-direction: column; /* Align items vertically */
+      align-items: flex-start; /* Align items to the start (left) */
+  }
+
+  #chat-box input[type="text"],
+  #chat-box input[type="submit"] {
+      width: calc(100% - 20px); /* Full width minus margin */
+      margin-right: 0; /* Remove margin between input fields and button */
+      margin-bottom: 10px; /* Margin bottom */
+  }
+
+  #chat-box input[type="submit"] {
+      width: 100%; /* Full width */
+  }
+
+  #chat-box img {
+      width: 60%; /* Full width */
+      height: auto; /* Maintain aspect ratio */
+      margin-top: 10px; /* Margin top */
+  }
+
+  .user-message,
+  .bot-message {
+      font-size: 14px; /* Adjust font size for messages */
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+      overflow-y: auto; /* Enable vertical scrolling */
+  }
+
+  .bot-container {
+      height: auto; /* Set automatic height */
+  }
+
+  .lead1, .lead {
+      margin-top: 20px; /* Margin top */
+      margin-left: 0; /* Zero left margin */
+      margin-right: 0; /* Zero right margin */
+      text-align: left; /* Align text to left */
+  }
+
+  .btn-primary2 {
+      margin-bottom: 10px;
+      margin-left: 10px; /* Add margin bottom for button */
+  }
+
+  #chat-container {
+      flex-direction: column; /* Align items vertically */
+      align-items: center; /* Align items to center */
+      margin: 0 10px; /* Equal left and right margin */
+  }
+
+  #chat-box {
+      width: 100%; /* Full width */
+      margin: 0 10px; /* Margin for small screens */
+      align-items: flex-start; /* Align items to the start (left) */
+  }
+
+  #chat-box form {
+      width: 100%; /* Full width */
+      flex-direction: row; /* Align items horizontally */
+      align-items: center; /* Center alignment */
+  }
+
+  #chat-box input[type="text"],
+  #chat-box input[type="submit"] {
+      width: calc(70% - 5px); /* Equal width for input fields and button */
+      margin-right: 5px; /* Margin between input fields and button */
+      margin-bottom: 20px; /* Margin bottom */
+  }
+
+  #chat-box input[type="submit"] {
+      width: calc(30% - 5px); /* Equal width for input fields and button */
+  }
+
+  #chat-box img {
+      width: 60%; /* Full width */
+      height: auto; /* Maintain aspect ratio */
+      margin-top: 10px; /* Margin top */
+  }
+
+  .user-message,
+  .bot-message {
+      font-size: 14px; /* Adjust font size for messages */
+  }
+}
+
 .industry1-container {
   padding: 20px;
   margin: 0 auto; /* Center the container */
@@ -87,28 +318,69 @@
 @media (max-width: 1024px) {
   .industry-row {
       flex-direction: column; /* Stack items vertically */
-      gap: 20px; /* Add space between items */
+      gap: 20px; /* Space between items */
   }
 
   .industry-item {
-      width: 100%; /* Full width */
-      margin: 0 auto; /* Center the item */
+      width: 100%; /* Full width for small screens */
+      margin-left: 0; /* Zero left margin */
+      margin-right: 0; /* Zero right margin */
+      margin-top: 20px; /* Equal top margin */
+      margin-bottom: 20px; /* Equal bottom margin */
+  }
+
+  .industry-image img {
+      max-width: 100px; /* Adjust image size for small screens */
+  }
+
+  .industry-content {
+      flex-direction: row; /* Align items horizontally */
+      justify-content: space-between;
+      align-items: center;
+  }
+
+  .industry-text {
+      transform: none; /* Remove skew */
+      padding-right: 10px; /* Reduce padding */
+  }
+
+  .industry-image {
+      transform: none; /* Remove skew */
+      margin-left: 10px; /* Maintain gap */
   }
 }
 
 @media (max-width: 768px) {
-  .industry1-container {
-      padding: 10px; /* Adjust padding for small screens */
-  }
-
   .industry-row {
       flex-direction: column; /* Stack items vertically */
-      gap: 20px; /* Add space between items */
-      margin: 0 10px; /* Add left and right margin for small screens */
+      gap: 20px; /* Space between items */
   }
 
   .industry-item {
-      width: 100%; /* Full width */
-      margin: 0 auto; /* Center the item */
+      width: 100%; /* Full width for small screens */
+      margin-left: 0; /* Zero left margin */
+      margin-right: 0; /* Zero right margin */
+      margin-top: 20px; /* Equal top margin */
+      margin-bottom: 20px; /* Equal bottom margin */
+  }
+
+  .industry-image img {
+      max-width: 100px; /* Adjust image size for small screens */
+  }
+
+  .industry-content {
+      flex-direction: row; /* Align items horizontally */
+      justify-content: space-between;
+      align-items: center;
+  }
+
+  .industry-text {
+      transform: none; /* Remove skew */
+      padding-right: 10px; /* Reduce padding */
+  }
+
+  .industry-image {
+      transform: none; /* Remove skew */
+      margin-left: 10px; /* Maintain gap */
   }
 }
