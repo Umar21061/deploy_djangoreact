@@ -1,24 +1,6 @@
-.testimonial {
-    text-align: center; /* Adjusted text alignment */
-}
-
-.testimonial p {
-    text-align: justify; /* Justify text alignment */
-    text-align: left; /* Align text to the left */
-}
-
-.heading-class {
-    font-size: 24px;
-    margin-top: 20px;
-}
-
-.description {
-    margin-top: 10px;
-}
-
 .blocks {
     display: flex;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     overflow-x: auto;
     margin-top: 80px;
     margin-bottom: 80px;
@@ -42,8 +24,8 @@
 }
 
 .block {
-    flex: 0 0 23.2%; /* Each block takes 25% of the container's width */
-    margin: 0 10px; /* Equal margin left and right */
+    flex: 0 0 calc(45% - 6px); /* Each block takes 45% of the container's width minus margins */
+    margin: 0 3px; /* Equal margin left and right, and 3px gap between blocks */
     position: relative;
     border: 1px solid #ccc; /* Added border */
     border-radius: 5px; /* Added border radius */
@@ -175,6 +157,7 @@
     background-color: #21a506; /* Color for block 8 */
     height: 35%;
 }
+
 /* Responsive Styles */
 @media (max-width: 1024px) {
     .blocks {
@@ -182,8 +165,8 @@
     }
 
     .block {
-        flex: 0 0 45%; /* Adjust width for smaller desktops */
-        margin: 10px 5px; /* Adjust margins */
+        flex: 0 0 calc(45% - 6px); /* Adjust width for smaller desktops */
+        margin: 10px 3px; /* Adjust margins for equal spacing */
     }
 }
 
@@ -191,11 +174,12 @@
     .blocks {
         margin-bottom: 50px; /* Adjust bottom margin for tablets */
         padding: 0 20px; /* Add padding for left and right margins */
+        height: auto; /* Set height to auto for flexibility */
     }
 
     .block {
-        flex: 0 0 45%; /* Adjust width for tablets */
-        margin: 10px; /* Adjust margins for equal spacing */
+        flex: 0 0 calc(50% - 6px); /* Adjust width for tablets */
+        margin: 10px 3px; /* Adjust margins for equal spacing */
     }
 
     .circle-image {
@@ -207,12 +191,11 @@
 @media (max-width: 576px) {
     .blocks {
         margin-bottom: 30px; /* Adjust bottom margin for mobile devices */
-        padding: 0 20px; /* Add padding for left and right margins */
     }
 
     .block {
-        flex: 0 0 100%; /* Adjust width for mobile devices */
-        margin: 10px 0; /* Equal margin between blocks */
+        flex: 0 0 calc(100% - 6px); /* Adjust width for mobile devices */
+        margin: 10px 3px; /* Adjust margins for equal spacing */
     }
 
     .circle-image {

@@ -81,7 +81,7 @@ const Testimonial = () => {
     <div className="container">
       <div className="testimonial">
         <div  className='heading display-5 fw-bold lh-1 mb-5 slice-left-to-right' style={{ marginBottom: '40px',marginTop: '100px' }}>Reviews</div>
-        <div className="description">This is our views description</div>
+        <div className="description">Reviews provide valuable insights and feedback from users, offering perspectives on products, services, or experiences to aid informed decisions.</div>
         <div className="blocks">
           {testimonials.map((testimonial, index) => (
             <div key={index} className="block">
