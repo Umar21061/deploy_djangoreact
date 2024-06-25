@@ -88,6 +88,9 @@ const Project = () => {
 
   return (
     <div className="project-container">
+
+    
+    <div  className='heading display-6 fw lh-1 mb-5 slice-left-to-right' style={{ marginBottom: '30px',marginTop: '50px' }}>We Craft cutting-edge solutions powered by AI, driving digital Transformation and Innovation for businesses worldwide</div>
       {options.length > 0 ? (
         <div className="option-container">
           {options.map((option, index) => (

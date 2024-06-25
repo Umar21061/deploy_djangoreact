@@ -32,7 +32,7 @@ const Footer = () => {
           <p>Service 4</p>
         </div>
         <div className="column">
-          <button className="get-in-touch-button">Get in Touch</button>
+          <button className="get-in-touch">Get in Touch</button>
           <p>Phone: (123) 456-7890</p>
           <p>Email: info@systemheuristics.com</p>
           <p>1234 Street Address, City, State, ZIP</p>

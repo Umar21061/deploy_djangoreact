@@ -4,14 +4,13 @@ body {
 }
 
 .bot-container {
-    height: 90vh;
+    height: 93vh;
     background-image: url('./image/bg.jpg'); /* Add background image */
     background-size: cover; /* Cover the entire container */
     background-position: center; /* Center the image */
     padding: 10vh 0vh;
-   
 }
-.bot-row{
+.bot-row {
     margin-left: 100px;
     margin-right: 100px;
     margin-top: 50px;
@@ -58,49 +57,29 @@ body {
 
 #chat-box form {
     display: flex;
-    flex-direction: row;
+    flex-direction: row; /* Align items horizontally */
     align-items: center;
     /* Add margin to the right to create space between the image and the form */
     margin-bottom: 10px; /* Add padding inside the form */
 }
 
-#chat-box img {
-    width: 100%; /* Adjust the width to your preference */
-    height: auto; /* Maintain aspect ratio */
-    margin-right: 0; /* Remove the margin between the image and the form */
-}
-
-.user-message {
-    text-align: right;
-}
-
-.bot-message {
-    text-align: left;
-    color: black; /* Ensure text color is black */
-}
-
-.bot-text {
-    color: black; /* Text color */
-}
-
-/* Add border to input fields */
-#chat-box input[type="text"], 
+#chat-box input[type="text"],
 #chat-box input[type="submit"] {
     border: 1px solid grey; /* Add a 5px solid grey border */
     border-radius: 8px;
-    padding: 5px; /* Add padding inside the input fields */
+    padding: 15px; /* Add padding inside the input fields */
+    margin-right: 10px; /* Margin between input fields and button */
+    width: calc(70% - 10px); /* Adjust width of input fields */
 }
 
-/* Style the send button */
 #chat-box input[type="submit"] {
     background-color: #0560e0; /* Change button background color */
     color: white; /* Button text color */
-    margin-left: 2px; /* Add 2px gap between button and fields */
     cursor: pointer; /* Change cursor to pointer on hover */
     border: 2px solid #0560e0;
     border-radius: 4px;
-    padding: 5px 10px; /* Add padding inside the send button */
-    margin-left: 2px;
+    padding: 15px 30px; /* Add padding inside the send button */
+    width: calc(30% - 10px); /* Adjust width of button */
 }
 
 #chat-box input[type="submit"]:hover {
@@ -118,11 +97,32 @@ body {
     margin-top: 20px;
     margin-bottom: 40px;
 }
+#chat-box img {
+    width: 100%; /* Full width */
+    height: auto; /* Maintain aspect ratio */
+    margin-top: 10px; /* Margin top */
+}
 
+@media (max-width: 1024px) {
+    .bot-container {
+        height: auto; /* Set automatic height for tablets */
+        padding: 10px; /* Add padding for small screens */
+    }
 
-@media (max-width: 768px) {
-    body {
-        overflow-y: auto; /* Enable vertical scrolling */
+    .bot-row {
+        margin: 10px; /* Equal margin for small screens */
+    }
+
+    .lead1,
+    .lead {
+        margin-left: 10px; /* Margin for small screens */
+        margin-right: 10px; /* Margin for small screens */
+        text-align: left; /* Align text to left */
+    }
+
+    .btn-primary2 {
+        margin-bottom: 10px;
+        margin-left: 10px; /* Add margin bottom for button */
     }
 
     #chat-container {
@@ -131,18 +131,33 @@ body {
         margin: 0 10px; /* Equal left and right margin */
     }
 
+    #chat-box {
+        width: 100%; /* Full width */
+        margin: 0 10px; /* Margin for small screens */
+        align-items: flex-start; /* Align items to the start (left) */
+    }
+
+    #chat-box form {
+        width: 100%; /* Full width */
+        flex-direction: column; /* Align items vertically */
+        align-items: flex-start; /* Align items to the start (left) */
+    }
+
+    #chat-box input[type="text"],
+    #chat-box input[type="submit"] {
+        width: calc(100% - 20px); /* Full width minus margin */
+        margin-right: 0; /* Remove margin between input fields and button */
+        margin-bottom: 10px; /* Margin bottom */
+    }
+
+    #chat-box input[type="submit"] {
+        width: 100%; /* Full width */
+    }
+
     #chat-box img {
-        width: 70px; /* Adjust image width */
-        margin: 0 auto; /* Center the image */
-        margin-right: 10px;
-    }
-
-    .get-in-touch-button {
-        margin-bottom: 20px; /* Add margin bottom after "Get in touch" button */
-    }
-
-    .bot-text {
-        margin-top: 20px; /* Adjust margin top for bot-text */
+        width: 60%; /* Full width */
+        height: auto; /* Maintain aspect ratio */
+        margin-top: 10px; /* Margin top */
     }
 
     .user-message,
@@ -151,18 +166,68 @@ body {
     }
 }
 
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (max-width: 768px) {
+    body {
+        overflow-y: auto; /* Enable vertical scrolling */
+    }
+
     .bot-container {
-        height: auto; /* Set automatic height for tablets */
+        height: auto; /* Set automatic height */
+        padding: 10px; /* Add padding for small screens */
+    }
+
+    .bot-row {
+        margin: 10px; /* Equal margin for small screens */
+    }
+
+    .lead1, .lead {
+        margin-left: 10px; /* Margin for small screens */
+        margin-right: 10px; /* Margin for small screens */
+        text-align: left; /* Align text to left */
+    }
+
+    .btn-primary2 {
+        margin-bottom: 10px;
+        margin-left: 10px; /* Add margin bottom for button */
+    }
+
+    #chat-container {
+        flex-direction: column; /* Align items vertically */
+        align-items: center; /* Align items to center */
+        margin: 0 10px; /* Equal left and right margin */
+    }
+
+    #chat-box {
+        width: 100%; /* Full width */
+        margin: 0 10px; /* Margin for small screens */
+        align-items: flex-start; /* Align items to the start (left) */
+    }
+
+    #chat-box form {
+        width: 100%; /* Full width */
+        flex-direction: row; /* Align items horizontally */
+        align-items: center; /* Center alignment */
     }
 
     #chat-box input[type="text"],
     #chat-box input[type="submit"] {
-        width: calc(100% - 90px); /* Adjust width of text field */
+        width: calc(70% - 5px); /* Equal width for input fields and button */
+        margin-right: 5px; /* Margin between input fields and button */
+        margin-bottom: 20px; /* Margin bottom */
+    }
+
+    #chat-box input[type="submit"] {
+        width: calc(30% - 5px); /* Equal width for input fields and button */
     }
 
     #chat-box img {
-        width: 70px; /* Adjust image width */
-        margin-right: 10px; /* Adjust image margin */
+        width: 60%; /* Full width */
+        height: auto; /* Maintain aspect ratio */
+        margin-top: 10px; /* Margin top */
+    }
+
+    .user-message,
+    .bot-message {
+        font-size: 14px; /* Adjust font size for messages */
     }
 }

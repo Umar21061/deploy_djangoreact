@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import './Aboutpage.css';
-import Cons from './Cons';
+
 import Footer from './Footer';
 import Crew from './crew';
 import Value from './Value';
@@ -129,7 +129,7 @@ const Aboutpage = () => {
    
       <Crew />
       <Value />
-      <Cons />
+  
       <Footer />
     </div>
   );
