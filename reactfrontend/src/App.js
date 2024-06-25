@@ -124,7 +124,7 @@ function HomePage({ textData }) {
       <Industry/>
       <Portfolio/>
       <Testimonial/>
-     
+      <Footer/>
       
       
     </>

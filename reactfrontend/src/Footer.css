@@ -1,3 +1,4 @@
+/* Base styles */
 .footer {
   background-color: #0560e0;
   color: white;
@@ -31,7 +32,7 @@
 
 .logo {
   width: 100px;
-  align-self: center; /* Align logo to the right */
+  align-self: center; /* Align logo to the center */
   margin-bottom: 10px;
 }
 
@@ -50,7 +51,7 @@
 .social-icon {
   width: 37px;
   height: 37px;
-  margin-top: 15px;
+  margin-top: 20px;
 }
 
 .btn-primary3 {
@@ -66,7 +67,24 @@
 
 .btn-primary3:hover {
   background-color: black; 
-  color: white; /* Change text color to black on hover */
-  border: black;
- 
+  color: white; /* Change text color to white on hover */
+  border-color: black; /* Change border color to black on hover */
+}
+
+/* Media Query for Small Screens (up to 1024px) */
+@media (max-width: 1024px) {
+  .footer-content {
+    flex-direction: column; /* Stack columns vertically */
+    align-items: center; /* Center align items */
+  }
+
+  .column {
+    width: 100%; /* Full width for columns */
+    margin: 10px 0; /* Adjust margin */
+    text-align: center; /* Center align text */
+  }
+
+  .logo {
+    margin-bottom: 20px; /* Increase margin for logo */
+  }
 }
