@@ -1,33 +1,54 @@
-.btn-contact {
-  font-size: 20px;
-  position: relative;
-  border: none;
-  cursor: pointer;
-  overflow: hidden;
-  color: white;
+/* Example styles for the contact form */
+.page-container {
+  background-size: cover;
+  background-position: center;
+  padding: 50px;
+  height: 120vh;
 }
 
-.btn-contact::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
+.contact-container {
+  max-width: 600px;
+  margin: 0 auto;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 30px;
+  border-radius: 8px;
+  margin-top: 120px;
+}
+
+.contact-form-box {
+  padding: 20px;
+}
+
+.headingform {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.form-label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+.form-control {
   width: 100%;
-  height: 100%;
-  background-image: linear-gradient(120deg, #3d547e 0%, #33237a 100%);
-  transform: translateX(-100%);
-  transition: transform 0.3s ease;
-  z-index: -1;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
 }
 
-.btn-contact:hover::before {
-  transform: translateX(0);
+.btn-contact {
+  display: inline-block;
+  padding: 10px 20px;
+  background: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
 }
 
 .btn-contact:hover {
-  color: #000000;
-  z-index: 1;
-}
-.contact-container{
-  color: white;
+  background: #0056b3;
 }

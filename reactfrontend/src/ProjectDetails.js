@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import './ProjectDetails.css';
 import Footer from './Footer';
-import Cons from './Cons';
+
 import loadingImage from './image/loading3.gif'; 
 
 function ProjectDetails() {
@@ -89,7 +89,7 @@ function ProjectDetails() {
          
         </div>
       )}
-      <Cons/>
+   
       <Footer/>
     </div>
   );

@@ -61,7 +61,7 @@ const Career = () => {
                 </div>
               )}
               <div className="job-apply">
-                <Link to="/apply" className="button-apply">Apply</Link>
+                <Link to="/contact" className="button-apply">Apply</Link>
               </div>
             </div>
           ))}

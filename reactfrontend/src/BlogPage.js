@@ -4,7 +4,6 @@ import './BlogPage.css';
 import { Link, Routes, Route } from 'react-router-dom';
 import BlogData from './BlogData';
 import Premium from './Premium';
-import Cons from './Cons';
 import Footer from './Footer';
 import BlogSlider from './BlogSlider';
 
@@ -112,7 +111,6 @@ const BlogPage = () => {
                 </Routes>
             </div>
             <Premium />
-            <Cons />
             <Footer />
         </>
     );

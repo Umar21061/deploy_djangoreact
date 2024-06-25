@@ -1,7 +1,10 @@
 import React from 'react';
 import axios from 'axios';
-import './Contact.css';
+import './Contact.css'; // Assuming this file contains additional styles
 import Footer from './Footer';
+
+// Importing the background image
+import bgImage from './image/industry.jpg';
 
 const ContactForm = () => {
   const [formStatus, setFormStatus] = React.useState('Send');
@@ -17,9 +20,23 @@ const ContactForm = () => {
     };
 
     try {
-      const response = await axios.post('/api/save_contact/', formData);
-      console.log(response.data); // Assuming the backend returns some confirmation
-      setFormStatus('Submitted');
+      // Save the form data to the backend
+      await axios.post('/api/save_contact/', formData);
+      
+      // Send the form data to Formspree
+      const response = await fetch('https://formspree.io/f/mqkrorqy', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(formData)
+      });
+
+      if (response.ok) {
+        setFormStatus('Submitted');
+      } else {
+        setFormStatus('Failed to send message via Formspree.');
+      }
     } catch (error) {
       console.error('Error submitting form:', error);
       setFormStatus('Error');
@@ -27,37 +44,44 @@ const ContactForm = () => {
   };
 
   return (
-    <div className="contact-container mt-5">
-      <h2 className="mb-3">Get in touch</h2>
-      <form onSubmit={onSubmit}>
-        <div className="row">
-          <div className="col-6 mb-3">
-            <label className="form-label" htmlFor="name">
-              Name
-            </label>
-            <input className="form-control" type="text" id="name" required />
-          </div>
-          <div className="col-6 mb-3">
-            <label className="form-label" htmlFor="email">
-              Email
-            </label>
-            <input className="form-control" type="email" id="email" required />
-          </div>
+    <>
+    <div className="page-container" style={{ backgroundImage: `url(${bgImage})` }}>
+      <div className="contact-container">
+        <div className="contact-form-box">
+          <h2 className="headingform mb-3">Get in touch</h2>
+          <form onSubmit={onSubmit}>
+            <div className="row">
+              <div className="col-6 mb-3">
+                <label className="form-label" htmlFor="name">
+                  Name
+                </label>
+                <input className="form-control" type="text" id="name" required />
+              </div>
+              <div className="col-6 mb-3">
+                <label className="form-label" htmlFor="email">
+                  Email
+                </label>
+                <input className="form-control" type="email" id="email" required />
+              </div>
+            </div>
+            <div className="row">
+              <div className="col-12 mb-3">
+                <label className="form-label" htmlFor="message">
+                  Message
+                </label>
+                <textarea className="form-control" id="message" required />
+              </div>
+            </div>
+            <button className="btn btn-contact" type="submit">
+              {formStatus}
+            </button>
+          </form>
         </div>
-        <div className="row">
-          <div className="col-12 mb-3">
-            <label className="form-label" htmlFor="message">
-              Message
-            </label>
-            <textarea className="form-control" id="message" required />
-          </div>
-        </div>
-        <button className="btn btn-contact" type="submit">
-          {formStatus}
-        </button>
-      </form>
-      <Footer/>
+      </div>
     </div>
+    <Footer/>
+
+    </>
   );
 };
 
