@@ -173,16 +173,13 @@ body {
 
     .bot-container {
         height: auto; /* Set automatic height */
-        padding: 10px; /* Add padding for small screens */
+       
     }
 
-    .bot-row {
-        margin: 10px; /* Equal margin for small screens */
-    }
+   
 
     .lead1, .lead {
-        margin-left: 10px; /* Margin for small screens */
-        margin-right: 10px; /* Margin for small screens */
+       
         text-align: left; /* Align text to left */
     }
 
