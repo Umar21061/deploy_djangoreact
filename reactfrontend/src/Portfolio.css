@@ -1,8 +1,8 @@
 .portfolio-section {
     position: relative;
     overflow: hidden;
-    height: auto; /* Set the height to 70vh */
-    height: 100vh;
+    height: auto; /* Set the height to auto */
+    height: 100vh; /* Full height for desktop */
     margin-bottom: 40px;
 }
 
@@ -23,25 +23,20 @@
     text-align: center;
     padding: 2% 5%; /* Adjust padding for smaller screens */
     margin-top: 5%;
-    
 }
 
 .portfolio-info {
     text-align: center;
     margin-top: 2%; /* Adjust margin for smaller screens */
+    margin-top: 40px;
 }
-.portfolio-info {
-margin-top: 40px;
 
-}
 .portfolio-info h2 {
     font-size: 6vw; /* Responsive font size based on viewport width */
     margin-bottom: 1%; /* Adjust margin for smaller screens */
     color: white;
     margin-top: 20px;
-   
 }
-
 
 .portfolio-info p {
     font-size: 2.5vw; /* Responsive font size based on viewport width */
@@ -50,7 +45,7 @@ margin-top: 40px;
 
 .portfolio-info h4 {
     color: white;
-    margin-top:20px;
+    margin-top: 20px;
 }
 
 .line {
@@ -65,8 +60,6 @@ margin-top: 40px;
     background: linear-gradient(120deg, #ffffff 0%, #ffffff 100%); /* Apply gradient on hover */
 }
 
-
-
 @keyframes moveLine {
     0% {
         width: 0;
@@ -76,12 +69,9 @@ margin-top: 40px;
     }
 }
 
-
-
 @media screen and (min-width: 768px) {
     .portfolio-info h2 {
         font-size: 4.5em; /* Larger font size for desktop */
-
     }
 
     .portfolio-info p {
@@ -92,5 +82,36 @@ margin-top: 40px;
         width: 10%; /* Larger width for desktop */
         height: 0.3em; /* Adjusted height for desktop */
         margin: 1% auto; /* Adjusted margin for desktop */
+    }
+}
+
+/* Responsive adjustments for small screens */
+@media (max-width: 768px) {
+    .portfolio-section {
+        margin: 0 3px; /* Equal left and right margins */
+        height: auto; /* Auto height for small screens */
+    }
+
+    .portfolio-content {
+        padding: 2% 3px; /* Equal left and right margins */
+    }
+
+    .portfolio-info {
+        margin-top: 20px; /* Adjust top margin */
+    }
+
+    .portfolio-info h2 {
+        font-size: 8vw; /* Responsive font size */
+        margin-top: 10px; /* Adjust top margin */
+    }
+
+    .portfolio-info p {
+        font-size: 3.5vw; /* Responsive font size */
+    }
+
+    .line {
+        width: 20%; /* Responsive width */
+        height: 1vw; /* Responsive height */
+        margin: 1% auto; /* Adjust margin */
     }
 }
