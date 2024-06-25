@@ -110,17 +110,19 @@
 .button-apply,
 .button-apply2 {
     padding: 10px 20px;
-    background-color: black;
-    color: white;
+    background-color:white;
+    color: black;
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    border: 2px solid royalblue;
 }
 
 /* Hover effect for Apply button */
 .job-row:hover .button-apply,
 .job-row2:hover .button-apply2 {
-    background-color: #644db4;
+    background-color: royalblue;
+    color: white;
 }
 
 /* Change Apply button text color on hover */
