@@ -62,19 +62,9 @@ const Career = () => {
               )}
               <div className="job-apply">
   <a 
-    href="https://docs.google.com/forms/d/e/1FAIpQLSc2PSCNYU3kjvL7b9YjfFpbYctQ2Blbyq0Aj1R2K3HLAy9nQw/viewform?usp=sf_link
-
-
-
-
-
-
-
-" 
+    href="https://docs.google.com/forms/d/e/1FAIpQLSc2PSCNYU3kjvL7b9YjfFpbYctQ2Blbyq0Aj1R2K3HLAy9nQw/viewform?usp=sf_link" 
     className="button-apply" 
-    target="_blank" 
-    rel="noopener noreferrer" 
-    style={{ textDecoration: 'none', color: 'inherit' }}
+    target="_blank"  rel="noopener noreferrer"  style={{ textDecoration: 'none' }}
   >
     Apply
   </a>

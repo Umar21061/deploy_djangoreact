@@ -7,6 +7,7 @@
 .career-heading2 {
     margin-bottom: 50px;
     color: black;
+    
 }
 
 .career-container {
@@ -100,15 +101,13 @@
     color: black;
 }
 
-.job-apply,
-.job-apply2 {
+.job-apply {
     flex: 0;
     color: black;
 }
 
 
-.button-apply,
-.button-apply2 {
+.button-apply {
     padding: 10px 20px;
     background-color:white;
     color: black;
@@ -117,19 +116,12 @@
     cursor: pointer;
     border: 2px solid royalblue;
 }
-
-/* Hover effect for Apply button */
-.job-row:hover .button-apply,
-.job-row2:hover .button-apply2 {
+.button-apply:hover{
     background-color: royalblue;
     color: white;
 }
 
-/* Change Apply button text color on hover */
-.job-row:hover .button-apply:hover,
-.job-row2:hover .button-apply2:hover {
-    color: black;
-}
+
 
 /* Media query for small screens */
 @media screen and (max-width: 768px) {
