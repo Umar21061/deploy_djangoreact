@@ -1,12 +1,11 @@
 import React from 'react';
 import './Footer.css';
 import instaIcon from './image/gmail2.png';
-import linkedinIcon from './image/linkedin.webp';
+
 import gmailIcon from './image/gmail.png';
 import fbIcon from './image/fb.webp';
 import logo from './image/nlogo.jpg';
 import linkdin2 from './image/linkdin.webp';
-
 
 const Footer = () => {
   return (
@@ -16,13 +15,20 @@ const Footer = () => {
           <img src={logo} alt="System Heuristics Logo" className="logo" />
           <span className="logo-text2">System Heuristics</span>
           <div className="social-icons">
-            <img src={instaIcon} alt="Instagram" className="social-icon" />
-            <img src={linkedinIcon} alt="LinkedIn" className="social-icon" />
-            <img src={gmailIcon} alt="Gmail" className="social-icon" />
-            <img src={fbIcon} alt="Facebook" className="social-icon" />
-            <img src={linkdin2} alt="linkdin2" className="social-icon" />
+            <a href="https://www.instagram.com/system.heuristics?igsh=MXYyanl0b24xMTJ5ag==" target="_blank" rel="noopener noreferrer">
+              <img src={gmailIcon} alt="Instagram" className="social-icon" />
+            </a>
+            <a href="https://www.linkedin.com/in/system-heuristics-bbaa61256/" target="_blank" rel="noopener noreferrer">
+              <img src={linkdin2} alt="LinkedIn" className="social-icon" />
+            </a>
+            <a href="mailto:info@systemheuristics.com" target="_blank" rel="noopener noreferrer">
+              <img src={instaIcon} alt="Gmail" className="social-icon" />
+            </a>
+            <a href="https://www.facebook.com/share/gGTgpAxUmNpv7bU1/?mibextid=qi2Omg" target="_blank" rel="noopener noreferrer">
+              <img src={fbIcon} alt="Facebook" className="social-icon" />
+            </a>
+           
           </div>
-        
         </div>
         <div className="column">
           <h3>Services</h3>
