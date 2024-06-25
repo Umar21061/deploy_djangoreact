@@ -119,12 +119,7 @@ function App() {
 function HomePage({ textData }) {
   return (
     <>
-     <Bot/>
-      <Services/>
-      <Industry/>
-      <Portfolio/>
-      <Testimonial/>
-      <Footer/>
+    
       
       
     </>

@@ -38,11 +38,11 @@ const Footer = () => {
           <p>Service 4</p>
         </div>
         <div className="column">
-          <button className="get-in-touch">Get in Touch</button>
+          <button className="btn-primary3">Get in Touch</button>
           <p>Phone: (123) 456-7890</p>
           <p>Email: info@systemheuristics.com</p>
           <p>1234 Street Address, City, State, ZIP</p>
-          <button className="free-consultation-button">Get Free Consultation</button>
+          <button className="btn-primary3">Get Free Consultation</button>
         </div>
       </div>
     </footer>
