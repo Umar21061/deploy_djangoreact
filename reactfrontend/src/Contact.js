@@ -24,7 +24,7 @@ const ContactForm = () => {
       await axios.post('/api/save_contact/', formData);
       
       // Send the form data to Formspree
-      const response = await fetch('https://formspree.io/f/mqkrorqy', {
+      const response = await fetch('https://formspree.io/f/mblrrpye', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
