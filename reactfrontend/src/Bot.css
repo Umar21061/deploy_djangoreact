@@ -115,8 +115,9 @@ body {
 
     .lead1,
     .lead {
-        margin-left: 10px; /* Margin for small screens */
-        margin-right: 10px; /* Margin for small screens */
+        margin-top: 20px; /* Margin top for small screens */
+        margin-left: 0; /* Zero left margin for small screens */
+        margin-right: 0; /* Zero right margin for small screens */
         text-align: left; /* Align text to left */
     }
 
@@ -173,13 +174,12 @@ body {
 
     .bot-container {
         height: auto; /* Set automatic height */
-       
     }
 
-   
-
     .lead1, .lead {
-       
+        margin-top: 20px; /* Margin top */
+        margin-left: 0; /* Zero left margin */
+        margin-right: 0; /* Zero right margin */
         text-align: left; /* Align text to left */
     }
 
