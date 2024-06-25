@@ -43,7 +43,8 @@ const Career = () => {
         </div>
         {/* Career Opportunities */}
         <div className="container" id="career-opportunities-container">
-          <h6 className="career-heading2">OUR CAREER OPPORTUNITIES</h6>
+        <div  className='heading display-5 fw-bold lh-1 mb-5 slice-left-to-right' style={{ marginBottom: '20px' }}>OUR CAREER OPPORTUNITIES</div>
+          
           <div className="button-row-career ">
             <button className={filter === 'All' ? 'button-career active' : 'button-career'} onClick={() => setFilter('All')}>All</button>
             <button className={filter === 'Sale' ? 'button-career active' : 'button-career'} onClick={() => setFilter('Sale')}>Sale</button>

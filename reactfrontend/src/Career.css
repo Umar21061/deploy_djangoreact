@@ -66,7 +66,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border: 1px solid #34397c;
+    border: 2px solid royalblue;
     padding: 10px;
     margin-top: 20px;
     transition: border-color 0.3s ease;
@@ -75,10 +75,9 @@
 
 .job-row:hover,
 .job-row2:hover {
-    border-color: rgb(69, 70, 155);
-    background-color: rgb(199, 206, 101);
+    
+    background-color: rgb(129, 100, 236);
     color: white;
-    border-color: rgb(211, 230, 46);
 }
 
 .job-info,
