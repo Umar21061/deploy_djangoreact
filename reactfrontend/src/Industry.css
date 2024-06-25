@@ -116,8 +116,8 @@ body {
   .lead1,
   .lead {
       margin-top: 20px; /* Margin top for small screens */
-      margin-left: 0; /* Zero left margin for small screens */
-      margin-right: 0; /* Zero right margin for small screens */
+      margin-left: 3px; /* 3px left margin for small screens */
+      margin-right: 3px; /* 3px right margin for small screens */
       text-align: left; /* Align text to left */
   }
 
@@ -178,8 +178,8 @@ body {
 
   .lead1, .lead {
       margin-top: 20px; /* Margin top */
-      margin-left: 0; /* Zero left margin */
-      margin-right: 0; /* Zero right margin */
+      margin-left: 3px; /* 3px left margin */
+      margin-right: 3px; /* 3px right margin */
       text-align: left; /* Align text to left */
   }
 
@@ -322,21 +322,19 @@ body {
   }
 
   .industry-item {
-      width: 100%; /* Full width for small screens */
-      margin-left: 0; /* Zero left margin */
-      margin-right: 0; /* Zero right margin */
+      width: calc(100% - 6px); /* Full width minus margins */
+      margin-left: 3px; /* Equal left margin */
+      margin-right: 3px; /* Equal right margin */
       margin-top: 20px; /* Equal top margin */
       margin-bottom: 20px; /* Equal bottom margin */
-  }
-
-  .industry-image img {
-      max-width: 100px; /* Adjust image size for small screens */
+      transform: none; /* Remove skew */
   }
 
   .industry-content {
       flex-direction: row; /* Align items horizontally */
       justify-content: space-between;
       align-items: center;
+      transform: none; /* Remove skew */
   }
 
   .industry-text {
@@ -347,6 +345,10 @@ body {
   .industry-image {
       transform: none; /* Remove skew */
       margin-left: 10px; /* Maintain gap */
+  }
+
+  .industry-image img {
+      max-width: 100px; /* Adjust image size for small screens */
   }
 }
 
@@ -357,21 +359,19 @@ body {
   }
 
   .industry-item {
-      width: 100%; /* Full width for small screens */
-      margin-left: 0; /* Zero left margin */
-      margin-right: 0; /* Zero right margin */
+      width: calc(100% - 6px); /* Full width minus margins */
+      margin-left: 3px; /* Equal left margin */
+      margin-right: 3px; /* Equal right margin */
       margin-top: 20px; /* Equal top margin */
       margin-bottom: 20px; /* Equal bottom margin */
-  }
-
-  .industry-image img {
-      max-width: 100px; /* Adjust image size for small screens */
+      transform: none; /* Remove skew */
   }
 
   .industry-content {
       flex-direction: row; /* Align items horizontally */
       justify-content: space-between;
       align-items: center;
+      transform: none; /* Remove skew */
   }
 
   .industry-text {
@@ -382,5 +382,9 @@ body {
   .industry-image {
       transform: none; /* Remove skew */
       margin-left: 10px; /* Maintain gap */
+  }
+
+  .industry-image img {
+      max-width: 100px; /* Adjust image size for small screens */
   }
 }
