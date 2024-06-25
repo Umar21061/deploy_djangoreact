@@ -123,7 +123,8 @@ function HomePage({ textData }) {
       <Services/>
       <Industry/>
       <Portfolio/>
-      
+      <Testimonial/>
+     
       
       
     </>
