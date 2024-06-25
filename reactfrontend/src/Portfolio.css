@@ -3,7 +3,7 @@
     overflow: hidden;
     height: auto; /* Set the height to auto */
     height: 100vh; /* Full height for desktop */
-    margin-bottom: 40px;
+    margin-bottom:100px;
 }
 
 .video-background {
@@ -90,6 +90,7 @@
     .portfolio-section {
         margin: 0 3px; /* Equal left and right margins */
         height: auto; /* Auto height for small screens */
+        margin-bottom: 30px;
     }
 
     .portfolio-content {
