@@ -177,7 +177,7 @@ body {
     }
 
     .lead1, .lead {
-        margin-top: 20px; /* Margin top */
+        margin-top: 30px; /* Margin top */
         margin-left: 0; /* Zero left margin */
         margin-right: 0; /* Zero right margin */
         text-align: left; /* Align text to left */
@@ -218,7 +218,7 @@ body {
     }
 
     #chat-box img {
-        width: 60%; /* Full width */
+        width: 65%; /* Full width */
         height: auto; /* Maintain aspect ratio */
         margin-top: 10px; /* Margin top */
     }

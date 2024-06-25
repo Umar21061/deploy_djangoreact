@@ -120,6 +120,7 @@ function HomePage({ textData }) {
   return (
     <>
      <Bot/>
+      <Services/>
       
       
       
