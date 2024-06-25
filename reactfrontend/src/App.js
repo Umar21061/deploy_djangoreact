@@ -122,6 +122,7 @@ function HomePage({ textData }) {
      <Bot/>
       <Services/>
       <Industry/>
+      <Portfolio/>
       
       
       
