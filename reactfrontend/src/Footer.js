@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './Footer.css';
 import instaIcon from './image/gmail2.png';
 
@@ -38,11 +39,21 @@ const Footer = () => {
           <p>Service 4</p>
         </div>
         <div className="column">
-          <button className="btn-primary3">Get in Touch</button>
+          
+          <div>
+           <Link to="/contact">
+             <button type="button" className="btn-primary3">Get in Touch</button>
+          </Link>
+          </div>
           <p>Phone: (123) 456-7890</p>
           <p>Email: info@systemheuristics.com</p>
           <p>1234 Street Address, City, State, ZIP</p>
-          <button className="btn-primary3">Get Free Consultation</button>
+          <div>
+           <Link to="/contact">
+             <button type="button" className="btn-primary3">Get Free Consultation</button>
+          </Link>
+          </div>
+        
         </div>
       </div>
     </footer>
