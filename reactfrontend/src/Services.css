@@ -1,17 +1,15 @@
 .container-services {
-    
     box-shadow: 0 4px 8px rgba(41, 41, 255, 0.5); /* Blue box shadow */
-    padding: 20px; /* Optional padding */
-    border-radius: 8px; /* Optional rounded corners */
-    margin-left: 150px; /* Center element horizontally */
-    margin-right: 150px; /* Center element horizontally */
-    margin-bottom: 100px;
-    margin-top: 60px;
+    padding: 20px;
+    border-radius: 8px;
+    margin: 60px auto 100px auto; /* Center horizontally and adjust vertical margins */
+    max-width: 1200px; /* Optional: Set a max-width for the container */
 }
 
 body {
-    background-color: black;
-    color: white;
+  
+    padding: 0 20px; /* Add padding to the body for a gap between body and border */
+    box-sizing: border-box; /* Ensure padding is included in the total width/height */
 }
 
 .heading {
@@ -27,36 +25,37 @@ body {
 .service-container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-around; /* Center items evenly */
 }
 
 .service-row {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-around;
     margin-bottom: 20px;
 }
 
 .service-item {
     flex-basis: calc(33.33% - 20px); /* Adjust width for responsiveness */
     margin-bottom: 40px;
+    text-align: center; /* Center align text inside items */
 }
 
 .service-item img {
-    max-width: 15%;
+    max-width: 100%;
     height: auto;
     transition: transform 0.3s ease-in-out;
 }
 
 .service-item h3 {
-    color: black; /* Initial h3 color */
-    text-decoration: none; /* Remove underline */
+    color: black;
+    text-decoration: none;
     margin-top: 10px;
     transition: color 0.3s ease-in-out;
 }
 
 .service-item a {
-    text-decoration: none; /* Remove underline from the link */
+    text-decoration: none;
 }
 
 .service-item:hover img {
@@ -64,15 +63,17 @@ body {
 }
 
 .service-item:hover h3 {
-    color: royalblue; /* Change h3 color to royal blue on hover */
+    color: royalblue;
 }
 
+.learn-more-button {
+    text-align: left; /* Align Learn More button to the left */
+    font-size: 18px;
+    margin-top: 20px;
+    display: inline-block; /* Ensure it respects margins */
+}
 
 @media (max-width: 1024px) {
-    .container-services {
-        margin: 60px 50px 100px 50px; /* Adjust margins for smaller desktops */
-    }
-
     .service-item {
         flex-basis: calc(50% - 20px); /* Adjust width for smaller desktops */
     }
@@ -80,28 +81,25 @@ body {
 
 @media (max-width: 768px) {
     .container-services {
-        margin: 60px 20px 100px 20px; /* Adjust margins for tablets */
+        padding: 10px;
     }
 
     .service-item {
         flex-basis: calc(50% - 20px); /* Adjust width for tablets */
     }
-
-    .see-all-button {
-        font-size: 15px; /* Reduce font size for smaller screens */
-    }
 }
 
-@media screen and (max-width: 576px) {
+@media (max-width: 576px) {
     .container-services {
-        margin: 60px 10px 100px 10px; /* Adjust margins for mobile devices */
+        padding: 10px;
+        margin: 60px 10px 100px 10px; /* Consistent margins for small screens */
     }
 
     .service-item {
         flex-basis: calc(100% - 20px); /* Adjust width for mobile devices */
     }
 
-    .see-all-button {
-        font-size: 15px;
+    .learn-more-button {
+        font-size: 15px; /* Reduce font size for smaller screens */
     }
 }
