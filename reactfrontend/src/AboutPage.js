@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import './Aboutpage.css';
 
 import Footer from './Footer';
-import Crew from './crew';
+
 import Value from './Value';
 import AboutBanner from './AboutBanner';
 
@@ -127,7 +127,7 @@ const Aboutpage = () => {
       </div>
       <br></br>
    
-      <Crew />
+   
       <Value />
   
       <Footer />

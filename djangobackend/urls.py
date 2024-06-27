@@ -17,7 +17,7 @@ urlpatterns = [
   
     path('api/learnmore/', views.learnmore, name='learnmore'),
     
-     path('api/get_crew_data/', views.get_crew_data, name='get_crew_data'),
+    
 
     path('api/global_project/', views.global_project, name='api/global_project'),
     path('api/project-detail/',views.project_detail, name='api/project_detail'),

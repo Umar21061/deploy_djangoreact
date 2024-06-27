@@ -18,7 +18,7 @@ import PortfolioPage from './PortfolioPage';
 import Partner from './Partner';
 
 
-import Crew from './crew';
+
 import Value from './Value';
 import Service2 from './Service2';
 import Career from './Career';
@@ -27,7 +27,7 @@ import ContactForm from './Contact';
 import BlogPage from './BlogPage';
 
 import Bot from './Bot';
-import Premium from './Premium';
+
 import LearnMore from './LearnMore';
 
 import Project from './project';

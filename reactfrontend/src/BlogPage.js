@@ -3,7 +3,7 @@ import axios from 'axios';
 import './BlogPage.css';
 import { Link, Routes, Route } from 'react-router-dom';
 import BlogData from './BlogData';
-import Premium from './Premium';
+
 import Footer from './Footer';
 import BlogSlider from './BlogSlider';
 
@@ -110,7 +110,7 @@ const BlogPage = () => {
                     <Route path="/blogdata/:name" element={<BlogData />} />
                 </Routes>
             </div>
-            <Premium />
+          
             <Footer />
         </>
     );
