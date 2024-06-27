@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { useParams } from 'react-router-dom';
 import './Industry_details.css';
+import Footer from './Footer';
+
 
 const IndustryDetails = () => {
   const [industryData, setIndustryData] = useState([]);
@@ -23,6 +25,7 @@ const IndustryDetails = () => {
   }, [industryName]); // Fetch data whenever the industryName changes
 
   return (
+    <>
     <div className="industry_details-container">
       {industryData.map((industry, index) => (
         <div key={index} className="industry_details-item">
@@ -88,6 +91,8 @@ const IndustryDetails = () => {
         </div>
       ))}
     </div>
+    
+    <Footer /></>
   );
 };
 
