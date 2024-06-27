@@ -51,13 +51,13 @@ const ContactForm = () => {
           <h2 className="headingform mb-3">Get in touch</h2>
           <form onSubmit={onSubmit}>
             <div className="row">
-              <div className="col-6 mb-3">
+              <div className="col-12 col-md-6 mb-3">
                 <label className="form-label" htmlFor="name">
                   Name
                 </label>
                 <input className="form-control" type="text" id="name" required />
               </div>
-              <div className="col-6 mb-3">
+              <div className="col-12 col-md-6 mb-3">
                 <label className="form-label" htmlFor="email">
                   Email
                 </label>
@@ -80,7 +80,6 @@ const ContactForm = () => {
       </div>
     </div>
     <Footer/>
-
     </>
   );
 };
