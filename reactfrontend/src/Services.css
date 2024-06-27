@@ -1,6 +1,6 @@
 .container-services {
-    border: 1px solid rgb(195, 202, 224); /* Light border color */
-    box-shadow: 0 4px 8px rgba(0, 0, 255, 0.5); /* Blue box shadow */
+    
+    box-shadow: 0 4px 8px rgba(41, 41, 255, 0.5); /* Blue box shadow */
     padding: 20px; /* Optional padding */
     border-radius: 8px; /* Optional rounded corners */
     margin-left: 150px; /* Center element horizontally */
@@ -67,36 +67,24 @@ body {
     color: royalblue; /* Change h3 color to royal blue on hover */
 }
 
-@media (max-width: 768px) {
-    body {
-        background-color: black; /* Set background color to black */
-        color: white; /* Set text color to white */
-        overflow-x: hidden; /* Prevent horizontal scrolling */
-        overflow-y: auto; /* Enable vertical scrolling */
-        margin-left: 20px; /* Equal left margin */
-        margin-right: 20px; /* Equal right margin */
-    }
 
-    #chat-container {
-        flex-direction: column; /* Change back to column in mobile view */
-        align-items: center; /* Align items to the center */
-    }
-
-    #chat-box {
-        margin: 0; /* Reset margin */
-    }
-
-    #chat-box img {
-        width: 70px; /* Adjust the width to your preference */
-        margin: 0 auto; /* Center the image */
-    }
-    
-    .get-in-touch-button {
-        margin-bottom: 20px; /* Add margin bottom after "Get in touch" button */
+@media (max-width: 1024px) {
+    .container-services {
+        margin: 60px 50px 100px 50px; /* Adjust margins for smaller desktops */
     }
 
     .service-item {
-        flex-basis: calc(50% - 20px); /* Adjust width for responsiveness */
+        flex-basis: calc(50% - 20px); /* Adjust width for smaller desktops */
+    }
+}
+
+@media (max-width: 768px) {
+    .container-services {
+        margin: 60px 20px 100px 20px; /* Adjust margins for tablets */
+    }
+
+    .service-item {
+        flex-basis: calc(50% - 20px); /* Adjust width for tablets */
     }
 
     .see-all-button {
@@ -105,13 +93,12 @@ body {
 }
 
 @media screen and (max-width: 576px) {
-    .service-item {
-        flex-basis: calc(100% - 20px); /* Adjust width for responsiveness */
+    .container-services {
+        margin: 60px 10px 100px 10px; /* Adjust margins for mobile devices */
     }
 
-    .service-item img {
-        max-width: 15%;
-        height: auto;
+    .service-item {
+        flex-basis: calc(100% - 20px); /* Adjust width for mobile devices */
     }
 
     .see-all-button {
