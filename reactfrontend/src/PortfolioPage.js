@@ -10,10 +10,6 @@ const PortfolioPage = () => {
     <div className="portfoliopage-page">
         <Portfolio/>
         <Project/>
-        
-       
-      
-   
       <Footer />
     </div>
   );

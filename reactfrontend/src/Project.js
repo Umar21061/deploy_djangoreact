@@ -87,35 +87,34 @@ const Project = () => {
   };
 
   return (
-    <div className="project-container">
+    <main className="project-container">
+      <header className='heading display-6 fw lh-1 mb-5 slice-left-to-right' style={{ marginBottom: '30px', marginTop: '50px' }}>
+        We Craft cutting-edge solutions powered by Artificial Intelligence (AI), driving digital Transformation and Innovation for businesses worldwide.
+      </header>
 
-    
-    <div  className='heading display-6 fw lh-1 mb-5 slice-left-to-right' style={{ marginBottom: '30px',marginTop: '50px' }}>We Craft cutting-edge solutions powered by AI, driving digital Transformation and Innovation for businesses worldwide</div>
       {options.length > 0 ? (
-        <div className="option-container">
+        <section className="option-container">
           {options.map((option, index) => (
             <button key={index} onClick={() => handleClick(option)} className={`project-button ${selectedOption === option ? 'selected' : ''}`}>
               {option}
             </button>
           ))}
-        </div>
+        </section>
       ) : (
-        <p className="black-text">No options Available</p>
+        <p className="black-text">No options available</p>
       )}
 
       {selectedOption && selectedOption !== 'All' && (
-        <div>
-          <div className="name-container">
-            {names.map((name, index) => (
-              <button key={index} onClick={() => handleNameClick(name)} className="name-button">{name}</button>
-            ))}
-          </div>
-        </div>
+        <section className="name-container">
+          {names.map((name, index) => (
+            <button key={index} onClick={() => handleNameClick(name)} className="name-button">{name}</button>
+          ))}
+        </section>
       )}
 
-      <div className="document-list">
+      <section className="document-list">
         {documents.map((doc, index) => (
-          <div key={index} className="document-item">
+          <article key={index} className="document-item">
             <Link to={`/projectdetails/${encodeURIComponent(doc.category)}/${encodeURIComponent(doc.name)}`}>
               <div className="project-video-container"
                 onMouseEnter={() => handleMouseEnter(index)}
@@ -127,22 +126,22 @@ const Project = () => {
                   Your browser does not support the video tag.
                 </video>
                 <div className="text-overlay">
-                  <p className="project-text">{doc.name}</p>
+                  <h2 className="project-text">{doc.name}</h2>
                   <p className="project-text">{doc.description}</p>
                 </div>
               </div>
             </Link>
-          </div>
+          </article>
         ))}
-      </div>
+      </section>
 
       {selectedDocument && (
-        <div>
+        <section className="selected-document">
           <p>Selected Document Name: {selectedDocument.name}</p>
           <p>Selected Document Category: {selectedDocument.category}</p>
-        </div>
+        </section>
       )}
-    </div>
+    </main>
   );
 };
 

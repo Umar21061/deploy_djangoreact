@@ -10,8 +10,8 @@ from openai import OpenAI
 # MongoDB connection URL
 MONGO_URL = settings.MONGO_URL
 
-
 client = OpenAI(api_key=settings.OPENAI_API_KEY)
+
 # Helper function to get MongoDB client
 def get_mongo_client():
     return MongoClient(MONGO_URL)
@@ -37,8 +37,6 @@ def get_couting_number(request):
     except Exception as e:
         return JsonResponse({'error': str(e)}, status=500)
 
-
-
 def get_job_data(request):
     try:
         client = get_mongo_client()
@@ -54,10 +52,6 @@ def get_job_data(request):
         return JsonResponse(job_data)
     except Exception as e:
         return JsonResponse({'error': str(e)}, status=500)
-
-
-
-
 
 @csrf_exempt
 def save_contact(request):
@@ -98,7 +92,7 @@ def chat(request):
             response = client.chat.completions.create(
                 model="ft:gpt-3.5-turbo-0125:personal::96ufzwZZ",
                 messages=[
-                    {"role": "system", "content": "System Heuristics is a tech consultancy firm that offers expert guidance and innovative strategies tailored to optimize performance and drive digital transformation"},
+                    {"role": "system", "content": "System Heuristics is a tech consultancy firm that offers expert guidance and innovative strategies tailored to optimize performance and drive digital transformation."},
                     {"role": "user", "content": user_message}
                 ],
                 temperature=0,
@@ -107,7 +101,7 @@ def chat(request):
             messages.append({"role": "user", "content": user_message})
             messages.append({"role": "system", "content": response.choices[0].message.content})
         else:
-            messages.append({"role": "system", "content": "Please provide a valid message"})
+            messages.append({"role": "system", "content": "Please provide a valid message."})
 
         return JsonResponse({'messages': messages})
 
@@ -322,20 +316,14 @@ def blog_data(request):
     except ConnectionFailure as e:
         return JsonResponse({'error': str(e)}, status=500)
 
-
-
-
-
-
 def get_industry_data(request):
     try:
-        client = get_mongo_client()  # Assuming this function gets your MongoDB client
-        db = client.portfolio  # Assuming 'portfolio' is your database name
-        industry_collection = db.industry  # Assuming 'industry' is your collection name
+        client = get_mongo_client()
+        db = client.portfolio
+        industry_collection = db.industry
         
-        # Aggregate pipeline to fetch documents with specific fields
         pipeline = [
-            { '$project': {
+            {'$project': {
                 '_id': 0,
                 'name': 1,
                 'description': 1,
@@ -343,33 +331,23 @@ def get_industry_data(request):
             }}
         ]
         
-        # Execute aggregation pipeline
         industry_documents = industry_collection.aggregate(pipeline)
-        
-        # Convert MongoDB cursor to list of dictionaries
         industry_list = list(industry_documents)
-        
-        # Close MongoDB client connection
         client.close()
         
-        # Return JSON response with industry data
         return JsonResponse(industry_list, safe=False)
     
     except Exception as e:
-        # Handle any exceptions and return error response
         return JsonResponse({'error': str(e)})
-
-
 
 def get_industry_details(request):
     try:
-        client = get_mongo_client()  # Assuming this function gets your MongoDB client
-        db = client.portfolio  # Assuming 'portfolio' is your database name
-        industry_collection = db.industry  # Assuming 'industry' is your collection name
+        client = get_mongo_client()
+        db = client.portfolio
+        industry_collection = db.industry
         
-        # Aggregate pipeline to fetch documents with specific fields
         pipeline = [
-            { '$project': {
+            {'$project': {
                 '_id': 0,
                 'name': 1,
                 'heading1': 1,
@@ -398,18 +376,11 @@ def get_industry_details(request):
             }}
         ]
         
-        # Execute aggregation pipeline
         industry_documents = industry_collection.aggregate(pipeline)
-        
-        # Convert MongoDB cursor to list of dictionaries
         industry_list = list(industry_documents)
-        
-        # Close MongoDB client connection
         client.close()
         
-        # Return JSON response with industry data
         return JsonResponse(industry_list, safe=False)
     
     except Exception as e:
-        # Handle any exceptions and return error response
         return JsonResponse({'error': str(e)})
