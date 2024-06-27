@@ -33,7 +33,10 @@ const IndustryPage = () => {
           <div className="text-container">
             <h1 className="industry-heading">Healthcare</h1>
             <p className="industry-description">AI is revolutionizing healthcare by improving diagnostic accuracy, optimizing treatment plans, and personalizing patient care. Our AI solutions facilitate early disease detection, streamline clinical workflows, and enable healthcare providers to deliver both preventive and predictive care, significantly improving patient outcomes and operational efficiencies.</p>
-            <button className='viewmore'>ViewMore</button>        
+            <a href="./industrydetailpage/Healthcare">
+  <button className="viewmore">View More</button>
+</a>
+        
           </div>
         </div>
         <div className="image">
@@ -50,7 +53,10 @@ const IndustryPage = () => {
           <div className="text-container">
             <h1 className="industry-heading">FinTech</h1>
             <p className="industry-description">In the fintech sector, our AI-driven solutions are transforming traditional banking and financial services. From risk assessment and fraud detection to personalized financial advice and automated customer service, AI helps financial institutions increase security, improve customer satisfaction, and drive smarter financial decision-making.</p>
-            <button className='viewmore'>ViewMore</button>
+            <a href="./industrydetailpage/FinTech">
+  <button className="viewmore">View More</button>
+</a>
+
           </div>
         </div>
       </div>
@@ -61,7 +67,9 @@ const IndustryPage = () => {
           <div className="text-container">
             <h1 className="industry-heading">Legal</h1>
             <p className="industry-description">AI in the legal field automates routine tasks, enhances document management, and provides advanced tools for legal research and litigation support. Our AI technologies help law firms and legal departments improve their operational efficiency, reduce human error, and deliver faster, more accurate legal services.</p>
-            <button className='viewmore'>ViewMore</button>
+            <a href="./industrydetailpage/Legal">
+  <button className="viewmore">View More</button>
+</a>
           </div>
         </div>
         <div className="image">
@@ -78,7 +86,9 @@ const IndustryPage = () => {
           <div className="text-container">
             <h1 className="industry-heading">Education</h1>
             <p className="industry-description">Our AI solutions in education tailor learning experiences to individual student needs. AI-driven platforms provide real-time insights into student performance, automate administrative tasks, and facilitate personalized and adaptive learning strategies that enhance engagement and improve educational outcomes.</p>
-          <button className='viewmore'>ViewMore</button>
+            <a href="./industrydetailpage/Education">
+  <button className="viewmore">View More</button>
+</a>
           </div>
         </div>
       </div>
@@ -89,7 +99,9 @@ const IndustryPage = () => {
           <div className="text-container">
             <h1 className="industry-heading">Real Estate</h1>
             <p className="industry-description">AI is reshaping the real estate industry by providing deeper insights into market trends, property valuations, and investment opportunities. Our AI tools assist in virtual property tours, predictive analysis for investment, and streamlined transaction processes, enhancing the buying, selling, and leasing experience for all parties.</p>
-            <button className='viewmore'>ViewMore</button>
+            <a href="./industrydetailpage/RealEstate">
+  <button className="viewmore">View More</button>
+</a>
           </div>
         </div>
         <div className="image">
@@ -106,14 +118,16 @@ const IndustryPage = () => {
           <div className="text-container">
             <h1 className="industry-heading">Logistics</h1>
             <p className="industry-description">In logistics, AI enhances operational efficiency through optimized route planning, predictive maintenance of vehicles, and automated inventory management. Our solutions help logistics companies reduce delivery times, minimize costs, and improve service quality by predicting demand and automating critical supply chain processes.</p>
-            <button className='viewmore'>ViewMore</button>
+            <a href="./industrydetailpage/Logistics">
+  <button className="viewmore">View More</button>
+</a>
           </div>
         </div>
       </div>
     </div>
     </div>
-    <Footer/>
     </>
+    
   );
 };
 

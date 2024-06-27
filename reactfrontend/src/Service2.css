@@ -1,4 +1,4 @@
-/* Service2.css */
+/* Existing CSS */
 
 /* Adjust container width */
 .container-service2 {
@@ -7,14 +7,13 @@
     overflow-x: hidden; /* Hide horizontal scrollbar */
 }
 
-.container-service2-row-servce{
+.container-service2-row-servce {
     margin-bottom: 40px;
-   
 }
+
 .container-service2 .row-servce .btn {
     margin-right: 5px;
 }
-
 
 .content-wrapper1 {
     width: 100%; /* Make content wrapper width full */
@@ -38,10 +37,11 @@
     font-style: normal;
     font-weight: 600;
     color: black;
-    font-size : 35px;
+    font-size: 35px;
     line-height: 35px;
 }
-.service-text{
+
+.service-text {
     color: black;
 }
 
@@ -57,7 +57,6 @@
 }
 
 /* Styling for Learn more button */
-/* Styling for Learn more button */
 .btn.learn-btn {
     background-color: transparent;
     color: black; /* White text */
@@ -67,9 +66,7 @@
     position: relative; /* For positioning the arrow and line */
     display: inline-block; /* Ensures button size fits content */
     margin-bottom: 30px; /* Add margin bottom for space between button and border */
-    
 }
-
 
 /* Styling for the arrow */
 .arrow {
@@ -148,12 +145,17 @@
     /* Updated styles for buttons */
     .btn.learn-btn {
         width: 45%; /* Set button width */
-        margin: 0 2.5%; /* Equal left and right margin */
+        margin: 0 4.5%; /* Equal left and right margin */
     }
 
     .container-service2 .row-servce .btn {
         width: 45%; /* Set button width */
         margin: 0 2.5%; /* Equal left and right margin */
+    }
+
+    /* Updated styles for border margin */
+    .border-around {
+        margin: 30px 5px; /* Set margin to 5px from left and right */
     }
 }
 
