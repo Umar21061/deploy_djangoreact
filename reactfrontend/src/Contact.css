@@ -9,7 +9,7 @@
 }
 
 .contact-container {
-  max-width: 600px;
+  max-width: 1000px;
   margin: 0 auto;
   background: rgba(255, 255, 255, 0.9);
   padding: 30px;
@@ -75,7 +75,7 @@
   .contact-container {
     margin-top: 30px;
     padding: 15px;
-    width: 90%; /* Increase width for small screens */
+   
   }
 
   .headingform {
